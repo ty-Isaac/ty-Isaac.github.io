@@ -270,6 +270,231 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/01/Create-reverse-table/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TianyLi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://oo9y7ylu4.bkt.clouddn.com/image/blog/headIcon/IMG_7483.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ty_Isaac">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/01/Create-reverse-table/" itemprop="url">
+                  Create reverse table
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-01T15:44:06+08:00">
+                2017-05-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programming/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/05/01/Create-reverse-table/" class="leancloud_visitors" data-flag-title="Create reverse table">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p><a href="http://a280606790.iteye.com/blog/799347" target="_blank" rel="external">http://a280606790.iteye.com/blog/799347</a></p>
+<p><a href="http://www.cnblogs.com/sephy/p/3303711.html" target="_blank" rel="external">http://www.cnblogs.com/sephy/p/3303711.html</a></p>
+</blockquote>
+<h2 id="Lucene包结构功能表"><a href="#Lucene包结构功能表" class="headerlink" title="Lucene包结构功能表"></a>Lucene包结构功能表</h2><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>org.apache.lucene.analysis</td>
+<td>语言分析器，主要用于的切词，支持中文主要是扩展此类</td>
+</tr>
+<tr>
+<td>org.apache.lucene.document</td>
+<td>索引存储时的文档结构管理，类似于关系型数据库的表结构</td>
+</tr>
+<tr>
+<td>org.apache.lucene.index</td>
+<td>索引管理，建立、删除等</td>
+</tr>
+<tr>
+<td>org.apache.lucene.queryParser</td>
+<td>查询分析器，查询关键词间的运算，与、或、非等</td>
+</tr>
+<tr>
+<td>org.apache.lucene.search</td>
+<td>检索管理，根据查询条件，检索得到结果</td>
+</tr>
+<tr>
+<td>org.apache.lucene.util</td>
+<td>公用类</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Analyzer是分析器，将字符串划分成一个个词语，去除其中的无效词语。英文的of,the，中文’的’，’地’等。</p>
+</li>
+<li><p>document用户提供的源，可以是文本文件、字符串或者数据库表的一条记录。一条记录经过索引后，就是以一个Document形式存储在索引文件中。用户进行搜索以Document列表形式返回</p>
+</li>
+<li><p>Field: 一个document可以包含多个信息域，标题、正文、最后修改时间，这些信息域通过Field在Document中存储。Field有两个属性可选：存储和索引。通过存储属性可以控制是否对该Field进行存储。</p>
+</li>
+<li><p>Term:搜索的最小单位，表示文档的一个词语。term由词语和这个词语出现的Field组成。</p>
+</li>
+<li><p>Tocken: term中的一次出现，包含term文本和相应的起止偏移，以及一个类型字符串。一句话可以出现多次相同的词语，它们用同一个term表示，但是用不同的tocken，每个tocken标记该词语出现的地方。</p>
+</li>
+<li><p>Segment: 添加索引时并不是每个document都马上添加到同一个索引文件，首先被写入不同的小文件，然后再合并成一个大索引文件，每一个小文件都是一个segment。</p>
+<p>​</p>
+</li>
+</ul>
+<h2 id="Lucene查询逻辑"><a href="#Lucene查询逻辑" class="headerlink" title="Lucene查询逻辑"></a>Lucene查询逻辑</h2><h3 id="影响Lucene对文档评分权重的方式"><a href="#影响Lucene对文档评分权重的方式" class="headerlink" title="影响Lucene对文档评分权重的方式"></a>影响Lucene对文档评分权重的方式</h3><p>如果希望某些文档和某些域比其他的域更重要，如果此文档和此域包含所要查询的词则应该得分较高，则可以在索引阶段设定文档的boost和域的boost值。默认值1.0，增加权重需要比1大才可以</p>
+<p>Lucene文档的打分公式：<br>$$<br>score(q,d)=coord(q,d) \cdot queryNorm(q)\cdot \sum (tf(t\in d))\cdot idf(t)^3 \cdot t.getBoost()\cdot norm(t,d))<br>$$<br>通过修改对应域的boost的值来修改对应域的权重。</p>
+<p>lucene的搜索相当强大，提供了很多辅助查询类，每个类都继承自Query类，各自完成特定的一种查询，可以组合使用完成特定的复杂操作；Lucene还提供Sort类对结果进行排序，还有Filter类对查询条件进行限制。各种查询方式可以在官网API中查看。</p>
+<p>对于分词器，按照句子语义切分成一个个词语。对英文进行切词已经有完善的分词器StandardAnalyzer，很多情况下都可以使用。但是对中文分词并不友好，它会将中文词语单切，对每一个字符都分词。例如搜索”如果”，也会将”牛奶不如果汁好喝”搜索出来，并且因为对每一个字都分词，会造成词项很多，文件很大。所以选择使用Paoding分词，按词典词义进行分词。</p>
+<p>执行查询的逻辑为：在已创建的索引目录中，创建一个搜索器。使用分词器对查询语句分词，设置搜索的域，利用生成的query去搜素，以Hits的形式返回。</p>
+<p>查询例示：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">searchIndex</span><span class="params">(String text)</span></span>&#123;</div><div class="line">     TokenStream stream = analyzer.tokenStream(<span class="string">"content"</span>,<span class="keyword">new</span> StringReader(text));</div><div class="line">     Date date1=<span class="keyword">new</span> Date();</div><div class="line">     <span class="keyword">try</span> &#123;</div><div class="line">         <span class="keyword">if</span>(showParticiple)</div><div class="line">             printTokens(<span class="string">" "</span>,stream);</div><div class="line">         System.out.println(<span class="string">"搜索 '"</span>+text+<span class="string">"' 结果如下"</span>);</div><div class="line">         <span class="comment">//1.打开存储位置</span></div><div class="line">             <span class="comment">//庖丁分词</span></div><div class="line">         analyzer = <span class="keyword">new</span> PaodingAnalyzer();</div><div class="line">         IndexReader ireader = IndexReader.open(INDEX_DIR);</div><div class="line">         <span class="comment">//2.创建搜索器</span></div><div class="line">         IndexSearcher isearcher = <span class="keyword">new</span> IndexSearcher(ireader);</div><div class="line">         <span class="comment">//3.进行关键词查询</span></div><div class="line">         QueryParser parser = <span class="keyword">new</span> QueryParser(<span class="string">"content"</span>,analyzer);</div><div class="line">       	<span class="comment">//进行多域查询，支持查询内容，时间，日期</span></div><div class="line">         String fields[] = &#123;<span class="string">"content"</span>,<span class="string">"filename"</span>,<span class="string">"editor"</span>,<span class="string">"date"</span>&#125;;</div><div class="line">         String texts[] =&#123;text,text,text,text&#125;;</div><div class="line">         Query query = MultiFieldQueryParser.parse(texts,fields,analyzer);</div><div class="line">         ScoreDoc[] hits=isearcher.search(query,<span class="keyword">null</span>,<span class="number">300</span>).scoreDocs;</div><div class="line">         <span class="keyword">if</span>(hits.length==<span class="number">0</span>)</div><div class="line">             System.out.println(<span class="string">"没有相似文件"</span>);</div><div class="line">         <span class="keyword">else</span> &#123;</div><div class="line">             System.out.println(<span class="string">"找到"</span>+hits.length+<span class="string">"个文件"</span>);</div><div class="line">         &#125;</div><div class="line">         <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;hits.length;i++)&#123;</div><div class="line">             Document hitDoc = isearcher.doc(hits[i].doc);</div><div class="line">             System.out.println(<span class="string">"_______________________"</span>);</div><div class="line">             System.out.println(hitDoc.get(<span class="string">"filename"</span>));</div><div class="line">             System.out.println(<span class="string">"时间: "</span>+hitDoc.get(<span class="string">"date"</span>));</div><div class="line">             System.out.println(<span class="string">"URL: "</span>+hitDoc.get(<span class="string">"url"</span>));</div><div class="line">             System.out.println(<span class="string">"Content:"</span>+hitDoc.get(<span class="string">"content"</span>));</div><div class="line">             System.out.println(<span class="string">"编辑: "</span>+hitDoc.get(<span class="string">"editor"</span>));</div><div class="line">             System.out.println(<span class="string">"Path:"</span>+hitDoc.get(<span class="string">"path"</span>));</div><div class="line">             System.out.println(<span class="string">"_______________________"</span>);</div><div class="line">         &#125;</div><div class="line">         <span class="comment">//4.关闭查询器等</span></div><div class="line">         ireader.close();</div><div class="line">     &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">         e.printStackTrace();</div><div class="line">     &#125;</div><div class="line">     Date date2 = <span class="keyword">new</span> Date();</div><div class="line">     System.out.println(<span class="string">"查看索引-----耗时："</span>+(date2.getTime()-date1.getTime()+<span class="string">"ms\n"</span>));</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<h2 id="Lucene入库逻辑"><a href="#Lucene入库逻辑" class="headerlink" title="Lucene入库逻辑"></a>Lucene入库逻辑</h2><ol>
+<li><p>入库这定义到库中文档的结构，如需要把网站内容加载到全文检索库，让用户通过“站内检索“搜索到相关的网页的内容。入库文档结构和关系型数据库中的表结构类似，每个入库的文档由多个字段构成（文章标题、作者、发布时间、原文链接、正文内容）。</p>
+</li>
+<li><p>包含N个字段的文档（Dcument）在入库前需要经过切词索引，切词规则由语言分析器（analyzer）完成。</p>
+</li>
+<li><p>切分后的”单词“被注册到索引树上，供查询使用。另需要将其他不需要索引的内容入库，所有这些文件操作由storage完成。</p>
+</li>
+<li><p>代码示例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">createIndex</span><span class="params">(String path)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">boolean</span> first=<span class="keyword">true</span>;</div><div class="line">        <span class="comment">//记录开始创建索引的时间</span></div><div class="line">        Date date1=<span class="keyword">new</span> Date();</div><div class="line">        <span class="comment">//获取路径下的所有文件集合</span></div><div class="line">        List&lt;File&gt; fileList=getFileList(path);</div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            <span class="keyword">for</span>(File f:fileList)&#123;</div><div class="line">                <span class="comment">//从"."开始取子字符串 取文件后缀</span></div><div class="line">                String type =f.getName().substring(f.getName().lastIndexOf(<span class="string">"."</span>)+<span class="number">1</span>);</div><div class="line">                <span class="comment">//1.读取txt文件的内容</span></div><div class="line">                <span class="keyword">if</span>(<span class="string">"txt"</span>.equalsIgnoreCase(type)) &#123;</div><div class="line">                    <span class="comment">//取得文件所有内容</span></div><div class="line">                    con = txt2String(f);</div><div class="line">                &#125;</div><div class="line">     </div><div class="line">                <span class="comment">//2.向本地文件存储索引</span></div><div class="line">                File indexFile = <span class="keyword">new</span> File(INDEX_DIR);</div><div class="line">              	<span class="comment">//如果索引不存在则创建</span></div><div class="line">                <span class="keyword">if</span>(!indexFile.exists())&#123;</div><div class="line">                    indexFile.mkdirs();</div><div class="line">                &#125;</div><div class="line">                indexWriter = <span class="keyword">new</span> IndexWriter(INDEX_DIR,analyzer,first);</div><div class="line">                first=<span class="keyword">false</span>;</div><div class="line">        </div><div class="line">                <span class="comment">//3.提取内容，进行索引的存储</span></div><div class="line">                Document document=<span class="keyword">new</span> Document();</div><div class="line">                Field filename = <span class="keyword">new</span> Field(<span class="string">"filename"</span>,con.get(<span class="number">0</span>), Field.Store.YES,Field.Index.TOKENIZED);</div><div class="line">                filename.setBoost(<span class="number">100</span>);</div><div class="line">                Field editor = <span class="keyword">new</span> Field(<span class="string">"editor"</span>,con.get(<span class="number">2</span>), Field.Store.YES,Field.Index.TOKENIZED);</div><div class="line">              	<span class="comment">//设置内容权重</span></div><div class="line">                editor.setBoost(<span class="number">80</span>);</div><div class="line">                document.add(filename);</div><div class="line">                Field content = <span class="keyword">new</span> Field(<span class="string">"content"</span>,con.get(con.size()-<span class="number">1</span>), Field.Store.YES,Field.Index.TOKENIZED);</div><div class="line">                content.setBoost(<span class="number">50</span>);</div><div class="line">                document.add(<span class="keyword">new</span> Field(<span class="string">"date"</span>,con.get(<span class="number">3</span>), Field.Store.YES,Field.Index.UN_TOKENIZED));</div><div class="line">                document.add(editor);</div><div class="line">                document.add(<span class="keyword">new</span> Field(<span class="string">"url"</span>,con.get(<span class="number">1</span>),Field.Store.YES,Field.Index.NO));</div><div class="line">                document.add(content);</div><div class="line">                document.add(<span class="keyword">new</span> Field(<span class="string">"path"</span>,f.getPath(), Field.Store.YES,Field.Index.NO));</div><div class="line">                <span class="comment">//4.索引对象加入索引创建中</span></div><div class="line">                indexWriter.addDocument(document);</div><div class="line">                <span class="comment">//提交索引并关闭</span></div><div class="line">                closeWriter();</div><div class="line">            &#125;</div><div class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">        Date date2=<span class="keyword">new</span> Date();</div><div class="line">        System.out.println(<span class="string">"创建索引成功\t耗时： "</span>+(date2.getTime()-date1.getTime())+<span class="string">"ms\n"</span>);</div><div class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/23/Python爬虫/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -585,6 +810,142 @@
 <p>allergy n.敏感症，反感 I have an allergy to animal hair.</p>
 <p>lethal adj.致命的 a lethal weapon </p>
 <p>oral learing: The mechanism of oral learing is largely that of continuous repetition.</p>
+<p>phase out : 逐渐减少 The Palace Museum will decide whether to phase out the sale of paper tickects and sell all tickets via the internet.</p>
+<p>in a bid to : 以便， in a bid to avoid too many tourists at a time.</p>
+<p>set a daily visitor cap 设置每日游客访问量</p>
+<p>restriction: The swimming club is open to families in the neighborhood without restriction.</p>
+<p>meditated a visit to her daughter ,  He meditate on his past life.</p>
+<p>reception 接待，招待会  receipt n.收据</p>
+<p>The book contains many mathmatical theorems.</p>
+<p>conform: I can’t conform what you said</p>
+<p>entrancing music 令人陶醉的音乐</p>
+<p>composite, composition, comprise</p>
+<p>speculate: It’s useless to speculate why he did it.</p>
+<p>cheat: I would rather fail than cheat in the examination.</p>
+<p>suspicious: suspicious behavior, I was suspicious of his motives.</p>
+<p>fluctuate: My weight fluctuated widly depending on how muach I ate.</p>
+<p>resent-hate: I resent having to get his permission for everything I do.</p>
+<p>elevation: The house is at an elevation of 1000 meters.</p>
+<p>population: One third of the world’s population consume two thirds of the world’s resources.</p>
+<p>fitness: fitness equipment , fitness centers ; Her fitness for the job cannot be questioned.</p>
+<p>certainty: We have no certainty of success.</p>
+<p>substitute: a meat substitute</p>
+<p>tentative: We made a tentative arrangement to meet on Friday. tentative conclusions.</p>
+<p>infectious disease,  tourist attraction旅游胜地</p>
+<p>a definitive agreement/answer/statement  The definitive version of text is ready to be published.</p>
+<p>Don’t keep us in suspense. Tell us what happened!</p>
+<p>a muscle spasm 肌肉痉挛</p>
+<p>It takes a lot of stamina to run a marathon.</p>
+<p>maximum temperature 最高气温</p>
+<p>There are some indications that the prices will rise.</p>
+<p>eternal truth不朽的真理  She felt eternal gratitude to him for saving her life.</p>
+<p>index of corpulence.肥胖指数</p>
+<p>2017-05-08</p>
+<p>renowned adj.有名的，有声誉的 He is renowned as novelist.</p>
+<p>decisive: the decisive vote决定性的一票 .The government must take decisive action on gun control.  </p>
+<p>a divorce settlement</p>
+<p>He made many efforts to enhance his reputation.</p>
+<p>The book shows that he is an ingenious author.</p>
+<p>The knowledge is beyond my scope.知识超过了我的范围</p>
+<p>Malls in the town reach saturation point.</p>
+<p>He consoled her with flowers.  Nothing could console him when his pet dog died.</p>
+<p>I refuse to lie about it , it’s against my principles.</p>
+<p>He give me a duplicate key of his house.</p>
+<p><u>Stern as he is , he is full of sympathy.</u></p>
+<p>quench熄灭（镇压）  extinguish熄灭（根除） Firemen try to quench the flames raging through the building.</p>
+<p>The house has an ample parlor.</p>
+<p>He could no longer distinguish between illusion and reality</p>
+<p>Reading good books elevates your mind.</p>
+<p>The sun has bleached her yellow skirt.</p>
+<p>We’re having difficulty keeping up our mortgage payments.</p>
+<p>They pledged never to tell the secret.</p>
+<p>a crucial factor / issue / decision</p>
+<p>ambient temperature 室温  Ambient noise may come from any direction.</p>
+<p>Rice is our staple food.</p>
+<p>The external walls of the building.</p>
+<p>Our relationship is based on reciprocal respect. 我们的关系是以相互尊重为基础的。</p>
+<p>The stillness was broken by the sound of footsteps.</p>
+<p>There was a suddent stillness in the air.</p>
+<p>They asked him to be merciful to the prisoners.</p>
+<p>He is a man always speaking with restraint.</p>
+<p>She’s tired of the perpetual complaints.   </p>
+<p>In his job, patience is an invalueable asset.</p>
+<p>The meeting may be prolong into the evening.</p>
+<p>He sent the letter our of malice.</p>
+<p>Henceforth I expect you to be punctual for meeting.</p>
+<ul>
+<li>permanent指总是处于相同的情况和地位，可长期持续下去，永久不变</li>
+<li>eternal语体较庄重，侧重指永远存在，无始无终。 </li>
+<li>perpetual语气最强，指保持永久不变，没有中断的行为，永无止境地持续下去。有时用于贬义，指令人厌烦之事。</li>
+</ul>
+<p>You don’t have to be a dieter.</p>
+<p>It’s the job of the police to enforce the law.</p>
+<p>2017-05-10</p>
+<p>She made an emotional plea for help.</p>
+<p>Her denial of my advice hurts me.</p>
+<p>There is no further reference to him in her diary</p>
+<p>The dispute coule develop into open warfare.</p>
+<p>Be careful not to damage other people’s property.</p>
+<p>Thank you so much for your timely help.</p>
+<p>Some people are never contented.</p>
+<p>A new work programme for young people will be implemented.</p>
+<p>It is doubtless that Taiwan belongs to China.</p>
+<p>I affirm that waht he said is true.</p>
+<p>The missing girl is presumed dead.</p>
+<p>I am accustomed to sleeping late.</p>
+<p>an elaborately decorated room</p>
+<p>He was resolute in carrying out his plan.</p>
+<p>2017-05-11 </p>
+<p>national anthem国歌</p>
+<p>think twice再三考虑</p>
+<p>A smile often denotes pleasure and friendship</p>
+<p>2017-05-12</p>
+<p>astonishing惊人的</p>
+<p>without intervention</p>
+<p>epidemic： childhood obesity was neither an epidemic nor a public health problem.</p>
+<p>obesity is also a risk factor for a variety of chronic diseases.</p>
+<p>The company was granted a charted trade in the occupied.</p>
+<p>I wouldn’t have dared to defy my teachers.</p>
+<p>Adolescence is the period of transition between childhood and adulthood.</p>
+<p>Her perdominant characteristic is honesty.</p>
+<p>I fail to see the logic behind his argument.</p>
+<p>Technically the building is a masterpiece, but few people like it.</p>
+<p>To be specific, the argument in your graduation thesis is logical.</p>
+<p>She was pressurized into agreeing to a merger.</p>
+<p>She was expelled from his company.</p>
+<p>2017-05-13 </p>
+<p>Implicit in his speech was the a assumption that they guilty.</p>
+<p>2017-05-14 </p>
+<p>There’s only a minimal amount of risk involved.</p>
+<p>If you get up early, you should not disturb others.</p>
+<p>Why should I say sorry when it’s not my fault?</p>
+<p>I really hate your abandonment of study.</p>
+<p>2017-05-15</p>
+<p>struggling with 艰苦奋斗</p>
+<p>distinctly:  Though they talked in a low voice, they could be heard distinctly.</p>
+<p>reportedly:  The  star is reportedly very ill.</p>
+<p>engage in:  Let’s not engage in personalities.</p>
+<p>category: We are divided into several categories by grades.</p>
+<p>sequence: He had to attend a sequence of meetings.</p>
+<p>under way: He gave his content for the project to get under way.</p>
+<p>elapse:  Three years have elapsd since we met last time.</p>
+<p>situated: The village is situated in a valley.</p>
+<p>cleanliness: We require the cleanliness from our child.</p>
+<p>designate: She was designated sportswoman of the year.</p>
+<p>regulatory: There were privacy and regulatory worries.</p>
+<p>inviolable: inviolable territory, the inviolable right to life</p>
+<p>2017-05-16 </p>
+<p>No previous experience is necessary for this job.</p>
+<p>He refused the proffered assistance.</p>
+<p>Children swim at the pool, under the watchful eye of lifeguards.</p>
+<p>The problem is that it’s not profitable.</p>
+<p>violence   ultraviolet</p>
+<p>in a stew over the lost keys</p>
+<p>case history</p>
+<p>deviant</p>
+<p>introverted</p>
+<p>2017-05-18</p>
+<p>His action is out of greed</p>
 <h2 id="教育意义"><a href="#教育意义" class="headerlink" title="教育意义"></a>教育意义</h2><ol>
 <li>gain knowledge about…… 获取关于……的知识</li>
 <li>develop a wide range of skills  </li>
@@ -607,6 +968,10 @@
 <li>academic subjects</li>
 <li>​</li>
 </ol>
+<h2 id="Listening-List"><a href="#Listening-List" class="headerlink" title="Listening List"></a>Listening List</h2><h3 id="House-renting"><a href="#House-renting" class="headerlink" title="House renting"></a>House renting</h3><p>renting 出租、real-estate agency房屋中介、Landlord房东、Landlady女房东、deposit押金、lease租约、available可租的、unfurnished没有家具的、furnished有家具的、facilities设备、surrounding周边环境、fence篱笆、driveway车道、garage车库、corridor走廊、fountain喷泉、suburb\outskirts郊区、downtown市区、style风格、bungalow平房、flat、accommodation住宿、dormitory宿舍、motel汽车旅馆、shared social area共享休息区、Wing翼、Annex副楼、Lobby前厅、Foyer门厅、balcony阳台、a single/double bedroom 单人间/双人间、a twin room双床房、Laundry room洗衣间、Attic阁楼、Bunk bed上下铺、Wardrobe衣柜、Mirror镜子、cupboard橱柜、cabinet衣柜、drawer柜子、Mattress床垫、king/queen-size bed特大/大号床、electronics电器、Central heating中央供暖、radiator暖气片、air-conditioner空调、washing machine洗衣机、fridge冰箱、vacuum cleaner吸尘器、micro-wave oven微波炉、(Hair)dryer、cable TV有线电视、stereo system立体音响、kettle电水壶、decoration装饰、carpet地毯、pillow枕头、sheet床单、blanket毯子、curtain窗帘、shutter百叶窗、soap肥皂、shampoo香波、body wash沐浴液、body lotion润肤乳、towel浴巾、toothpaste牙膏、toothbrush牙刷、filter过滤器</p>
+<h3 id="Job-hopping"><a href="#Job-hopping" class="headerlink" title="Job hopping"></a>Job hopping</h3><p>vacant position空缺职位、job applicant工作申请者、candidate求职者、day shift 日班、shift work倒班、challenging job有挑战的工作、CV=resume简历、arm badge/name badge 胸章/臂章、job interview求职面试、starting salary起薪、wage工资、commission佣金、perks红包、bonus分红、pension养老金、public house fund住房公积金、health insurance健康保险、duration时长、career plan职业规划、work irregular hours不规则工作时间、achievement成就、random selection随机选择、occupational factor职业因素、satisfaction满足感、routine work日常工作、staff advantages员工福利、window dressing橱窗展示、cashier收银员、serve customers服务客户、performance at work工作表现、performance绩效、keep an eye on stock关注库存、stimulating刺激、human resources人力资源、financial officer财政人员、public servant公务员、airplane飞机、ferry轮渡、hovercraft气垫船、tube地铁、subway地铁、underground地铁、metro地铁、cab出租车、4-wheel-drive四驱车、hybrid混合动力车、airport shuttle bus机场穿梭巴士、minibus小巴、express train高铁</p>
+<h3 id="Shopping"><a href="#Shopping" class="headerlink" title="Shopping"></a>Shopping</h3><p>shop assistant售货员、counter柜台、corner shop街角小店、general store综合商店、Hypermarket大型超级市场、stall货摊、booth流动商店、kiosk报亭 公用电话亭、boutique时装精品小店、bazaar市场、arcade拱廊市场？、precinct购物区、shopping mall购物中心、department store百货商店、free parking lot免费停车场、mail-order store邮购商店、auction拍卖、second-hand store二手商店、bid喊价、discount折扣、change找零、cosmetic化妆品、stationery文具、fabrics纺织品、sports good体育用品、daily necessities日常必需品、cash现金、cheque支票、cheque book支票本、signature签名、visa、balance余额、overdraft透支、installment分期还款、duty-free shop免税店、credit card信用卡、quality质量、service服务、brand品牌、compact紧凑车型、sedan小轿车、</p>
+<h3 id="食物"><a href="#食物" class="headerlink" title="食物"></a>食物</h3><p>barley 大麦</p>
 
           
         
@@ -799,7 +1164,7 @@
 <li>保持平稳：(keep/remain)  (stable/steady)</li>
 <li>波动： fluctuate</li>
 <li>显著地： obviously  / consideratly / significantly</li>
-<li>大约：about / around / almost /approximately / roughtly / just over or below</li>
+<li>大约：about / around / almost /approximately / roughly / just over or below</li>
 <li>超过：overtake / exceed / surpass</li>
 <li>展现： show / illustrate / give information about</li>
 </ul>
@@ -818,6 +1183,7 @@
 <p>diploma  degree        Bachelor degree</p>
 <p>相等</p>
 <p>be + amost / around  same with   equal to  ,  similar to  ,  close to</p>
+<p>There is no difference between the two in quantitative terms.</p>
 <p>倍数</p>
 <p>A is twice as big as B</p>
 <p>A is twice bigger than B </p>
@@ -842,7 +1208,7 @@
 <p>趋势（上升、下降）：  明显的一组 不明显的一组</p>
 <p>分段：</p>
 <p>总结：多幅图各个击破，找最大的overview；寻找共同点。</p>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>静态还是动态</p>
+<h2 id="表格-table"><a href="#表格-table" class="headerlink" title="表格(table)"></a>表格(table)</h2><p>静态还是动态</p>
 <p>​    看情况、曲线图、</p>
 <p>表格的主要特点</p>
 <p>​    </p>
@@ -850,8 +1216,38 @@
 <p>​    最大的数</p>
 <p>横着看，竖着看都有结论</p>
 <p>时间按  最早、第二早、最晚。</p>
+<p>相关的数据关系。</p>
 <p>兼顾纵横</p>
 <p>表格作业</p>
+<h2 id="地图题"><a href="#地图题" class="headerlink" title="地图题"></a>地图题</h2><h4 id="历史变迁型-difference"><a href="#历史变迁型-difference" class="headerlink" title="历史变迁型(difference)"></a>历史变迁型(difference)</h4><p>Before - After: </p>
+<p>difference的角度  <u>数量的变化、面积的变化、位置的变化</u></p>
+<p><u>顺序  顺时针，第二幅图 按照第一幅图的顺序</u></p>
+<p>基本功：</p>
+<p>数量：</p>
+<p>0-1修建：build construct</p>
+<p>1-0去除：remove demolish</p>
+<p>1-2倍数：倍数的表达</p>
+<p>位置：</p>
+<p>move to, relocate at ,<u>to in</u></p>
+<p>面积：area , size </p>
+<p>后面这个比前面这个变了很多</p>
+<h4 id="规划类-layout"><a href="#规划类-layout" class="headerlink" title="规划类(layout)"></a>规划类(layout)</h4><p>注意比较二者的区别最后得出结论</p>
+<p>总而言之，我觉得 …… 更适合 </p>
+<h2 id="流程图-Flow-chart"><a href="#流程图-Flow-chart" class="headerlink" title="流程图 Flow chart"></a>流程图 Flow chart</h2><p>Life cycle生命周期</p>
+<p>Production物品生产</p>
+<p>基本功 ： 找谓语，词汇很关键</p>
+<p>产卵spawn  生长发育 thrive</p>
+<p>immigrate 人的移民</p>
+<p>emmigrate 动物的迁徙  dwell     inhabit栖息</p>
+<p>Washing powder</p>
+<p>grind / ground   laminate  磨碎</p>
+<p>process 处理(加工)</p>
+<p>undergo  high temerature</p>
+<p>spwan产卵 lay下蛋    thrive , grow   。  grow into 长成  live on 以……为生</p>
+<p>knit</p>
+<p>First , then , stage/phase , step</p>
+<p>intelligible 通俗易懂</p>
+<p>总结，产品 的 流程 比较清楚、清晰易懂</p>
 
           
         
@@ -1864,7 +2260,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1886,7 +2282,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">20</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
