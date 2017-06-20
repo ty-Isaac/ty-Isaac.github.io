@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="A*搜索算法 http://www.cnblogs.com/mingjiatang/p/5967681.html  A*搜索算法简介A*搜索算法是一种启发式算法。即在盲目搜索的过程加入一个启发函数，对于当前结点搜索完毕后，使用启发函数对每一个子结点的状态计算代价，选择代价最小的节点作为下一步的搜索节点。通过不断求最优，就可以找到最优解。 DFS，BFS都是属于盲目搜索，选择子结点是根据固定顺序选择">
+<meta name="description" content="启发式搜索A*搜索算法 http://www.cnblogs.com/mingjiatang/p/5967681.html  A*搜索算法简介A*搜索算法是一种启发式算法。即在盲目搜索的过程加入一个启发函数，对于当前结点搜索完毕后，使用启发函数对每一个子结点的状态计算代价，选择代价最小的节点作为下一步的搜索节点。通过不断求最优，就可以找到最优解。 DFS，BFS都是属于盲目搜索，选择子结点是根据固">
 <meta name="keywords" content="A*算法,人工智能,迷宫问题,八数码问题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="A*算法">
 <meta property="og:url" content="http://yoursite.com/2017/04/19/迷宫问题A*搜索/index.html">
 <meta property="og:site_name" content="Ty_Isaac">
-<meta property="og:description" content="A*搜索算法 http://www.cnblogs.com/mingjiatang/p/5967681.html  A*搜索算法简介A*搜索算法是一种启发式算法。即在盲目搜索的过程加入一个启发函数，对于当前结点搜索完毕后，使用启发函数对每一个子结点的状态计算代价，选择代价最小的节点作为下一步的搜索节点。通过不断求最优，就可以找到最优解。 DFS，BFS都是属于盲目搜索，选择子结点是根据固定顺序选择">
-<meta property="og:updated_time" content="2017-05-05T13:45:11.000Z">
+<meta property="og:description" content="启发式搜索A*搜索算法 http://www.cnblogs.com/mingjiatang/p/5967681.html  A*搜索算法简介A*搜索算法是一种启发式算法。即在盲目搜索的过程加入一个启发函数，对于当前结点搜索完毕后，使用启发函数对每一个子结点的状态计算代价，选择代价最小的节点作为下一步的搜索节点。通过不断求最优，就可以找到最优解。 DFS，BFS都是属于盲目搜索，选择子结点是根据固">
+<meta property="og:updated_time" content="2017-05-23T10:52:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="A*算法">
-<meta name="twitter:description" content="A*搜索算法 http://www.cnblogs.com/mingjiatang/p/5967681.html  A*搜索算法简介A*搜索算法是一种启发式算法。即在盲目搜索的过程加入一个启发函数，对于当前结点搜索完毕后，使用启发函数对每一个子结点的状态计算代价，选择代价最小的节点作为下一步的搜索节点。通过不断求最优，就可以找到最优解。 DFS，BFS都是属于盲目搜索，选择子结点是根据固定顺序选择">
+<meta name="twitter:description" content="启发式搜索A*搜索算法 http://www.cnblogs.com/mingjiatang/p/5967681.html  A*搜索算法简介A*搜索算法是一种启发式算法。即在盲目搜索的过程加入一个启发函数，对于当前结点搜索完毕后，使用启发函数对每一个子结点的状态计算代价，选择代价最小的节点作为下一步的搜索节点。通过不断求最优，就可以找到最优解。 DFS，BFS都是属于盲目搜索，选择子结点是根据固">
 
 
 
@@ -375,7 +375,7 @@
       
 
       
-        <h1 id="A-搜索算法"><a href="#A-搜索算法" class="headerlink" title="A*搜索算法"></a>A*搜索算法</h1><blockquote>
+        <h1 id="启发式搜索"><a href="#启发式搜索" class="headerlink" title="启发式搜索"></a>启发式搜索</h1><h1 id="A-搜索算法"><a href="#A-搜索算法" class="headerlink" title="A*搜索算法"></a>A*搜索算法</h1><blockquote>
 <p><a href="http://www.cnblogs.com/mingjiatang/p/5967681.html" target="_blank" rel="external">http://www.cnblogs.com/mingjiatang/p/5967681.html</a></p>
 </blockquote>
 <h2 id="A-搜索算法简介"><a href="#A-搜索算法简介" class="headerlink" title="A*搜索算法简介"></a>A*搜索算法简介</h2><p>A*搜索算法是一种启发式算法。即在盲目搜索的过程加入一个启发函数，对于当前结点搜索完毕后，使用启发函数对每一个子结点的状态计算代价，选择代价最小的节点作为下一步的搜索节点。通过不断求最优，就可以找到最优解。</p>
@@ -408,9 +408,45 @@
 <li>循环终止后，从终点节点开始沿父节点往前遍历，从后到前输出搜索路径。</li>
 </ol>
 <p>其中，设置相邻节点的父节点为当前节点为了记录从起始节点到终止节点的路径，方便搜索路径后对路径进行输出。</p>
-<h2 id="A-算法对于八数码问题"><a href="#A-算法对于八数码问题" class="headerlink" title="A*算法对于八数码问题"></a>A*算法对于八数码问题</h2><h2 id="A-算法对于迷宫问题"><a href="#A-算法对于迷宫问题" class="headerlink" title="A*算法对于迷宫问题"></a>A*算法对于迷宫问题</h2><p>采用A*算法对迷宫路径求解中，$g(n)$和$h(n)$都采用==曼哈顿距离==，曼哈顿距离代表两个点在标准坐标上的绝对轴距总和。<br>$$<br>d(i,j)=|x_1-x_2|+|y_1-y_2|<br>$$<br>即每次获取的当前通道块，都会对其到入口通道块和出口通道开的曼哈顿距离进行计算。求算当前通道块的Fvalue进行保存。该函数满足启发式算法的充分条件1、2、3、4。</p>
-<p>对于迷宫问题需要将A*算法进行更改，其中2-3-1，如果相邻节点不可通行或者该节点已经在CLOSE表或OEPN表中，则什么也不执行；2-3-2，如果该节点不在OPEN表和CLOSE表中，则将该节点添加到OPEN表中，并将该节点的父节点设置为当前节点，同时计算保存相邻节点的Fvalue。</p>
-<p>在迷宫求解中使用A*搜索算法不需要更新OPEN表中已存在节点的Fvalue，因为每个节点的位置都是确定的，所以曼哈顿九黎就是固定的。如果是带权值的网路求解最短路径，那么就需要去更新OPEN表中节点的Fvalue，如Dijkstra算法。</p>
+<h2 id="A-算法对于八数码问题"><a href="#A-算法对于八数码问题" class="headerlink" title="A*算法对于八数码问题"></a>A*算法对于八数码问题</h2><h3 id="启发式A-算法"><a href="#启发式A-算法" class="headerlink" title="启发式A*算法"></a>启发式A*算法</h3><p>open表：存放所有待扩展的节点</p>
+<p>closed表：存放所有已扩展的节点</p>
+<p>spring表：存放所有待处理的节点状态</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">List&lt;State&gt; open = <span class="keyword">new</span> ArrayList&lt;&gt;();  <span class="comment">//open表</span></div><div class="line">List&lt;State&gt; closed = <span class="keyword">new</span> ArrayList&lt;&gt;();     <span class="comment">//close表</span></div><div class="line">List&lt;State&gt; spring = <span class="keyword">new</span> ArrayList&lt;&gt;();     <span class="comment">//spring表</span></div><div class="line"><span class="keyword">int</span> start[]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">0</span>&#125;;            <span class="comment">//初始状态数组</span></div><div class="line"><span class="keyword">int</span> goal[] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">8</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">6</span>,<span class="number">5</span>&#125;;           <span class="comment">//目标状态数组</span></div><div class="line">State startState = <span class="keyword">new</span> State();         <span class="comment">//初始状态</span></div><div class="line">State goalState = <span class="keyword">new</span> State();          <span class="comment">//目标状态</span></div></pre></td></tr></table></figure>
+<h3 id="算法步骤"><a href="#算法步骤" class="headerlink" title="算法步骤"></a>算法步骤</h3><ol>
+<li><p>检查是否有解（逆序数）</p>
+<p>将9宫格横向展开，左边的数大于右边的数的组数称为逆序数。横向平移逆序数增量为0、2或-2。纵向平移逆序数增长为0、4或-4。因此，初态和目标态的逆序数和应该是偶数。（即初态逆序奇数、末态逆序也为奇数和为偶数）若不是偶数代表此八数码无解。</p>
+</li>
+<li><p>初始化open表（存放待扩展的节点）、close表（存放已扩展的节点）、spring表（存放答案）、初始状态、目标状态。</p>
+</li>
+<li><p>计算初始状态的g、h、f值后，将初始状态加入到open表中</p>
+</li>
+<li><p>检查问题是否有解</p>
+</li>
+<li><p>循环()</p>
+<ol>
+<li><p>在open表中取出一个状态getOfOpen，判断是否是目标状态。是目标状态则结束</p>
+</li>
+<li><p>将状态getOfOpen加入closed表</p>
+</li>
+<li><p>将状态getOfOpen产生后继节点</p>
+<ol>
+<li>获取0的位置，将0进行四个方向移动的尝试，可以则移动。</li>
+<li>判断该移动方向得到的结果是否与其前驱节点相似。</li>
+<li>不相似创建新的状态点加入到spring中。</li>
+</ol>
+</li>
+<li><p>检查spring表中所有的节点(state)</p>
+<p>如果在open表中有相同节点(stateInOpen)。如果state的g值&lt;stateInOpen的g值，则改变open表中(stateInOpen)的参数，并将open表中的状态按gvalue重排。并从spring表删除该节点。</p>
+<p>如果在closed表中有相同节点(stateInClosed)，state的g值&lt;stateInClosed的g值，则改变closed表中(stateInClosed)的参数，将stateInClosed加入open表并排序。并从spring表删除该节点</p>
+<p>否则将state加入open表，并从spring表中删除该节点</p>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="算法空间表示"><a href="#算法空间表示" class="headerlink" title="算法空间表示"></a>算法空间表示</h3><p>状态用一维数组表示，每个节点状态存以一个State对象存储。包括存储Fvalue，Gvalue，Hvalue。对于九宫格按行展开存入数组，用0表示移动位置（空格）。</p>
+<h2 id="A-算法对于迷宫问题"><a href="#A-算法对于迷宫问题" class="headerlink" title="A*算法对于迷宫问题"></a>A*算法对于迷宫问题</h2><p>采用A*算法对迷宫路径求解中，$g(n)$和$h(n)$都采用==曼哈顿距离==，曼哈顿距离代表两个点在标准坐标上的绝对轴距总和。<br>$$<br>d(i,j)=|x_1-x_2|+|y_1-y_2|<br>$$<br>即每次获取的当前通道块，都会对其到入口通道块和出口通道开的曼哈顿距离进行计算。求算当前通道块的Fvalue进行保存。该函数满足启发式算法的充分条件1、2、3、4。</p>
+<p>对于迷宫问题需要将A*算法进行更改，其中2-3-1，如果相邻节点不可通行或者该节点已经在close表或open表中，则什么也不执行；2-3-2，如果该节点不在open表和close表中，则将该节点添加到open表中，并将该节点的父节点设置为当前节点，同时计算保存相邻节点的$Fvalue$。</p>
+<p>在迷宫求解中使用A*搜索算法不需要更新OPEN表中已存在节点的Fvalue，因为每个节点的位置都是确定的，所以曼哈顿九黎就是固定的。如果是带权值的网路求解最短路径，那么就需要去更新open表中节点的$Fvalue$，如$Dijkstra$算法。</p>
 
       
     </div>
@@ -543,7 +579,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -565,7 +601,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -600,7 +636,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#A-搜索算法"><span class="nav-number">1.</span> <span class="nav-text">A*搜索算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#A-搜索算法简介"><span class="nav-number">1.1.</span> <span class="nav-text">A*搜索算法简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A-搜索算法描述"><span class="nav-number">1.2.</span> <span class="nav-text">A*搜索算法描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A-算法对于八数码问题"><span class="nav-number">1.3.</span> <span class="nav-text">A*算法对于八数码问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A-算法对于迷宫问题"><span class="nav-number">1.4.</span> <span class="nav-text">A*算法对于迷宫问题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#启发式搜索"><span class="nav-number">1.</span> <span class="nav-text">启发式搜索</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#A-搜索算法"><span class="nav-number">2.</span> <span class="nav-text">A*搜索算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#A-搜索算法简介"><span class="nav-number">2.1.</span> <span class="nav-text">A*搜索算法简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A-搜索算法描述"><span class="nav-number">2.2.</span> <span class="nav-text">A*搜索算法描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A-算法对于八数码问题"><span class="nav-number">2.3.</span> <span class="nav-text">A*算法对于八数码问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#启发式A-算法"><span class="nav-number">2.3.1.</span> <span class="nav-text">启发式A*算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法步骤"><span class="nav-number">2.3.2.</span> <span class="nav-text">算法步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法空间表示"><span class="nav-number">2.3.3.</span> <span class="nav-text">算法空间表示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A-算法对于迷宫问题"><span class="nav-number">2.4.</span> <span class="nav-text">A*算法对于迷宫问题</span></a></li></ol></li></ol></div>
             
 
           </div>
