@@ -1,0 +1,1757 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="复习,人工智能," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="人工智能专题复习hejizh@sdu.edu.cn 主要复习内容:   [ ] 知识的表示方法（*）    [ ] 搜索技术（*）  盲目搜索方法 ；       启发式搜索方法 与/或图搜索方法；   博弈树搜索方法   [ ] 经典逻辑理论（*）     [ ] 产生式系统（*）    [ ] 不确定性推理模型   -[ ] 计算智能（ * ）蚁群算法、粒子群算法、  -[ ] 机器学习（*）">
+<meta name="keywords" content="复习,人工智能">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ty_Isaac">
+<meta property="og:url" content="http://yoursite.com/2017/05/28/人工智能专题复习/index.html">
+<meta property="og:site_name" content="Ty_Isaac">
+<meta property="og:description" content="人工智能专题复习hejizh@sdu.edu.cn 主要复习内容:   [ ] 知识的表示方法（*）    [ ] 搜索技术（*）  盲目搜索方法 ；       启发式搜索方法 与/或图搜索方法；   博弈树搜索方法   [ ] 经典逻辑理论（*）     [ ] 产生式系统（*）    [ ] 不确定性推理模型   -[ ] 计算智能（ * ）蚁群算法、粒子群算法、  -[ ] 机器学习（*）">
+<meta property="og:image" content="http://oo9y7ylu4.bkt.clouddn.com/image/knowledge/%E5%86%B3%E7%AD%96%E6%A0%91.png">
+<meta property="og:updated_time" content="2017-06-23T03:05:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ty_Isaac">
+<meta name="twitter:description" content="人工智能专题复习hejizh@sdu.edu.cn 主要复习内容:   [ ] 知识的表示方法（*）    [ ] 搜索技术（*）  盲目搜索方法 ；       启发式搜索方法 与/或图搜索方法；   博弈树搜索方法   [ ] 经典逻辑理论（*）     [ ] 产生式系统（*）    [ ] 不确定性推理模型   -[ ] 计算智能（ * ）蚁群算法、粒子群算法、  -[ ] 机器学习（*）">
+<meta name="twitter:image" content="http://oo9y7ylu4.bkt.clouddn.com/image/knowledge/%E5%86%B3%E7%AD%96%E6%A0%91.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/05/28/人工智能专题复习/"/>
+
+
+
+
+
+  <title>  | Ty_Isaac </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ty_Isaac</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/28/人工智能专题复习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TianyLi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://oo9y7ylu4.bkt.clouddn.com/image/blog/headIcon/IMG_7483.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ty_Isaac">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-28T16:08:52+08:00">
+                2017-05-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/review/" itemprop="url" rel="index">
+                    <span itemprop="name">review</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/05/28/人工智能专题复习/" class="leancloud_visitors" data-flag-title="">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="人工智能专题复习"><a href="#人工智能专题复习" class="headerlink" title="人工智能专题复习"></a>人工智能专题复习</h1><p>hejizh@sdu.edu.cn</p>
+<p>主要复习内容:</p>
+<ol>
+<li><ul>
+<li>[ ] 知识的表示方法（*）</li>
+</ul>
+</li>
+<li><ul>
+<li>[ ] 搜索技术（*）</li>
+</ul>
+<p>盲目搜索方法 ；       启发式搜索方法</p>
+<p>与/或图搜索方法；   博弈树搜索方法</p>
+</li>
+<li><ul>
+<li>[ ] 经典逻辑理论（*） </li>
+</ul>
+</li>
+<li><ul>
+<li>[ ] 产生式系统（*）</li>
+</ul>
+</li>
+<li><ul>
+<li>[ ] 不确定性推理模型</li>
+</ul>
+</li>
+<li><p>-[ ] 计算智能（ * ）蚁群算法、粒子群算法、</p>
+</li>
+<li><p>-[ ] 机器学习（*）归纳学习、决策树学习、ID3、神经网络</p>
+</li>
+<li><p>-[ ] AI中的其它技术介绍</p>
+</li>
+</ol>
+<h2 id="知识表示"><a href="#知识表示" class="headerlink" title="知识表示"></a>知识表示</h2><ul>
+<li>[ ] 逻辑表示</li>
+<li>[ ] 产生式规则表示法</li>
+<li>[ ] 语义网络表示法</li>
+<li>[ ] 框架理论表示法</li>
+<li>[ ] 软件技术架构与框架理论关系</li>
+<li>[ ] 知识图谱</li>
+</ul>
+<h3 id="表示方法"><a href="#表示方法" class="headerlink" title="表示方法"></a>表示方法</h3><p>直接表示、逻辑表示、产生式规则表示、语义网络表示法、框架表示法、脚本方法、过程表示</p>
+<h4 id="逻辑表示法"><a href="#逻辑表示法" class="headerlink" title="逻辑表示法"></a>逻辑表示法</h4><ul>
+<li>一阶谓词逻辑式谓词逻辑中最直观的一种逻辑。以谓词形式来表示动作的主体、客体，客体可以有多个。</li>
+<li>谓词逻辑规范表达式：$P(x_1,x_2,x_3,…)$，P是谓词，x~i~是主体与客体</li>
+<li>存在问题：谓词表示越细，推理越慢、效率越低，但表示清楚</li>
+</ul>
+<h4 id="产生式规则表示法"><a href="#产生式规则表示法" class="headerlink" title="产生式规则表示法"></a>产生式规则表示法</h4><ul>
+<li><p>可以看成断言是一个语言变量的值或是多个语言变量间的关系的陈述句，语言变量的值或语言变量间的关系可以使一个词，不一定是数字</p>
+</li>
+<li><p>基本特征：</p>
+<ul>
+<li>数据库：存放构成产生式的基本元素，又是产生式的作用对象</li>
+<li>一组规则：产生式本身</li>
+<li>一个解释程序：从匹配成功的规则中选出一个加以执行</li>
+</ul>
+</li>
+<li><p>基本结构：</p>
+<ul>
+<li>工作存储器(数据库)：存放当前已知的数据，包括推理过程中形成的中间结论。</li>
+<li>产生式规则：每条产生式分左右两个部分，左部表示激活条件，右部表示产生结果。</li>
+<li>规则解释程序：<ul>
+<li>匹配器：判断规则条件是否成立</li>
+<li>冲突消解器：选择可调用的规则</li>
+<li>解释器：执行规则的动作。在满足结束条件时终止产生式系统</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>推理方法</p>
+<p>正向、反向、双向、与或树</p>
+<ul>
+<li>正向：从已知事实出发，逐步推导出最后结论。</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>反向：首先提出假设，然后验证这些假设的真假性，找到假设成立的所有证据或事实。</li>
+<li><p>双向：既自顶向下、又自底向上作双向推理，直至某个中间界面上两方向结果相符便成功结束。</p>
+</li>
+<li><p>优点：</p>
+<ul>
+<li>模块性：规则与规则之间相互独立</li>
+<li>灵活性：知识库易于增加、修改、删除</li>
+<li>自然性：方便地表示专家的启发性知识与经验</li>
+<li>透明性：易于保留动作所产生的变化、轨迹</li>
+</ul>
+</li>
+<li><p>缺点：</p>
+<ul>
+<li>知识库维护难</li>
+<li>效率低。为了模块一致性</li>
+<li>理解难。由于规则一致性彼此之间不能调用</li>
+</ul>
+</li>
+</ul>
+<h4 id="语义网络表示法"><a href="#语义网络表示法" class="headerlink" title="语义网络表示法"></a>语义网络表示法</h4><ul>
+<li>表示形式：每一个要表达的事实用一个“结点”表示，而事实之间用“弧线”表示。即，有向图表示的三元组（结点1，弧，结点2）连接而成。</li>
+<li>类属关系：类属关系是指有<strong>共同属性</strong>的不同事物间的分类关系、成员关系或实例关系<ul>
+<li>常见属性：<ul>
+<li>A-Kind-of  表示一个事物是另一个事物的一种类型</li>
+<li>A-member-of  表示一个事物是另一个事物的成员</li>
+<li>Is-a   表示一个事物是另一个事物的实例</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>包含关系：也称聚类关系，是指具有组织或结构特征的“部分与整体”之间的关系。（包含关系一般不具备属性的继承性）<ul>
+<li>常见属性：<ul>
+<li>Part-of 一个事物是另一个事物的一部分</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>属性关系：事物和其他属性之间的关系<ul>
+<li>常见属性：<ul>
+<li>Have   表示一个节点具有另一个节点所描述的属性 </li>
+<li>Can  一个节点能做另一个节点的事</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>位置关系：不同事物在位置方面的关系<ul>
+<li>常见位置关系：Located-on/-at/-under/inside/outside</li>
+</ul>
+</li>
+<li>相近关系：不同事物在形状、内容等方面相似和接近<ul>
+<li>常用相近关系：Similar-to 相似  Near-to 接近</li>
+</ul>
+</li>
+<li>时间关系：指不同事件在其发生时间方面的先后关系<ul>
+<li>常用时间关系：Before 表示一个事件在另一个事件之前发生  After 一个事件在一个事件之后发生</li>
+</ul>
+</li>
+<li>多元逻辑关系：</li>
+<li>推理方法<ul>
+<li>网络匹配：结构上的匹配，包括结点和弧的匹配</li>
+<li>继承推理：利用具有继承性质的语义联系建立一些并不一定显示存在于语义网络知识库中的网络结构。</li>
+</ul>
+</li>
+<li>结论：<ul>
+<li>语义网络图的好处是直观、清晰</li>
+<li>缺点是表达范围有限。</li>
+</ul>
+</li>
+<li>特点：<ul>
+<li>结构性好：语义网络是一种结构化的知识表示方法，能够把事物的属性和事物间的各种语义关系显示地表示出来</li>
+<li>联想性：语义网络作为人类联想记忆模型提出来，强调的就是事物之间的语义关系</li>
+<li>自然性：语义网络实际上是一个带有标示的有向图，可直观的把事物的属性及事物间的语义联系表示出来，便于理解</li>
+</ul>
+</li>
+</ul>
+<h4 id="框架表示"><a href="#框架表示" class="headerlink" title="框架表示"></a>框架表示</h4><ul>
+<li>定义：框架是由若干个结点和关系（统称槽）构成的网络。是语义网络更一般化形式的一种结构。同语义网络没有本质区别。</li>
+<li>表示形式：框架名、槽名、侧面、值</li>
+<li>推理方法：没有固定的推理机理。遵循匹配和继承的原理</li>
+<li>软件开发过程中框架理论的使用<ul>
+<li>人们将相同类型问题的解决途径进行抽象，抽取成一个应用框架Framework，提供一套明确机制，让开发人员很容易的扩展和控制整个Framework开发上的结构。</li>
+<li>为某一特定目的实现一个基本的、可执行的架构。包含了应用程序从启动到运行的主要流程，流程中无法确定的步骤留给用户来实现。程序运行时框架系统自动调用用书实现的功能组件。系统的行为是主动的。</li>
+</ul>
+</li>
+<li>性质：<ul>
+<li>对事物进行描述。</li>
+<li>通过它对一些从感官中没有直接得到的信息进行预测。</li>
+<li>可以利用框架知识进行判断推理</li>
+<li>可以通过来认识某一类事物</li>
+<li>可以通过实例修正框架对某些事物的不完整描述</li>
+</ul>
+</li>
+</ul>
+<h4 id="脚本表示"><a href="#脚本表示" class="headerlink" title="脚本表示"></a>脚本表示</h4><ul>
+<li>脚本方式式采用一个专用的框架来表示特定领域的知识</li>
+<li>脚本通过元语作为槽名来代表要表示的对象的基本行为</li>
+<li>有点像电影剧本</li>
+</ul>
+<h2 id="产生式系统"><a href="#产生式系统" class="headerlink" title="产生式系统"></a>产生式系统</h2><h3 id="产生式系统的基本组成"><a href="#产生式系统的基本组成" class="headerlink" title="产生式系统的基本组成"></a>产生式系统的基本组成</h3><h4 id="组成三要素"><a href="#组成三要素" class="headerlink" title="组成三要素(*)"></a>组成三要素(*)</h4><ol>
+<li>一个综合<strong>数据库</strong>—— 存放信息</li>
+<li>一组产生式<strong>规则库</strong>—— 知识</li>
+<li>一个控制系统<strong>推理机</strong>—— 规则的解释或执行程序（控制策略、推理策略）</li>
+</ol>
+<p>产生式系统定义：把一组产生式放在一起，让它们相互配合，协同工作，一个产生式生成的结论可以供另一个产生式作为前提使用，以这种方式求得解决问题的系统叫作产生式系统。</p>
+<h4 id="产生式系统的特点"><a href="#产生式系统的特点" class="headerlink" title="产生式系统的特点"></a>产生式系统的特点</h4><ul>
+<li>数据驱动：从已知事实出发</li>
+<li>模块化：知识的无序性</li>
+<li>控制系统与问题无关</li>
+<li>类似人类认识的过程：规则似乎式模拟人类如何解决问题的自然方法</li>
+</ul>
+<h4 id="产生式系统的类型"><a href="#产生式系统的类型" class="headerlink" title="产生式系统的类型(*)"></a>产生式系统的类型(*)</h4><ul>
+<li>正向推理：从已知事实出发，通过规则库求得结论，也称自底向上或者数据驱动的方式。F规则</li>
+<li>反向推理：从目标出发，反向使用规则，求得已知事实，也称自顶向下推理方式或者目标驱动方式。B规则</li>
+<li>双向推理：既自顶向下又自底向上，直至达到某个终结环节两个方向的结果相符边成功结束。</li>
+</ul>
+<h4 id="产生式系统总结"><a href="#产生式系统总结" class="headerlink" title="产生式系统总结"></a>产生式系统总结</h4><ul>
+<li>产生式系统是最简单的知识表示方法，也是应用最广泛的知识表示方法，适于表示各种启发式的经验性关联规则，领域专家无需知识工程工具就能够把自己的知识转化成IF-THEN规则</li>
+<li>规则选择效率较低，控制策略不灵活，知识表示形式单一</li>
+</ul>
+<h3 id="产生式系统的搜索策略"><a href="#产生式系统的搜索策略" class="headerlink" title="产生式系统的搜索策略"></a>产生式系统的搜索策略</h3><h4 id="产生式系统的搜索策略-1"><a href="#产生式系统的搜索策略-1" class="headerlink" title="产生式系统的搜索策略"></a>产生式系统的搜索策略</h4><ol>
+<li><strong>盲目搜索</strong>：也称为无信息搜索，即只按预定的控制策略进行搜索，在搜索过程中获得的中间信息不用来改进控制策略。</li>
+<li><strong>启发式搜索</strong>：在搜索中加入了与问题有关的启发性信息，用于指导搜索朝着最有希望的方向进行，加速问题的求解过程并找到最优解。</li>
+</ol>
+<h4 id="图搜索策略"><a href="#图搜索策略" class="headerlink" title="图搜索策略"></a>图搜索策略</h4><ul>
+<li>回溯搜索：只保留从初始状态到当前状态的一条路径</li>
+<li>图搜索：保留所有已搜索过的路径</li>
+</ul>
+<h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><ul>
+<li>节点深度： 根节点深度 = 0  ，其他节点深度 = 父节点深度 + 1</li>
+<li>路径： 设一节点序列为$(n_0 ,n_1 ,……,n_k)$，对于i = 1,…,k，若节点n~i-1~具有一个后继节点n~i~，则该序列称为从n~0~到n~k~的路径</li>
+<li>路径的耗散值： 一条路径的耗散值等于连接这条路径各节点间所有耗散值的总和。用$C(n_i,n_j)$表示从n~i~到n~j~的路径的耗散值</li>
+<li>扩展一个节点： 生成出该节点所有后继节点，并给出它们之间的耗散值。$Expand(n)$。</li>
+<li>辅助存储表：open表：未扩展节点表，closed表：已扩展节点表 </li>
+</ul>
+<h4 id="无信息图搜索过程"><a href="#无信息图搜索过程" class="headerlink" title="无信息图搜索过程"></a>无信息图搜索过程</h4><ul>
+<li>深度优先搜索：<ul>
+<li>栈实现</li>
+<li>一般不能保证找到最优解。当深度限制不合理时，可能找不到解。可将算法改为可变深度限制。最坏的情况搜索空间等同于穷举</li>
+<li>缺点：如果目标节点不在搜索所进入的分支上而该分支又是一个无穷分支，则就得不到解。</li>
+<li>优点：如果目标节点恰好在搜索所进入的分支上，则可以较快地得到解</li>
+</ul>
+</li>
+<li>宽度优先搜索：<ul>
+<li>队列实现</li>
+<li>当问题为单位耗散值时，且问题有解时，一定能找到最优解</li>
+<li>方法与问题无关，具有通用性。</li>
+<li>效率较低，属于图搜索方法</li>
+<li>缺点：当目标节点距离初始节点较远时会产生许多无用的节点，搜索效率低</li>
+<li>优点：只要问题有解，则总可以得到解，是完备的，而且是最短路径的解。</li>
+</ul>
+</li>
+<li>回溯与宽度优先方法结合<ul>
+<li>目的：解决宽度优先方法的空间问题和回溯方法不能找到最优解的问题</li>
+<li>思想：首先个给回溯法一个比较小的深度限制，然后逐渐增加深度限制，直到找到解或遍历所有分支</li>
+</ul>
+</li>
+</ul>
+<h4 id="启发式图搜索"><a href="#启发式图搜索" class="headerlink" title="启发式图搜索"></a>启发式图搜索</h4><p>利用知识来引导搜索，达到减小搜索范围，降低问题复杂度的目的。</p>
+<ol>
+<li><p>启发信息的强度 </p>
+<ul>
+<li>强：降低搜索工作量，但可能导致找不到最优解。</li>
+<li>弱：一般会使工作量降低不如强的多，极限情况下变为盲目搜索，但是可能会找到最优解</li>
+</ul>
+</li>
+<li><p>启发信息</p>
+<p>引入启发知识，在保证找到最佳解的情况下，尽可能减少搜索范围，提高搜索效率。</p>
+</li>
+<li><p>基本思想</p>
+<p>定义启发函数$f$ ，对当前搜索状态进行评估，找出一个最有希望的节点来扩展。</p>
+</li>
+<li><p>A算法与A*算法定义</p>
+<p>或图通常采用如下形式的<strong>估计函数</strong>时，称为A算法。</p>
+<p>$f(n)=g(n)+h(n)$</p>
+<p>$g(n)$表示从<strong>s到n点费用的估计</strong>，因为n为当前节点，搜索已达到n点，所以g$(n)可$</p>
+<p>计算出。</p>
+<p>$h(n)$表示从<strong>n到目标接近程度的估计</strong>，因为尚未找到解路径，所以$h(n)$仅仅是估计值。</p>
+</li>
+<li><p><strong>A算法(最好优先搜索)</strong>，适用于<strong>或图</strong>搜索。在所有待扩展结点中优先选择最有希望的结点进行扩展。在搜索过程中如果早期选择了一个错误，最好优先搜索提供了<strong>修改的机会</strong>，这是最好优先搜索算法的关键。 但是<strong>A算法并未显示地给出如何定义<u>启发函数</u>，A*算法就是对A算法的启发函数加上限制后的一种算法</strong>。</p>
+</li>
+</ol>
+<h4 id="符号定义"><a href="#符号定义" class="headerlink" title="符号定义"></a>符号定义</h4><ul>
+<li>$g(n)$ 从S到n的最短路径的<strong>耗散值</strong></li>
+<li>$h(n)$ 从n到G的最短路径的<strong>耗散值</strong></li>
+<li>$f(n)=g(n)+h(n)$ 从S经过n到G的最短路径<strong>耗散值</strong></li>
+<li>$g’(n), h’(n), f’(n)$ 分别式$g(n), h(n), f(n)$的估计值</li>
+</ul>
+<h4 id="算法特征"><a href="#算法特征" class="headerlink" title="算法特征"></a>算法特征</h4><p>$f(n)=g(n)+h(n)$ </p>
+<ol>
+<li>若令$h(n)\equiv0$ ，则A算法相当于宽度优先搜索，因为上一层节点的搜索费用一般比下一层的小</li>
+<li>若$g(n)\equiv 0$ ，则相当于最佳优先搜索算法</li>
+<li>$g(n)\equiv h(n)\equiv0$ 相当于随机算法</li>
+<li><strong>特别是当要求 $h(n) \le h’(n)$，就称为这种A算法为A* 算法</strong></li>
+</ol>
+<h4 id="A-算法性质"><a href="#A-算法性质" class="headerlink" title="A* 算法性质"></a>A* 算法性质</h4><p>定理1： 对有限图，如果从初始节点s到目标节点t有路径存在，则算法A一定成功</p>
+<p>在A算法中，如果满足条件：</p>
+<ol>
+<li>g(n)是对g*(n)的估计 g(n)&gt;0 </li>
+<li>h(n)≤h*(n)</li>
+</ol>
+<p>则A算法称为A*算法</p>
+<h3 id="产生式系统-1"><a href="#产生式系统-1" class="headerlink" title="产生式系统"></a>产生式系统</h3><ul>
+<li>[ ] 与或图的搜索及与或图启发式搜索算法AO*</li>
+<li>[ ] 与或图搜索中的能解节点和不能解节点</li>
+<li>[ ] 博弈树搜索</li>
+<li>[ ] α-β剪枝的条件</li>
+<li>[ ] 使用α-β剪枝规则完成博弈树搜索的剪枝</li>
+</ul>
+<h4 id="与或图表示问题"><a href="#与或图表示问题" class="headerlink" title="与或图表示问题"></a>与或图表示问题</h4><ul>
+<li>与或图是一个超图，节点间通过连接符连接</li>
+<li>K-连接符</li>
+<li>$K(n,N) = C_n + k(n_1,N)+…+k(n_i,N)$</li>
+<li>其中N为终结节点 ， C~n~为连接符的耗散值</li>
+</ul>
+<h5 id="能解节点"><a href="#能解节点" class="headerlink" title="能解节点"></a>能解节点</h5><ul>
+<li>终节点是能解节点</li>
+<li>若非终节点有“或”子节点时，当前仅当至少有一能解解时，该非终节点能解</li>
+<li>若非终节点有“与”子节点时，当且仅当其子节点均能解时，该非终节点才能解。</li>
+</ul>
+<h5 id="不能解节点"><a href="#不能解节点" class="headerlink" title="不能解节点"></a>不能解节点</h5><ul>
+<li>没有后裔的非终节点式不能解节点</li>
+<li>若非终节点有“或”子节点，当前仅当所有子节点均不能解，该非终节点不能解</li>
+<li>若非终节点有“与”子节点，当至少有一个子节点不能解时，该非终节点才能解</li>
+</ul>
+<h4 id="与或图启发式搜索算法AO"><a href="#与或图启发式搜索算法AO" class="headerlink" title="与或图启发式搜索算法AO*"></a>与或图启发式搜索算法AO*</h4><ul>
+<li><p>AO* 算法两个过程</p>
+<ul>
+<li><p>图生成过程，即扩展节点（利用起发信息进行）</p>
+</li>
+<li><p>计算耗散值的过程（根据与或关系）</p>
+</li>
+</ul>
+</li>
+<li><p>具有最小耗散值的解图称为最佳解图，其值也用h*(n)表示</p>
+</li>
+</ul>
+<h4 id="博弈树搜索"><a href="#博弈树搜索" class="headerlink" title="博弈树搜索"></a>博弈树搜索</h4><ul>
+<li>博弈问题特点：<ul>
+<li>双人对弈、轮流走步</li>
+<li>信息完备，双方所得到的信息一样</li>
+<li>零和，对一方有利的棋，对另一方不利，不存在对双方有利或无利的棋</li>
+<li>博弈过程寻找对数必败态的过程</li>
+<li>双方无法干预对方选择</li>
+<li>可使用图搜索，但是效率很低</li>
+</ul>
+</li>
+<li><p>博弈实例：</p>
+<ul>
+<li>下棋双方对立</li>
+<li>一方为正方，MAX节点</li>
+<li>另一方反方，MIN节点</li>
+<li>正方反方交替走步，MAX节点MIN节点交替出现</li>
+<li>图中所有终结点均表示该选手必输的情况，取胜方的目标式设法使棋局发展为结束在对方走步时的终结点上。</li>
+</ul>
+</li>
+<li><p>博弈策略考虑问题：</p>
+<ul>
+<li>对MIN走后的每一个MAX结点，必须证明MAX对MIN可能走的每一个棋局对弈后能获胜，即MAX必须考虑应付MIN的所有招法。因此MAX结点可看成<strong>与结点</strong>。</li>
+<li>对MAX走后的每一个MIN结点，只需证明MAX有一步能走赢就可以，即MAX只要考虑走出一步棋使MIN无法招架。因此MIN结点可看成<strong>或节点</strong>。</li>
+</ul>
+</li>
+<li><p>极大极小搜索过程—-对各个局面进行评估</p>
+<ul>
+<li>评估目的：对后面的状态提前考虑，并且以各种状态的评估值为基础做出最好的选择</li>
+<li>评估方法：用评价函数对棋局进行评估<ul>
+<li>赢的评估值设为+∞，输的评估值设为-∞，平局的评估值设为0</li>
+</ul>
+</li>
+<li>评估的标准：由于下棋的双方是对立的，只能选择其中一方为评估的标准方</li>
+<li>由于正方和反方交替走步，因此MAX节点和MIN节点会交替出现。</li>
+<li>正方（MAX节点）从所有子节点中，选取具有<strong>最大评估值的节点</strong>。</li>
+<li>反方（MIN节点）从所有子节点中选取具有<strong>最小评估值的节点</strong></li>
+<li>反复进行选取，可以得到双方各个节点的评估值</li>
+</ul>
+</li>
+</ul>
+<h4 id="alpha-beta-搜索过程"><a href="#alpha-beta-搜索过程" class="headerlink" title="$\alpha-\beta$搜索过程"></a>$\alpha-\beta$搜索过程</h4><p>在极小极大搜索过程中，必须求出所有终端节点的评估值，当考虑的棋步比较多时，计算量会大大增加。为提高搜索效率，引入了通过对评估值的上下限进行估计，从而减少需进行评估的节点范围的$\alpha-\beta$剪枝法</p>
+<ul>
+<li><p>Max节点的评估下限值 $\alpha$</p>
+<p>作为正方出现的Max节点，假设它的MIN子节点有N个，那么当它的第一个MIN子节点的评估值为$\alpha$时，对于其他子节点</p>
+<ul>
+<li>有高过$\alpha$的，就取最高的值作为MAX节点的评估值</li>
+<li>没有高估的，则该MAX的节点评估值为$\alpha$</li>
+<li>总之Max节点的估计值不会低于$\alpha$，$ \alpha$称为该MAX节点的评估下限值</li>
+</ul>
+</li>
+<li><p>MIN节点的评估上限值$\beta$</p>
+<p>作为反方出现的MIN节点，假设它的MAX子节点有N个，那么当它的第一个MAX子节点的评估值为$\beta$时，对于其他子节点</p>
+<ul>
+<li>有低于$\beta$的，就取那个低于$\beta$的值作为该MIN节点的估计值</li>
+<li>没有低于的，则该MIN节点的估计值取$\beta$</li>
+<li>总之，该MIN节点的评估值不会高过$\beta$，这个$\beta$就称为该MIN节点的评估上限值</li>
+</ul>
+</li>
+<li><p>$\alpha$剪枝法</p>
+<p>设MAX节点的下限为$\alpha$，则其所有MIN子节点中，其评估值的$\beta$上限小于等于$\alpha$的节点，其以下部分的搜索都可以停止了，即对这部分进行$\alpha$剪枝。</p>
+</li>
+<li><p>$\beta $剪枝法</p>
+<p>设MIN节点的上限为$\beta$，则其所有的MAX子节点中，其评估值的$\alpha$下限大于等于 $\beta$的节点，其以下部分的搜索都可以停止了，即对这部分进行$\beta$剪枝。</p>
+</li>
+<li><p>MAX节点的下界为$\alpha$，MIN节点的上界为$\beta$。则剪枝的条件为：</p>
+<ul>
+<li>祖先节点的$\alpha$值 $\ge$ 后辈节点的$\beta$值时，$\alpha$剪枝</li>
+<li>祖先节点的$\beta$值$ \le $后辈界节点的$\alpha$值时，$\beta$剪枝</li>
+</ul>
+</li>
+</ul>
+<h2 id="经典逻辑理论"><a href="#经典逻辑理论" class="headerlink" title="经典逻辑理论"></a>经典逻辑理论</h2><ol>
+<li><p>归结原理</p>
+<p>一种定理证明方法，从理论上解决了定理证明问题。</p>
+<p>在有限步内给予判定。</p>
+</li>
+<li><p>子句和子句集</p>
+<p>子句：</p>
+<ul>
+<li>无量词约束</li>
+<li>元素只是文字的析取</li>
+<li>否定符只作用于单个文字</li>
+<li>元素间默认为合取</li>
+</ul>
+<p>子句集：合取范式形式下的子命题（元素）的集合</p>
+<p>文字：不含任何连接词的谓词公式</p>
+<p>子句：一些文字的析取（谓词的和）</p>
+<p>子句集求取： G ——&gt;SKOLEM范式 ——&gt;消去存在变量——&gt;以 ， 取代 </p>
+</li>
+<li><p>公式G和由公式求取的子句集的关系</p>
+</li>
+<li><p>归结的一般过程</p>
+<ul>
+<li>将命题写成合取范式</li>
+<li>求出子句集</li>
+<li>对子句集使用归结推理规则</li>
+<li>归结式作为新子句参加归结</li>
+<li>归结式为空，s不可满足的（矛盾），原命题成立</li>
+</ul>
+</li>
+<li><p>置换/合一，最一般合一者</p>
+<p>置换：在一个谓词公式中用置换项去置换变量，形如${t_1/x_1,t_2/x_2,…,t_n/x_n}$的有限集合。其中x是变量，t是不同于x的项；$t_i/x_i$表示用$t_i$置换$x_i$，并且要求$t_i$与$x_i$不相同。</p>
+<p>合一：寻找相对变量的置换，使两个谓词公式一致。设有公式集$F={F_1,F_2,…,F_n}$，若存在一个置换$\theta$可使$F_1\theta = F_2\theta=…=F_n\theta$，则称$\theta$是F的一个合一。一个公式集的合一不唯一</p>
+</li>
+<li><p>Skolem标准型（斯克林范式）</p>
+<ul>
+<li>前束范式：公式A是一个前束范式，如果A中的一切量词都位于该公式的最左边（不含否定词），且这些量词的辖域都延伸到公式末端。</li>
+<li>把所有的量词都提到前面去，然后消掉所有量词<ul>
+<li>原则：消去存在量词，略去全称量词</li>
+<li>左边有全称量词的存在量词，消去时应该改写成为全称量词的函数；如没有则改写成常量。</li>
+</ul>
+</li>
+<li>SKOLEM定理：谓词逻辑的任意公式都可以化为与之等价的前束范式，但是前束范式不唯一</li>
+<li>SKOLEM标准形：消去量词后的谓词公式</li>
+</ul>
+</li>
+<li><p>用归结法证明问题</p>
+</li>
+<li><p>归结过程的控制策略及策略的完备性</p>
+<ul>
+<li>解决问题：归结方法的知识爆炸</li>
+<li>控制策略的目的：归结点尽量少</li>
+<li>控制策略的原则：给出控制策略，以使仅对选择合适的子句间方可做归结，避免多余的、不必要的归结式出现。或者说，少做些归结仍能导出空子句。</li>
+<li>采用支撑集 </li>
+<li>线性归结：线性归结策略首先从子句集中选取一个称作顶子句的子句C0开始作归结。归结过程中所得到的归结式Ci立即同另一子句B_i进行归结得归结式Ci+1</li>
+<li>单元归结：单元归结策略要求在归结过程中，每次归结都有一个子句是单元子句（只含一个文字的子句）或单元因子。显而易见，此方法可以简单地削去另一个非单子句中的一个因子，使其长度减少，构成简单化，归结效率较高。</li>
+<li>输入归结</li>
+</ul>
+</li>
+</ol>
+<h2 id="不确定性推理模型"><a href="#不确定性推理模型" class="headerlink" title="不确定性推理模型"></a>不确定性推理模型</h2><ol>
+<li>Bayes贝叶斯网<ul>
+<li>一系列变量的联合概率分布的图形表示；一个表示变量之间的相互依赖关系的数据结构；图论与概率论的完美结合</li>
+<li>贝叶斯网就是一个在弧的连接关系上加入连接强度的因果关系网络。是一种变形的语义网络（特殊的有向无环图）DAG+CPT</li>
+<li>推理<ul>
+<li>因果推理是从起因到效果。 主要操作：按照给定证据的V和它的所有双亲的联合概率，重新表达给定证据的寻问结点的所求条件概率。</li>
+<li>诊断推理是从效果到起因。 主要思想：利用贝叶斯规则将诊断推理转化为因果推理</li>
+<li>辩解推理：因果推理与诊断推理结合使用。推理使用嵌入在一个诊断推理中的因果推理。</li>
+</ul>
+</li>
+<li>计算结果的语义解释（*）</li>
+</ul>
+</li>
+<li>主观Bayes贝叶斯网<ul>
+<li>主观Bayes：<ul>
+<li>贝叶斯规则 $P(B|A)=\frac{P(A|B)P(B)}{P(A)}$</li>
+<li>思路：先定好怎么办，再凑公式</li>
+<li>LS：充分似然率  $LS = \frac{O(B|A)}{O(B)}=\frac{P(A|B)}{P(A|-B)}$，A为真时对B的影响</li>
+<li>LN：必要似然率 $LN = \frac{O(B|-A)}{O(B)}=\frac{P(-A|B)}{P(-A|-B)}$，A为假时对B的影响</li>
+</ul>
+</li>
+<li>几率函数O(x) ：$O(x)=\frac{P(x)}{1-P(x)}$<ul>
+<li>P(x)=0，O(x)=0 假；逻辑不发生</li>
+<li>P(x)=0.5，O(x)=1 可能发生/不发生</li>
+<li>P(x)=1，O(x)=∞ 真；逻辑发生</li>
+<li>$O(B|A)=LS*O(B)$</li>
+<li>$O(B|-A) =LN*O(B)$</li>
+</ul>
+</li>
+<li>取值规则<ul>
+<li>LS , LN ≥ 0，不独立。都在[0,∞)</li>
+<li>LS , LN 不能同时&gt;1 或 &lt;1 。（证明）</li>
+<li>LS , LN 可同时 = 1</li>
+</ul>
+</li>
+<li>计算A1,A2必然发生时，求结论B1的更新值<ul>
+<li>A 必然出现时 P(A)=1:<ul>
+<li>$O(B|A) =LS*O(B)$</li>
+<li>$O(B|-A) =LN*O(B)$</li>
+<li>$P(A)=\frac{O(A)}{1+O(A)}$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>确定性方法-CF模型<ul>
+<li>规则A —B，可信度表示为CF(B,A)：<ul>
+<li>$CF(B,A)=MB(B,A)-MD(B,A)$</li>
+<li>CF是由证据A得到的假设B的确定性因子</li>
+<li>MB是证据A得到假设B的<strong>信任增加度量</strong></li>
+<li>MD是证据A得到的假设B的<strong>不信任增加度量</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>证据理论（DS）</li>
+</ol>
+<h2 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h2><ol>
+<li><p>概念</p>
+</li>
+<li><p>机器学习可以分为几类</p>
+</li>
+<li><p>机器学习系统</p>
+</li>
+<li><p>实例学习及实例学习的两个空间模型</p>
+<ol>
+<li>例子空间(实例)—&gt;解释例子(泛化)—&gt;规则空间(概念)—&gt;选择例子(例化)</li>
+<li>例子空间<ul>
+<li>示教例子的质量: 不能有错，同时提供正例和反例，逐步分批由选择地送入。</li>
+<li>选择的条件：最有力地划分规则空间；证实肯定假设规则的集合；否定假设规则的集合。</li>
+</ul>
+</li>
+<li>解释例子(泛化)<ul>
+<li>解释例子的目的是从例子中提出用于搜索空间的信息。把示教例子变换成易于进行符号归纳的形式</li>
+</ul>
+</li>
+<li>规则空间(最根本，真正学习的部分)<ul>
+<li>定义：一套符号来规定表示规则的算符、术语，所有的描述都在其中。</li>
+<li>归纳方法：</li>
+<li>对规则空间的要求：<ul>
+<li>规则空间表达能力与规则空间搜索难度</li>
+<li>表示和例子的一致</li>
+<li>引入新术语（规则空间）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>归纳学习及学习的偏置：变形空间与候选消除学习</p>
+</li>
+<li><p>决策树学习方法，神经网络学习方法(不要求计算)</p>
+<ol>
+<li><p>决策树</p>
+<p>一种描述<u><strong>概念空间</strong></u>的有效的归纳推理办法。基于决策树的学习方法可以进行不相关的多概念学习，具有简单快捷的优势，已经在各个领域取得广泛应用。</p>
+<ol>
+<li>基本概念</li>
+</ol>
+<ul>
+<li><p>决策树的每一层节点依照某一属性值向下分为子节点，待分类的实例在每一节点处与该节点相关的属性值进行比较，根据不同的比较结果朝相应的子节点扩展，这一过程在到达决策树的叶节点时结束，此时得到结论。</p>
+</li>
+<li><p>从根节点到叶节点的每一条路经都对应着一条合理的规则，规则间各个部分（各个层的条件）的关系是合取关系。整个决策树就对应着一组析取的规则。</p>
+</li>
+<li><p><u><strong>决策树学习算法的最大优点是，它可以自学习。</strong></u>在学习的过程中，不需要使用者了解过多背景知识，只需要对训练例子进行较好的标注，就能够进行学习。如果在应用中发现不符合规则的实例，程序会询问用户该实例的正确分类，从而生成新的分枝和叶子，并添加到树中。</p>
+</li>
+<li><p>树是由<u><strong>节点</strong></u>和<strong><u>分枝</u></strong>组成的层次数据结构。<strong>节点</strong>用于存贮信息或知识，<strong>分枝</strong>用于连接各个节点。树是图的一个特例，图是更一般的数学结构，如贝叶斯网络。</p>
+</li>
+<li><p>决策树是<u><strong>描述分类过程的一种数据结</strong></u>构，从上端的根节点开始，各种分类原则被引用进来，并依这些分类原则将根节点的数据集划分为子集，这一划分过程直到某种约束条件满足而结束</p>
+</li>
+<li><p><img src="http://oo9y7ylu4.bkt.clouddn.com/image/knowledge/%E5%86%B3%E7%AD%96%E6%A0%91.png" alt="决策树图"></p>
+</li>
+<li><p>可以看到，一个决策树的内部结点包含学习的实例，每层分枝代表了实例的一个属性的可能取值，叶节点是最终划分成的类。如果判定是二元的，那么构造的将是一棵二叉树，在树中每回答一个问题就降到树的下一层。</p>
+</li>
+<li><p>判定结构可以机械的转变成产生式规则。可以通过对结构进行广度优先搜索，并在每个节点生成“IF…THEN”规则来实现。如图的决策树可以转换成下规则：</p>
+<pre><code>IF “个子大”THEN
+
+       IF “脖子短”THEN 
+
+                 IF “鼻子长”  THEN可能是大象
+</code></pre></li>
+</ul>
+<ol>
+<li><p>构造决策树(四个问题)</p>
+<ul>
+<li><p>收集待分类的数据，这些数据的所有属性应该是完全标注的。</p>
+</li>
+<li><p>设计分类原则，即数据的哪些属性可以被用来分类，以及如何将该属性量化。</p>
+</li>
+<li><p>分类原则的选择，即在众多分类准则中，每一步选择哪一准则使最终的树更令人满意。</p>
+</li>
+<li><p>设计分类停止条件，实际应用中数据的属性很多，真正有分类意义的属性往往是有限几个，因此在必要的时候应该停止数据集分裂：例如</p>
+<p>​    该节点包含的数据太少不足以分裂，</p>
+<p>​    继续分裂数据集对树生成的目标(例如ID3中的熵下降准则)没有贡献，</p>
+<p>​    树的深度过大不宜再分。</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>人工神经网络(ANNs)</p>
+<ol>
+<li><p>概述</p>
+</li>
+<li><p>神经网络表示-<strong><u>非图形符号表示</u></strong></p>
+<ul>
+<li><p>决策树是一种图形符号表示</p>
+<p>– 能表示<strong><u>与或规则</u></strong></p>
+<p>– 形象直观地<strong><u>图形符号</u></strong></p>
+</li>
+<li><p>ANNs非图形符号表示法</p>
+<p>– 一种<strong><u>函数表示法</u></strong>；</p>
+<p>– 从大量的数据中<strong><u>抽取规则函数</u></strong>（或者根本无法表示的识别能力)</p>
+</li>
+</ul>
+</li>
+<li><p>ANN表示的信息</p>
+<p>所学的概念是一种非精确表示</p>
+</li>
+<li><p>ANN的学习</p>
+<ul>
+<li>提供的训练阳历应是数字信息，且有明确的概念</li>
+<li>ANN训练完毕后用于区分其他信息</li>
+<li>ANN解决问题的步骤：<ol>
+<li>选择确定<strong><u>网络结构</u></strong>：输入层、输出层、隐含层的结点数码以及连接权重</li>
+<li>选择<strong><u>学习算法</u></strong></li>
+<li><strong><u>训练神经网络</u></strong>直至能输出正确的结构</li>
+<li><strong><u>使用神经网络</u></strong></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>网络结构</p>
+<ul>
+<li><p>双层网络/多层网络</p>
+</li>
+<li><p>全连接/部分连接神经网络</p>
+</li>
+<li><p>前馈神经网络—— BP算法</p>
+<p>计算每个单元的误差，首先计算输出单元的误差；利用<u><strong>输出单元的误差再计算上一层单元的误差</strong></u>，依次向上传播，因此又称<strong><u>反向传播</u></strong>，又称<strong><u>逆推学习算法</u></strong>，简称BP算法。</p>
+</li>
+<li><p>随机神经网络—— 模拟退火算法</p>
+</li>
+<li><p>自组织特征映射神经网络</p>
+</li>
+</ul>
+</li>
+<li><p>学习速率</p>
+<ul>
+<li>ƞ称作学习速率，一般设定为小数</li>
+<li>学习速率主要用于控制权重的变化</li>
+<li>学习速率ƞ的大小对学习算法的影响：<ul>
+<li>过大会引起飘移</li>
+<li>过小收敛速度太慢，学习效率不高</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>神经网络学习法中学习速率ƞ的概念</p>
+</li>
+<li><p>了解ID3学习算法构建决策树的原理和过程</p>
+<p>采用自顶向下的贪婪搜索遍历可能的决策树空间</p>
+<ol>
+<li>ID3的思想<ul>
+<li><strong>自顶向下</strong>构造决策树</li>
+<li>从“哪一个属性将在树的根节点被测试”开始</li>
+<li>使用统计测试来确定每一个实例属性单独分类训练样例的能力</li>
+</ul>
+</li>
+<li>ID3的过程<ul>
+<li>分类能力最好的属性被选作树的根节点(如年龄、长相、文化程度、收入、工作性质、家庭背景，性别，姓氏等等)</li>
+<li>根节点的每个可能值产生一个分支</li>
+<li>训练样例排列到适当的分支</li>
+<li>重复上述过程</li>
+</ul>
+</li>
+<li>ID3算法<ol>
+<li>随机选择训练实例的子集构成训练窗口</li>
+<li>重复下列步骤：<ol>
+<li>对窗口内的实例集构造其决策树</li>
+<li>寻找决策树的一个反例</li>
+<li>如果反例存在则将其加入到训练窗口中，并转1；否则返回得到决策树</li>
+</ol>
+</li>
+<li>ID3检查所有的候选属性，选择增益最大的属性A作为根节点，形成数。然后对子树C~1~ ,C~2~ ,…,C~m~以同样处理，递归形成决策树。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="计算智能"><a href="#计算智能" class="headerlink" title="计算智能"></a>计算智能</h2><h3 id="遗传算法"><a href="#遗传算法" class="headerlink" title="遗传算法"></a>遗传算法</h3><ol>
+<li><p>算法的思想</p>
+<p>在生物系统中，进化被人误是一种成功的自适应方法，具有很好的健壮性。其主要特点：</p>
+<ol>
+<li>直接对结构对象进行操作，不存在求导和函数连续性的限定。</li>
+<li>具有内在的隐含并行性和更好的全局寻优能力；</li>
+<li>采用概率化的寻优方法，能自动获取和指导优化的搜索空间。</li>
+</ol>
+<p>遗传算法将“优胜劣汰，适者生存”的生物进化原理引入优化参数形成的编码串群体中，按所选择的<strong><u>适应度函数</u></strong>并通过遗传中的<u><strong>复制、交叉及变异</strong></u>对个体进行筛选，<strong>适应度高</strong>的个体被保留下来，组成新的群体，新的群体既继承了上一代的信息，又优于上一代</p>
+</li>
+<li><p>三种基本操作：复制、交叉、变异</p>
+<ol>
+<li>复制：从一个旧种群中选择生命力强的个体位串产生新种群的过程，具有高适应度的位串更有可能在下一代中产生一个或多个子孙。</li>
+<li>交叉：复制操作能从旧种群中选择出优秀者，但不能创造新的染色体。而交叉模拟了生物进化过程中的繁殖现象，通过两个染色体的交换组合，来产生新的优良品种。</li>
+<li>变异：用来模拟生物在自然的遗传环境中由于各种偶然因素引起的基因突变，它以很小的概率随机地改变遗传基因（表示染色体的符号串的某一位）的值。在染色体以二进制编码的系统中，它随机地将染色体的某一个基因由1变成0，由0编程1.</li>
+</ol>
+</li>
+<li><p>适应度函数与轮盘赌算法</p>
+<p>在遗传算法中，衡量个体优劣的尺度是<strong><u>适应度</u></strong>，更具适应度的大小决定某些个体是繁殖或是消亡。</p>
+<p>通常，适应度是费用、赢利、方差等目标的表达式。</p>
+<ol>
+<li><p>统一表达式</p>
+</li>
+<li><p>适应度缩放</p>
+</li>
+<li><p>复制（轮盘选择）</p>
+<ul>
+<li>依次累计群体内各个个体的适应度，得相应的累计值S~i~,最后一个累计值为S~n~</li>
+<li>在[0,S~n~]区间内产生均匀分布的随机数R</li>
+<li>依次用S~i~ 与R相比较，第一个出现S~i~大于或等于R的个体i被选为复制队形</li>
+<li>重复(2),(3)直至满足所需要的个体数目。</li>
+</ul>
+<p>每代群体中，被复制的个体数目由复制概率Pt控制， Pt常取0.1～0.2，也就是说，群体中有90%～80%个体被复制，相应地有10%<br>～20%个体被淘汰，以保持群体大小。</p>
+</li>
+</ol>
+</li>
+<li><p>编码与解码</p>
+<ol>
+<li><p>编码（coding）</p>
+<p>遗传算法首先要对实际问题进行编码，用字符串表达问题。这种字符串相当于遗传学中的染色体。每一代所产生的字符串个体总和称为群体。为了实现方便，字符串长度固定，字符选为0或1。</p>
+<p>遗传算法的工作对象是字符串，因此对字符串的编码有两点要求：</p>
+<ul>
+<li>字符串要反映所研究问题的性质</li>
+<li>字符串的表达要便于计算处理</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>与粒子群算法的相同与不同</p>
+</li>
+</ol>
+<h3 id="群智能"><a href="#群智能" class="headerlink" title="群智能"></a>群智能</h3><ol>
+<li><p>概念，<strong><u>智能源于社会性的相互作用</u></strong></p>
+<p>已有的群智能理论和应用研究证明群智能方法是一种能够有效解决<strong><u>大多数优化问题的新方法</u></strong></p>
+</li>
+<li><p>两大特点：并行性和分布式</p>
+</li>
+<li><p>一种能够有效解决优化问题的方法</p>
+</li>
+<li><p>群智能典型算法</p>
+<ul>
+<li>蚁群算法</li>
+<li>粒子群算法</li>
+<li>鱼群算法</li>
+<li>猴群算法</li>
+</ul>
+</li>
+<li><p>蚁群算法，粒子群算法</p>
+<ol>
+<li><p>蚁群算法</p>
+<ol>
+<li>蚁群算法：</li>
+</ol>
+<p>蚂蚁觅食的过程，随机移动，遇到食物返回的路上分泌信息素（易挥发的化学性物质），关键路径上的信息素浓度相对高。</p>
+<ol>
+<li>蚁群算法原理：<ul>
+<li>基于蚂蚁觅食时最优路径的选择问题，可以构造人工蚁群来解决最优问题</li>
+<li>人工蚁群中把具有最简单功能的工作单元看作蚂蚁</li>
+<li>人工蚂蚁与自然蚁群相似：优先选择信息素浓度大的路径；区别：人工蚂蚁具有一定的记忆能力，能够记忆已经访问过的节点</li>
+<li>人工蚁群在选择吓一跳路径的时候按照一定的算法有意识的寻找最短路径，而不是盲目的。</li>
+</ul>
+</li>
+<li>蚁群算法中的各种行为因子<ul>
+<li>范围</li>
+<li>环境</li>
+<li>觅食规则</li>
+<li>移动规则</li>
+<li>避障规则</li>
+<li>信息素规则</li>
+</ul>
+</li>
+<li>蚁群算法的应用<ul>
+<li>聚类问题</li>
+<li>路由算法设计</li>
+<li>图着色</li>
+<li>车辆调度</li>
+<li>机器人路径规划</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>粒子群算法</p>
+<ol>
+<li><p>粒子群优化算法：</p>
+<p>模拟鸟群或蜂群的觅食行为。基本思想：通过群体中个体之间的协作和信息共享来寻找最优解。</p>
+</li>
+<li><p>粒子群优化算法原理：</p>
+<ul>
+<li>每个飞行的小鸟抽象为一个无质量、无体积的粒子</li>
+<li>每个粒子有一个适应度（评估）函数模拟每只小鸟与食物的距离</li>
+<li>每个粒子有一个速度决定它的飞行方向和距离，初始值可以随机确定</li>
+<li>每一次单位时间的飞行后，所有粒子分享信息，下一步将飞向自身最佳位置（个体极值）和全局最优位置（全局极值）的加权中心</li>
+</ul>
+</li>
+<li><p>粒子群优化算法流程</p>
+<ol>
+<li>初始化一群粒子（群体规模），包括随机的位置和速度</li>
+<li>评价每个粒子的适应度</li>
+<li>对每个粒子更新个体最优位置P~id~</li>
+<li>更新全局最优位置P~gbest~</li>
+<li>根据速度和位置方差更行每个粒子的速度和位置（V~id~和P~id~)</li>
+<li>如果未满足结束条件（通常为满足足够好的适应值或达到设定的最大迭代次数），返回2 </li>
+</ol>
+</li>
+<li><p>与遗传算法的比较</p>
+<ol>
+<li>共性：<ul>
+<li>都属于仿生算法</li>
+<li>都属于全局优化方法</li>
+<li>都属于随机搜索算法</li>
+<li>都隐含并行性</li>
+<li>根据个体的适应信息进行搜索，因此不受函数约束条件的限制，如连续性、可导性等；</li>
+<li>对高位复杂问题，往往会遇到早熟收敛和收敛性能差的缺点，都无法保证收敛到最优点</li>
+</ul>
+</li>
+<li>差异：<ul>
+<li>PSO有记忆，所有粒子都保存较优解的知识，而GA，以前的知识随着种群的改变被改变</li>
+<li>PSO中的粒子是一种单向信息共享机制。而GA中的染色体之间相互共享信息，使得整个种群都向最优区域移动</li>
+<li>GA需要编码和遗传操作，而PSO没有交叉和变异操作，粒子只是通过内部速度进行更行，因此原理更简单、参数更少、实现更容易。</li>
+</ul>
+</li>
+<li>粒子群优化算法的应用<ul>
+<li>巡航导弹的飞行高度进行优化</li>
+<li>邮政投递</li>
+<li>火车及汽车的调度</li>
+<li>港口装卸集装箱</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>人工鱼群算法</p>
+<ol>
+<li><p>人工鱼群算法</p>
+<p>模拟鱼群的觅食行为、集群行为、跟随行为、和随机游动行为。大多数时间，鱼会想有更多食物的方向游动，同事，它们会尽量聚集在一起来并保持和鱼群中心位置的鱼游动方向一致</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>每种算法提出的思想依据与理论基础</p>
+</li>
+<li><p>蚁群算法和粒子群算法应用领域</p>
+</li>
+</ol>
+<h3 id="自然语言处理"><a href="#自然语言处理" class="headerlink" title="自然语言处理"></a>自然语言处理</h3><ol>
+<li>NPL的困难<ul>
+<li>歧义（Ambiguity）<ul>
+<li>注音歧义</li>
+<li>分词歧义</li>
+<li>无法在句子内部解决的歧义</li>
+<li>短语歧义</li>
+</ul>
+</li>
+<li>病构（ill-Formedness）</li>
+<li>重述（Paraphrasing）</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>NPL方法论</p>
+<p>语言处理的科学内容</p>
+</li>
+<li><p>NPL的任务和瓶颈</p>
+<ol>
+<li><p>NLP的性质</p>
+<p>NLP需要的知识非常复杂</p>
+<ul>
+<li>理解语言的过程是动态的，不是静态的</li>
+<li>NLP需要的知识大多是归纳的，不是演绎的</li>
+<li>人也不一定能够做出一致的理解结果，存在Upper Bound</li>
+<li>NLP是一个非确定性过程</li>
+<li>领域词典不充分</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>统计语言模型及解决问题的思想</p>
+<p>|    模型    |    算法     |<br>| :——: | :——-: |<br>|  状态机模型   |   动态编程    |<br>| 形式规则系统模型 |   及其学习    |<br>|   统计模型   | 分类/序列模型算法 |<br>|  向量空间模型  |  最大期望算法   |</p>
+<p>​</p>
+</li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/复习/" rel="tag"># 复习</a>
+          
+            <a href="/tags/人工智能/" rel="tag"># 人工智能</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/05/信息检索专题复习/" rel="next" title="信息检索专题复习">
+                <i class="fa fa-chevron-left"></i> 信息检索专题复习
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/01/Create-reverse-table/" rel="prev" title="Create reverse table">
+                Create reverse table <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://oo9y7ylu4.bkt.clouddn.com/image/blog/headIcon/IMG_7483.jpg"
+               alt="TianyLi" />
+          <p class="site-author-name" itemprop="name">TianyLi</p>
+           
+              <p class="site-description motion-element" itemprop="description">It's a bolg that belongs to a strive programmer</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#人工智能专题复习"><span class="nav-number">1.</span> <span class="nav-text">人工智能专题复习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#知识表示"><span class="nav-number">1.1.</span> <span class="nav-text">知识表示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#表示方法"><span class="nav-number">1.1.1.</span> <span class="nav-text">表示方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#逻辑表示法"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">逻辑表示法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#产生式规则表示法"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">产生式规则表示法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#语义网络表示法"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">语义网络表示法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#框架表示"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">框架表示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#脚本表示"><span class="nav-number">1.1.1.5.</span> <span class="nav-text">脚本表示</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#产生式系统"><span class="nav-number">1.2.</span> <span class="nav-text">产生式系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#产生式系统的基本组成"><span class="nav-number">1.2.1.</span> <span class="nav-text">产生式系统的基本组成</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#组成三要素"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">组成三要素(*)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#产生式系统的特点"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">产生式系统的特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#产生式系统的类型"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">产生式系统的类型(*)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#产生式系统总结"><span class="nav-number">1.2.1.4.</span> <span class="nav-text">产生式系统总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#产生式系统的搜索策略"><span class="nav-number">1.2.2.</span> <span class="nav-text">产生式系统的搜索策略</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#产生式系统的搜索策略-1"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">产生式系统的搜索策略</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图搜索策略"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">图搜索策略</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#无信息图搜索过程"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">无信息图搜索过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#启发式图搜索"><span class="nav-number">1.2.2.5.</span> <span class="nav-text">启发式图搜索</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#符号定义"><span class="nav-number">1.2.2.6.</span> <span class="nav-text">符号定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法特征"><span class="nav-number">1.2.2.7.</span> <span class="nav-text">算法特征</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#A-算法性质"><span class="nav-number">1.2.2.8.</span> <span class="nav-text">A* 算法性质</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#产生式系统-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">产生式系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#与或图表示问题"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">与或图表示问题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#能解节点"><span class="nav-number">1.2.3.1.1.</span> <span class="nav-text">能解节点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#不能解节点"><span class="nav-number">1.2.3.1.2.</span> <span class="nav-text">不能解节点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#与或图启发式搜索算法AO"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">与或图启发式搜索算法AO*</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#博弈树搜索"><span class="nav-number">1.2.3.3.</span> <span class="nav-text">博弈树搜索</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#alpha-beta-搜索过程"><span class="nav-number">1.2.3.4.</span> <span class="nav-text">$\alpha-\beta$搜索过程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#经典逻辑理论"><span class="nav-number">1.3.</span> <span class="nav-text">经典逻辑理论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不确定性推理模型"><span class="nav-number">1.4.</span> <span class="nav-text">不确定性推理模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#机器学习"><span class="nav-number">1.5.</span> <span class="nav-text">机器学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算智能"><span class="nav-number">1.6.</span> <span class="nav-text">计算智能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#遗传算法"><span class="nav-number">1.6.1.</span> <span class="nav-text">遗传算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#群智能"><span class="nav-number">1.6.2.</span> <span class="nav-text">群智能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自然语言处理"><span class="nav-number">1.6.3.</span> <span class="nav-text">自然语言处理</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TianyLi</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("KzDP5NgGACc0bKLgfEtJ8Xrk-gzGzoHsz", "nGixqUVUQJjtTFuvDaoKrMo0");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
