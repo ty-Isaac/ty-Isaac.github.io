@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="Ty_Isaac">
 <meta property="og:description" content="人工智能专题复习Made by ® Isaac. Ty hejizh@sdu.edu.cn 主要复习内容:   [ ] 知识的表示方法（*）    [ ] 搜索技术（*）  盲目搜索方法 ；       启发式搜索方法 与/或图搜索方法；   博弈树搜索方法   [ ] 经典逻辑理论（*）     [ ] 产生式系统（*）    [ ] 不确定性推理模型   -[ ] 计算智能（ * ）蚁群算法、">
 <meta property="og:image" content="http://oo9y7ylu4.bkt.clouddn.com/image/knowledge/%E5%86%B3%E7%AD%96%E6%A0%91.png">
-<meta property="og:updated_time" content="2017-06-23T03:11:57.000Z">
+<meta property="og:updated_time" content="2017-06-24T10:10:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="人工智能复习">
 <meta name="twitter:description" content="人工智能专题复习Made by ® Isaac. Ty hejizh@sdu.edu.cn 主要复习内容:   [ ] 知识的表示方法（*）    [ ] 搜索技术（*）  盲目搜索方法 ；       启发式搜索方法 与/或图搜索方法；   博弈树搜索方法   [ ] 经典逻辑理论（*）     [ ] 产生式系统（*）    [ ] 不确定性推理模型   -[ ] 计算智能（ * ）蚁群算法、">
@@ -857,6 +857,7 @@
 </li>
 <li>计算A1,A2必然发生时，求结论B1的更新值<ul>
 <li>A 必然出现时 P(A)=1:<ul>
+<li>$O(B)=\frac{P(B)}{1-P(B)}$</li>
 <li>$O(B|A) =LS*O(B)$</li>
 <li>$O(B|-A) =LN*O(B)$</li>
 <li>$P(A)=\frac{O(A)}{1+O(A)}$</li>
@@ -866,40 +867,86 @@
 </li>
 </ul>
 </li>
-<li>确定性方法-CF模型<ul>
+<li><p>确定性方法-CF模型</p>
+<ul>
 <li>规则A —B，可信度表示为CF(B,A)：<ul>
 <li>$CF(B,A)=MB(B,A)-MD(B,A)$</li>
 <li>CF是由证据A得到的假设B的确定性因子</li>
 <li>MB是证据A得到假设B的<strong>信任增加度量</strong></li>
 <li>MD是证据A得到的假设B的<strong>不信任增加度量</strong></li>
+<li>确定性因子把信任与不信任组合在了一起</li>
+</ul>
+</li>
+<li>MB和MD表达式</li>
+<li>CF(B,A)表达式 </li>
+<li><p>CF(B,A)表示的意义</p>
+<ul>
+<li>证据为真时，相对于P(~B)=1-P(B)来说，A对B为真的支持程度。即A发生更支持B发生</li>
+<li>相对于P(B)来说，A对B为真的不支持程度。即A发生不支持B发生</li>
+<li>$-1 \le CF(B,A) \le 1$</li>
+<li>CF的特殊值</li>
+<li>CF(B,A) = 1 前提真，结论必真 P(B|A)=1</li>
+<li>CF(B,A) = -1前提真，结论必假 P(B|A)=0</li>
+<li>CF(B,A) = 0 前提真假与结论无关  P(B|A) = P(B)</li>
+<li>实际中CF(B,A)由专家确定，并非由P(B|A),P(B)计算得到</li>
+</ul>
+</li>
+<li>证据A的可信度表示为CF(A)<ul>
+<li>特殊值<ul>
+<li>CF(A)=1  前提肯定真</li>
+<li>CF(A)=-1 前提肯定假</li>
+<li>CF(A)=0  对前提一无所知</li>
+</ul>
+</li>
+<li>CF(A)&gt;0 , 表示A以CF(A)程度为真</li>
+<li>CF(A)&lt;0 , 表示A以CF(A)程度为假</li>
+</ul>
+</li>
+<li>确定性方法-CF模型<ul>
+<li>规则推理计算</li>
+<li>规则合成计算</li>
+<li>简单的推理计算<ul>
+<li>规则推理计算 1，2，（3，4）</li>
+<li>是否必然发生，都乘概率，只是必然概率为1</li>
+</ul>
+</li>
+<li>$$</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>证据理论（DS）</li>
 </ol>
-<h2 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h2><ol>
-<li><p>概念</p>
-</li>
-<li><p>机器学习可以分为几类</p>
-</li>
-<li><p>机器学习系统</p>
-</li>
-<li><p>实例学习及实例学习的两个空间模型</p>
 <ol>
+<li>证据理论（DS）<ul>
+<li>基本概率分配函数m(x)：<ul>
+<li>$m(x): 2^U \rightarrow [0,1]$，在U的幂集上定义，取值[0,1]</li>
+<li>m(A)表示了证据对U的子集A成立的一种信任度</li>
+<li>A属于U，且不等于U，表示对A的精确信任度</li>
+<li>A等于U，表示这个数不知如何分配</li>
+</ul>
+</li>
+<li>信任函数Bel(A)：集合和他的子集合的信任总和</li>
+<li>似然函数</li>
+</ul>
+</li>
+</ol>
+<h2 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><h3 id="机器学习可以分为几类"><a href="#机器学习可以分为几类" class="headerlink" title="机器学习可以分为几类"></a>机器学习可以分为几类</h3><p>常见的机器学习方法可分为 连接学习、归纳学习、分析学习和遗传算法与强化学习等</p>
+<h3 id="机器学习系统"><a href="#机器学习系统" class="headerlink" title="机器学习系统"></a>机器学习系统</h3><p>应有环境、知识库、学习环节和执行环节四个基本部分组成</p>
+<h3 id="实例学习及实例学习的两个空间模型"><a href="#实例学习及实例学习的两个空间模型" class="headerlink" title="实例学习及实例学习的两个空间模型"></a>实例学习及实例学习的两个空间模型</h3><ol>
 <li>例子空间(实例)—&gt;解释例子(泛化)—&gt;规则空间(概念)—&gt;选择例子(例化)</li>
+<li>例子空间的描述语言可以描述所有例子；规则空间的描述语言可以描述所有规则</li>
 <li>例子空间<ul>
 <li>示教例子的质量: 不能有错，同时提供正例和反例，逐步分批由选择地送入。</li>
 <li>选择的条件：最有力地划分规则空间；证实肯定假设规则的集合；否定假设规则的集合。</li>
 </ul>
 </li>
 <li>解释例子(泛化)<ul>
-<li>解释例子的目的是从例子中提出用于搜索空间的信息。把示教例子变换成易于进行符号归纳的形式</li>
+<li>解释例子的目的是从例子中提出用于搜索空间的信息。把示教例子变换成易于进行符号归纳的形式（有时很难）</li>
 </ul>
 </li>
 <li>规则空间(最根本，真正学习的部分)<ul>
 <li>定义：一套符号来规定表示规则的算符、术语，所有的描述都在其中。</li>
-<li>归纳方法：</li>
+<li>归纳方法：从一般到特殊</li>
 <li>对规则空间的要求：<ul>
 <li>规则空间表达能力与规则空间搜索难度</li>
 <li>表示和例子的一致</li>
@@ -909,32 +956,97 @@
 </ul>
 </li>
 </ol>
-</li>
-<li><p>归纳学习及学习的偏置：变形空间与候选消除学习</p>
-</li>
-<li><p>决策树学习方法，神经网络学习方法(不要求计算)</p>
+<h3 id="归纳学习及学习的偏置：变形空间与候选消除学习"><a href="#归纳学习及学习的偏置：变形空间与候选消除学习" class="headerlink" title="归纳学习及学习的偏置：变形空间与候选消除学习"></a>归纳学习及学习的偏置：变形空间与候选消除学习</h3><h4 id="学习过程"><a href="#学习过程" class="headerlink" title="学习过程"></a>学习过程</h4><ol>
+<li>实例学习：从特殊的训练样例中得到的普遍规律</li>
+<li>归纳：保证输出的假设能与训练杨丽相你和</li>
+<li>归纳假设的一个基本假定（偏置）：对于未见实例最好的假设就是与训练数据最佳拟合的假设</li>
+<li>归纳学习假设：任一假设如果在足够大的训练样例样例集中很好地逼近目标函数，它也能在未见实例中很好地逼近目标函数</li>
+</ol>
+<h4 id="假设从一般到特殊的转化"><a href="#假设从一般到特殊的转化" class="headerlink" title="假设从一般到特殊的转化"></a>假设从一般到特殊的转化</h4><p>任何被较特殊的假设划分为正例的实例都会被较一般的实例划分为正例</p>
+<h4 id="Find-S算法：寻找极大特殊假设"><a href="#Find-S算法：寻找极大特殊假设" class="headerlink" title="Find-S算法：寻找极大特殊假设"></a>Find-S算法：寻找极大特殊假设</h4><p>使用more_general_than偏序的搜索算法，从H中最特殊假设（最小假设）开始，然后在假设覆盖正例失败时将其一般化</p>
+<p>Find-S算法</p>
 <ol>
-<li><p>决策树</p>
-<p>一种描述<u><strong>概念空间</strong></u>的有效的归纳推理办法。基于决策树的学习方法可以进行不相关的多概念学习，具有简单快捷的优势，已经在各个领域取得广泛应用。</p>
+<li>将h初始化H中最特殊假设</li>
+<li>对每个正例x<ul>
+<li>对h的每个属性约束$a_i$，如果x满足$a_i$，那么不做任何处理</li>
+<li>否则将h中$a_i$替换为x满足的另一个更一般约束</li>
+</ul>
+</li>
+<li>输出假设h</li>
+</ol>
+<p>Find-S算法重要特点：对以属性约束的合取式描述的假设空间H，保证输出为H中与正例一致的最特殊的假设</p>
+<h4 id="变形空间和候选消除算法"><a href="#变形空间和候选消除算法" class="headerlink" title="变形空间和候选消除算法"></a>变形空间和候选消除算法</h4><p>候选消除算法输出与训练样例一致的<strong>所有假设的集合</strong>；在描述这一级和时不需要明确列举所有成员；可用于启发式搜索控制规则来表示。</p>
 <ol>
-<li>基本概念</li>
+<li><p>一致的定义：一个假设h与训练样例集合D一致，当且仅当对D中每一个样例$<x,c(x)>$都有h(x)=c(x)</x,c(x)></p>
+</li>
+<li><p>先列表后消除法</p>
+<p>能表示变型空间的一种方法是列出其所有成员</p>
+<ul>
+<li>优点：保证得到所有与训练数据一致的假设</li>
+<li>缺点：非常繁琐地列出H中的所有假设，大多数实际的假设空间无法做到。</li>
+</ul>
+</li>
+<li><p>变型空间的更简洁表示</p>
+<p>变型空间被表示为它的极大一般g和极大特殊s的成员，这些成员形成了一般和特殊边界的集合，这些边界在整个偏序结构中划分出变型空间。</p>
+<p>变型空间方法的初始G集是最上面的一个点（最一般的概念），初始S集是最下面的直线上的点（训练正例），初始H集是整个规则空间。</p>
+<p>在搜索过程中，G 集逐步下移（进行特例化），S 集逐步上移（进行泛化），H 逐步缩小。最后H收敛为满足要求的概念。</p>
+<p>搜索：使用一个可能合理的假设规则的集合H，H是规则空间的子集，是规则空间中间的一段。</p>
+<p>H中最一般的元素组成的子集称为G集合，最特殊的元素组成的子集称为S集合。（H是上界G和下界S之间的一段。）</p>
+<p>学习基本思想：尽可能合理的进行特殊化和一般化处理，通过搜索减小H，找到一个假设规则。</p>
+<p>具体方法：消除候选元素法</p>
+</li>
+<li><p>形式化定义</p>
+<ul>
+<li>极大一般：更一般中的极大者(元)-下确界</li>
+<li>极大特殊:更特殊中的极小者(元)-上确界</li>
+<li>关于假设空间H和训练数据D的一般边界G，是在H中与D相一致的<strong>极大一般</strong>成员的集合</li>
+<li>关于假设空间H和训练数据D的特殊边界S，是在H中与D相一致的<strong>极大特殊</strong>成员的集合</li>
+</ul>
+</li>
+<li><p>候选消除算法</p>
+<p>将G集合初始化为H中极大一般假设$G0={&lt;\emptyset,\emptyset,\emptyset,\emptyset,\emptyset,\emptyset,\emptyset&gt;}$</p>
+<p>将S集合初始化为H中极大特殊假设$S0={&lt;?,?,?,?,?,?,?&gt;}$</p>
+<ul>
+<li><p>初始化G和S</p>
+</li>
+<li><p>如果d是一个<strong>正例</strong></p>
+<p>从G中移去所有与d不一致的假设</p>
+<p>对S中每个与d不一致的假设s，从S中移出s，把s的所有的极小一般（泛化）式h加入到S中，其中h满足h与d一致，而且G的某个成员比h更一般</p>
+</li>
+<li><p>如果d是一个<strong>反例</strong></p>
+<p>从S中移去所有与d不一致的假设</p>
+<p>对G中每个与d不一致的假设g，从G中移出g，把g的所有的极小特殊（例化）式h加入到G中，其中h满足h与d一致，而且S的某个成员比h更特殊</p>
+</li>
+</ul>
+<p>正例去掉G中不符合的概念，然后修改S，归纳出最特殊的结果，尽量少改S</p>
+<p>反例去掉S中符合的概念，然后修改G，做特殊化得到最一般的结构，尽量少改G</p>
+</li>
+<li><p>变型空间法的优缺点</p>
+<ul>
+<li>搜索空间太大，有可能引起计算爆炸问题（规则总地来说是越扩越多）</li>
+<li>抗干扰性差，所有数据驱动方法的通病。解决方法：例子一组一组地给。</li>
+<li>采用析取规则，即此算法不可能发现“或”的关系。 </li>
+</ul>
+</li>
+</ol>
+<h3 id="决策树学习方法，神经网络学习方法-不要求计算"><a href="#决策树学习方法，神经网络学习方法-不要求计算" class="headerlink" title="决策树学习方法，神经网络学习方法(不要求计算)"></a>决策树学习方法，神经网络学习方法(不要求计算)</h3><h4 id="决策树-Decision-Tree"><a href="#决策树-Decision-Tree" class="headerlink" title="决策树(Decision Tree)"></a>决策树(Decision Tree)</h4><p>一种描述<u><strong>概念空间</strong></u>的有效的归纳推理办法。基于决策树的学习方法可以进行不相关的多概念学习，具有简单快捷的优势，已经在各个领域取得广泛应用。</p>
+<ol>
+<li><p>基本思想</p>
+<p>以信息熵为度量标准，构造一棵熵值下降最快的树，到叶子节点处的熵值为零，此时每个叶节点中的示例都属于同一类。</p>
+</li>
+<li><p>基本概念</p>
+<p>决策树学习采用的是自顶向下的递归方法</p>
+<p>决策树的每一层节点依照某一属性值向下分为子节点，待分类的实例在每一节点处与该节点相关的属性值进行比较，根据不同的比较结果朝相应的子节点扩展，这一过程在到达决策树的叶节点时结束，此时得到结论。</p>
+<p>从根节点到叶节点的每一条路经都对应着一条合理的规则，规则间各个部分（各个层的条件）的关系是合取关系。整个决策树就对应着一组析取的规则。</p>
+<p><u><strong>决策树学习算法的最大优点是，它可以自学习。</strong></u>在学习的过程中，不需要使用者了解过多背景知识，只需要对训练例子进行较好的标注，就能够进行学习。如果在应用中发现不符合规则的实例，程序会询问用户该实例的正确分类，从而生成新的分枝和叶子，并添加到树中。</p>
+<p>树是由<u><strong>节点</strong></u>和<strong><u>分枝</u></strong>组成的层次数据结构。<strong>节点</strong>用于存贮信息或知识，<strong>分枝</strong>用于连接各个节点。树是图的一个特例，图是更一般的数学结构，如贝叶斯网络。</p>
+<p>决策树是<u><strong>描述分类过程的一种数据结构</strong></u>，从上端的根节点开始，各种分类原则被引用进来，并依这些分类原则将根节点的数据集划分为子集，这一划分过程直到某种约束条件满足而结束</p>
+</li>
 </ol>
 <ul>
-<li><p>决策树的每一层节点依照某一属性值向下分为子节点，待分类的实例在每一节点处与该节点相关的属性值进行比较，根据不同的比较结果朝相应的子节点扩展，这一过程在到达决策树的叶节点时结束，此时得到结论。</p>
-</li>
-<li><p>从根节点到叶节点的每一条路经都对应着一条合理的规则，规则间各个部分（各个层的条件）的关系是合取关系。整个决策树就对应着一组析取的规则。</p>
-</li>
-<li><p><u><strong>决策树学习算法的最大优点是，它可以自学习。</strong></u>在学习的过程中，不需要使用者了解过多背景知识，只需要对训练例子进行较好的标注，就能够进行学习。如果在应用中发现不符合规则的实例，程序会询问用户该实例的正确分类，从而生成新的分枝和叶子，并添加到树中。</p>
-</li>
-<li><p>树是由<u><strong>节点</strong></u>和<strong><u>分枝</u></strong>组成的层次数据结构。<strong>节点</strong>用于存贮信息或知识，<strong>分枝</strong>用于连接各个节点。树是图的一个特例，图是更一般的数学结构，如贝叶斯网络。</p>
-</li>
-<li><p>决策树是<u><strong>描述分类过程的一种数据结</strong></u>构，从上端的根节点开始，各种分类原则被引用进来，并依这些分类原则将根节点的数据集划分为子集，这一划分过程直到某种约束条件满足而结束</p>
-</li>
 <li><p><img src="http://oo9y7ylu4.bkt.clouddn.com/image/knowledge/%E5%86%B3%E7%AD%96%E6%A0%91.png" alt="决策树图"></p>
-</li>
-<li><p>可以看到，一个决策树的内部结点包含学习的实例，每层分枝代表了实例的一个属性的可能取值，叶节点是最终划分成的类。如果判定是二元的，那么构造的将是一棵二叉树，在树中每回答一个问题就降到树的下一层。</p>
-</li>
-<li><p>判定结构可以机械的转变成产生式规则。可以通过对结构进行广度优先搜索，并在每个节点生成“IF…THEN”规则来实现。如图的决策树可以转换成下规则：</p>
+<p>可以看到，一个决策树的内部结点包含学习的实例，每层分枝代表了实例的一个属性的可能取值，叶节点是最终划分成的类。如果判定是二元的，那么构造的将是一棵二叉树，在树中每回答一个问题就降到树的下一层。</p>
+<p>判定结构可以机械的转变成产生式规则。可以通过对结构进行广度优先搜索，并在每个节点生成“IF…THEN”规则来实现。如图的决策树可以转换成下规则：</p>
 <pre><code>IF “个子大”THEN
 
        IF “脖子短”THEN 
@@ -945,23 +1057,29 @@
 <ol>
 <li><p>构造决策树(四个问题)</p>
 <ul>
-<li><p>收集待分类的数据，这些数据的所有属性应该是完全标注的。</p>
+<li><p><strong>收集待分类的数据</strong>，这些数据的所有属性应该是完全标注的。</p>
 </li>
-<li><p>设计分类原则，即数据的哪些属性可以被用来分类，以及如何将该属性量化。</p>
+<li><p><strong>设计分类原则</strong>，即数据的哪些属性可以被用来分类，以及如何将该属性量化。</p>
 </li>
-<li><p>分类原则的选择，即在众多分类准则中，每一步选择哪一准则使最终的树更令人满意。</p>
+<li><p><strong>分类原则的选择</strong>，即在众多分类准则中，每一步选择哪一准则使最终的树更令人满意。</p>
 </li>
-<li><p>设计分类停止条件，实际应用中数据的属性很多，真正有分类意义的属性往往是有限几个，因此在必要的时候应该停止数据集分裂：例如</p>
-<p>​    该节点包含的数据太少不足以分裂，</p>
-<p>​    继续分裂数据集对树生成的目标(例如ID3中的熵下降准则)没有贡献，</p>
-<p>​    树的深度过大不宜再分。</p>
+<li><p><strong>设计分类停止条件</strong>，实际应用中数据的属性很多，真正有分类意义的属性往往是有限几个，因此在必要的时候应该停止数据集分裂：例如</p>
+<p>该节点包含的数据太少不足以分裂</p>
+<p>继续分裂数据集对树生成的目标(例如ID3中的熵下降准则)没有贡献</p>
+<p>树的深度过大不宜再分。</p>
 </li>
 </ul>
 </li>
-</ol>
+<li><p>决策树性质</p>
+<ul>
+<li>证据由属性值对表示</li>
+<li>目标函数有离散输出值</li>
+<li>需要不相关的描述</li>
+<li>容忍训练数据的错误</li>
+</ul>
 </li>
-<li><p>人工神经网络(ANNs)</p>
-<ol>
+</ol>
+<h4 id="人工神经网络-ANNs"><a href="#人工神经网络-ANNs" class="headerlink" title="人工神经网络(ANNs)"></a>人工神经网络(ANNs)</h4><ol>
 <li><p>概述</p>
 </li>
 <li><p>神经网络表示-<strong><u>非图形符号表示</u></strong></p>
@@ -1019,13 +1137,7 @@
 </ul>
 </li>
 </ol>
-</li>
-</ol>
-</li>
-<li><p>神经网络学习法中学习速率ƞ的概念</p>
-</li>
-<li><p>了解ID3学习算法构建决策树的原理和过程</p>
-<p>采用自顶向下的贪婪搜索遍历可能的决策树空间</p>
+<h4 id="神经网络学习法中学习速率n的概念"><a href="#神经网络学习法中学习速率n的概念" class="headerlink" title="神经网络学习法中学习速率ƞ的概念"></a>神经网络学习法中学习速率ƞ的概念</h4><h4 id="了解ID3学习算法构建决策树的原理和过程"><a href="#了解ID3学习算法构建决策树的原理和过程" class="headerlink" title="了解ID3学习算法构建决策树的原理和过程"></a>了解ID3学习算法构建决策树的原理和过程</h4><p>采用自顶向下的贪婪搜索遍历可能的决策树空间</p>
 <ol>
 <li>ID3的思想<ul>
 <li><strong>自顶向下</strong>构造决策树</li>
@@ -1051,28 +1163,40 @@
 <li>ID3检查所有的候选属性，选择增益最大的属性A作为根节点，形成数。然后对子树C~1~ ,C~2~ ,…,C~m~以同样处理，递归形成决策树。</li>
 </ol>
 </li>
-</ol>
+<li>ID3和候选消除算法的比较<ul>
+<li>ID3的搜索范围是一个完整的假设空间，但不彻底地搜索这个空间</li>
+<li>候选消除算法的搜索范围是不完整的假设空间，但彻底地搜索这个空间</li>
+<li>ID3的归纳偏置完全是搜索车略排序假设的结果，来自搜索策略</li>
+<li>候选消除算法完全是假设表示的表达能力的结果，来自对搜索空间的定义。</li>
+</ul>
 </li>
 </ol>
 <h2 id="计算智能"><a href="#计算智能" class="headerlink" title="计算智能"></a>计算智能</h2><h3 id="遗传算法"><a href="#遗传算法" class="headerlink" title="遗传算法"></a>遗传算法</h3><ol>
 <li><p>算法的思想</p>
-<p>在生物系统中，进化被人误是一种成功的自适应方法，具有很好的健壮性。其主要特点：</p>
+<p>在生物系统中，进化被认为是一种成功的自适应方法，具有很好的健壮性。其主要特点：</p>
 <ol>
 <li>直接对结构对象进行操作，不存在求导和函数连续性的限定。</li>
 <li>具有内在的隐含并行性和更好的全局寻优能力；</li>
 <li>采用概率化的寻优方法，能自动获取和指导优化的搜索空间。</li>
+<li>自适应地调整搜索方向，不需要确定的规则</li>
 </ol>
 <p>遗传算法将“优胜劣汰，适者生存”的生物进化原理引入优化参数形成的编码串群体中，按所选择的<strong><u>适应度函数</u></strong>并通过遗传中的<u><strong>复制、交叉及变异</strong></u>对个体进行筛选，<strong>适应度高</strong>的个体被保留下来，组成新的群体，新的群体既继承了上一代的信息，又优于上一代</p>
 </li>
 <li><p>三种基本操作：复制、交叉、变异</p>
 <ol>
-<li>复制：从一个旧种群中选择生命力强的个体位串产生新种群的过程，具有高适应度的位串更有可能在下一代中产生一个或多个子孙。</li>
-<li>交叉：复制操作能从旧种群中选择出优秀者，但不能创造新的染色体。而交叉模拟了生物进化过程中的繁殖现象，通过两个染色体的交换组合，来产生新的优良品种。</li>
-<li>变异：用来模拟生物在自然的遗传环境中由于各种偶然因素引起的基因突变，它以很小的概率随机地改变遗传基因（表示染色体的符号串的某一位）的值。在染色体以二进制编码的系统中，它随机地将染色体的某一个基因由1变成0，由0编程1.</li>
+<li><p>复制：从一个旧种群中选择生命力强的个体位串产生新种群的过程，具有<strong>高适应度</strong>的位串更有可能在下一代中产生一个或多个子孙。</p>
+<p>复制操作可以通过随机方法来实现。首先产生0~1之间均匀分布的随机数，若某串的复制概率为40%，则当产生的随机数在0.40~1.0之间时，该串被复制，否则被淘汰。</p>
+</li>
+<li><p>交叉：复制操作能从旧种群中选择出优秀者，但不能创造新的染色体。而交叉模拟了生物进化过程中的<strong>繁殖现象</strong>，通过两个染色体的交换组合，来产生新的优良品种。</p>
+<p>交叉的过程为：在匹配池中任选两个染色体，随机选择一点或多点交换点位置；交换双亲染色体交换点右边的部分，即可得到两个新的染色体数字串。</p>
+</li>
+<li><p>变异：用来模拟生物在自然的遗传环境中由于各种偶然因素引起的基因突变，它<strong>以很小的概率随机地改变遗传基因</strong>（表示染色体的符号串的某一位）的值。在染色体以二进制编码的系统中，它随机地将染色体的某一个基因由1变成0，由0变成1.</p>
+<p>若只有选择和交叉，而没有变异，则无法在初始基因组合以外的空间进行搜索，使进化过程在早期就陷入局部解而进入终止过程，从而影响解的质量。为了在尽可能大的空间中获得质量较高的优化解，必须采用变异操作。</p>
+</li>
 </ol>
 </li>
 <li><p>适应度函数与轮盘赌算法</p>
-<p>在遗传算法中，衡量个体优劣的尺度是<strong><u>适应度</u></strong>，更具适应度的大小决定某些个体是繁殖或是消亡。</p>
+<p>在遗传算法中，衡量个体优劣的尺度是<strong><u>适应度</u></strong>，根据适应度的大小决定某些个体是繁殖或是消亡。</p>
 <p>通常，适应度是费用、赢利、方差等目标的表达式。</p>
 <ol>
 <li><p>统一表达式</p>
@@ -1081,9 +1205,9 @@
 </li>
 <li><p>复制（轮盘选择）</p>
 <ul>
-<li>依次累计群体内各个个体的适应度，得相应的累计值S~i~,最后一个累计值为S~n~</li>
-<li>在[0,S~n~]区间内产生均匀分布的随机数R</li>
-<li>依次用S~i~ 与R相比较，第一个出现S~i~大于或等于R的个体i被选为复制队形</li>
+<li>依次累计群体内各个个体的适应度，得相应的累计值$S_i$,最后一个累计值为$S_n$</li>
+<li>在$[0,S_n]$区间内产生均匀分布的随机数R</li>
+<li>依次用S~i~ 与R相比较，第一个出现S~i~大于或等于R的个体i被选为复制对象</li>
 <li>重复(2),(3)直至满足所需要的个体数目。</li>
 </ul>
 <p>每代群体中，被复制的个体数目由复制概率Pt控制， Pt常取0.1～0.2，也就是说，群体中有90%～80%个体被复制，相应地有10%<br>～20%个体被淘汰，以保持群体大小。</p>
@@ -1099,19 +1223,20 @@
 <li>字符串要反映所研究问题的性质</li>
 <li>字符串的表达要便于计算处理</li>
 </ul>
+<p>对于兼有多种性质的问题，可以采用长字符串顺序分别表示。例如，可选25位0/1字符串表示物体的体积、重量及颜色，其中前10位数表示体积量，中间10位数表示重量，后5位数表示颜色。</p>
 </li>
 </ol>
 </li>
 <li><p>与粒子群算法的相同与不同</p>
 </li>
 </ol>
-<h3 id="群智能"><a href="#群智能" class="headerlink" title="群智能"></a>群智能</h3><ol>
-<li><p>概念，<strong><u>智能源于社会性的相互作用</u></strong></p>
+<h3 id="群智能（Swarm-Intelligence）"><a href="#群智能（Swarm-Intelligence）" class="headerlink" title="群智能（Swarm Intelligence）"></a>群智能（Swarm Intelligence）</h3><ol>
+<li><p>概念，<strong><u>智能源于社会性的相互作用</u></strong>，群智能发展的基石。</p>
 <p>已有的群智能理论和应用研究证明群智能方法是一种能够有效解决<strong><u>大多数优化问题的新方法</u></strong></p>
 </li>
 <li><p>两大特点：并行性和分布式</p>
 </li>
-<li><p>一种能够有效解决优化问题的方法</p>
+<li><p>已有的群智能理论的研究和应用证明群智能方法是一种能够有效解决优化问题的方法</p>
 </li>
 <li><p>群智能典型算法</p>
 <ul>
@@ -1125,11 +1250,11 @@
 <ol>
 <li><p>蚁群算法</p>
 <ol>
-<li>蚁群算法：</li>
-</ol>
+<li><p>蚁群算法：</p>
 <p>蚂蚁觅食的过程，随机移动，遇到食物返回的路上分泌信息素（易挥发的化学性物质），关键路径上的信息素浓度相对高。</p>
-<ol>
-<li>蚁群算法原理：<ul>
+</li>
+<li><p>蚁群算法原理：</p>
+<ul>
 <li>基于蚂蚁觅食时最优路径的选择问题，可以构造人工蚁群来解决最优问题</li>
 <li>人工蚁群中把具有最简单功能的工作单元看作蚂蚁</li>
 <li>人工蚂蚁与自然蚁群相似：优先选择信息素浓度大的路径；区别：人工蚂蚁具有一定的记忆能力，能够记忆已经访问过的节点</li>
@@ -1158,14 +1283,16 @@
 <li><p>粒子群算法</p>
 <ol>
 <li><p>粒子群优化算法：</p>
-<p>模拟鸟群或蜂群的觅食行为。基本思想：通过群体中个体之间的协作和信息共享来寻找最优解。</p>
+<p>模拟鸟群或蜂群的觅食行为。</p>
+</li>
+<li><p>基本思想：通过群体中个体之间的协作和信息共享来寻找最优解。</p>
 </li>
 <li><p>粒子群优化算法原理：</p>
 <ul>
 <li>每个飞行的小鸟抽象为一个无质量、无体积的粒子</li>
-<li>每个粒子有一个适应度（评估）函数模拟每只小鸟与食物的距离</li>
-<li>每个粒子有一个速度决定它的飞行方向和距离，初始值可以随机确定</li>
-<li>每一次单位时间的飞行后，所有粒子分享信息，下一步将飞向自身最佳位置（个体极值）和全局最优位置（全局极值）的加权中心</li>
+<li>每个粒子有一个适应度（评估）函数模拟每只小鸟与食物的<strong>距离</strong></li>
+<li>每个粒子有一个<strong>速度</strong>决定它的飞行方向和距离，初始值可以随机确定</li>
+<li>每一次单位时间的飞行后，所有粒子分享信息，下一步将飞向<strong>自身最佳位置</strong>（个体极值）和<strong>全局最优位置</strong>（全局极值）的加权中心</li>
 </ul>
 </li>
 <li><p>粒子群优化算法流程</p>
@@ -1177,6 +1304,8 @@
 <li>根据速度和位置方差更行每个粒子的速度和位置（V~id~和P~id~)</li>
 <li>如果未满足结束条件（通常为满足足够好的适应值或达到设定的最大迭代次数），返回2 </li>
 </ol>
+</li>
+<li><p>粒子速度和位置的更新公式</p>
 </li>
 <li><p>与遗传算法的比较</p>
 <ol>
@@ -1197,6 +1326,7 @@
 </li>
 <li>粒子群优化算法的应用<ul>
 <li>巡航导弹的飞行高度进行优化</li>
+<li>车辆路径问题的应用</li>
 <li>邮政投递</li>
 <li>火车及汽车的调度</li>
 <li>港口装卸集装箱</li>
@@ -1255,6 +1385,21 @@
 <li><p>统计语言模型及解决问题的思想</p>
 <p>|    模型    |    算法     |<br>| :——: | :——-: |<br>|  状态机模型   |   动态编程    |<br>| 形式规则系统模型 |   及其学习    |<br>|   统计模型   | 分类/序列模型算法 |<br>|  向量空间模型  |  最大期望算法   |</p>
 <p>​</p>
+</li>
+</ol>
+<h3 id="计算题"><a href="#计算题" class="headerlink" title="计算题"></a>计算题</h3><ol>
+<li>归结原理<ul>
+<li>P4 49页   求归结步骤和归结树</li>
+<li>P4 27页   化为Skolem标准形</li>
+</ul>
+</li>
+<li>主观贝叶斯方法<ul>
+<li>P5 100页  根据R1,R2，LS,LN求B的更新值(A1,A2必然发生的情况)</li>
+</ul>
+</li>
+<li>确定性方法<ul>
+<li>P5  124页  CF(B1),CF(B2)的计算</li>
+</ul>
 </li>
 </ol>
 
@@ -1438,7 +1583,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#人工智能专题复习"><span class="nav-number">1.</span> <span class="nav-text">人工智能专题复习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#知识表示"><span class="nav-number">1.1.</span> <span class="nav-text">知识表示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#表示方法"><span class="nav-number">1.1.1.</span> <span class="nav-text">表示方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#逻辑表示法"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">逻辑表示法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#产生式规则表示法"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">产生式规则表示法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#语义网络表示法"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">语义网络表示法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#框架表示"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">框架表示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#脚本表示"><span class="nav-number">1.1.1.5.</span> <span class="nav-text">脚本表示</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#产生式系统"><span class="nav-number">1.2.</span> <span class="nav-text">产生式系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#产生式系统的基本组成"><span class="nav-number">1.2.1.</span> <span class="nav-text">产生式系统的基本组成</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#组成三要素"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">组成三要素(*)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#产生式系统的特点"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">产生式系统的特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#产生式系统的类型"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">产生式系统的类型(*)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#产生式系统总结"><span class="nav-number">1.2.1.4.</span> <span class="nav-text">产生式系统总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#产生式系统的搜索策略"><span class="nav-number">1.2.2.</span> <span class="nav-text">产生式系统的搜索策略</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#产生式系统的搜索策略-1"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">产生式系统的搜索策略</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图搜索策略"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">图搜索策略</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#无信息图搜索过程"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">无信息图搜索过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#启发式图搜索"><span class="nav-number">1.2.2.5.</span> <span class="nav-text">启发式图搜索</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#符号定义"><span class="nav-number">1.2.2.6.</span> <span class="nav-text">符号定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法特征"><span class="nav-number">1.2.2.7.</span> <span class="nav-text">算法特征</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#A-算法性质"><span class="nav-number">1.2.2.8.</span> <span class="nav-text">A* 算法性质</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#产生式系统-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">产生式系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#与或图表示问题"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">与或图表示问题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#能解节点"><span class="nav-number">1.2.3.1.1.</span> <span class="nav-text">能解节点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#不能解节点"><span class="nav-number">1.2.3.1.2.</span> <span class="nav-text">不能解节点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#与或图启发式搜索算法AO"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">与或图启发式搜索算法AO*</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#博弈树搜索"><span class="nav-number">1.2.3.3.</span> <span class="nav-text">博弈树搜索</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#alpha-beta-搜索过程"><span class="nav-number">1.2.3.4.</span> <span class="nav-text">$\alpha-\beta$搜索过程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#经典逻辑理论"><span class="nav-number">1.3.</span> <span class="nav-text">经典逻辑理论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不确定性推理模型"><span class="nav-number">1.4.</span> <span class="nav-text">不确定性推理模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#机器学习"><span class="nav-number">1.5.</span> <span class="nav-text">机器学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算智能"><span class="nav-number">1.6.</span> <span class="nav-text">计算智能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#遗传算法"><span class="nav-number">1.6.1.</span> <span class="nav-text">遗传算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#群智能"><span class="nav-number">1.6.2.</span> <span class="nav-text">群智能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自然语言处理"><span class="nav-number">1.6.3.</span> <span class="nav-text">自然语言处理</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#人工智能专题复习"><span class="nav-number">1.</span> <span class="nav-text">人工智能专题复习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#知识表示"><span class="nav-number">1.1.</span> <span class="nav-text">知识表示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#表示方法"><span class="nav-number">1.1.1.</span> <span class="nav-text">表示方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#逻辑表示法"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">逻辑表示法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#产生式规则表示法"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">产生式规则表示法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#语义网络表示法"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">语义网络表示法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#框架表示"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">框架表示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#脚本表示"><span class="nav-number">1.1.1.5.</span> <span class="nav-text">脚本表示</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#产生式系统"><span class="nav-number">1.2.</span> <span class="nav-text">产生式系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#产生式系统的基本组成"><span class="nav-number">1.2.1.</span> <span class="nav-text">产生式系统的基本组成</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#组成三要素"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">组成三要素(*)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#产生式系统的特点"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">产生式系统的特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#产生式系统的类型"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">产生式系统的类型(*)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#产生式系统总结"><span class="nav-number">1.2.1.4.</span> <span class="nav-text">产生式系统总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#产生式系统的搜索策略"><span class="nav-number">1.2.2.</span> <span class="nav-text">产生式系统的搜索策略</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#产生式系统的搜索策略-1"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">产生式系统的搜索策略</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图搜索策略"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">图搜索策略</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#无信息图搜索过程"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">无信息图搜索过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#启发式图搜索"><span class="nav-number">1.2.2.5.</span> <span class="nav-text">启发式图搜索</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#符号定义"><span class="nav-number">1.2.2.6.</span> <span class="nav-text">符号定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法特征"><span class="nav-number">1.2.2.7.</span> <span class="nav-text">算法特征</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#A-算法性质"><span class="nav-number">1.2.2.8.</span> <span class="nav-text">A* 算法性质</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#产生式系统-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">产生式系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#与或图表示问题"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">与或图表示问题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#能解节点"><span class="nav-number">1.2.3.1.1.</span> <span class="nav-text">能解节点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#不能解节点"><span class="nav-number">1.2.3.1.2.</span> <span class="nav-text">不能解节点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#与或图启发式搜索算法AO"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">与或图启发式搜索算法AO*</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#博弈树搜索"><span class="nav-number">1.2.3.3.</span> <span class="nav-text">博弈树搜索</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#alpha-beta-搜索过程"><span class="nav-number">1.2.3.4.</span> <span class="nav-text">$\alpha-\beta$搜索过程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#经典逻辑理论"><span class="nav-number">1.3.</span> <span class="nav-text">经典逻辑理论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不确定性推理模型"><span class="nav-number">1.4.</span> <span class="nav-text">不确定性推理模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#机器学习"><span class="nav-number">1.5.</span> <span class="nav-text">机器学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概念"><span class="nav-number">1.5.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习可以分为几类"><span class="nav-number">1.5.2.</span> <span class="nav-text">机器学习可以分为几类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习系统"><span class="nav-number">1.5.3.</span> <span class="nav-text">机器学习系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例学习及实例学习的两个空间模型"><span class="nav-number">1.5.4.</span> <span class="nav-text">实例学习及实例学习的两个空间模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#归纳学习及学习的偏置：变形空间与候选消除学习"><span class="nav-number">1.5.5.</span> <span class="nav-text">归纳学习及学习的偏置：变形空间与候选消除学习</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#学习过程"><span class="nav-number">1.5.5.1.</span> <span class="nav-text">学习过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#假设从一般到特殊的转化"><span class="nav-number">1.5.5.2.</span> <span class="nav-text">假设从一般到特殊的转化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Find-S算法：寻找极大特殊假设"><span class="nav-number">1.5.5.3.</span> <span class="nav-text">Find-S算法：寻找极大特殊假设</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变形空间和候选消除算法"><span class="nav-number">1.5.5.4.</span> <span class="nav-text">变形空间和候选消除算法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#决策树学习方法，神经网络学习方法-不要求计算"><span class="nav-number">1.5.6.</span> <span class="nav-text">决策树学习方法，神经网络学习方法(不要求计算)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#决策树-Decision-Tree"><span class="nav-number">1.5.6.1.</span> <span class="nav-text">决策树(Decision Tree)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#人工神经网络-ANNs"><span class="nav-number">1.5.6.2.</span> <span class="nav-text">人工神经网络(ANNs)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#神经网络学习法中学习速率n的概念"><span class="nav-number">1.5.6.3.</span> <span class="nav-text">神经网络学习法中学习速率ƞ的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#了解ID3学习算法构建决策树的原理和过程"><span class="nav-number">1.5.6.4.</span> <span class="nav-text">了解ID3学习算法构建决策树的原理和过程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算智能"><span class="nav-number">1.6.</span> <span class="nav-text">计算智能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#遗传算法"><span class="nav-number">1.6.1.</span> <span class="nav-text">遗传算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#群智能（Swarm-Intelligence）"><span class="nav-number">1.6.2.</span> <span class="nav-text">群智能（Swarm Intelligence）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自然语言处理"><span class="nav-number">1.6.3.</span> <span class="nav-text">自然语言处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算题"><span class="nav-number">1.6.4.</span> <span class="nav-text">计算题</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
