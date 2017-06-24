@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="Ty_Isaac">
 <meta property="og:description" content="人工智能专题复习Made by ® Isaac. Ty hejizh@sdu.edu.cn 主要复习内容:   [ ] 知识的表示方法（*）    [ ] 搜索技术（*）  盲目搜索方法 ；       启发式搜索方法 与/或图搜索方法；   博弈树搜索方法   [ ] 经典逻辑理论（*）     [ ] 产生式系统（*）    [ ] 不确定性推理模型   -[ ] 计算智能（ * ）蚁群算法、">
 <meta property="og:image" content="http://oo9y7ylu4.bkt.clouddn.com/image/knowledge/%E5%86%B3%E7%AD%96%E6%A0%91.png">
-<meta property="og:updated_time" content="2017-06-24T15:23:31.000Z">
+<meta property="og:updated_time" content="2017-06-24T15:25:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="人工智能复习">
 <meta name="twitter:description" content="人工智能专题复习Made by ® Isaac. Ty hejizh@sdu.edu.cn 主要复习内容:   [ ] 知识的表示方法（*）    [ ] 搜索技术（*）  盲目搜索方法 ；       启发式搜索方法 与/或图搜索方法；   博弈树搜索方法   [ ] 经典逻辑理论（*）     [ ] 产生式系统（*）    [ ] 不确定性推理模型   -[ ] 计算智能（ * ）蚁群算法、">
@@ -915,8 +915,8 @@
 <li>MD是证据A得到的假设B的<strong>不信任增加度量</strong></li>
 <li>确定性因子把信任与不信任组合在了一起</li>
 </ul>
-<h4 id="MB和MD表达式（-）"><a href="#MB和MD表达式（-）" class="headerlink" title="MB和MD表达式（*）"></a>MB和MD表达式（*）</h4><p>$$ \begin{equation}MB(B,A)=\begin{cases}1 &amp;\mbox P(B)=1\\frac{max{P(B|A),P(B)}-P(B)}{1-P(B)} &amp;\mbox 其它\end{cases}\end{equation}$$</p>
-<p>$$\begin{equation}MD(B,A)=\begin{cases}1 &amp;\mbox P(B)=0\ \frac{min{P(B|A),P(B)}-P(B)}{-P(B)} &amp;\mbox 其它\end{cases}\end{equation}$$</p>
+<h4 id="MB和MD表达式（-）"><a href="#MB和MD表达式（-）" class="headerlink" title="MB和MD表达式（*）"></a>MB和MD表达式（*）</h4><p>$$ \begin{equation}MB(B,A)=\begin{cases} 1 &amp;\mbox P(B)=1 \\ \frac{max{P(B|A),P(B)}-P(B)}{1-P(B)} &amp;\mbox 其它\end{cases}\end{equation}$$</p>
+<p>$$\begin{equation}MD(B,A)=\begin{cases}1 &amp;\mbox P(B)=0 \\ \frac{min{P(B|A),P(B)}-P(B)}{-P(B)} &amp;\mbox 其它\end{cases}\end{equation}$$</p>
 <h4 id="CF-B-A-表达式-（-）"><a href="#CF-B-A-表达式-（-）" class="headerlink" title="CF(B,A)表达式  （*）"></a>CF(B,A)表达式  （*）</h4><p>$$\begin{equation}CF(B,A)=\begin{cases}\frac{P(B|A)-P(B)}{1-P(B)} &amp;\mbox P(B|A) \ge P(B)\ \frac{P(B|A)-P(B)}{P(B)} &amp;\mbox  P(B|A) &lt; P(B)\end{cases}\end{equation}$$</p>
 <h4 id="CF-B-A-表示的意义"><a href="#CF-B-A-表示的意义" class="headerlink" title="CF(B,A)表示的意义"></a>CF(B,A)表示的意义</h4><ul>
 <li>证据为真时，相对于P(~B)=1-P(B)来说，A对B为真的支持程度。即A发生更 支持B发生</li>
