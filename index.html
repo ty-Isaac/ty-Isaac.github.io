@@ -270,6 +270,167 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/12/编程训练/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TianyLi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://oo9y7ylu4.bkt.clouddn.com/image/blog/headIcon/IMG_7483.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ty_Isaac">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/07/12/编程训练/" itemprop="url">
+                  编程训练
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-12T18:03:13+08:00">
+                2017-07-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programming/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/12/编程训练/" class="leancloud_visitors" data-flag-title="编程训练">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="二叉树的深度"><a href="#二叉树的深度" class="headerlink" title="二叉树的深度"></a>二叉树的深度</h1><h2 id="Instruction"><a href="#Instruction" class="headerlink" title="Instruction"></a>Instruction</h2><p>Given a binary tree, find its minimum depth. The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.</p>
+<p>Definition for binary tree</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</div><div class="line">   <span class="keyword">int</span> val;</div><div class="line">   TreeNode left;</div><div class="line">   TreeNode right;</div><div class="line">	TreeNode(<span class="keyword">int</span> x) &#123; val = x; &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Answer-to-the-question"><a href="#Answer-to-the-question" class="headerlink" title="Answer to the question"></a>Answer to the question</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">run</span><span class="params">(TreeNode root)</span> </span>&#123;</div><div class="line">      <span class="keyword">if</span>(root==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">      <span class="keyword">else</span> <span class="keyword">if</span>(root.left==<span class="keyword">null</span>)<span class="keyword">return</span> run(root.right)+<span class="number">1</span>;</div><div class="line">      <span class="keyword">else</span> <span class="keyword">if</span>(root.right==<span class="keyword">null</span>)<span class="keyword">return</span> run(root.left)+<span class="number">1</span>;</div><div class="line">      <span class="keyword">else</span>&#123;</div><div class="line">          <span class="keyword">return</span> Math.min(run(root.left), run(root.right))+<span class="number">1</span>;</div><div class="line">      &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The most important thing is that, it is a repeatitive process to calculate the depth from each child. So we find that if a node have both left and right node, we will choose a less depth. Apart from that, if the node just have right or left child node, we can choose the other one to calculate. Finally, if the node , don’t have a child, will return 0.</p>
+<h1 id="逆波兰表达式运算"><a href="#逆波兰表达式运算" class="headerlink" title="逆波兰表达式运算"></a>逆波兰表达式运算</h1><h2 id="instruction"><a href="#instruction" class="headerlink" title="instruction"></a>instruction</h2><p>valuate the value of an arithmetic expression in Reverse Polish Notation.Valid operators are+,-,*,/. Each operand may be an integer or another expression. </p>
+<h2 id="Answer"><a href="#Answer" class="headerlink" title="Answer"></a>Answer</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">solve</span><span class="params">(String []tokens)</span></span>&#123;</div><div class="line">    Stack&lt;Integer&gt; numStack = <span class="keyword">new</span> Stack&lt;&gt;();</div><div class="line">    <span class="keyword">for</span>(String term:tokens)&#123;</div><div class="line">        <span class="keyword">switch</span> (term)&#123;</div><div class="line">            <span class="keyword">case</span> <span class="string">"+"</span>:</div><div class="line">                numStack.push(numStack.pop()+numStack.pop());</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="string">"-"</span>:</div><div class="line">                <span class="keyword">int</span> a = numStack.pop();</div><div class="line">                numStack.push(numStack.pop()-a);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="string">"*"</span>:</div><div class="line">                numStack.push(numStack.pop()*numStack.pop());</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="string">"/"</span>:</div><div class="line">                <span class="keyword">int</span> b = numStack.pop();</div><div class="line">                numStack.push(numStack.pop()/b);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">default</span>: numStack.push(Integer.valueOf(term));</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> numStack.pop();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Be careful of that we need to take the operator’s order into account. In Reverse Polish Notation, different order means completely different experssion. So do not use two stacks to reserve operand or operator. In Reverse Polish Notationm, it is vital that if we meet a operator, we should find two operands in stack to calculate immediately and push the result in the stack.</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/12/C10T2W1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -380,8 +541,8 @@
       
         
           
-            <h1 id="Writing-task1"><a href="#Writing-task1" class="headerlink" title="Writing task1"></a>Writing task1</h1><p>The tables illustrate sales of Fairtrade*-labelled coffee and bananas in UK, Switerland , Denmark , Belgium , and Sweden in 1999 abd in 2004.</p>
-<p>Switerland sold  3 millions of euros in coffee  in 1999 , which is twice more than that in UK, and increased to 6 milllions euros in 2004. The sales in Denmark rose from £1.8 million in 1999 to £2 million in 2004. In 1999 Sweden had the least sales, just £0.8 million. UK increased a lot from £1.5 million in 1999 to £20 million in 2004.</p>
+            <h1 id="Writing-task1"><a href="#Writing-task1" class="headerlink" title="Writing task1"></a>Writing task1</h1><p>The tables illustrate sales of Fairtrade*-labelled coffee and bananas in UK, Switerland , Denmark , Belgium , and Sweden in 1999 and in 2004.</p>
+<p>Switerland sold  3 millions of euros in coffee  in 1999 , which is twice more than that in UK, and increased to 6 milllions euros in 2004. The sales in Denmark rose from £1.8 million in 1999 to £2 million in 2004. In 1999 Sweden had the least sales, just £0.8 million.The sale of in UK increased a lot from £1.5 million in 1999 to £20 million in 2004.</p>
 <p>As for sales of Fairtrade-labelled bananas. In 1999, Switzerland sold 15 millions of euros in bananas and had a huge increase to £47 million in 2004 . Denmark sold £2 million , twice as big as that in UK, while Belgium just sold 0.6. The sales in UK and Belgium increased to £5.5 million and £4 million in 2004 respectively.</p>
 <p>In conclusion, sales of coffee in UK are the biggest in 2004,  while sales of bananas in Switzerland in 2004 are the biggest too.</p>
 <p>30min</p>
@@ -541,10 +702,10 @@
             <h1 id="Writing-task-2"><a href="#Writing-task-2" class="headerlink" title="Writing task 2"></a>Writing task 2</h1><p>Some people think that all university students study whatever they like. Others blieve that they should only be allowed to study subjects that will be useful in the future, such as those related to science and technology.</p>
 <p>Discuss both these views and give your own opinion.</p>
 <h1 id="Answer"><a href="#Answer" class="headerlink" title="Answer"></a>Answer</h1><h2 id="outline"><a href="#outline" class="headerlink" title="outline"></a>outline</h2><p><img src="http://oo9y7ylu4.bkt.clouddn.com/image/IELTS/C10T2W2.jpg" alt="提纲"></p>
-<h2 id="Article"><a href="#Article" class="headerlink" title="Article"></a>Article</h2><p>The topic that all university students should study whatever they like or useful subjects in the future is being discussed. Although each side of them have their own outlook , I suppose that all university students ought to study subjects that will be useful in the future.</p>
-<p>As for subjects which students like ,students have various choose but these can’t work well.  Firstly, students will not completely know about all their subjects , just choosing subjects which they think they like. They may find that some kinds of subjects which they study are not same as they consider. With disappointed , they can not concentrate on the subject. Secondly, if university students study too much subjects , they  would not get good grades in each one. Students busy with a large quantity of subjects which means heavy school work . As a result , they don not know what they have learnt. So university students should not study  no matter what they like.</p>
-<p>Studying useful subjects make them more professional in the future. First , in the compus , the undergraduates who just study subjects which suit for their job have a deep understanding of the technology. Besides, they use almost whole four year to study subject about their job. Accumulating a great deal of experience , they could solve the problem, happening in work, easily. This kind of undergraduates meet with great favor in companys. In short , university students who just study useful subjects are more capable than others.</p>
-<p>In conclusion, students studying they like will not have a great achievement than students studying useful subjects. So in my opinion, university students sould study the useful subject.</p>
+<h2 id="Article"><a href="#Article" class="headerlink" title="Article"></a>Article</h2><p>The topic that all university students should study whatever they like or subjects which will be useful in the future is being discussed. Although each side of them have their own outlook , I suppose that all university students ought to study subjects that will be useful in the future.</p>
+<p>As for subjects <del>which</del> students like ,students have various choose but these can’t work well.  Firstly, students will not completely know about all their subjects , just choosing subjects which they think they like. They may find that some kinds of subjects which they study are not same as they consider. With <del>disappointed</del> <u>disappointment</u> , they can not concentrate on the subject. Secondly, if university students study too much subjects , they  would not get good grades in each one. Students are busy with a large quantity of subjects which means heavy school work . As a result , they do not know what they have learnt. So university students should not study  no matter what they like.</p>
+<p>Studying useful subjects make them more professional in the future. First , in the compus , the undergraduates who just study subjects which suit for their job have a deep understanding of the technology        . Besides, they use almost whole four years to study subjects about their job. Accumulating a great deal of experience , they could solve the problems, happening in work, easily. This kind of undergraduates meet with great favor in companys. In short , university students who just study useful subjects are more capable than others.</p>
+<p>In conclusion, students studying whatever they like will not have a great achievement than students studying useful subjects. So in my opinion, university students sould study the useful subject.</p>
 <p>40min</p>
 
           
@@ -6470,284 +6631,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/19/小作文/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="TianyLi">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://oo9y7ylu4.bkt.clouddn.com/image/blog/headIcon/IMG_7483.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ty_Isaac">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/19/小作文/" itemprop="url">
-                  IELTS小作文
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-19T23:30:58+08:00">
-                2017-04-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/English/" itemprop="url" rel="index">
-                    <span itemprop="name">英语</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/04/19/小作文/" class="leancloud_visitors" data-flag-title="IELTS小作文">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="曲线图"><a href="#曲线图" class="headerlink" title="曲线图"></a>曲线图</h2><h3 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h3><ol>
-<li>曲线的变化趋势：上升、下降、保持平稳、波动</li>
-<li>特殊点：起点、终点、交点、极值点、转折点</li>
-<li>特殊曲线</li>
-</ol>
-<h3 id="逻辑"><a href="#逻辑" class="headerlink" title="逻辑"></a>逻辑</h3><ol>
-<li>简单介绍逻辑 paraphrase    不能抄题</li>
-<li>所有曲线的起点  信息处理逻辑（从大到小），相近的点一句话处理（顺序）</li>
-<li>所有下降的曲线及除了交点之外的所有特点</li>
-<li>所有上升的曲线及包含交点的所有特点        （按幅度分组）</li>
-<li>图标的Overview  图的最大特点，第一眼看 (1)各个曲线的趋势（2）特殊曲线</li>
-</ol>
-<h2 id="柱状图"><a href="#柱状图" class="headerlink" title="柱状图"></a>柱状图</h2><p>按柱子的分类分段（主要方法）</p>
-<p>按横坐标的组数分段（补充方法）    原则4~6</p>
-<p>按时态分段（适用于)</p>
-<p>分段不参考 动静</p>
-<p>两倍关系 ：第一 的从句 将一半的带出</p>
-<ol>
-<li>柱状图即可提现数据变化趋势</li>
-</ol>
-<h2 id="饼图"><a href="#饼图" class="headerlink" title="饼图"></a>饼图</h2><ol>
-<li><p>写几块？ 为什么？</p>
-<p>（x-1）块，x=总块数 ；</p>
-</li>
-<li><p>主要特点是</p>
-<p>1st 2nd last。找数字关系</p>
-</li>
-<li><p>写作顺序</p>
-<p>从大到小</p>
-</li>
-<li><p>余下的块看情况，找数字之间的关系</p>
-</li>
-</ol>
-<h2 id="基本功"><a href="#基本功" class="headerlink" title="基本功"></a>基本功</h2><h4 id="单词"><a href="#单词" class="headerlink" title="单词"></a>单词</h4><ul>
-<li>上升： rise / climb / increase / soar / show an upward trend /</li>
-<li>下降：fall / decline / decrease / slash大幅度削减 /detract from /descend</li>
-<li>保持平稳：(keep/remain)  (stable/steady)</li>
-<li>波动： fluctuate</li>
-<li>显著地： obviously  / consideratly / significantly</li>
-<li>大约：about / around / almost /approximately / roughly / just over or below</li>
-<li>超过：overtake / exceed / surpass</li>
-<li>展现： show / illustrate / give information about</li>
-<li>很多：a great deal</li>
-<li>占据：account for</li>
-</ul>
-<h3 id="静态图句型"><a href="#静态图句型" class="headerlink" title="静态图句型"></a>静态图句型</h3><p>百分之…的…被用来/被用在…了 </p>
-<p><u>40% of money was used/spent in food.</u></p>
-<p><u>There is 40% of money that is spent on food.</u></p>
-<p><u>Money spent on food occupies/takes up/consititute/  40%  of all/collectively</u>(不适用纯数字)</p>
-<p><u>The percentage/proportion of money spent on food is 40%.</u>    number/quantity/amount</p>
-<h3 id="动态图句型"><a href="#动态图句型" class="headerlink" title="动态图句型"></a>动态图句型</h3><p> A increased to XXX(单位) in 2000</p>
-<p>There was an obvious decrease/increase in D.</p>
-<p>E rose and peaked at XXX(单位) in 1990 before fell significantly to XXX [单位] in 1996</p>
-<p>F soared to XXX[单位] in 1993 after a slow increase from 1990 to 1991.</p>
-<p>占据  consititue ,  account for , takes up ,  occupies    species 单复数通行</p>
-<p>collectively 总体、集体</p>
-<p>纯数字，带单位，百分数没有单位</p>
-<p>diploma  degree        Bachelor degree</p>
-<p>相等</p>
-<p>be + amost / around  same with   equal to  ,  similar to  ,  close to</p>
-<p>There is no difference between the two in quantitative terms.</p>
-<p>倍数</p>
-<p>A is twice as big as B</p>
-<p>A is twice bigger than B </p>
-<p>The percentage of money spent on rent was 20%, which was about twice bigger than taht of clothes.</p>
-<p>There was 9% of money spent entertainment, which was similar/close to that of clothes.</p>
-<p>多个饼图 动静结合</p>
-<ol>
-<li><p>数据的变化趋势</p>
-<p>参考曲线图</p>
-</li>
-<li><p>具有代表性的数字</p>
-<p>1^st^  2^nd^  last</p>
-</li>
-<li><p>数字之间的倍数</p>
-<p>相等、倍数</p>
-</li>
-<li><p>Overview</p>
-<p>寻找每个饼的overview之间的联系</p>
-</li>
-</ol>
-<p>pie charts </p>
-<p>趋势（上升、下降）：  明显的一组 不明显的一组</p>
-<p>分段：</p>
-<p>总结：多幅图各个击破，找最大的overview；寻找共同点。</p>
-<h2 id="表格-table"><a href="#表格-table" class="headerlink" title="表格(table)"></a>表格(table)</h2><p>静态还是动态</p>
-<p>​    看情况、曲线图、</p>
-<p>表格的主要特点</p>
-<p>​    </p>
-<p>表格的overview</p>
-<p>​    最大的数</p>
-<p>横着看，竖着看都有结论</p>
-<p>时间按  最早、第二早、最晚。</p>
-<p>相关的数据关系。</p>
-<p>兼顾纵横</p>
-<p>表格作业</p>
-<h2 id="地图题"><a href="#地图题" class="headerlink" title="地图题"></a>地图题</h2><h4 id="历史变迁型-difference"><a href="#历史变迁型-difference" class="headerlink" title="历史变迁型(difference)"></a>历史变迁型(difference)</h4><p>Before - After: </p>
-<p>difference的角度  <u>数量的变化、面积的变化、位置的变化</u></p>
-<p><u>顺序  顺时针，第二幅图 按照第一幅图的顺序</u></p>
-<p>基本功：</p>
-<p>数量：</p>
-<p>0-1修建：build construct</p>
-<p>1-0去除：remove demolish</p>
-<p>1-2倍数：倍数的表达</p>
-<p>位置：</p>
-<p>move to, relocate at ,<u>to in</u></p>
-<p>面积：area , size </p>
-<p>后面这个比前面这个变了很多</p>
-<h4 id="规划类-layout"><a href="#规划类-layout" class="headerlink" title="规划类(layout)"></a>规划类(layout)</h4><p>注意比较二者的区别最后得出结论</p>
-<p>总而言之，我觉得 …… 更适合 </p>
-<h2 id="流程图-Flow-chart"><a href="#流程图-Flow-chart" class="headerlink" title="流程图 Flow chart"></a>流程图 Flow chart</h2><p>Life cycle生命周期</p>
-<p>Production物品生产</p>
-<p>基本功 ： 找谓语，词汇很关键</p>
-<p>产卵spawn  生长发育 thrive</p>
-<p>immigrate 人的移民</p>
-<p>emmigrate 动物的迁徙  dwell     inhabit栖息</p>
-<p>Washing powder</p>
-<p>grind / ground   laminate  磨碎</p>
-<p>process 处理(加工)</p>
-<p>undergo  high temerature</p>
-<p>spwan产卵 lay下蛋    thrive , grow   。  grow into 长成  live on 以……为生</p>
-<p>knit</p>
-<p>First , then , stage/phase , step</p>
-<p>intelligible 通俗易懂</p>
-<p>总结，产品 的 流程 比较清楚、清晰易懂</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -6797,7 +6680,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -6819,7 +6702,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
