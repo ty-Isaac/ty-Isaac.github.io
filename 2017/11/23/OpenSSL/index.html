@@ -87,19 +87,19 @@
 
 
 
-<meta name="description" content="OpenSLL在linux 中编译和安装 获得 OpenSSL  从OpenSSL的 官方网站 即可下载当前版本的 OpenSSL 源代码压缩包。当前版本为 openssl-1.0.2l。  在Linux中解压缩：  $tar zxf openssl-1.0.2l.tar.gz  编译和安装  $sudo ./config  $sudo make  $sudo make test  $sudo m">
+<meta name="description" content="OpenSSL实验在linux 中编译和安装 获得 OpenSSL  从OpenSSL的 官方网站 即可下载当前版本的 OpenSSL 源代码压缩包。当前版本为 openssl-1.0.2l。  在Linux中解压缩：  $tar zxf openssl-1.0.2l.tar.gz  编译和安装  $sudo ./config  $sudo make  $sudo make test  $sudo">
 <meta name="keywords" content="Openssl,Encrypt">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Openssl Encrypt">
 <meta property="og:url" content="http://yoursite.com/2017/11/23/OpenSSL/index.html">
 <meta property="og:site_name" content="Ty_Isaac">
-<meta property="og:description" content="OpenSLL在linux 中编译和安装 获得 OpenSSL  从OpenSSL的 官方网站 即可下载当前版本的 OpenSSL 源代码压缩包。当前版本为 openssl-1.0.2l。  在Linux中解压缩：  $tar zxf openssl-1.0.2l.tar.gz  编译和安装  $sudo ./config  $sudo make  $sudo make test  $sudo m">
+<meta property="og:description" content="OpenSSL实验在linux 中编译和安装 获得 OpenSSL  从OpenSSL的 官方网站 即可下载当前版本的 OpenSSL 源代码压缩包。当前版本为 openssl-1.0.2l。  在Linux中解压缩：  $tar zxf openssl-1.0.2l.tar.gz  编译和安装  $sudo ./config  $sudo make  $sudo make test  $sudo">
 <meta property="og:image" content="http://img.hexun.com/2009-06-24/118958535.gif">
 <meta property="og:image" content="http://img.hexun.com/2009-06-24/118958536.gif">
-<meta property="og:updated_time" content="2017-11-23T03:28:12.000Z">
+<meta property="og:updated_time" content="2017-11-29T11:39:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Openssl Encrypt">
-<meta name="twitter:description" content="OpenSLL在linux 中编译和安装 获得 OpenSSL  从OpenSSL的 官方网站 即可下载当前版本的 OpenSSL 源代码压缩包。当前版本为 openssl-1.0.2l。  在Linux中解压缩：  $tar zxf openssl-1.0.2l.tar.gz  编译和安装  $sudo ./config  $sudo make  $sudo make test  $sudo m">
+<meta name="twitter:description" content="OpenSSL实验在linux 中编译和安装 获得 OpenSSL  从OpenSSL的 官方网站 即可下载当前版本的 OpenSSL 源代码压缩包。当前版本为 openssl-1.0.2l。  在Linux中解压缩：  $tar zxf openssl-1.0.2l.tar.gz  编译和安装  $sudo ./config  $sudo make  $sudo make test  $sudo">
 <meta name="twitter:image" content="http://img.hexun.com/2009-06-24/118958535.gif">
 
 
@@ -378,7 +378,7 @@
       
 
       
-        <h1 id="OpenSLL"><a href="#OpenSLL" class="headerlink" title="OpenSLL"></a>OpenSLL</h1><h2 id="在linux-中编译和安装"><a href="#在linux-中编译和安装" class="headerlink" title="在linux 中编译和安装"></a>在linux 中编译和安装</h2><ol>
+        <h1 id="OpenSSL实验"><a href="#OpenSSL实验" class="headerlink" title="OpenSSL实验"></a>OpenSSL实验</h1><h2 id="在linux-中编译和安装"><a href="#在linux-中编译和安装" class="headerlink" title="在linux 中编译和安装"></a>在linux 中编译和安装</h2><ol>
 <li><p>获得 OpenSSL</p>
 <p> 从OpenSSL的 <a href="http://www.openssl.org/source/" target="_blank" rel="external">官方网站</a> 即可下载当前版本的 OpenSSL 源代码压缩包。当前版本为 openssl-1.0.2l。</p>
 <p> 在Linux中解压缩：</p>
@@ -392,10 +392,25 @@
 <p> 安装OpenSSL 开发包，这在所有的现代Linux发行版的标准软件仓库中都有。</p>
 <p> $sudo apt-get install libssl-dev</p>
 </li>
+<li><p>编译代码文件</p>
+<p> gcc 文件名.c -o 编译文件名 -lcrypto</p>
+</li>
+<li><p>我的代码使用方式</p>
+<p> ECB模式，编译执行即可</p>
+<p> CBC模式，分加密 和 解密 文件，需要先自己写data文件。 根据提示输入 文件名等信息</p>
+<p> CFB模式、OFB模式，编译执行即可</p>
+<p> AES模式，编译执行即可</p>
+<p> RC4模式，编译执行即可</p>
+<p> RSA加密，需要根据下文生成公钥和私钥，然后编译执行</p>
+<p> RSA签名和认证，编译执行就可以</p>
+</li>
 </ol>
-<h2 id="实验三-对称加密算法实验"><a href="#实验三-对称加密算法实验" class="headerlink" title="实验三 对称加密算法实验"></a>实验三 对称加密算法实验</h2><ol>
+<h2 id="实验三-对称加密算法实验"><a href="#实验三-对称加密算法实验" class="headerlink" title="实验三 对称加密算法实验"></a>实验三 对称加密算法实验</h2><p>加密一般分为对称加密(Symmetric Key Encryption) 和非对称加密(Asymmetric Key Encryption)。对称加密又分为分组加密和序列密码。</p>
+<p>分组密码，也叫块加密(block cyphers)，一次加密明文中的一个块。是将明文按一定的位长分组，明文组经过加密运算得到密文组，密文组经过解密运算（加密运算的逆运算），还原成明文组。</p>
+<p>序列密码，也叫流加密(stream cyphers)，一次加密明文中的一个位。是指利用少量的密钥(制乱元素) 通过某种复杂的运算(密码算法) 产生大量的伪随机位流，用于对明文位流的加密。解密是指用同样的密钥和密码算法及与加密相同的伪随机位流，用于还原明文位流。</p>
+<ol>
 <li><p>DES 算法接口 </p>
-<p> DES 加密算法是分组算法。 DES 的基本操作是把64比特明文在 56 比特密钥指引下加密成64位密文</p>
+<p> DES 加密算法是分组算法。 DES 的基本操作是把 64bit 明文在 56 bit 密钥指引下加密成64位密文</p>
 <p> DES(IN,KEY) = OUT</p>
 <p> 在openSSL中，DES算法的基本函数就是ECB 操作模式对应的函数  ==DES_ecb_encrypt()== 。该函数把一个8字节明文分组input加密成为一个 8 字节密文分组 output。</p>
 <p> 参数中密钥结构 ks 是用函数 DES_set_key()准备好的， 而密钥 key 是用随机数算法产生的 64 个随机比特。</p>
@@ -475,6 +490,26 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">RSA_public_encrypt</span><span class="params">(<span class="keyword">int</span> flen, <span class="keyword">const</span> *from,<span class="keyword">unsigned</span> <span class="keyword">char</span> *to, RSA *rsa,<span class="keyword">int</span> padding)</span></span>; </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">RSA_private_decrypt</span><span class="params">(<span class="keyword">int</span> flen, <span class="keyword">const</span> *from,<span class="keyword">unsigned</span> <span class="keyword">char</span> *to, RSA *rsa,<span class="keyword">int</span> padding)</span></span>;</div></pre></td></tr></table></figure>
 <h3 id="RSA-签名和验证"><a href="#RSA-签名和验证" class="headerlink" title="RSA 签名和验证"></a>RSA 签名和验证</h3><p>签名使用私钥，验证使用公钥。RSA签名操作是把被签署消息的散列值编码后用私钥加密，因此函数中参数 type 用来指示散列函数的类型，一般是NID_MD5,NID_sha1 正确情况下返回 0 。</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">RSA_sign</span><span class="params">(<span class="keyword">int</span> type, <span class="keyword">const</span> <span class="keyword">unsigned</span> <span class="keyword">char</span> *m, <span class="keyword">unsigned</span> <span class="keyword">int</span> m_length, <span class="keyword">unsigned</span> <span class="keyword">char</span> *sigret, <span class="keyword">unsigned</span> <span class="keyword">int</span> *siglen, RSA *rsa)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">RSA_verify</span><span class="params">(<span class="keyword">int</span> type, <span class="keyword">const</span> <span class="keyword">unsigned</span> <span class="keyword">char</span> *m, <span class="keyword">unsigned</span> <span class="keyword">int</span> m_length, <span class="keyword">unsigned</span> <span class="keyword">char</span> *sigbuf, <span class="keyword">unsigned</span> <span class="keyword">int</span> siglen, RSA *rsa)</span></span>;</div></pre></td></tr></table></figure>
+<h1 id="复习"><a href="#复习" class="headerlink" title="复习"></a>复习</h1><p>抗否认</p>
+<p>抵赖性</p>
+<p>完整性</p>
+<p>认证问题</p>
+<p>实验报告提交要求</p>
+<p>danny0128@126.com</p>
+<p>主题 ： 2014IS 一个doc 文档</p>
+<p>doc 文档命名： 学号+姓名.doc</p>
+<p>deadline : </p>
+<p>周五那一天 半夜12点</p>
+<p>实验结束后实验报告邮件</p>
+<p>平时成绩 ： 网络登录 + 小测验 +  </p>
+<p>基本概念</p>
+<p>数字证书，ITEM 术语  ，穷举攻击，所有的基本概念</p>
+<p>这是啥，为啥，原理性。 数字证书怎么保证认证， kerpos 协议如何认证，道理讲清楚</p>
+<p>基本原理</p>
+<p>基本理论，基本原理，基本应用 </p>
+<p>重点搞清楚原理</p>
+<p>第三章，第四章，第五章 </p>
+<p>第六章三重des 和流</p>
 
       
     </div>
@@ -656,7 +691,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OpenSLL"><span class="nav-number">1.</span> <span class="nav-text">OpenSLL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#在linux-中编译和安装"><span class="nav-number">1.1.</span> <span class="nav-text">在linux 中编译和安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验三-对称加密算法实验"><span class="nav-number">1.2.</span> <span class="nav-text">实验三 对称加密算法实验</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验四-公钥算法实验"><span class="nav-number">1.3.</span> <span class="nav-text">实验四 公钥算法实验</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#RSA-密钥产生"><span class="nav-number">1.3.1.</span> <span class="nav-text">RSA 密钥产生</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RSA-加密和解密"><span class="nav-number">1.3.2.</span> <span class="nav-text">RSA 加密和解密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RSA-签名和验证"><span class="nav-number">1.3.3.</span> <span class="nav-text">RSA 签名和验证</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OpenSSL实验"><span class="nav-number">1.</span> <span class="nav-text">OpenSSL实验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#在linux-中编译和安装"><span class="nav-number">1.1.</span> <span class="nav-text">在linux 中编译和安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验三-对称加密算法实验"><span class="nav-number">1.2.</span> <span class="nav-text">实验三 对称加密算法实验</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验四-公钥算法实验"><span class="nav-number">1.3.</span> <span class="nav-text">实验四 公钥算法实验</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#RSA-密钥产生"><span class="nav-number">1.3.1.</span> <span class="nav-text">RSA 密钥产生</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RSA-加密和解密"><span class="nav-number">1.3.2.</span> <span class="nav-text">RSA 加密和解密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RSA-签名和验证"><span class="nav-number">1.3.3.</span> <span class="nav-text">RSA 签名和验证</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#复习"><span class="nav-number">2.</span> <span class="nav-text">复习</span></a></li></ol></div>
             
 
           </div>
