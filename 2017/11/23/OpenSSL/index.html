@@ -96,7 +96,7 @@
 <meta property="og:description" content="OpenSSL实验在linux 中编译和安装 获得 OpenSSL  从OpenSSL的 官方网站 即可下载当前版本的 OpenSSL 源代码压缩包。当前版本为 openssl-1.0.2l。  在Linux中解压缩：  $tar zxf openssl-1.0.2l.tar.gz  编译和安装  $sudo ./config  $sudo make  $sudo make test  $sudo">
 <meta property="og:image" content="http://img.hexun.com/2009-06-24/118958535.gif">
 <meta property="og:image" content="http://img.hexun.com/2009-06-24/118958536.gif">
-<meta property="og:updated_time" content="2017-12-03T03:08:59.000Z">
+<meta property="og:updated_time" content="2017-12-04T08:14:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Openssl Encrypt">
 <meta name="twitter:description" content="OpenSSL实验在linux 中编译和安装 获得 OpenSSL  从OpenSSL的 官方网站 即可下载当前版本的 OpenSSL 源代码压缩包。当前版本为 openssl-1.0.2l。  在Linux中解压缩：  $tar zxf openssl-1.0.2l.tar.gz  编译和安装  $sudo ./config  $sudo make  $sudo make test  $sudo">
@@ -504,7 +504,7 @@
 <p>平时成绩 ： 网络登录 + 小测验 +  </p>
 <p>基本概念</p>
 <p>数字证书，ITEM 术语  ，穷举攻击，所有的基本概念</p>
-<p>这是啥，为啥，原理性。 数字证书怎么保证认证， kerpos 协议如何认证，道理讲清楚</p>
+<p>这是啥，为啥，原理性。 数字证书怎么保证认证， kerberos 协议如何认证，道理讲清楚</p>
 <p>基本原理</p>
 <p>基本理论，基本原理，基本应用 </p>
 <p>重点搞清楚原理</p>
@@ -536,7 +536,42 @@
 <p>雪崩效应：明文或密钥的某一位发生变化会导致密文的很多位都发生变化。</p>
 <p>链接第6章：</p>
 <p>ECB 电子密码本：一次处理一组明文分块，每次使用相同的密钥加密。  适合于数据较少的情况，比如加密密钥。很长的消息ECB模式不安全</p>
-<p>CBC密文分组链接：</p>
+<p>CBC密文分组链接：加密算法的输入时当前的明文组和上一个密文组的异或，而使用相同的密钥。最后分组不完整就填充。</p>
+<p>CFB密文反馈模式：可以将分组密码当做流密码使用。不需要填充明文分组</p>
+<p>OFB输出反馈模式：和CFB类似，它用加密函数的输出填充移位寄存器。而CFB使用密文单元来填充。 优点：传输过程中在某位上发生的错误不会影响其他位。 缺点：抗消息流篡改攻击能力不如CFB</p>
+<h3 id="第四章-数论和有限域"><a href="#第四章-数论和有限域" class="headerlink" title="第四章 数论和有限域"></a>第四章 数论和有限域</h3><h3 id="第五章-高级加密标准"><a href="#第五章-高级加密标准" class="headerlink" title="第五章 高级加密标准"></a>第五章 高级加密标准</h3><p>AES 高级加密标准：对称分组密码算法，分组长度为128位，密钥长度为128位、192位或256位。 </p>
+<p>四个不同阶段： 字节替代、行位移、列混淆、轮密钥加</p>
+<h3 id="第六章-分组密码工作模式"><a href="#第六章-分组密码工作模式" class="headerlink" title="第六章 分组密码工作模式"></a>第六章 分组密码工作模式</h3><p>中间相遇攻击：将 p 按所有可能的密钥 K~1~ 加密，得到结果放在表内。然后将 C 用所有可能的密钥 K~2~ 解密，每解密一次就将解密结果与表中的值比较，如果相等就用此密钥对对一个新的明密文进行验证。</p>
+<p>流密码：每次加密一个字节的明文，随机密钥流与明文的每一个字节进行对位异或运算，得到一个字节</p>
+<p>流密码设计因素：加密序列的周期要长、密钥流尽可能地接近于真正随机数流的特征。</p>
+<h3 id="第八章-数论入门"><a href="#第八章-数论入门" class="headerlink" title="第八章 数论入门"></a>第八章 数论入门</h3><p>费马定理：</p>
+<h3 id="第九章-公钥密码学与RSA"><a href="#第九章-公钥密码学与RSA" class="headerlink" title="第九章 公钥密码学与RSA"></a>第九章 公钥密码学与RSA</h3><p>公钥算法用两个密钥中的一个及加密算法将明文转换位密文。用另一个密钥及解密算法从密文恢复出明文。</p>
+<p>特点：仅根据密码算法和加密密钥来确定解密密钥在计算上不可行。 两个密钥任何一个都可以用来加密，另一个用来解密</p>
+<p>密码体制的应用：加密/解密 、数字签名、密钥交换</p>
+<p>RSA算法：使用乘方运算，明文以分组为单位进行加密，每个分组的二进制值均小于n。</p>
+<h3 id="第十一章-消息认证和Hash函数"><a href="#第十一章-消息认证和Hash函数" class="headerlink" title="第十一章 消息认证和Hash函数"></a>第十一章 消息认证和Hash函数</h3><p>消息认证是用来验证消息完整性的一种机制或服务，确保收到的数据和发送时一样，切发送方声称的身份真实有效</p>
+<p>消息认证码：利用密钥来生成一个固定长度的短数据块，并将该数据块附加在消息之后</p>
+<p>Hash函数：将可变长度的消息映射为固定长度的Hash值或消息摘要。</p>
+<h3 id="第十三章-数字签名"><a href="#第十三章-数字签名" class="headerlink" title="第十三章 数字签名"></a>第十三章 数字签名</h3><p>数字签名：一种认证机制，使得消息的产生着可以添加一个起签名作用的码字。通过计算消息的hash值并用产生者的私钥加密hash值来生成签名。签名保证了消息的来源和完整性。</p>
+<p>数字签名标准是NIST标准，使用安全HASH算法(SHA)</p>
+<p>数字签名特征：</p>
+<p>能验证签名者、签名日期和时间</p>
+<p>能认证被签的消息内容</p>
+<p>签名能由第三方仲裁</p>
+<p>数字签名需求：</p>
+<ol>
+<li>签名必须是与消息相关的二进制位串。</li>
+<li>签名必须使用发送方某些独有的信息，以防伪造和否认</li>
+<li>产生数字签名比较容易。</li>
+<li>识别和验证数字签名比较容易。</li>
+<li>伪造数字签名在计算上是不可以行的</li>
+</ol>
+<h3 id="第十四章-认证应用"><a href="#第十四章-认证应用" class="headerlink" title="第十四章 认证应用"></a>第十四章 认证应用</h3><p>kerberos 解决问题：在开放的分布式网络环境中，用户通过工作站访问服务器提供的服务存在问题</p>
+<p>kerberos 通过提供一个集中的授权服务器来负责用户对服务器的认证和服务器对用户的认证。 </p>
+<p>kerberos ：安全性、可靠性、透明性、可伸缩</p>
+<p>三个概念： 认证服务器（AS）：将所有用户口令集中存在本地数据库，其与每个应用服务器共享一个唯一密钥 ； 客户端（C）：代替用户与服务器进行信息交换  ；票据 （Ticket）：身份或权利的证明</p>
+<p>kerberos 简单认证会话过程：</p>
+<p>简单认证的问题：1. 每一访问新服务需要新的票据，导致用户多次输入口令 2.用明文传递的用户口令会被窃听</p>
 <h2 id="问答题考点"><a href="#问答题考点" class="headerlink" title="问答题考点"></a>问答题考点</h2><ol>
 <li><p>对称加密算法</p>
 <ol>
@@ -773,7 +808,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OpenSSL实验"><span class="nav-number">1.</span> <span class="nav-text">OpenSSL实验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#在linux-中编译和安装"><span class="nav-number">1.1.</span> <span class="nav-text">在linux 中编译和安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验三-对称加密算法实验"><span class="nav-number">1.2.</span> <span class="nav-text">实验三 对称加密算法实验</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验四-公钥算法实验"><span class="nav-number">1.3.</span> <span class="nav-text">实验四 公钥算法实验</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#RSA-密钥产生"><span class="nav-number">1.3.1.</span> <span class="nav-text">RSA 密钥产生</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RSA-加密和解密"><span class="nav-number">1.3.2.</span> <span class="nav-text">RSA 加密和解密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RSA-签名和验证"><span class="nav-number">1.3.3.</span> <span class="nav-text">RSA 签名和验证</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#复习"><span class="nav-number">2.</span> <span class="nav-text">复习</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#课程主题"><span class="nav-number">3.</span> <span class="nav-text">课程主题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#密码学"><span class="nav-number">3.1.</span> <span class="nav-text">密码学</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#传统密码学"><span class="nav-number">3.1.1.</span> <span class="nav-text">传统密码学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#公钥密码"><span class="nav-number">3.1.2.</span> <span class="nav-text">公钥密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hash-函数-MAC-函数-数字签名"><span class="nav-number">3.1.3.</span> <span class="nav-text">Hash 函数 / MAC 函数 / 数字签名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络安全实践"><span class="nav-number">3.2.</span> <span class="nav-text">网络安全实践</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#考试"><span class="nav-number">4.</span> <span class="nav-text">考试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#复习-1"><span class="nav-number">4.1.</span> <span class="nav-text">复习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一章-概述"><span class="nav-number">4.1.1.</span> <span class="nav-text">第一章 概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二章-传统加密技术"><span class="nav-number">4.1.2.</span> <span class="nav-text">第二章 传统加密技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三章-分组密码"><span class="nav-number">4.1.3.</span> <span class="nav-text">第三章 分组密码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问答题考点"><span class="nav-number">4.2.</span> <span class="nav-text">问答题考点</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OpenSSL实验"><span class="nav-number">1.</span> <span class="nav-text">OpenSSL实验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#在linux-中编译和安装"><span class="nav-number">1.1.</span> <span class="nav-text">在linux 中编译和安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验三-对称加密算法实验"><span class="nav-number">1.2.</span> <span class="nav-text">实验三 对称加密算法实验</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验四-公钥算法实验"><span class="nav-number">1.3.</span> <span class="nav-text">实验四 公钥算法实验</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#RSA-密钥产生"><span class="nav-number">1.3.1.</span> <span class="nav-text">RSA 密钥产生</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RSA-加密和解密"><span class="nav-number">1.3.2.</span> <span class="nav-text">RSA 加密和解密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RSA-签名和验证"><span class="nav-number">1.3.3.</span> <span class="nav-text">RSA 签名和验证</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#复习"><span class="nav-number">2.</span> <span class="nav-text">复习</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#课程主题"><span class="nav-number">3.</span> <span class="nav-text">课程主题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#密码学"><span class="nav-number">3.1.</span> <span class="nav-text">密码学</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#传统密码学"><span class="nav-number">3.1.1.</span> <span class="nav-text">传统密码学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#公钥密码"><span class="nav-number">3.1.2.</span> <span class="nav-text">公钥密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hash-函数-MAC-函数-数字签名"><span class="nav-number">3.1.3.</span> <span class="nav-text">Hash 函数 / MAC 函数 / 数字签名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络安全实践"><span class="nav-number">3.2.</span> <span class="nav-text">网络安全实践</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#考试"><span class="nav-number">4.</span> <span class="nav-text">考试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#复习-1"><span class="nav-number">4.1.</span> <span class="nav-text">复习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一章-概述"><span class="nav-number">4.1.1.</span> <span class="nav-text">第一章 概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二章-传统加密技术"><span class="nav-number">4.1.2.</span> <span class="nav-text">第二章 传统加密技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三章-分组密码"><span class="nav-number">4.1.3.</span> <span class="nav-text">第三章 分组密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第四章-数论和有限域"><span class="nav-number">4.1.4.</span> <span class="nav-text">第四章 数论和有限域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第五章-高级加密标准"><span class="nav-number">4.1.5.</span> <span class="nav-text">第五章 高级加密标准</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第六章-分组密码工作模式"><span class="nav-number">4.1.6.</span> <span class="nav-text">第六章 分组密码工作模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第八章-数论入门"><span class="nav-number">4.1.7.</span> <span class="nav-text">第八章 数论入门</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第九章-公钥密码学与RSA"><span class="nav-number">4.1.8.</span> <span class="nav-text">第九章 公钥密码学与RSA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第十一章-消息认证和Hash函数"><span class="nav-number">4.1.9.</span> <span class="nav-text">第十一章 消息认证和Hash函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第十三章-数字签名"><span class="nav-number">4.1.10.</span> <span class="nav-text">第十三章 数字签名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第十四章-认证应用"><span class="nav-number">4.1.11.</span> <span class="nav-text">第十四章 认证应用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问答题考点"><span class="nav-number">4.2.</span> <span class="nav-text">问答题考点</span></a></li></ol></li></ol></div>
             
 
           </div>
