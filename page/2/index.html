@@ -270,6 +270,354 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/12/编程训练/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TianyLi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://oo9y7ylu4.bkt.clouddn.com/image/blog/headIcon/IMG_7483.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ty_Isaac">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/07/12/编程训练/" itemprop="url">
+                  编程训练
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-12T18:03:13+08:00">
+                2017-07-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programming/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/12/编程训练/" class="leancloud_visitors" data-flag-title="编程训练">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="二叉树的深度"><a href="#二叉树的深度" class="headerlink" title="二叉树的深度"></a>二叉树的深度</h1><h2 id="Instruction"><a href="#Instruction" class="headerlink" title="Instruction"></a>Instruction</h2><p>Given a binary tree, find its minimum depth. The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.</p>
+<p>Definition for binary tree</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</div><div class="line">   <span class="keyword">int</span> val;</div><div class="line">   TreeNode left;</div><div class="line">   TreeNode right;</div><div class="line">	TreeNode(<span class="keyword">int</span> x) &#123; val = x; &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Answer-to-the-question"><a href="#Answer-to-the-question" class="headerlink" title="Answer to the question"></a>Answer to the question</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">run</span><span class="params">(TreeNode root)</span> </span>&#123;</div><div class="line">      <span class="keyword">if</span>(root==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">      <span class="keyword">else</span> <span class="keyword">if</span>(root.left==<span class="keyword">null</span>)<span class="keyword">return</span> run(root.right)+<span class="number">1</span>;</div><div class="line">      <span class="keyword">else</span> <span class="keyword">if</span>(root.right==<span class="keyword">null</span>)<span class="keyword">return</span> run(root.left)+<span class="number">1</span>;</div><div class="line">      <span class="keyword">else</span>&#123;</div><div class="line">          <span class="keyword">return</span> Math.min(run(root.left), run(root.right))+<span class="number">1</span>;</div><div class="line">      &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The most important thing is that, it is a repeatitive process to calculate the depth from each child. So we find that if a node have both left and right node, we will choose a less depth. Apart from that, if the node just have right or left child node, we can choose the other one to calculate. Finally, if the node , don’t have a child, will return 0.</p>
+<h1 id="逆波兰表达式运算"><a href="#逆波兰表达式运算" class="headerlink" title="逆波兰表达式运算"></a>逆波兰表达式运算</h1><h2 id="instruction"><a href="#instruction" class="headerlink" title="instruction"></a>instruction</h2><p>valuate the value of an arithmetic expression in Reverse Polish Notation.Valid operators are+,-,*,/. Each operand may be an integer or another expression. </p>
+<h2 id="Answer"><a href="#Answer" class="headerlink" title="Answer"></a>Answer</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">solve</span><span class="params">(String []tokens)</span></span>&#123;</div><div class="line">    Stack&lt;Integer&gt; numStack = <span class="keyword">new</span> Stack&lt;&gt;();</div><div class="line">    <span class="keyword">for</span>(String term:tokens)&#123;</div><div class="line">        <span class="keyword">switch</span> (term)&#123;</div><div class="line">            <span class="keyword">case</span> <span class="string">"+"</span>:</div><div class="line">                numStack.push(numStack.pop()+numStack.pop());</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="string">"-"</span>:</div><div class="line">                <span class="keyword">int</span> a = numStack.pop();</div><div class="line">                numStack.push(numStack.pop()-a);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="string">"*"</span>:</div><div class="line">                numStack.push(numStack.pop()*numStack.pop());</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="string">"/"</span>:</div><div class="line">                <span class="keyword">int</span> b = numStack.pop();</div><div class="line">                numStack.push(numStack.pop()/b);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">default</span>: numStack.push(Integer.valueOf(term));</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> numStack.pop();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Be careful of that we need to take the operator’s order into account. In Reverse Polish Notation, different order means completely different experssion. So do not use two stacks to reserve operand or operator. In Reverse Polish Notationm, it is vital that if we meet a operator, we should find two operands in stack to calculate immediately and push the result in the stack.</p>
+<h1 id="链表排序"><a href="#链表排序" class="headerlink" title="链表排序"></a>链表排序</h1><h2 id="instruction-1"><a href="#instruction-1" class="headerlink" title="instruction"></a>instruction</h2><p>Sort a linked list in O($nlogn$) time using constant space complexity.</p>
+<h2 id="Answer-1"><a href="#Answer-1" class="headerlink" title="Answer"></a>Answer</h2><p>题目要求时间复杂度为O(nlogn)，可以考虑归并排序的思想</p>
+<p>一般步骤：</p>
+<ol>
+<li>将待排序数组（链表）取中点一分为二</li>
+<li>递归地对左半部分进行归并排序</li>
+<li>递归地对右半部分进行归并排序</li>
+<li>将两个部分合并</li>
+</ol>
+<h1 id="二叉树遍历方式"><a href="#二叉树遍历方式" class="headerlink" title="二叉树遍历方式"></a>二叉树遍历方式</h1><h2 id="instruction-2"><a href="#instruction-2" class="headerlink" title="instruction"></a>instruction</h2><p>Given a binary tree, return the preorder, postorder and  traversal of its nodes’ values.</p>
+<h2 id="Personal-Views"><a href="#Personal-Views" class="headerlink" title="Personal Views"></a>Personal Views</h2><p>二叉树的遍历方式有三种，中序遍历、前序遍历、后序遍历。可以用访问根节点的次序来定义，并且左子节点的访问先于右子节点。即 前序遍历：根、左、右 ；中序遍历：左、根、右；后序遍历：左、右、根</p>
+<h2 id="Postorder-Traversal"><a href="#Postorder-Traversal" class="headerlink" title="Postorder Traversal"></a>Postorder Traversal</h2><h3 id="栈实现"><a href="#栈实现" class="headerlink" title="栈实现"></a>栈实现</h3><p>思路：不同的遍历方式根本上是为了按照不同的次序访问节点。因此可以使用堆栈来调整元素位置。使用两个栈，stack1存放待访问的节点，stack2存放已访问节点，最后将stack2依次弹出则得到需要顺序。不同的顺序遍历结点入栈的顺序不同。</p>
+<p>postorder Traversal, 最后stack2弹栈按照 左、右、根，因此stack2中存放顺序为 根、右、左，即节点从stack1存入stack2的顺序为 根、右、左，由此：</p>
+<ul>
+<li>stack1t弹栈得到带访问节点node，将此节点（根节点）存入stack2</li>
+<li>访问node左子节点，将此节点存入stack1</li>
+<li>访问node右子节点，将此节点存入stack1</li>
+<li>从stack1弹栈得到下一个待访问节点 （右 $\rightarrow$ 左）</li>
+</ul>
+<h3 id="递归实现"><a href="#递归实现" class="headerlink" title="递归实现"></a>递归实现</h3><h2 id="Preorder-Traversal"><a href="#Preorder-Traversal" class="headerlink" title="Preorder Traversal"></a>Preorder Traversal</h2><h3 id="栈实现-1"><a href="#栈实现-1" class="headerlink" title="栈实现"></a>栈实现</h3><h3 id="递归实现-1"><a href="#递归实现-1" class="headerlink" title="递归实现"></a>递归实现</h3><p>存放次序为 根 、左 、右</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">preorderTraversal</span><span class="params">(TreeNode root)</span></span>&#123;</div><div class="line">    ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">    <span class="keyword">if</span>(root==<span class="keyword">null</span>)</div><div class="line">        <span class="keyword">return</span> list;</div><div class="line">    list.add(root.val);			<span class="comment">//先将根 存入列表</span></div><div class="line">    list.addAll(preorderTraversal(root.left));  <span class="comment">//左子节点存入列表</span></div><div class="line">    list.addAll(preorderTraversal(root.right));	<span class="comment">//右子节点存入列表</span></div><div class="line">    <span class="keyword">return</span> list;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> val;</div><div class="line">    TreeNode left;</div><div class="line">    TreeNode right;</div><div class="line">    TreeNode(<span class="keyword">int</span> x)&#123;val=x;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h1><h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><h3 id="TwoSum"><a href="#TwoSum" class="headerlink" title="TwoSum"></a>TwoSum</h3><h4 id="Instruction-1"><a href="#Instruction-1" class="headerlink" title="Instruction"></a>Instruction</h4><p>Given an array of integers, find two numbers such that they add up to a specific target number.</p>
+<p>The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2. Please note that your returned answers (both index1 and index2 ) are not zero-based.</p>
+<p>You may assume that each input would have exactly on solution.</p>
+<p><strong>Input</strong> : numbers = {2,7,11,15} , target = 9</p>
+<p><strong>Output</strong> : index1 = 1,    index2 = 2</p>
+<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>Using map collection can solve this problem easily. For each pair of numbers, saving each num as a key of map, meanwhile saving index of the num as its value. Every time if we can not find the needed number , just put it in the map. So, the time we get a result is that the needed number we find is in the map.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.HashMap;</div><div class="line"><span class="keyword">import</span> java.util.Map;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TwoSum</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] numbers, <span class="keyword">int</span> target) &#123;</div><div class="line">        <span class="keyword">int</span>[] result = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>];</div><div class="line">        Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numbers.length;i++)&#123;</div><div class="line">            <span class="keyword">if</span>(map.containsKey(target-numbers[i]))&#123;</div><div class="line">                result[<span class="number">1</span>] = i + <span class="number">1</span>;</div><div class="line">                result[<span class="number">0</span>] = map.get(target - numbers[i]);</div><div class="line">                <span class="keyword">return</span> result;</div><div class="line">            &#125;</div><div class="line">            map.put(numbers[i],i+<span class="number">1</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>Note</strong> : map.put(key , value) , map.get(key) . number -&gt; key , index -&gt; value</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/12/C10T2W1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TianyLi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://oo9y7ylu4.bkt.clouddn.com/image/blog/headIcon/IMG_7483.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ty_Isaac">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/07/12/C10T2W1/" itemprop="url">
+                  C10T2W1
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-12T14:18:33+08:00">
+                2017-07-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/English/" itemprop="url" rel="index">
+                    <span itemprop="name">英语</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/12/C10T2W1/" class="leancloud_visitors" data-flag-title="C10T2W1">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Writing-task1"><a href="#Writing-task1" class="headerlink" title="Writing task1"></a>Writing task1</h1><p>The tables illustrate sales of Fairtrade*-labelled coffee and bananas in UK, Switerland , Denmark , Belgium , and Sweden in 1999 and in 2004.</p>
+<p>Switerland sold  3 millions of euros in coffee  in 1999 , which is twice more than that in UK, and increased to 6 milllions euros in 2004. The sales in Denmark rose from £1.8 million in 1999 to £2 million in 2004. In 1999 Sweden had the least sales, just £0.8 million.The sale of in UK increased a lot from £1.5 million in 1999 to £20 million in 2004.</p>
+<p>As for sales of Fairtrade-labelled bananas. In 1999, Switzerland sold 15 millions of euros in bananas and had a huge increase to £47 million in 2004 . Denmark sold £2 million , twice as big as that in UK, while Belgium just sold 0.6. The sales in UK and Belgium increased to £5.5 million and £4 million in 2004 respectively.</p>
+<p>In conclusion, sales of coffee in UK are the biggest in 2004,  while sales of bananas in Switzerland in 2004 are the biggest too.</p>
+<p>30min</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/11/C10T2W2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -6312,519 +6660,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/19/小作文/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="TianyLi">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://oo9y7ylu4.bkt.clouddn.com/image/blog/headIcon/IMG_7483.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ty_Isaac">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/19/小作文/" itemprop="url">
-                  IELTS小作文
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-19T23:30:58+08:00">
-                2017-04-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/English/" itemprop="url" rel="index">
-                    <span itemprop="name">英语</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/04/19/小作文/" class="leancloud_visitors" data-flag-title="IELTS小作文">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="曲线图"><a href="#曲线图" class="headerlink" title="曲线图"></a>曲线图</h2><h3 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h3><ol>
-<li>曲线的变化趋势：上升、下降、保持平稳、波动</li>
-<li>特殊点：起点、终点、交点、极值点、转折点 </li>
-<li>特殊曲线 ： 最高、最低 (**！！)</li>
-</ol>
-<h3 id="逻辑"><a href="#逻辑" class="headerlink" title="逻辑"></a>逻辑</h3><ol>
-<li>简单介绍逻辑 paraphrase    不能抄题</li>
-<li>所有曲线的起点  信息处理逻辑（从大到小），相近的点一句话处理（顺序）</li>
-<li>所有下降的曲线及除了交点之外的所有特点</li>
-<li>所有上升的曲线及包含交点的所有特点        （按幅度分组）</li>
-<li>图标的Overview  图的最大特点，第一眼看 (1)各个曲线的趋势（2）特殊曲线</li>
-</ol>
-<h2 id="柱状图"><a href="#柱状图" class="headerlink" title="柱状图"></a>柱状图</h2><p>按柱子的分类分段（主要方法）</p>
-<p>按横坐标的组数分段（补充方法）    原则4~6</p>
-<p>按时态分段（适用于)</p>
-<p>分段不参考 动静</p>
-<p>动态：参照 曲线图</p>
-<p>静态： 1st 2nd last  将不同的柱子分开</p>
-<p>与其他的关系</p>
-<p>两倍关系 ：第一 的从句 将一半的带出</p>
-<ol>
-<li>柱状图即可提现数据变化趋势</li>
-</ol>
-<h2 id="饼图-pie-chart"><a href="#饼图-pie-chart" class="headerlink" title="饼图(pie chart)"></a>饼图(pie chart)</h2><ol>
-<li><p>写几块？ 为什么？</p>
-<p>（x-1）块，x=总块数 ；</p>
-</li>
-<li><p>主要特点是</p>
-<p>1st 2nd last。找数字关系</p>
-</li>
-<li><p>写作顺序</p>
-<p>从大到小</p>
-</li>
-<li><p>余下的块看情况，找数字之间的关系</p>
-</li>
-</ol>
-<p>动态饼  抓主要趋势</p>
-<p><strong>多个饼图 动静结合</strong></p>
-<ol>
-<li><p>数据的变化趋势</p>
-<p>参考曲线图</p>
-</li>
-<li><p>具有代表性的数字</p>
-<p>1^st^  2^nd^  last</p>
-</li>
-<li><p>数字之间的倍数</p>
-<p>相等、倍数</p>
-</li>
-<li><p>Overview</p>
-<p>寻找每个饼的overview之间的联系</p>
-</li>
-</ol>
-<p>pie charts </p>
-<p>趋势（上升、下降）：  明显的一组 不明显的一组</p>
-<p>分段：</p>
-<p>总结：多幅图各个击破，找最大的overview；寻找共同点。</p>
-<h2 id="表格-table"><a href="#表格-table" class="headerlink" title="表格(table)"></a>表格(table)</h2><p>静态还是动态</p>
-<p>​    看情况、曲线图、</p>
-<p>表格的主要特点</p>
-<p>​    </p>
-<p>表格的overview</p>
-<p>​    最大的数</p>
-<p>横着看，竖着看都有结论</p>
-<p>时间按  最早、第二早、最晚。</p>
-<p>相关的数据关系。</p>
-<p>兼顾纵横</p>
-<h2 id="地图题"><a href="#地图题" class="headerlink" title="地图题"></a>地图题</h2><h4 id="历史变迁型-difference"><a href="#历史变迁型-difference" class="headerlink" title="历史变迁型(difference)"></a>历史变迁型(difference)</h4><p>Before - After: </p>
-<p>difference的角度  <u>数量的变化、面积的变化、位置的变化</u></p>
-<p><u>顺序  顺时针，第二幅图 按照第一幅图的顺序</u></p>
-<p>基本功：</p>
-<p>数量：</p>
-<p>0-1修建：build , construct</p>
-<p>1-0去除：remove , demolish</p>
-<p>1-2倍数：倍数的表达</p>
-<p>位置：</p>
-<p>move to, relocate at ,<u>to in</u></p>
-<p>面积：area , size </p>
-<p>后面这个比前面这个变了很多</p>
-<h4 id="规划类-layout"><a href="#规划类-layout" class="headerlink" title="规划类(layout)"></a>规划类(layout)</h4><p>注意比较二者的区别最后得出结论</p>
-<p>总而言之，我觉得 …… 更适合 </p>
-<h2 id="流程图-Flow-chart"><a href="#流程图-Flow-chart" class="headerlink" title="流程图 Flow chart"></a>流程图 Flow chart</h2><p>Life cycle生命周期</p>
-<p>Production物品生产</p>
-<p>基本功 ： 找谓语，词汇很关键</p>
-<p>产卵spawn  生长发育 thrive</p>
-<p>immigrate 人的移民</p>
-<p>emmigrate 动物的迁徙  dwell     inhabit栖息</p>
-<p>Washing powder</p>
-<p>grind / ground   laminate  磨碎</p>
-<p>process 处理(加工)</p>
-<p>undergo  high temerature</p>
-<p>spwan产卵 lay下蛋    thrive , grow   。  grow into 长成  live on 以……为生</p>
-<p>knit</p>
-<p>First , then , stage/phase , step</p>
-<p>intelligible 通俗易懂</p>
-<p>总结，产品 的 流程 比较清楚、清晰易懂</p>
-<p>step  \ stage</p>
-<h2 id="基本功"><a href="#基本功" class="headerlink" title="基本功"></a>基本功</h2><h3 id="单词"><a href="#单词" class="headerlink" title="单词"></a>单词</h3><ul>
-<li>上升： rise / climb / increase / soar / show an upward trend /</li>
-<li>下降：fall / decline / decrease / slash大幅度削减 /detract from /descend</li>
-<li>保持平稳：(keep/remain)  (stable/steady)</li>
-<li>波动： fluctuate</li>
-<li>显著地： obviously  / consideratly / significantly /dramaticly</li>
-<li>大约：about / around / almost /approximately / roughly / just over or below / nearly</li>
-<li>超过：overtake / exceed / surpass</li>
-<li>展现： show / illustrate / give information about</li>
-<li>很多：a great deal</li>
-<li>占据：account for</li>
-<li>交叠：overlap</li>
-</ul>
-<h3 id="静态图句型"><a href="#静态图句型" class="headerlink" title="静态图句型"></a>静态图句型</h3><p>百分之…的…被用来/被用在…了 </p>
-<p><u>40% of money was used/spent in food.</u></p>
-<p><u>There is 40% of money that is spent on food.</u></p>
-<p><u>Money spent on food occupies/takes up/consititute/  40%  of all/collectively</u>(不适用纯数字)</p>
-<p><u>The percentage/proportion of money spent on food is 40%.</u>    number(可数)/quantity/amount(不可数)</p>
-<h3 id="动态图句型"><a href="#动态图句型" class="headerlink" title="动态图句型"></a>动态图句型</h3><p> A increased to XXX(单位) in 2000</p>
-<p>There was an obvious decrease/increase in D(something).</p>
-<p>E rose and peaked at XXX(单位) in 1990 before fell significantly to XXX [单位] in 1996</p>
-<p>F soared to XXX[单位] in 1993 after a slow increase from 1990 to 1991.</p>
-<p>占据  consititue ,  account for , takes up ,  occupies  species 单复数通行</p>
-<p>collectively 总体、集体</p>
-<p>纯数字，带单位，百分数没有单位</p>
-<p>diploma  degree大学文凭        Bachelor degree学士学位</p>
-<p>predict  ———  estimate  ——— calculate</p>
-<p>相等</p>
-<p>be + almost / around  same with   equal to  ,  similar to  ,  close to</p>
-<p>There is no difference between the two in quantitative terms.</p>
-<p>倍数</p>
-<p>A is twice as big as B</p>
-<p>A is twice bigger than B </p>
-<p>The percentage of money spent on rent was 20%, which was about twice bigger than taht of clothes.</p>
-<p>There was 9% of money spent entertainment, which was similar/close to that of clothes.</p>
-<p>介词性：Thanks to, due to , because of </p>
-<p>连词性：because , since , as , for , thus ,so</p>
-<p>状语性：as a result, in this way</p>
-<p>动词性：cause, lead to ,result in ,contribute to ,are involved/related/linked</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/19/迷宫问题A*搜索/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="TianyLi">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://oo9y7ylu4.bkt.clouddn.com/image/blog/headIcon/IMG_7483.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ty_Isaac">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/19/迷宫问题A*搜索/" itemprop="url">
-                  A*算法
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-19T19:23:57+08:00">
-                2017-04-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Programming/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/04/19/迷宫问题A*搜索/" class="leancloud_visitors" data-flag-title="A*算法">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="启发式搜索"><a href="#启发式搜索" class="headerlink" title="启发式搜索"></a>启发式搜索</h1><h1 id="A-搜索算法"><a href="#A-搜索算法" class="headerlink" title="A*搜索算法"></a>A*搜索算法</h1><blockquote>
-<p><a href="http://www.cnblogs.com/mingjiatang/p/5967681.html" target="_blank" rel="external">http://www.cnblogs.com/mingjiatang/p/5967681.html</a></p>
-</blockquote>
-<h2 id="A-搜索算法简介"><a href="#A-搜索算法简介" class="headerlink" title="A*搜索算法简介"></a>A*搜索算法简介</h2><p>A*搜索算法是一种启发式算法。即在盲目搜索的过程加入一个启发函数，对于当前结点搜索完毕后，使用启发函数对每一个子结点的状态计算代价，选择代价最小的节点作为下一步的搜索节点。通过不断求最优，就可以找到最优解。</p>
-<p>DFS，BFS都是属于盲目搜索，选择子结点是根据固定顺序选择，在某些情况下求解会产生大量的冗余步骤。而A*搜索算法会是根据一个启发函数值来判别从哪一个节点继续进行搜索。启发函数的表达形式为：</p>
-<p>​                            $f(n)=g(n)+h(n)$ </p>
-<p>其中$f(n)$是每个节点的估值或者代价值。$g(n)$表示从起点到搜索点的代价，$h(n)$代表搜索点到目标点的代价，$h(n)$会直接影响到A*算法的效率。</p>
-<p>一种具有$f(n)=g(n)+h(n)$的启发式算法能成为A*算法的充分条件是：</p>
-<ol>
-<li>搜索树上存在从起点到终点的最优路径</li>
-<li>问题域有限</li>
-<li>所有子结点的搜索代价值都大于0</li>
-<li>$h(n)\leq h*(n)$</li>
-</ol>
-<h2 id="A-搜索算法描述"><a href="#A-搜索算法描述" class="headerlink" title="A*搜索算法描述"></a>A*搜索算法描述</h2><p>A*算法的流程如下：</p>
-<p>A*算法需要两个额外的存储空间，OPEN表和CLOSE表。</p>
-<ol>
-<li>初始化OPEN表和CLOSE表，将开始节点（开始节点的Hvalue和Gvalue都视为0）放入OPEN表中</li>
-<li>重复下面步骤(循环)<ol>
-<li>在开始列表中查找具有最小Fvalue的节点作为当前节点</li>
-<li>把当前节点从OPEN表中删除，并加入到CLOSED表中</li>
-<li>对当前节点的每一个相邻节点依次执行以下步骤：<ol>
-<li>如果相邻节点不可通行或者该节点已经在CLOSE表中，则什么操作也不执行</li>
-<li>如果该相邻节点不在OPEN表中，则将该节点添加到OEPN表中，并<u>将该相邻节点的父节点设置为当前节点</u>，同时计算保存相邻节点的Fvalue</li>
-<li>如果该相邻节点在OPEN表中，则判断若经由当前节点到达该相邻节点的Fvalue是否小雨原来保存的Fvalue，若小于则将该相邻节点的父节点设置为当前节点，并重新计算该相邻节点的Fvalue</li>
-<li>若当终点节点被加入到OPEN表作为待检验节点时，表示路径已经找到，此时应终止循环；若当OPEN表为空，表示没有从开始节点到终点节点的路径，此时循环结束</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>循环终止后，从终点节点开始沿父节点往前遍历，从后到前输出搜索路径。</li>
-</ol>
-<p>其中，设置相邻节点的父节点为当前节点为了记录从起始节点到终止节点的路径，方便搜索路径后对路径进行输出。</p>
-<h2 id="A-算法对于八数码问题"><a href="#A-算法对于八数码问题" class="headerlink" title="A*算法对于八数码问题"></a>A*算法对于八数码问题</h2><h3 id="启发式A-算法"><a href="#启发式A-算法" class="headerlink" title="启发式A*算法"></a>启发式A*算法</h3><p>open表：存放所有待扩展的节点</p>
-<p>closed表：存放所有已扩展的节点</p>
-<p>spring表：存放所有待处理的节点状态</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">List&lt;State&gt; open = <span class="keyword">new</span> ArrayList&lt;&gt;();  <span class="comment">//open表</span></div><div class="line">List&lt;State&gt; closed = <span class="keyword">new</span> ArrayList&lt;&gt;();     <span class="comment">//close表</span></div><div class="line">List&lt;State&gt; spring = <span class="keyword">new</span> ArrayList&lt;&gt;();     <span class="comment">//spring表</span></div><div class="line"><span class="keyword">int</span> start[]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">0</span>&#125;;            <span class="comment">//初始状态数组</span></div><div class="line"><span class="keyword">int</span> goal[] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">8</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">6</span>,<span class="number">5</span>&#125;;           <span class="comment">//目标状态数组</span></div><div class="line">State startState = <span class="keyword">new</span> State();         <span class="comment">//初始状态</span></div><div class="line">State goalState = <span class="keyword">new</span> State();          <span class="comment">//目标状态</span></div></pre></td></tr></table></figure>
-<h3 id="算法步骤"><a href="#算法步骤" class="headerlink" title="算法步骤"></a>算法步骤</h3><ol>
-<li><p>检查是否有解（逆序数）</p>
-<p>将9宫格横向展开，左边的数大于右边的数的组数称为逆序数。横向平移逆序数增量为0、2或-2。纵向平移逆序数增长为0、4或-4。因此，初态和目标态的逆序数和应该是偶数。（即初态逆序奇数、末态逆序也为奇数和为偶数）若不是偶数代表此八数码无解。</p>
-</li>
-<li><p>初始化open表（存放待扩展的节点）、close表（存放已扩展的节点）、spring表（存放答案）、初始状态、目标状态。</p>
-</li>
-<li><p>计算初始状态的g、h、f值后，将初始状态加入到open表中</p>
-</li>
-<li><p>检查问题是否有解</p>
-</li>
-<li><p>循环()</p>
-<ol>
-<li><p>在open表中取出一个状态getOfOpen，判断是否是目标状态。是目标状态则结束</p>
-</li>
-<li><p>将状态getOfOpen加入closed表</p>
-</li>
-<li><p>将状态getOfOpen产生后继节点</p>
-<ol>
-<li>获取0的位置，将0进行四个方向移动的尝试，可以则移动。</li>
-<li>判断该移动方向得到的结果是否与其前驱节点相似。</li>
-<li>不相似创建新的状态点加入到spring中。</li>
-</ol>
-</li>
-<li><p>检查spring表中所有的节点(state)</p>
-<p>如果在open表中有相同节点(stateInOpen)。如果state的g值&lt;stateInOpen的g值，则改变open表中(stateInOpen)的参数，并将open表中的状态按gvalue重排。并从spring表删除该节点。</p>
-<p>如果在closed表中有相同节点(stateInClosed)，state的g值&lt;stateInClosed的g值，则改变closed表中(stateInClosed)的参数，将stateInClosed加入open表并排序。并从spring表删除该节点</p>
-<p>否则将state加入open表，并从spring表中删除该节点</p>
-</li>
-</ol>
-</li>
-</ol>
-<h3 id="算法空间表示"><a href="#算法空间表示" class="headerlink" title="算法空间表示"></a>算法空间表示</h3><p>状态用一维数组表示，每个节点状态存以一个State对象存储。包括存储Fvalue，Gvalue，Hvalue。对于九宫格按行展开存入数组，用0表示移动位置（空格）。</p>
-<h2 id="A-算法对于迷宫问题"><a href="#A-算法对于迷宫问题" class="headerlink" title="A*算法对于迷宫问题"></a>A*算法对于迷宫问题</h2><p>采用A*算法对迷宫路径求解中，$g(n)$和$h(n)$都采用==曼哈顿距离==，曼哈顿距离代表两个点在标准坐标上的绝对轴距总和。<br>$$<br>d(i,j)=|x_1-x_2|+|y_1-y_2|<br>$$<br>即每次获取的当前通道块，都会对其到入口通道块和出口通道开的曼哈顿距离进行计算。求算当前通道块的Fvalue进行保存。该函数满足启发式算法的充分条件1、2、3、4。</p>
-<p>对于迷宫问题需要将A*算法进行更改，其中2-3-1，如果相邻节点不可通行或者该节点已经在close表或open表中，则什么也不执行；2-3-2，如果该节点不在open表和close表中，则将该节点添加到open表中，并将该节点的父节点设置为当前节点，同时计算保存相邻节点的$Fvalue$。</p>
-<p>在迷宫求解中使用A*搜索算法不需要更新OPEN表中已存在节点的Fvalue，因为每个节点的位置都是确定的，所以曼哈顿九黎就是固定的。如果是带权值的网路求解最短路径，那么就需要去更新open表中节点的$Fvalue$，如$Dijkstra$算法。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -6874,7 +6709,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -6885,7 +6720,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -6896,7 +6731,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">36</span>
+                <span class="site-state-item-count">38</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
