@@ -1,0 +1,366 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head prefix="og: http://ogp.me/ns#">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="It&#39;s a bolg that belongs to a industrious programmer">
+    <title>Create reverse table | Ty_Isaac</title>
+
+    <!-- Open Graph -->
+    <meta name="description" content="http://a280606790.iteye.com/blog/799347 http://www.cnblogs.com/sephy/p/3303711.html  Lucene包结构功能表   包名 功能     org.apache.lucene.analysis 语言分析器，主要用于的切词，支持中文主要是扩展此类   org.apache.lucene.document 索引存储时的文">
+<meta name="keywords" content="建立倒排表,java,Lucene,信息检索">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Create reverse table">
+<meta property="og:url" content="http://yoursite.com/2017/05/01/Create-reverse-table/index.html">
+<meta property="og:site_name" content="Ty_Isaac">
+<meta property="og:description" content="http://a280606790.iteye.com/blog/799347 http://www.cnblogs.com/sephy/p/3303711.html  Lucene包结构功能表   包名 功能     org.apache.lucene.analysis 语言分析器，主要用于的切词，支持中文主要是扩展此类   org.apache.lucene.document 索引存储时的文">
+<meta property="og:updated_time" content="2017-06-20T08:00:51.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Create reverse table">
+<meta name="twitter:description" content="http://a280606790.iteye.com/blog/799347 http://www.cnblogs.com/sephy/p/3303711.html  Lucene包结构功能表   包名 功能     org.apache.lucene.analysis 语言分析器，主要用于的切词，支持中文主要是扩展此类   org.apache.lucene.document 索引存储时的文">
+
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "email": "mailto:undefined",
+  "image": "undefined",
+  "name": "TianyLi",
+  "url": "http://yoursite.com"
+}
+</script>
+    <script>
+    var algoliaEnabled = false;
+    
+</script>
+
+    
+
+    
+    
+        <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    
+    
+    
+        <!-- stylesheets list from config.yml -->
+        
+        <link rel="stylesheet" href="/css/aloha.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+        
+    
+
+</head>
+<body id="body" style="margin-bottom: 0;" class="pushable">
+
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="ui top fixed menu">
+        <a class="item" id="menu-icon"><i class="sidebar icon"></i></a>
+    </div>
+
+    <div id="menu-sidebar" class="ui left vertical sidebar menu">
+
+    <div id="sidebar-top">
+        <div class="content">
+            <h3>Ty_Isaac</h3>
+        </div>
+    </div>
+    <div class="ui container sidebar-card">
+    <div class="ui people shape content">
+        <div class="active side">
+            <div class="ui card">
+                <div class="image">
+                    <img class="ui medium bordered image" src="/images/avatar.jpg">
+                </div>
+                <div class="content">
+                    <a class="header">TianyLi</a>
+                    
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+                        
+                    </div>
+
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+    
+    
+
+    
+
+    
+    <a href="/index.html" class="item" >
+        <i class="home icon"></i>
+        HOME
+    </a>
+
+    
+
+    
+</div>
+
+    <div class="pusher body-content">
+        <div id="content" class="ui main container">
+            <!--<div class="ui one column grid">-->
+                <!--<div class="column">-->
+                    <!--<div class="ui main container">-->
+                        <div id="post-Create-reverse-table" class="ui main container article-type-post">
+
+    
+
+    <div class="ui divided grid">
+
+        <div class="two column row" id="article-content">
+
+            <div class="thirteen wide computer thirteen wide tablet sixteen wide mobile column">
+                
+
+<h1 class="ui header">
+    
+    Create reverse table
+</h1>
+
+
+
+                <div class="article-inner">
+
+                    <div class="article-entry" itemprop="articleBody">
+                        
+                        <blockquote>
+<p><a href="http://a280606790.iteye.com/blog/799347" target="_blank" rel="external">http://a280606790.iteye.com/blog/799347</a></p>
+<p><a href="http://www.cnblogs.com/sephy/p/3303711.html" target="_blank" rel="external">http://www.cnblogs.com/sephy/p/3303711.html</a></p>
+</blockquote>
+<h2 id="Lucene包结构功能表"><a href="#Lucene包结构功能表" class="headerlink" title="Lucene包结构功能表"></a>Lucene包结构功能表</h2><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>org.apache.lucene.analysis</td>
+<td>语言分析器，主要用于的切词，支持中文主要是扩展此类</td>
+</tr>
+<tr>
+<td>org.apache.lucene.document</td>
+<td>索引存储时的文档结构管理，类似于关系型数据库的表结构</td>
+</tr>
+<tr>
+<td>org.apache.lucene.index</td>
+<td>索引管理，建立、删除等</td>
+</tr>
+<tr>
+<td>org.apache.lucene.queryParser</td>
+<td>查询分析器，查询关键词间的运算，与、或、非等</td>
+</tr>
+<tr>
+<td>org.apache.lucene.search</td>
+<td>检索管理，根据查询条件，检索得到结果</td>
+</tr>
+<tr>
+<td>org.apache.lucene.util</td>
+<td>公用类</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Analyzer是分析器，将字符串划分成一个个词语，去除其中的无效词语。英文的of,the，中文’的’，’地’等。</p>
+</li>
+<li><p>document用户提供的源，可以是文本文件、字符串或者数据库表的一条记录。一条记录经过索引后，就是以一个Document形式存储在索引文件中。用户进行搜索以Document列表形式返回</p>
+</li>
+<li><p>Field: 一个document可以包含多个信息域，标题、正文、最后修改时间，这些信息域通过Field在Document中存储。Field有两个属性可选：存储和索引。通过存储属性可以控制是否对该Field进行存储。</p>
+</li>
+<li><p>Term:搜索的最小单位，表示文档的一个词语。term由词语和这个词语出现的Field组成。</p>
+</li>
+<li><p>Tocken: term中的一次出现，包含term文本和相应的起止偏移，以及一个类型字符串。一句话可以出现多次相同的词语，它们用同一个term表示，但是用不同的tocken，每个tocken标记该词语出现的地方。</p>
+</li>
+<li><p>Segment: 添加索引时并不是每个document都马上添加到同一个索引文件，首先被写入不同的小文件，然后再合并成一个大索引文件，每一个小文件都是一个segment。</p>
+<p>​</p>
+</li>
+</ul>
+<h2 id="Lucene查询逻辑"><a href="#Lucene查询逻辑" class="headerlink" title="Lucene查询逻辑"></a>Lucene查询逻辑</h2><h3 id="影响Lucene对文档评分权重的方式"><a href="#影响Lucene对文档评分权重的方式" class="headerlink" title="影响Lucene对文档评分权重的方式"></a>影响Lucene对文档评分权重的方式</h3><p>如果希望某些文档和某些域比其他的域更重要，如果此文档和此域包含所要查询的词则应该得分较高，则可以在索引阶段设定文档的boost和域的boost值。默认值1.0，增加权重需要比1大才可以</p>
+<p>Lucene文档的打分公式：<br>$$<br>score(q,d)=coord(q,d) \cdot queryNorm(q)\cdot \sum (tf(t\in d))\cdot idf(t)^3 \cdot t.getBoost()\cdot norm(t,d))<br>$$<br>通过修改对应域的boost的值来修改对应域的权重。</p>
+<p>lucene的搜索相当强大，提供了很多辅助查询类，每个类都继承自Query类，各自完成特定的一种查询，可以组合使用完成特定的复杂操作；Lucene还提供Sort类对结果进行排序，还有Filter类对查询条件进行限制。各种查询方式可以在官网API中查看。</p>
+<p>对于分词器，按照句子语义切分成一个个词语。对英文进行切词已经有完善的分词器StandardAnalyzer，很多情况下都可以使用。但是对中文分词并不友好，它会将中文词语单切，对每一个字符都分词。例如搜索”如果”，也会将”牛奶不如果汁好喝”搜索出来，并且因为对每一个字都分词，会造成词项很多，文件很大。所以选择使用Paoding分词，按词典词义进行分词。</p>
+<p>执行查询的逻辑为：在已创建的索引目录中，创建一个搜索器。使用分词器对查询语句分词，设置搜索的域，利用生成的query去搜素，以Hits的形式返回。</p>
+<p>查询例示：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">searchIndex</span><span class="params">(String text)</span></span>&#123;</div><div class="line">     TokenStream stream = analyzer.tokenStream(<span class="string">"content"</span>,<span class="keyword">new</span> StringReader(text));</div><div class="line">     Date date1=<span class="keyword">new</span> Date();</div><div class="line">     <span class="keyword">try</span> &#123;</div><div class="line">         <span class="keyword">if</span>(showParticiple)</div><div class="line">             printTokens(<span class="string">" "</span>,stream);</div><div class="line">         System.out.println(<span class="string">"搜索 '"</span>+text+<span class="string">"' 结果如下"</span>);</div><div class="line">         <span class="comment">//1.打开存储位置</span></div><div class="line">             <span class="comment">//庖丁分词</span></div><div class="line">         analyzer = <span class="keyword">new</span> PaodingAnalyzer();</div><div class="line">         IndexReader ireader = IndexReader.open(INDEX_DIR);</div><div class="line">         <span class="comment">//2.创建搜索器</span></div><div class="line">         IndexSearcher isearcher = <span class="keyword">new</span> IndexSearcher(ireader);</div><div class="line">         <span class="comment">//3.进行关键词查询</span></div><div class="line">         QueryParser parser = <span class="keyword">new</span> QueryParser(<span class="string">"content"</span>,analyzer);</div><div class="line">       	<span class="comment">//进行多域查询，支持查询内容，时间，日期</span></div><div class="line">         String fields[] = &#123;<span class="string">"content"</span>,<span class="string">"filename"</span>,<span class="string">"editor"</span>,<span class="string">"date"</span>&#125;;</div><div class="line">         String texts[] =&#123;text,text,text,text&#125;;</div><div class="line">         Query query = MultiFieldQueryParser.parse(texts,fields,analyzer);</div><div class="line">         ScoreDoc[] hits=isearcher.search(query,<span class="keyword">null</span>,<span class="number">300</span>).scoreDocs;</div><div class="line">         <span class="keyword">if</span>(hits.length==<span class="number">0</span>)</div><div class="line">             System.out.println(<span class="string">"没有相似文件"</span>);</div><div class="line">         <span class="keyword">else</span> &#123;</div><div class="line">             System.out.println(<span class="string">"找到"</span>+hits.length+<span class="string">"个文件"</span>);</div><div class="line">         &#125;</div><div class="line">         <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;hits.length;i++)&#123;</div><div class="line">             Document hitDoc = isearcher.doc(hits[i].doc);</div><div class="line">             System.out.println(<span class="string">"_______________________"</span>);</div><div class="line">             System.out.println(hitDoc.get(<span class="string">"filename"</span>));</div><div class="line">             System.out.println(<span class="string">"时间: "</span>+hitDoc.get(<span class="string">"date"</span>));</div><div class="line">             System.out.println(<span class="string">"URL: "</span>+hitDoc.get(<span class="string">"url"</span>));</div><div class="line">             System.out.println(<span class="string">"Content:"</span>+hitDoc.get(<span class="string">"content"</span>));</div><div class="line">             System.out.println(<span class="string">"编辑: "</span>+hitDoc.get(<span class="string">"editor"</span>));</div><div class="line">             System.out.println(<span class="string">"Path:"</span>+hitDoc.get(<span class="string">"path"</span>));</div><div class="line">             System.out.println(<span class="string">"_______________________"</span>);</div><div class="line">         &#125;</div><div class="line">         <span class="comment">//4.关闭查询器等</span></div><div class="line">         ireader.close();</div><div class="line">     &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">         e.printStackTrace();</div><div class="line">     &#125;</div><div class="line">     Date date2 = <span class="keyword">new</span> Date();</div><div class="line">     System.out.println(<span class="string">"查看索引-----耗时："</span>+(date2.getTime()-date1.getTime()+<span class="string">"ms\n"</span>));</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<h2 id="Lucene入库逻辑"><a href="#Lucene入库逻辑" class="headerlink" title="Lucene入库逻辑"></a>Lucene入库逻辑</h2><ol>
+<li><p>入库这定义到库中文档的结构，如需要把网站内容加载到全文检索库，让用户通过“站内检索“搜索到相关的网页的内容。入库文档结构和关系型数据库中的表结构类似，每个入库的文档由多个字段构成（文章标题、作者、发布时间、原文链接、正文内容）。</p>
+</li>
+<li><p>包含N个字段的文档（Dcument）在入库前需要经过切词索引，切词规则由语言分析器（analyzer）完成。</p>
+</li>
+<li><p>切分后的”单词“被注册到索引树上，供查询使用。另需要将其他不需要索引的内容入库，所有这些文件操作由storage完成。</p>
+</li>
+<li><p>代码示例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">createIndex</span><span class="params">(String path)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">boolean</span> first=<span class="keyword">true</span>;</div><div class="line">        <span class="comment">//记录开始创建索引的时间</span></div><div class="line">        Date date1=<span class="keyword">new</span> Date();</div><div class="line">        <span class="comment">//获取路径下的所有文件集合</span></div><div class="line">        List&lt;File&gt; fileList=getFileList(path);</div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            <span class="keyword">for</span>(File f:fileList)&#123;</div><div class="line">                <span class="comment">//从"."开始取子字符串 取文件后缀</span></div><div class="line">                String type =f.getName().substring(f.getName().lastIndexOf(<span class="string">"."</span>)+<span class="number">1</span>);</div><div class="line">                <span class="comment">//1.读取txt文件的内容</span></div><div class="line">                <span class="keyword">if</span>(<span class="string">"txt"</span>.equalsIgnoreCase(type)) &#123;</div><div class="line">                    <span class="comment">//取得文件所有内容</span></div><div class="line">                    con = txt2String(f);</div><div class="line">                &#125;</div><div class="line">     </div><div class="line">                <span class="comment">//2.向本地文件存储索引</span></div><div class="line">                File indexFile = <span class="keyword">new</span> File(INDEX_DIR);</div><div class="line">              	<span class="comment">//如果索引不存在则创建</span></div><div class="line">                <span class="keyword">if</span>(!indexFile.exists())&#123;</div><div class="line">                    indexFile.mkdirs();</div><div class="line">                &#125;</div><div class="line">                indexWriter = <span class="keyword">new</span> IndexWriter(INDEX_DIR,analyzer,first);</div><div class="line">                first=<span class="keyword">false</span>;</div><div class="line">        </div><div class="line">                <span class="comment">//3.提取内容，进行索引的存储</span></div><div class="line">                Document document=<span class="keyword">new</span> Document();</div><div class="line">                Field filename = <span class="keyword">new</span> Field(<span class="string">"filename"</span>,con.get(<span class="number">0</span>), Field.Store.YES,Field.Index.TOKENIZED);</div><div class="line">                filename.setBoost(<span class="number">100</span>);</div><div class="line">                Field editor = <span class="keyword">new</span> Field(<span class="string">"editor"</span>,con.get(<span class="number">2</span>), Field.Store.YES,Field.Index.TOKENIZED);</div><div class="line">              	<span class="comment">//设置内容权重</span></div><div class="line">                editor.setBoost(<span class="number">80</span>);</div><div class="line">                document.add(filename);</div><div class="line">                Field content = <span class="keyword">new</span> Field(<span class="string">"content"</span>,con.get(con.size()-<span class="number">1</span>), Field.Store.YES,Field.Index.TOKENIZED);</div><div class="line">                content.setBoost(<span class="number">50</span>);</div><div class="line">                document.add(<span class="keyword">new</span> Field(<span class="string">"date"</span>,con.get(<span class="number">3</span>), Field.Store.YES,Field.Index.UN_TOKENIZED));</div><div class="line">                document.add(editor);</div><div class="line">                document.add(<span class="keyword">new</span> Field(<span class="string">"url"</span>,con.get(<span class="number">1</span>),Field.Store.YES,Field.Index.NO));</div><div class="line">                document.add(content);</div><div class="line">                document.add(<span class="keyword">new</span> Field(<span class="string">"path"</span>,f.getPath(), Field.Store.YES,Field.Index.NO));</div><div class="line">                <span class="comment">//4.索引对象加入索引创建中</span></div><div class="line">                indexWriter.addDocument(document);</div><div class="line">                <span class="comment">//提交索引并关闭</span></div><div class="line">                closeWriter();</div><div class="line">            &#125;</div><div class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">        Date date2=<span class="keyword">new</span> Date();</div><div class="line">        System.out.println(<span class="string">"创建索引成功\t耗时： "</span>+(date2.getTime()-date1.getTime())+<span class="string">"ms\n"</span>);</div><div class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ol>
+
+                        
+                    </div>
+
+                    
+                    
+                    
+
+                    <div class="description post-description">
+    <span class="post-description-item">
+        <time datetime="2017-05-01T07:44:06.000Z" itemprop="datePublished">2017-05-01</time>
+
+    </span>
+    <span class="post-description-item">
+        
+
+    <span>
+        <i class="tags icon"></i>
+    </span>
+
+    
+    <span class="ui tiny label">
+        <a href="/tags/建立倒排表/">建立倒排表</a>
+    </span>
+
+    
+    <span class="ui tiny label">
+        <a href="/tags/java/">java</a>
+    </span>
+
+    
+    <span class="ui tiny label">
+        <a href="/tags/Lucene/">Lucene</a>
+    </span>
+
+    
+    <span class="ui tiny label">
+        <a href="/tags/信息检索/">信息检索</a>
+    </span>
+
+    
+
+    </span>
+</div>
+
+                </div>
+                
+                <div id="pagination" class="nav-web ui text container pagination">
+
+    <div class="ui stackable two column divided grid container">
+        <div class="row">
+            <div class="column nav-left">
+                
+
+                <a href="/2017/04/23/Python爬虫/" class="ui tiny button">
+
+                    <i class="angle left icon"></i>
+                    
+                    Python爬虫--《山大主页》
+                    
+
+                </a>
+
+                
+            </div>
+            <div class="column nav-right">
+                
+
+                <a href="/2017/06/05/信息检索专题复习/" class="ui tiny button">
+                    
+                    信息检索专题复习
+                    
+                    <i class="angle right icon"></i></a>
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+                
+            </div>
+
+            
+            <div class="three wide computer three wide tablet column">
+
+                <div class="ui sticky article-toc" id="article-toc">
+                    <!-- toc -->
+                    <ol class="ui ordered list"><li><a href="#Lucene包结构功能表"><span>Lucene包结构功能表</span></a></li><li><a href="#Lucene查询逻辑"><span>Lucene查询逻辑</span></a><ol><li><a href="#影响Lucene对文档评分权重的方式"><span>影响Lucene对文档评分权重的方式</span></a></li></ol></li><li><a href="#Lucene入库逻辑"><span>Lucene入库逻辑</span></a></li></ol>
+                </div>
+
+            </div>
+            
+
+        </div>
+    </div>
+</div>
+
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="ui vertical footer segment">
+    <div class="ui center aligned container">
+        <div class="ui inverted section divider"></div>
+        &copy; 2018 <a href="/">TianyLi</a>,
+        Powered by <a href="https://github.com/henryhuang/hexo-theme-aloha" target="_blank">Aloha</a> and <a
+                href="http://hexo.io/" target="_blank">Hexo</a>.
+    </div>
+</div>
+
+    </div>
+
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+
+<script src="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch/3.18.1/algoliasearch.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js"></script>
+
+<script src="/js/semantic-ui-algolia.js"></script>
+
+<script src="/js/aloha-events.js"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+
+</body>
+</html>

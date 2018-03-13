@@ -1,0 +1,343 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head prefix="og: http://ogp.me/ns#">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="It&#39;s a bolg that belongs to a industrious programmer">
+    <title>Ty_Isaac</title>
+
+    <!-- Open Graph -->
+    <meta name="description" content="AndroidAdapterMVC Model : 通常可以理解为数据，负责执行程序的核心运算与判断逻辑。通过view获得用户输入的数据，然后根据从数据库查询相关的信息，最后进行运算和判断，再将得到的结果交给view来显示。 View : 用户的操作接口，说白了就是GUI，应该使用哪种接口组件,组件间的排列位置与顺序都需要设计 Controller : 控制器，作为 model 与 view 之间">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ty_Isaac">
+<meta property="og:url" content="http://yoursite.com/2017/11/05/Android/index.html">
+<meta property="og:site_name" content="Ty_Isaac">
+<meta property="og:description" content="AndroidAdapterMVC Model : 通常可以理解为数据，负责执行程序的核心运算与判断逻辑。通过view获得用户输入的数据，然后根据从数据库查询相关的信息，最后进行运算和判断，再将得到的结果交给view来显示。 View : 用户的操作接口，说白了就是GUI，应该使用哪种接口组件,组件间的排列位置与顺序都需要设计 Controller : 控制器，作为 model 与 view 之间">
+<meta property="og:updated_time" content="2017-11-09T00:50:33.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ty_Isaac">
+<meta name="twitter:description" content="AndroidAdapterMVC Model : 通常可以理解为数据，负责执行程序的核心运算与判断逻辑。通过view获得用户输入的数据，然后根据从数据库查询相关的信息，最后进行运算和判断，再将得到的结果交给view来显示。 View : 用户的操作接口，说白了就是GUI，应该使用哪种接口组件,组件间的排列位置与顺序都需要设计 Controller : 控制器，作为 model 与 view 之间">
+
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "email": "mailto:undefined",
+  "image": "undefined",
+  "name": "TianyLi",
+  "url": "http://yoursite.com"
+}
+</script>
+    <script>
+    var algoliaEnabled = false;
+    
+</script>
+
+    
+
+    
+    
+        <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    
+    
+    
+        <!-- stylesheets list from config.yml -->
+        
+        <link rel="stylesheet" href="/css/aloha.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+        
+    
+
+</head>
+<body id="body" style="margin-bottom: 0;" class="pushable">
+
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="ui top fixed menu">
+        <a class="item" id="menu-icon"><i class="sidebar icon"></i></a>
+    </div>
+
+    <div id="menu-sidebar" class="ui left vertical sidebar menu">
+
+    <div id="sidebar-top">
+        <div class="content">
+            <h3>Ty_Isaac</h3>
+        </div>
+    </div>
+    <div class="ui container sidebar-card">
+    <div class="ui people shape content">
+        <div class="active side">
+            <div class="ui card">
+                <div class="image">
+                    <img class="ui medium bordered image" src="/images/avatar.jpg">
+                </div>
+                <div class="content">
+                    <a class="header">TianyLi</a>
+                    
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+                        
+                    </div>
+
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+    
+    
+
+    
+
+    
+    <a href="/index.html" class="item" >
+        <i class="home icon"></i>
+        HOME
+    </a>
+
+    
+
+    
+</div>
+
+    <div class="pusher body-content">
+        <div id="content" class="ui main container">
+            <!--<div class="ui one column grid">-->
+                <!--<div class="column">-->
+                    <!--<div class="ui main container">-->
+                        <div id="post-Android" class="ui main container article-type-post">
+
+    
+
+    <div class="ui divided grid">
+
+        <div class="two column row" id="article-content">
+
+            <div class="thirteen wide computer thirteen wide tablet sixteen wide mobile column">
+                
+
+                <div class="article-inner">
+
+                    <div class="article-entry" itemprop="articleBody">
+                        
+                        <h1 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h1><h2 id="Adapter"><a href="#Adapter" class="headerlink" title="Adapter"></a>Adapter</h2><h3 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h3><ul>
+<li>Model : 通常可以理解为数据，负责执行程序的核心运算与判断逻辑。通过view获得用户输入的数据，然后根据从数据库查询相关的信息，最后进行运算和判断，再将得到的结果交给view来显示。</li>
+<li>View : 用户的操作接口，说白了就是GUI，应该使用哪种接口组件,组件间的排列位置与顺序都需要设计</li>
+<li>Controller : 控制器，作为 model 与 view 之间的枢纽，负责控制程序的执行流程以及对象之间的互动</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>UI名称</th>
+<th>类名/方法名</th>
+<th>是否实现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ListView</td>
+<td></td>
+<td>是</td>
+</tr>
+<tr>
+<td>ActionBar</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Menu</td>
+<td>onCreateOptionsMenu()</td>
+<td>是</td>
+</tr>
+<tr>
+<td>ViewPager</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Gallery</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GridView</td>
+<td>GridView_init()</td>
+<td>是</td>
+</tr>
+<tr>
+<td>ImageView</td>
+<td></td>
+<td>是</td>
+</tr>
+<tr>
+<td>ProgressBar</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>TextView</td>
+<td></td>
+<td>是</td>
+</tr>
+<tr>
+<td>ScrollView</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>TimeView</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>TipView</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FlipView</td>
+<td>flipperPage_init()</td>
+<td>是</td>
+</tr>
+<tr>
+<td>ColorPickView</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GraphView</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+                        
+                    </div>
+
+                    
+                    
+                    
+
+                    <div class="description post-description">
+    <span class="post-description-item">
+        <time datetime="2017-11-05T01:23:12.000Z" itemprop="datePublished">2017-11-05</time>
+
+    </span>
+    <span class="post-description-item">
+        
+    </span>
+</div>
+
+                </div>
+                
+                <div id="pagination" class="nav-web ui text container pagination">
+
+    <div class="ui stackable two column divided grid container">
+        <div class="row">
+            <div class="column nav-left">
+                
+
+                <a href="/2017/09/22/OperatingSystem/" class="ui tiny button">
+
+                    <i class="angle left icon"></i>
+                    
+                    操作系统
+                    
+
+                </a>
+
+                
+            </div>
+            <div class="column nav-right">
+                
+
+                <a href="/2017/11/23/OpenSSL/" class="ui tiny button">
+                    
+                    Openssl Encrypt
+                    
+                    <i class="angle right icon"></i></a>
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+                
+            </div>
+
+            
+            <div class="three wide computer three wide tablet column">
+
+                <div class="ui sticky article-toc" id="article-toc">
+                    <!-- toc -->
+                    <ol class="ui ordered list"><li><a href="#Android"><span>Android</span></a><ol><li><a href="#Adapter"><span>Adapter</span></a><ol><li><a href="#MVC"><span>MVC</span></a></li></ol></li></ol></li></ol>
+                </div>
+
+            </div>
+            
+
+        </div>
+    </div>
+</div>
+
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="ui vertical footer segment">
+    <div class="ui center aligned container">
+        <div class="ui inverted section divider"></div>
+        &copy; 2018 <a href="/">TianyLi</a>,
+        Powered by <a href="https://github.com/henryhuang/hexo-theme-aloha" target="_blank">Aloha</a> and <a
+                href="http://hexo.io/" target="_blank">Hexo</a>.
+    </div>
+</div>
+
+    </div>
+
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+
+<script src="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch/3.18.1/algoliasearch.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js"></script>
+
+<script src="/js/semantic-ui-algolia.js"></script>
+
+<script src="/js/aloha-events.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+</body>
+</html>
