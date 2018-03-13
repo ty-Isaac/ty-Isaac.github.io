@@ -1,15 +1,93 @@
+<!doctype html>
 
 
-<!DOCTYPE html>
-<html lang="zh-Hans">
-<head prefix="og: http://ogp.me/ns#">
-    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <meta name="description" content="It&#39;s a bolg that belongs to a industrious programmer">
-    <title>计算机体系结构专题复习 | Ty_Isaac</title>
 
-    <!-- Open Graph -->
-    <meta name="description" content="计算机体系结构专题复习made by © Isaac .Ty 第一章 计算机系统结构基础及并行性的开发计算机系统的层次结构 机器：能存储和执行相应语言程序的算法和数据结构的执行体。 计算机语言： 用以 述控制流程的、有一定规则的字符集合 语言不是专属软件范畴，可以分属于计算机系统的各个层次，具有不同作用                 多层次结构：从使用语言的角度，一台由软、硬件组成的通用计算机">
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="复习,计算机体系结构," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="计算机体系结构专题复习made by © Isaac .Ty 第一章 计算机系统结构基础及并行性的开发计算机系统的层次结构 机器：能存储和执行相应语言程序的算法和数据结构的执行体。 计算机语言： 用以 述控制流程的、有一定规则的字符集合 语言不是专属软件范畴，可以分属于计算机系统的各个层次，具有不同作用                 多层次结构：从使用语言的角度，一台由软、硬件组成的通用计算机">
 <meta name="keywords" content="复习,计算机体系结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算机体系结构专题复习">
@@ -21,127 +99,283 @@
 <meta name="twitter:title" content="计算机体系结构专题复习">
 <meta name="twitter:description" content="计算机体系结构专题复习made by © Isaac .Ty 第一章 计算机系统结构基础及并行性的开发计算机系统的层次结构 机器：能存储和执行相应语言程序的算法和数据结构的执行体。 计算机语言： 用以 述控制流程的、有一定规则的字符集合 语言不是专属软件范畴，可以分属于计算机系统的各个层次，具有不同作用                 多层次结构：从使用语言的角度，一台由软、硬件组成的通用计算机">
 
-    <script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Person",
-  "email": "mailto:undefined",
-  "image": "undefined",
-  "name": "TianyLi",
-  "url": "http://yoursite.com"
-}
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
 </script>
-    <script>
-    var algoliaEnabled = false;
-    
-</script>
 
-    
 
-    
-    
-        <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-    
-    
-    
-        <!-- stylesheets list from config.yml -->
-        
-        <link rel="stylesheet" href="/css/aloha.css">
-        
-        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css">
-        
-        <link rel="stylesheet" href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-        
-    
 
+  <link rel="canonical" href="http://yoursite.com/2017/06/20/计算机体系结构专题复习/"/>
+
+
+
+
+
+  <title> 计算机体系结构专题复习 | Ty_Isaac </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
-<body id="body" style="margin-bottom: 0;" class="pushable">
 
-    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="ui top fixed menu">
-        <a class="item" id="menu-icon"><i class="sidebar icon"></i></a>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ty_Isaac</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
 
-    <div id="menu-sidebar" class="ui left vertical sidebar menu">
-
-    <div id="sidebar-top">
-        <div class="content">
-            <h3>Ty_Isaac</h3>
-        </div>
-    </div>
-    <div class="ui container sidebar-card">
-    <div class="ui people shape content">
-        <div class="active side">
-            <div class="ui card">
-                <div class="image">
-                    <img class="ui medium bordered image" src="/images/avatar.jpg">
-                </div>
-                <div class="content">
-                    <a class="header">TianyLi</a>
-                    
-                </div>
-                <div class="extra content">
-                    <div class="ui list">
-                        
-                        
-                    </div>
-
-                </div>
-                <div class="extra content">
-                    <div class="ui list">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
     
-    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/20/计算机体系结构专题复习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TianyLi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://oo9y7ylu4.bkt.clouddn.com/image/blog/headIcon/IMG_7483.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ty_Isaac">
+    </span>
 
     
+      <header class="post-header">
 
-    
-    <a href="/index.html" class="item" >
-        <i class="home icon"></i>
-        HOME
-    </a>
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                计算机体系结构专题复习
+              
+            
+          </h1>
+        
 
-    
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-20T21:57:47+08:00">
+                2017-06-20
+              </time>
+            
 
-    
-</div>
+            
 
-    <div class="pusher body-content">
-        <div id="content" class="ui main container">
-            <!--<div class="ui one column grid">-->
-                <!--<div class="column">-->
-                    <!--<div class="ui main container">-->
-                        <div id="post-计算机体系结构专题复习" class="ui main container article-type-post">
+            
+          </span>
 
-    
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/review/" itemprop="url" rel="index">
+                    <span itemprop="name">review</span>
+                  </a>
+                </span>
 
-    <div class="ui divided grid">
-
-        <div class="two column row" id="article-content">
-
-            <div class="thirteen wide computer thirteen wide tablet sixteen wide mobile column">
                 
+                
+              
+            </span>
+          
 
-<h1 class="ui header">
+          
+            
+          
+
+          
+          
+             <span id="/2017/06/20/计算机体系结构专题复习/" class="leancloud_visitors" data-flag-title="计算机体系结构专题复习">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
     
-    计算机体系结构专题复习
-</h1>
 
 
+    <div class="post-body" itemprop="articleBody">
 
-                <div class="article-inner">
+      
+      
 
-                    <div class="article-entry" itemprop="articleBody">
-                        
-                        <h1 id="计算机体系结构专题复习"><a href="#计算机体系结构专题复习" class="headerlink" title="计算机体系结构专题复习"></a>计算机体系结构专题复习</h1><p>made by © Isaac .Ty</p>
+      
+        <h1 id="计算机体系结构专题复习"><a href="#计算机体系结构专题复习" class="headerlink" title="计算机体系结构专题复习"></a>计算机体系结构专题复习</h1><p>made by © Isaac .Ty</p>
 <h2 id="第一章-计算机系统结构基础及并行性的开发"><a href="#第一章-计算机系统结构基础及并行性的开发" class="headerlink" title="第一章 计算机系统结构基础及并行性的开发"></a>第一章 计算机系统结构基础及并行性的开发</h2><h3 id="计算机系统的层次结构"><a href="#计算机系统的层次结构" class="headerlink" title="计算机系统的层次结构"></a>计算机系统的层次结构</h3><ul>
 <li>机器：能存储和执行相应语言程序的算法和数据结构的<strong>执行体</strong>。</li>
 <li>计算机语言：<ul>
@@ -1156,124 +1390,474 @@
 </ul>
 <p>  ​<br>  ​<br>  ​        </p>
 
-                        
-                    </div>
+      
+    </div>
 
-                    
-                    
-                    
-
-                    <div class="description post-description">
-    <span class="post-description-item">
-        <time datetime="2017-06-20T13:57:47.000Z" itemprop="datePublished">2017-06-20</time>
-
-    </span>
-    <span class="post-description-item">
+    <div>
+      
         
 
-    <span>
-        <i class="tags icon"></i>
-    </span>
-
-    
-    <span class="ui tiny label">
-        <a href="/tags/复习/">复习</a>
-    </span>
-
-    
-    <span class="ui tiny label">
-        <a href="/tags/计算机体系结构/">计算机体系结构</a>
-    </span>
-
-    
-
-    </span>
-</div>
-
-                </div>
-                
-                <div id="pagination" class="nav-web ui text container pagination">
-
-    <div class="ui stackable two column divided grid container">
-        <div class="row">
-            <div class="column nav-left">
-                
-
-                <a href="/2017/06/19/计算机图形学专题复习/" class="ui tiny button">
-
-                    <i class="angle left icon"></i>
-                    
-                    计算机图形学复习要点
-                    
-
-                </a>
-
-                
-            </div>
-            <div class="column nav-right">
-                
-
-                <a href="/2017/06/23/人工智能专题复习/" class="ui tiny button">
-                    
-                    人工智能复习
-                    
-                    <i class="angle right icon"></i></a>
-                
-            </div>
-        </div>
+      
     </div>
 
-</div>
-                
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/复习/" rel="tag"># 复习</a>
+          
+            <a href="/tags/计算机体系结构/" rel="tag"># 计算机体系结构</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/23/人工智能专题复习/" rel="next" title="人工智能复习">
+                <i class="fa fa-chevron-left"></i> 人工智能复习
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/19/计算机图形学专题复习/" rel="prev" title="计算机图形学复习要点">
+                计算机图形学复习要点 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://oo9y7ylu4.bkt.clouddn.com/image/blog/headIcon/IMG_7483.jpg"
+               alt="TianyLi" />
+          <p class="site-author-name" itemprop="name">TianyLi</p>
+           
+              <p class="site-description motion-element" itemprop="description">It's a bolg that belongs to a industrious programmer</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
             </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">39</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
 
             
-            <div class="three wide computer three wide tablet column">
-
-                <div class="ui sticky article-toc" id="article-toc">
-                    <!-- toc -->
-                    <ol class="ui ordered list"><li><a href="#计算机体系结构专题复习"><span>计算机体系结构专题复习</span></a><ol><li><a href="#第一章-计算机系统结构基础及并行性的开发"><span>第一章 计算机系统结构基础及并行性的开发</span></a><ol><li><a href="#计算机系统的层次结构"><span>计算机系统的层次结构</span></a></li><li><a href="#计算机系统结构、计算机组成和计算机实现"><span>计算机系统结构、计算机组成和计算机实现</span></a></li><li><a href="#计算机系统的软、硬件取舍和性能评测及定量设计原理"><span>计算机系统的软、硬件取舍和性能评测及定量设计原理</span></a><ol><li><a href="#计算机性能评测"><span>计算机性能评测</span></a></li><li><a href="#定量设计原理"><span>定量设计原理</span></a></li><li><a href="#程序访问的局部性规律"><span>程序访问的局部性规律</span></a></li></ol></li></ol></li><li><a href="#第二章-数据表示、寻址方式与指令系统"><span>第二章 数据表示、寻址方式与指令系统</span></a><ol><li><a href="#数据表示"><span>数据表示</span></a><ol><li><a href="#数据表示和数据结构"><span>数据表示和数据结构</span></a></li><li><a href="#高级数据结构"><span>高级数据结构</span></a></li></ol></li><li><a href="#寻址方式（重点）"><span>寻址方式（重点）</span></a><ol><li><a href="#寻址方式的三个面向"><span>寻址方式的三个面向</span></a></li><li><a href="#寻址方式在指令中的指明"><span>寻址方式在指令中的指明</span></a></li><li><a href="#寻址方式的种类"><span>寻址方式的种类</span></a></li><li><a href="#程序在主存中的定位技术"><span>程序在主存中的定位技术</span></a></li></ol></li><li><a href="#指令系统的设计和优化"><span>指令系统的设计和优化</span></a><ol><li><a href="#指令系统设计基本原则"><span>指令系统设计基本原则</span></a></li><li><a href="#指令设计的步骤"><span>指令设计的步骤</span></a><ol><li><a href="#指令类型"><span>指令类型</span></a></li><li><a href="#编译程序设计"><span>编译程序设计</span></a></li><li><a href="#系统设计"><span>系统设计</span></a></li></ol></li><li><a href="#指令格式的优化"><span>指令格式的优化</span></a><ol><li><a href="#操作码优化"><span>操作码优化</span></a></li><li><a href="#哈夫曼压缩（计算：哈夫曼树构成）"><span>哈夫曼压缩（计算：哈夫曼树构成）</span></a></li><li><a href="#基于哈夫曼编码的扩展操作码（计算：指令设计）"><span>基于哈夫曼编码的扩展操作码（计算：指令设计）</span></a></li><li><a href="#指令字格式的优化"><span>指令字格式的优化</span></a></li><li><a href="#指令编排（P63"><span>指令编排（P63)</span></a></li></ol></li></ol></li><li><a href="#指令系统的发展和改进"><span>指令系统的发展和改进</span></a></li></ol></li><li><a href="#第三章-存储、中断、总线与输入-输出系统"><span>第三章 存储、中断、总线与输入/输出系统</span></a><ol><li><a href="#存储系统的基本要求和并行主存系统"><span>存储系统的基本要求和并行主存系统</span></a><ol><li><a href="#存储系统的基本要求"><span>存储系统的基本要求</span></a></li><li><a href="#并行主存系统"><span>并行主存系统</span></a><ol><li><a href="#单体单字存储器"><span>单体单字存储器</span></a></li><li><a href="#单体多字存储器"><span>单体多字存储器</span></a></li><li><a href="#多体单字"><span>多体单字</span></a></li><li><a href="#模m低位交叉编址"><span>模m低位交叉编址</span></a></li><li><a href="#模m高位交叉编址"><span>模m高位交叉编址</span></a></li><li><a href="#定量分析-P85"><span>定量分析(P85)</span></a></li><li><a href="#结论"><span>结论</span></a></li></ol></li></ol></li><li><a href="#中断系统"><span>中断系统</span></a><ol><li><a href="#中断的分类和分级"><span>中断的分类和分级</span></a><ol><li><a href="#中断的分类"><span>中断的分类</span></a></li><li><a href="#中断和异常"><span>中断和异常</span></a></li><li><a href="#中断的分级"><span>中断的分级</span></a></li></ol></li><li><a href="#中断的响应和处理次序-P89"><span>中断的响应和处理次序(P89)</span></a><ol><li><a href="#结论-1"><span>结论</span></a></li></ol></li><li><a href="#中断系统的软、硬件分配"><span>中断系统的软、硬件分配</span></a></li></ol></li><li><a href="#总线系统"><span>总线系统</span></a><ol><li><a href="#总线的分类"><span>总线的分类</span></a><ol><li><a href="#按系统中的位置"><span>按系统中的位置</span></a></li><li><a href="#按信息传送方向"><span>按信息传送方向</span></a></li><li><a href="#按使用方法"><span>按使用方法</span></a></li></ol></li><li><a href="#总线的控制方式"><span>总线的控制方式</span></a><ol><li><a href="#集中式控制"><span>集中式控制</span></a></li></ol></li><li><a href="#总线的通讯方式"><span>总线的通讯方式</span></a><ol><li><a href="#同步通讯"><span>同步通讯</span></a></li><li><a href="#异步通讯（图什么意思）"><span>异步通讯（图什么意思）</span></a></li></ol></li><li><a href="#数据宽度与总线线数"><span>数据宽度与总线线数</span></a><ol><li><a href="#数据宽度"><span>数据宽度</span></a></li><li><a href="#总线的线数"><span>总线的线数</span></a></li></ol></li></ol></li><li><a href="#输入-输出系统"><span>输入/输出系统</span></a><ol><li><a href="#输入输出系统概述"><span>输入输出系统概述</span></a><ol><li><a href="#输入输出系统的特点"><span>输入输出系统的特点</span></a></li></ol></li><li><a href="#通道处理机的工作原理和流量设计"><span>通道处理机的工作原理和流量设计</span></a><ol><li><a href="#通道处理机工作原理"><span>通道处理机工作原理</span></a></li><li><a href="#启动I-O指令"><span>启动I/O指令</span></a></li><li><a href="#通道数据传送方式"><span>通道数据传送方式</span></a></li><li><a href="#通道流量的设计"><span>通道流量的设计</span></a></li></ol></li></ol></li></ol></li><li><a href="#第四章-存储体系"><span>第四章 存储体系</span></a><ol><li><a href="#基本概念"><span>基本概念</span></a><ol><li><a href="#存储体系及其分支"><span>存储体系及其分支</span></a><ol><li><a href="#主存—辅存存储层次（容量）"><span>主存—辅存存储层次（容量）</span></a></li><li><a href="#Cache—主存存储层次（速度）"><span>Cache—主存存储层次（速度）</span></a></li><li><a href="#多级存储层次"><span>多级存储层次</span></a></li></ol></li><li><a href="#存储体系构成依据"><span>存储体系构成依据</span></a></li><li><a href="#存储体系的性能参数（老师PDF中无）"><span>存储体系的性能参数（老师PDF中无）</span></a></li><li><a href="#存储器层次结构设计的问题"><span>存储器层次结构设计的问题</span></a></li></ol></li><li><a href="#虚拟存储器"><span>虚拟存储器</span></a><ol><li><a href="#虚拟存储器的管理方式"><span>虚拟存储器的管理方式</span></a><ol><li><a href="#段式管理"><span>段式管理</span></a></li><li><a href="#页式管理"><span>页式管理</span></a></li><li><a href="#段页式管理"><span>段页式管理</span></a></li></ol></li><li><a href="#页式虚拟存储器的构成"><span>页式虚拟存储器的构成</span></a><ol><li><a href="#地址映像和变换"><span>地址映像和变换</span></a></li><li><a href="#地址变化规则"><span>地址变化规则</span></a></li><li><a href="#页面替换算法-P125"><span>页面替换算法(P125)</span></a></li></ol></li></ol></li><li><a href="#高速缓冲存储器"><span>高速缓冲存储器</span></a><ol><li><a href="#工作原理和基本结构"><span>工作原理和基本结构</span></a><ol><li><a href="#工作原理"><span>工作原理</span></a></li><li><a href="#基本结构"><span>基本结构</span></a></li><li><a href="#Cache设计要素"><span>Cache设计要素</span></a></li></ol></li><li><a href="#地址映像与变换"><span>地址映像与变换</span></a><ol><li><a href="#地址映像"><span>地址映像</span></a></li><li><a href="#地址变换"><span>地址变换</span></a></li><li><a href="#选取地址映像方法考虑的主要因素"><span>选取地址映像方法考虑的主要因素</span></a></li><li><a href="#全相联映像与变换"><span>全相联映像与变换</span></a></li><li><a href="#直接映像与变换"><span>直接映像与变换</span></a></li><li><a href="#组相联映像与变换"><span>组相联映像与变换</span></a></li><li><a href="#段相联映像"><span>段相联映像</span></a></li></ol></li><li><a href="#Cache存储器的LRU替换算法的硬件实现（不在老师PDF）"><span>Cache存储器的LRU替换算法的硬件实现（不在老师PDF）</span></a></li><li><a href="#Cache存储器的透明性及性能分析"><span>Cache存储器的透明性及性能分析</span></a><ol><li><a href="#Cache存储器的透明性分析及其解决方法"><span>Cache存储器的透明性分析及其解决方法</span></a></li><li><a href="#共享主存多CPU系统保持内容一致性解决方法（-）"><span>共享主存多CPU系统保持内容一致性解决方法（**）</span></a></li></ol></li><li><a href="#P158-4-14"><span>P158 4-14</span></a></li></ol></li><li><a href="#三级存储体系"><span>三级存储体系</span></a></li></ol></li><li><a href="#第五章-标量处理机"><span>第五章 标量处理机</span></a><ol><li><a href="#重叠方式"><span>重叠方式</span></a><ol><li><a href="#重叠原理与一次重叠"><span>重叠原理与一次重叠</span></a><ol><li><a href="#顺序解释（-）"><span>顺序解释（**）</span></a></li><li><a href="#重叠解释"><span>重叠解释</span></a></li><li><a href="#重叠解释的要求"><span>重叠解释的要求</span></a></li></ol></li><li><a href="#相关处理"><span>相关处理</span></a></li></ol></li><li><a href="#流水方式"><span>流水方式</span></a><ol><li><a href="#基本概念-1"><span>基本概念</span></a><ol><li><a href="#工作原理-1"><span>工作原理</span></a></li><li><a href="#流水线特点"><span>流水线特点</span></a></li><li><a href="#流水线分析"><span>流水线分析</span></a></li><li><a href="#流水线的分类—多功能的链接方式"><span>流水线的分类—多功能的链接方式</span></a></li><li><a href="#流水线的分类—是否有反馈信号"><span>流水线的分类—是否有反馈信号</span></a></li></ol></li><li><a href="#标量流水线的主要性能"><span>标量流水线的主要性能</span></a><ol><li><a href="#吞吐率"><span>吞吐率</span></a></li><li><a href="#加速比"><span>加速比</span></a></li><li><a href="#效率"><span>效率</span></a></li><li><a href="#P117"><span>P117</span></a></li></ol></li><li><a href="#标量流水机的相关处理和控制机构"><span>标量流水机的相关处理和控制机构</span></a><ol><li><a href="#局部相关的处理"><span>局部相关的处理</span></a></li><li><a href="#全局相关的处理（-）"><span>全局相关的处理（**）</span></a></li><li><a href="#流水机器的中断处理"><span>流水机器的中断处理</span></a></li><li><a href="#非线性流水线调度"><span>非线性流水线调度</span></a></li></ol></li><li><a href="#P185计算-冲突向量"><span>P185计算 冲突向量</span></a></li></ol></li><li><a href="#指令级高度并行的超出处理机"><span>指令级高度并行的超出处理机</span></a><ol><li><a href="#超标量处理机基本结构"><span>超标量处理机基本结构</span></a></li><li><a href="#超流水线处理机"><span>超流水线处理机</span></a></li><li><a href="#超标量超流水线处理机"><span>超标量超流水线处理机</span></a></li></ol></li></ol></li></ol></li></ol>
-                </div>
-
-            </div>
+              
             
 
-        </div>
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机体系结构专题复习"><span class="nav-number">1.</span> <span class="nav-text">计算机体系结构专题复习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章-计算机系统结构基础及并行性的开发"><span class="nav-number">1.1.</span> <span class="nav-text">第一章 计算机系统结构基础及并行性的开发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机系统的层次结构"><span class="nav-number">1.1.1.</span> <span class="nav-text">计算机系统的层次结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机系统结构、计算机组成和计算机实现"><span class="nav-number">1.1.2.</span> <span class="nav-text">计算机系统结构、计算机组成和计算机实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机系统的软、硬件取舍和性能评测及定量设计原理"><span class="nav-number">1.1.3.</span> <span class="nav-text">计算机系统的软、硬件取舍和性能评测及定量设计原理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#计算机性能评测"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">计算机性能评测</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定量设计原理"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">定量设计原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#程序访问的局部性规律"><span class="nav-number">1.1.3.3.</span> <span class="nav-text">程序访问的局部性规律</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二章-数据表示、寻址方式与指令系统"><span class="nav-number">1.2.</span> <span class="nav-text">第二章 数据表示、寻址方式与指令系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据表示"><span class="nav-number">1.2.1.</span> <span class="nav-text">数据表示</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据表示和数据结构"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">数据表示和数据结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#高级数据结构"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">高级数据结构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#寻址方式（重点）"><span class="nav-number">1.2.2.</span> <span class="nav-text">寻址方式（重点）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#寻址方式的三个面向"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">寻址方式的三个面向</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#寻址方式在指令中的指明"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">寻址方式在指令中的指明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#寻址方式的种类"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">寻址方式的种类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#程序在主存中的定位技术"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">程序在主存中的定位技术</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指令系统的设计和优化"><span class="nav-number">1.2.3.</span> <span class="nav-text">指令系统的设计和优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#指令系统设计基本原则"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">指令系统设计基本原则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#指令设计的步骤"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">指令设计的步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#指令类型"><span class="nav-number">1.2.3.2.1.</span> <span class="nav-text">指令类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#编译程序设计"><span class="nav-number">1.2.3.2.2.</span> <span class="nav-text">编译程序设计</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#系统设计"><span class="nav-number">1.2.3.2.3.</span> <span class="nav-text">系统设计</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#指令格式的优化"><span class="nav-number">1.2.3.3.</span> <span class="nav-text">指令格式的优化</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#操作码优化"><span class="nav-number">1.2.3.3.1.</span> <span class="nav-text">操作码优化</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#哈夫曼压缩（计算：哈夫曼树构成）"><span class="nav-number">1.2.3.3.2.</span> <span class="nav-text">哈夫曼压缩（计算：哈夫曼树构成）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#基于哈夫曼编码的扩展操作码（计算：指令设计）"><span class="nav-number">1.2.3.3.3.</span> <span class="nav-text">基于哈夫曼编码的扩展操作码（计算：指令设计）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#指令字格式的优化"><span class="nav-number">1.2.3.3.4.</span> <span class="nav-text">指令字格式的优化</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#指令编排（P63"><span class="nav-number">1.2.3.3.5.</span> <span class="nav-text">指令编排（P63)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指令系统的发展和改进"><span class="nav-number">1.2.4.</span> <span class="nav-text">指令系统的发展和改进</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三章-存储、中断、总线与输入-输出系统"><span class="nav-number">1.3.</span> <span class="nav-text">第三章 存储、中断、总线与输入/输出系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#存储系统的基本要求和并行主存系统"><span class="nav-number">1.3.1.</span> <span class="nav-text">存储系统的基本要求和并行主存系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#存储系统的基本要求"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">存储系统的基本要求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#并行主存系统"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">并行主存系统</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#单体单字存储器"><span class="nav-number">1.3.1.2.1.</span> <span class="nav-text">单体单字存储器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#单体多字存储器"><span class="nav-number">1.3.1.2.2.</span> <span class="nav-text">单体多字存储器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#多体单字"><span class="nav-number">1.3.1.2.3.</span> <span class="nav-text">多体单字</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#模m低位交叉编址"><span class="nav-number">1.3.1.2.4.</span> <span class="nav-text">模m低位交叉编址</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#模m高位交叉编址"><span class="nav-number">1.3.1.2.5.</span> <span class="nav-text">模m高位交叉编址</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#定量分析-P85"><span class="nav-number">1.3.1.2.6.</span> <span class="nav-text">定量分析(P85)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#结论"><span class="nav-number">1.3.1.2.7.</span> <span class="nav-text">结论</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中断系统"><span class="nav-number">1.3.2.</span> <span class="nav-text">中断系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#中断的分类和分级"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">中断的分类和分级</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#中断的分类"><span class="nav-number">1.3.2.1.1.</span> <span class="nav-text">中断的分类</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#中断和异常"><span class="nav-number">1.3.2.1.2.</span> <span class="nav-text">中断和异常</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#中断的分级"><span class="nav-number">1.3.2.1.3.</span> <span class="nav-text">中断的分级</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#中断的响应和处理次序-P89"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">中断的响应和处理次序(P89)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#结论-1"><span class="nav-number">1.3.2.2.1.</span> <span class="nav-text">结论</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#中断系统的软、硬件分配"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">中断系统的软、硬件分配</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总线系统"><span class="nav-number">1.3.3.</span> <span class="nav-text">总线系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#总线的分类"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">总线的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#按系统中的位置"><span class="nav-number">1.3.3.1.1.</span> <span class="nav-text">按系统中的位置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#按信息传送方向"><span class="nav-number">1.3.3.1.2.</span> <span class="nav-text">按信息传送方向</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#按使用方法"><span class="nav-number">1.3.3.1.3.</span> <span class="nav-text">按使用方法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总线的控制方式"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">总线的控制方式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#集中式控制"><span class="nav-number">1.3.3.2.1.</span> <span class="nav-text">集中式控制</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总线的通讯方式"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">总线的通讯方式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#同步通讯"><span class="nav-number">1.3.3.3.1.</span> <span class="nav-text">同步通讯</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#异步通讯（图什么意思）"><span class="nav-number">1.3.3.3.2.</span> <span class="nav-text">异步通讯（图什么意思）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据宽度与总线线数"><span class="nav-number">1.3.3.4.</span> <span class="nav-text">数据宽度与总线线数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#数据宽度"><span class="nav-number">1.3.3.4.1.</span> <span class="nav-text">数据宽度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#总线的线数"><span class="nav-number">1.3.3.4.2.</span> <span class="nav-text">总线的线数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输入-输出系统"><span class="nav-number">1.3.4.</span> <span class="nav-text">输入/输出系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输入输出系统概述"><span class="nav-number">1.3.4.1.</span> <span class="nav-text">输入输出系统概述</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#输入输出系统的特点"><span class="nav-number">1.3.4.1.1.</span> <span class="nav-text">输入输出系统的特点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通道处理机的工作原理和流量设计"><span class="nav-number">1.3.4.2.</span> <span class="nav-text">通道处理机的工作原理和流量设计</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#通道处理机工作原理"><span class="nav-number">1.3.4.2.1.</span> <span class="nav-text">通道处理机工作原理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#启动I-O指令"><span class="nav-number">1.3.4.2.2.</span> <span class="nav-text">启动I/O指令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#通道数据传送方式"><span class="nav-number">1.3.4.2.3.</span> <span class="nav-text">通道数据传送方式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#通道流量的设计"><span class="nav-number">1.3.4.2.4.</span> <span class="nav-text">通道流量的设计</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四章-存储体系"><span class="nav-number">1.4.</span> <span class="nav-text">第四章 存储体系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本概念"><span class="nav-number">1.4.1.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#存储体系及其分支"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">存储体系及其分支</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#主存—辅存存储层次（容量）"><span class="nav-number">1.4.1.1.1.</span> <span class="nav-text">主存—辅存存储层次（容量）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Cache—主存存储层次（速度）"><span class="nav-number">1.4.1.1.2.</span> <span class="nav-text">Cache—主存存储层次（速度）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#多级存储层次"><span class="nav-number">1.4.1.1.3.</span> <span class="nav-text">多级存储层次</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#存储体系构成依据"><span class="nav-number">1.4.1.2.</span> <span class="nav-text">存储体系构成依据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#存储体系的性能参数（老师PDF中无）"><span class="nav-number">1.4.1.3.</span> <span class="nav-text">存储体系的性能参数（老师PDF中无）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#存储器层次结构设计的问题"><span class="nav-number">1.4.1.4.</span> <span class="nav-text">存储器层次结构设计的问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#虚拟存储器"><span class="nav-number">1.4.2.</span> <span class="nav-text">虚拟存储器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#虚拟存储器的管理方式"><span class="nav-number">1.4.2.1.</span> <span class="nav-text">虚拟存储器的管理方式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#段式管理"><span class="nav-number">1.4.2.1.1.</span> <span class="nav-text">段式管理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#页式管理"><span class="nav-number">1.4.2.1.2.</span> <span class="nav-text">页式管理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#段页式管理"><span class="nav-number">1.4.2.1.3.</span> <span class="nav-text">段页式管理</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#页式虚拟存储器的构成"><span class="nav-number">1.4.2.2.</span> <span class="nav-text">页式虚拟存储器的构成</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#地址映像和变换"><span class="nav-number">1.4.2.2.1.</span> <span class="nav-text">地址映像和变换</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#地址变化规则"><span class="nav-number">1.4.2.2.2.</span> <span class="nav-text">地址变化规则</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#页面替换算法-P125"><span class="nav-number">1.4.2.2.3.</span> <span class="nav-text">页面替换算法(P125)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高速缓冲存储器"><span class="nav-number">1.4.3.</span> <span class="nav-text">高速缓冲存储器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#工作原理和基本结构"><span class="nav-number">1.4.3.1.</span> <span class="nav-text">工作原理和基本结构</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#工作原理"><span class="nav-number">1.4.3.1.1.</span> <span class="nav-text">工作原理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#基本结构"><span class="nav-number">1.4.3.1.2.</span> <span class="nav-text">基本结构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Cache设计要素"><span class="nav-number">1.4.3.1.3.</span> <span class="nav-text">Cache设计要素</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#地址映像与变换"><span class="nav-number">1.4.3.2.</span> <span class="nav-text">地址映像与变换</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#地址映像"><span class="nav-number">1.4.3.2.1.</span> <span class="nav-text">地址映像</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#地址变换"><span class="nav-number">1.4.3.2.2.</span> <span class="nav-text">地址变换</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#选取地址映像方法考虑的主要因素"><span class="nav-number">1.4.3.2.3.</span> <span class="nav-text">选取地址映像方法考虑的主要因素</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#全相联映像与变换"><span class="nav-number">1.4.3.2.4.</span> <span class="nav-text">全相联映像与变换</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#直接映像与变换"><span class="nav-number">1.4.3.2.5.</span> <span class="nav-text">直接映像与变换</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#组相联映像与变换"><span class="nav-number">1.4.3.2.6.</span> <span class="nav-text">组相联映像与变换</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#段相联映像"><span class="nav-number">1.4.3.2.7.</span> <span class="nav-text">段相联映像</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cache存储器的LRU替换算法的硬件实现（不在老师PDF）"><span class="nav-number">1.4.3.3.</span> <span class="nav-text">Cache存储器的LRU替换算法的硬件实现（不在老师PDF）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cache存储器的透明性及性能分析"><span class="nav-number">1.4.3.4.</span> <span class="nav-text">Cache存储器的透明性及性能分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Cache存储器的透明性分析及其解决方法"><span class="nav-number">1.4.3.4.1.</span> <span class="nav-text">Cache存储器的透明性分析及其解决方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#共享主存多CPU系统保持内容一致性解决方法（-）"><span class="nav-number">1.4.3.4.2.</span> <span class="nav-text">共享主存多CPU系统保持内容一致性解决方法（**）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#P158-4-14"><span class="nav-number">1.4.3.5.</span> <span class="nav-text">P158 4-14</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三级存储体系"><span class="nav-number">1.4.4.</span> <span class="nav-text">三级存储体系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五章-标量处理机"><span class="nav-number">1.5.</span> <span class="nav-text">第五章 标量处理机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#重叠方式"><span class="nav-number">1.5.1.</span> <span class="nav-text">重叠方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#重叠原理与一次重叠"><span class="nav-number">1.5.1.1.</span> <span class="nav-text">重叠原理与一次重叠</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#顺序解释（-）"><span class="nav-number">1.5.1.1.1.</span> <span class="nav-text">顺序解释（**）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#重叠解释"><span class="nav-number">1.5.1.1.2.</span> <span class="nav-text">重叠解释</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#重叠解释的要求"><span class="nav-number">1.5.1.1.3.</span> <span class="nav-text">重叠解释的要求</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相关处理"><span class="nav-number">1.5.1.2.</span> <span class="nav-text">相关处理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#流水方式"><span class="nav-number">1.5.2.</span> <span class="nav-text">流水方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念-1"><span class="nav-number">1.5.2.1.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#工作原理-1"><span class="nav-number">1.5.2.1.1.</span> <span class="nav-text">工作原理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#流水线特点"><span class="nav-number">1.5.2.1.2.</span> <span class="nav-text">流水线特点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#流水线分析"><span class="nav-number">1.5.2.1.3.</span> <span class="nav-text">流水线分析</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#流水线的分类—多功能的链接方式"><span class="nav-number">1.5.2.1.4.</span> <span class="nav-text">流水线的分类—多功能的链接方式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#流水线的分类—是否有反馈信号"><span class="nav-number">1.5.2.1.5.</span> <span class="nav-text">流水线的分类—是否有反馈信号</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标量流水线的主要性能"><span class="nav-number">1.5.2.2.</span> <span class="nav-text">标量流水线的主要性能</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#吞吐率"><span class="nav-number">1.5.2.2.1.</span> <span class="nav-text">吞吐率</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#加速比"><span class="nav-number">1.5.2.2.2.</span> <span class="nav-text">加速比</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#效率"><span class="nav-number">1.5.2.2.3.</span> <span class="nav-text">效率</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#P117"><span class="nav-number">1.5.2.2.4.</span> <span class="nav-text">P117</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标量流水机的相关处理和控制机构"><span class="nav-number">1.5.2.3.</span> <span class="nav-text">标量流水机的相关处理和控制机构</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#局部相关的处理"><span class="nav-number">1.5.2.3.1.</span> <span class="nav-text">局部相关的处理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#全局相关的处理（-）"><span class="nav-number">1.5.2.3.2.</span> <span class="nav-text">全局相关的处理（**）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#流水机器的中断处理"><span class="nav-number">1.5.2.3.3.</span> <span class="nav-text">流水机器的中断处理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#非线性流水线调度"><span class="nav-number">1.5.2.3.4.</span> <span class="nav-text">非线性流水线调度</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#P185计算-冲突向量"><span class="nav-number">1.5.2.4.</span> <span class="nav-text">P185计算 冲突向量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指令级高度并行的超出处理机"><span class="nav-number">1.5.3.</span> <span class="nav-text">指令级高度并行的超出处理机</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#超标量处理机基本结构"><span class="nav-number">1.5.3.1.</span> <span class="nav-text">超标量处理机基本结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#超流水线处理机"><span class="nav-number">1.5.3.2.</span> <span class="nav-text">超流水线处理机</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#超标量超流水线处理机"><span class="nav-number">1.5.3.3.</span> <span class="nav-text">超标量超流水线处理机</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
     </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TianyLi</span>
 </div>
 
 
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        </div>
-        <div class="ui vertical footer segment">
-    <div class="ui center aligned container">
-        <div class="ui inverted section divider"></div>
-        &copy; 2018 <a href="/">TianyLi</a>,
-        Powered by <a href="https://github.com/henryhuang/hexo-theme-aloha" target="_blank">Aloha</a> and <a
-                href="http://hexo.io/" target="_blank">Hexo</a>.
-    </div>
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
-    </div>
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
 
 
 
 
-<!-- scripts list from theme config.yml -->
 
-<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
 
-<script src="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.js"></script>
 
-<script src="//cdn.bootcss.com/algoliasearch/3.18.1/algoliasearch.min.js"></script>
 
-<script src="//cdn.bootcss.com/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js"></script>
 
-<script src="/js/semantic-ui-algolia.js"></script>
+  
 
-<script src="/js/aloha-events.js"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("KzDP5NgGACc0bKLgfEtJ8Xrk-gzGzoHsz", "nGixqUVUQJjtTFuvDaoKrMo0");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
@@ -1293,6 +1877,14 @@
 <!-- hexo-inject:end -->
 
 
+
+  
+
+  
+
+  
+
+  
 
 </body>
 </html>

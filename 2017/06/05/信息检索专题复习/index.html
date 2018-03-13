@@ -1,15 +1,93 @@
+<!doctype html>
 
 
-<!DOCTYPE html>
-<html lang="zh-Hans">
-<head prefix="og: http://ogp.me/ns#">
-    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <meta name="description" content="It&#39;s a bolg that belongs to a industrious programmer">
-    <title>信息检索专题复习 | Ty_Isaac</title>
 
-    <!-- Open Graph -->
-    <meta name="description" content="信息检索Made by ® Isaac. Ty  信息检索模型：描述信息检索中的文档、查询和他们之间的关系（匹配函数）的数学模型 IR新课题 自然语言理解 多媒体检索 垂直检索技术 移动搜索 对社会媒体信息检索 问答 知识发现 行为分析、舆情控制 自动对话  2.布尔检索信息检索模型概述定义文档表示一个文档被表示为关键词(bag of words)的集合 查询表示查询式（Queries）被表示为关">
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="信息检索,复习," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="信息检索Made by ® Isaac. Ty  信息检索模型：描述信息检索中的文档、查询和他们之间的关系（匹配函数）的数学模型 IR新课题 自然语言理解 多媒体检索 垂直检索技术 移动搜索 对社会媒体信息检索 问答 知识发现 行为分析、舆情控制 自动对话  2.布尔检索信息检索模型概述定义文档表示一个文档被表示为关键词(bag of words)的集合 查询表示查询式（Queries）被表示为关">
 <meta name="keywords" content="信息检索,复习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="信息检索专题复习">
@@ -25,127 +103,283 @@
 <meta name="twitter:description" content="信息检索Made by ® Isaac. Ty  信息检索模型：描述信息检索中的文档、查询和他们之间的关系（匹配函数）的数学模型 IR新课题 自然语言理解 多媒体检索 垂直检索技术 移动搜索 对社会媒体信息检索 问答 知识发现 行为分析、舆情控制 自动对话  2.布尔检索信息检索模型概述定义文档表示一个文档被表示为关键词(bag of words)的集合 查询表示查询式（Queries）被表示为关">
 <meta name="twitter:image" content="http://oo9y7ylu4.bkt.clouddn.com/image/knowledge/%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE.png">
 
-    <script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Person",
-  "email": "mailto:undefined",
-  "image": "undefined",
-  "name": "TianyLi",
-  "url": "http://yoursite.com"
-}
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
 </script>
-    <script>
-    var algoliaEnabled = false;
-    
-</script>
 
-    
 
-    
-    
-        <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-    
-    
-    
-        <!-- stylesheets list from config.yml -->
-        
-        <link rel="stylesheet" href="/css/aloha.css">
-        
-        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css">
-        
-        <link rel="stylesheet" href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-        
-    
 
+  <link rel="canonical" href="http://yoursite.com/2017/06/05/信息检索专题复习/"/>
+
+
+
+
+
+  <title> 信息检索专题复习 | Ty_Isaac </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
-<body id="body" style="margin-bottom: 0;" class="pushable">
 
-    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="ui top fixed menu">
-        <a class="item" id="menu-icon"><i class="sidebar icon"></i></a>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ty_Isaac</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
 
-    <div id="menu-sidebar" class="ui left vertical sidebar menu">
-
-    <div id="sidebar-top">
-        <div class="content">
-            <h3>Ty_Isaac</h3>
-        </div>
-    </div>
-    <div class="ui container sidebar-card">
-    <div class="ui people shape content">
-        <div class="active side">
-            <div class="ui card">
-                <div class="image">
-                    <img class="ui medium bordered image" src="/images/avatar.jpg">
-                </div>
-                <div class="content">
-                    <a class="header">TianyLi</a>
-                    
-                </div>
-                <div class="extra content">
-                    <div class="ui list">
-                        
-                        
-                    </div>
-
-                </div>
-                <div class="extra content">
-                    <div class="ui list">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
     
-    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/05/信息检索专题复习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TianyLi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://oo9y7ylu4.bkt.clouddn.com/image/blog/headIcon/IMG_7483.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ty_Isaac">
+    </span>
 
     
+      <header class="post-header">
 
-    
-    <a href="/index.html" class="item" >
-        <i class="home icon"></i>
-        HOME
-    </a>
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                信息检索专题复习
+              
+            
+          </h1>
+        
 
-    
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-05T19:27:51+08:00">
+                2017-06-05
+              </time>
+            
 
-    
-</div>
+            
 
-    <div class="pusher body-content">
-        <div id="content" class="ui main container">
-            <!--<div class="ui one column grid">-->
-                <!--<div class="column">-->
-                    <!--<div class="ui main container">-->
-                        <div id="post-信息检索专题复习" class="ui main container article-type-post">
+            
+          </span>
 
-    
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/review/" itemprop="url" rel="index">
+                    <span itemprop="name">review</span>
+                  </a>
+                </span>
 
-    <div class="ui divided grid">
-
-        <div class="two column row" id="article-content">
-
-            <div class="thirteen wide computer thirteen wide tablet sixteen wide mobile column">
                 
+                
+              
+            </span>
+          
 
-<h1 class="ui header">
+          
+            
+          
+
+          
+          
+             <span id="/2017/06/05/信息检索专题复习/" class="leancloud_visitors" data-flag-title="信息检索专题复习">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
     
-    信息检索专题复习
-</h1>
 
 
+    <div class="post-body" itemprop="articleBody">
 
-                <div class="article-inner">
+      
+      
 
-                    <div class="article-entry" itemprop="articleBody">
-                        
-                        <h1 id="信息检索"><a href="#信息检索" class="headerlink" title="信息检索"></a>信息检索</h1><p>Made by ® Isaac. Ty </p>
+      
+        <h1 id="信息检索"><a href="#信息检索" class="headerlink" title="信息检索"></a>信息检索</h1><p>Made by ® Isaac. Ty </p>
 <p>信息检索模型：描述信息检索中的文档、查询和他们之间的关系（匹配函数）的数学模型</p>
 <h4 id="IR新课题"><a href="#IR新课题" class="headerlink" title="IR新课题"></a>IR新课题</h4><ul>
 <li>自然语言理解</li>
@@ -1786,124 +2020,474 @@
 <li>簇个数确定</li>
 </ul>
 
-                        
-                    </div>
+      
+    </div>
 
-                    
-                    
-                    
-
-                    <div class="description post-description">
-    <span class="post-description-item">
-        <time datetime="2017-06-05T11:27:51.000Z" itemprop="datePublished">2017-06-05</time>
-
-    </span>
-    <span class="post-description-item">
+    <div>
+      
         
 
-    <span>
-        <i class="tags icon"></i>
-    </span>
-
-    
-    <span class="ui tiny label">
-        <a href="/tags/信息检索/">信息检索</a>
-    </span>
-
-    
-    <span class="ui tiny label">
-        <a href="/tags/复习/">复习</a>
-    </span>
-
-    
-
-    </span>
-</div>
-
-                </div>
-                
-                <div id="pagination" class="nav-web ui text container pagination">
-
-    <div class="ui stackable two column divided grid container">
-        <div class="row">
-            <div class="column nav-left">
-                
-
-                <a href="/2017/05/01/Create-reverse-table/" class="ui tiny button">
-
-                    <i class="angle left icon"></i>
-                    
-                    Create reverse table
-                    
-
-                </a>
-
-                
-            </div>
-            <div class="column nav-right">
-                
-
-                <a href="/2017/06/19/计算机图形学专题复习/" class="ui tiny button">
-                    
-                    计算机图形学复习要点
-                    
-                    <i class="angle right icon"></i></a>
-                
-            </div>
-        </div>
+      
     </div>
 
-</div>
-                
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/信息检索/" rel="tag"># 信息检索</a>
+          
+            <a href="/tags/复习/" rel="tag"># 复习</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/19/计算机图形学专题复习/" rel="next" title="计算机图形学复习要点">
+                <i class="fa fa-chevron-left"></i> 计算机图形学复习要点
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/01/Create-reverse-table/" rel="prev" title="Create reverse table">
+                Create reverse table <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://oo9y7ylu4.bkt.clouddn.com/image/blog/headIcon/IMG_7483.jpg"
+               alt="TianyLi" />
+          <p class="site-author-name" itemprop="name">TianyLi</p>
+           
+              <p class="site-description motion-element" itemprop="description">It's a bolg that belongs to a industrious programmer</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
             </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">39</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
 
             
-            <div class="three wide computer three wide tablet column">
-
-                <div class="ui sticky article-toc" id="article-toc">
-                    <!-- toc -->
-                    <ol class="ui ordered list"><li><a href="#信息检索"><span>信息检索</span></a><ol><li><a href="#IR新课题"><span>IR新课题</span></a></li></ol></li></ol></li><li><a href="#2-布尔检索"><span>2.布尔检索</span></a><ol><li><a href="#信息检索模型概述"><span>信息检索模型概述</span></a><ol><li><a href="#定义"><span>定义</span></a><ol><li><a href="#文档表示"><span>文档表示</span></a></li><li><a href="#查询表示"><span>查询表示</span></a></li><li><a href="#相关度计算"><span>相关度计算</span></a></li><li><a href="#非结构化数据"><span>非结构化数据</span></a></li><li><a href="#结构化数据"><span>结构化数据</span></a></li><li><a href="#聚类（clustering）"><span>聚类（clustering）</span></a></li><li><a href="#分类（classification）"><span>分类（classification）</span></a></li></ol></li><li><a href="#布尔模型：优缺点"><span>布尔模型：优缺点</span></a><ol><li><a href="#优点"><span>优点</span></a></li><li><a href="#缺点"><span>缺点</span></a></li></ol></li><li><a href="#信息检索的基本假设"><span>信息检索的基本假设</span></a></li><li><a href="#典型的搜索模型"><span>典型的搜索模型</span></a></li><li><a href="#返回文档的好坏"><span>返回文档的好坏</span></a><ol><li><a href="#查准率"><span>查准率</span></a></li><li><a href="#召回率"><span>召回率</span></a></li></ol></li></ol></li><li><a href="#倒排索引"><span>倒排索引</span></a><ol><li><a href="#倒排索引建立步骤"><span>倒排索引建立步骤</span></a></li></ol></li><li><a href="#布尔检索模型"><span>布尔检索模型</span></a><ol><li><a href="#文档表示-1"><span>文档表示</span></a></li><li><a href="#查询表示-1"><span>查询表示</span></a></li><li><a href="#相关度计算-1"><span>相关度计算</span></a></li><li><a href="#形式化表示"><span>形式化表示</span></a></li><li><a href="#布尔检索模型：布尔代数"><span>布尔检索模型：布尔代数</span></a><ol><li><a href="#布尔变量"><span>布尔变量</span></a></li><li><a href="#布尔操作（关系）"><span>布尔操作（关系）</span></a></li><li><a href="#布尔表达式"><span>布尔表达式</span></a></li></ol></li><li><a href="#精确匹配"><span>精确匹配</span></a></li><li><a href="#查询优化"><span>查询优化</span></a></li></ol></li></ol></li><li><a href="#3-词项词典和倒排记录表"><span>3.词项词典和倒排记录表</span></a><ol><li><a href="#建立词项词典"><span>建立词项词典</span></a><ol><li><a href="#文档解析"><span>文档解析</span></a></li><li><a href="#词条化"><span>词条化</span></a></li><li><a href="#停用词"><span>停用词</span></a></li><li><a href="#词项归一化"><span>词项归一化</span></a></li><li><a href="#词干还原"><span>词干还原</span></a></li><li><a href="#词形归并"><span>词形归并</span></a></li><li><a href="#区别："><span>区别：</span></a></li></ol></li><li><a href="#实现倒排记录表"><span>实现倒排记录表</span></a><ol><li><a href="#合并算法"><span>合并算法</span></a></li><li><a href="#基于调表的倒排记录表快速合并算法"><span>基于调表的倒排记录表快速合并算法</span></a></li><li><a href="#短语查询"><span>短语查询</span></a><ol><li><a href="#二元词索引"><span>二元词索引</span></a></li><li><a href="#扩展的二元词索引"><span>扩展的二元词索引</span></a></li><li><a href="#位置信息索引"><span>位置信息索引</span></a></li></ol></li></ol></li></ol></li><li><a href="#4-索引构建"><span>4.索引构建</span></a><ol><li><a href="#硬件基础"><span>硬件基础</span></a></li><li><a href="#语资料库"><span>语资料库</span></a></li><li><a href="#索引构建算法"><span>索引构建算法</span></a><ol><li><a href="#基于块的排序索引算法（BSBI：Blocked-sort-based-Indexing）"><span>基于块的排序索引算法（BSBI：Blocked sort-based Indexing）</span></a><ol><li><a href="#基于BSBI排序算法存在的问题"><span>基于BSBI排序算法存在的问题</span></a></li></ol></li><li><a href="#内存式单遍扫描索引算法（SPIMI-Single-pass-in-memory-indexing"><span>内存式单遍扫描索引算法（SPIMI  Single-pass  in-memory indexing)</span></a></li><li><a href="#分布式索引构建（Distributed-indexing）"><span>分布式索引构建（Distributed indexing）</span></a></li></ol></li><li><a href="#动态索引"><span>动态索引</span></a><ol><li><a href="#动态索引构建方法"><span>动态索引构建方法</span></a></li><li><a href="#主索引与辅助索引存在的问题"><span>主索引与辅助索引存在的问题</span></a></li><li><a href="#对数合并"><span>对数合并</span></a></li></ol></li></ol></li><li><a href="#4-索引压缩"><span>4.索引压缩</span></a><ol><li><a href="#压缩"><span>压缩</span></a><ol><li><a href="#压缩倒排索引的原因"><span>压缩倒排索引的原因</span></a></li></ol></li><li><a href="#词项统计量"><span>词项统计量</span></a></li><li><a href="#词典压缩"><span>词典压缩</span></a><ol><li><a href="#有损压缩和无损压缩"><span>有损压缩和无损压缩</span></a></li><li><a href="#Heaps定律：M-kT-b"><span>Heaps定律：M=kT^b^</span></a></li><li><a href="#Zipf定律"><span>Zipf定律</span></a></li><li><a href="#为什么要压缩词典"><span>为什么要压缩词典</span></a></li><li><a href="#压缩词项列表：将词典看成单一字符串"><span>压缩词项列表：将词典看成单一字符串</span></a></li><li><a href="#按块存储（Blocking）"><span>按块存储（Blocking）</span></a></li><li><a href="#前端编码"><span>前端编码</span></a></li></ol></li><li><a href="#倒排记录表压缩"><span>倒排记录表压缩</span></a><ol><li><a href="#倒排记录表：相反的两点"><span>倒排记录表：相反的两点</span></a></li><li><a href="#倒排记录表项中文档ID的间距（GAP）"><span>倒排记录表项中文档ID的间距（GAP）</span></a></li><li><a href="#可变长度编码"><span>可变长度编码</span></a></li></ol></li></ol></li><li><a href="#5-Web搜索"><span>5.Web搜索</span></a><ol><li><a href="#Web搜索基础"><span>Web搜索基础</span></a><ol><li><a href="#重复文档"><span>重复文档</span></a></li><li><a href="#相似性计算"><span>相似性计算</span></a></li><li><a href="#小结：近似重复检测"><span>小结：近似重复检测</span></a></li></ol></li><li><a href="#Web采集"><span>Web采集</span></a><ol><li><a href="#采集器"><span>采集器</span></a><ol><li><a href="#采集器必须具有的功能"><span>采集器必须具有的功能</span></a></li></ol></li><li><a href="#采集器基本架构"><span>采集器基本架构</span></a></li><li><a href="#Web-图"><span>Web 图</span></a><ol><li><a href="#Web-→Web图"><span>Web →Web图</span></a></li><li><a href="#邻接表"><span>邻接表</span></a></li></ol></li><li><a href="#链接分析"><span>链接分析</span></a><ol><li><a href="#Web是有向图"><span>Web是有向图</span></a></li><li><a href="#索引锚文本"><span>索引锚文本</span></a></li><li><a href="#小结：锚文本"><span>小结：锚文本</span></a></li></ol></li><li><a href="#链接分析：PageRank"><span>链接分析：PageRank</span></a><ol><li><a href="#PageRank"><span>PageRank</span></a></li><li><a href="#查询处理"><span>查询处理</span></a></li><li><a href="#PageRank打分"><span>PageRank打分</span></a></li><li><a href="#随机跳转（Teleporting）"><span>随机跳转（Teleporting）</span></a></li><li><a href="#马尔科夫链"><span>马尔科夫链</span></a></li><li><a href="#邻接矩阵A→概率转移矩阵P"><span>邻接矩阵A→概率转移矩阵P</span></a></li><li><a href="#概率向量的变化"><span>概率向量的变化</span></a></li></ol></li></ol></li><li><a href="#链接分析：HITS"><span>链接分析：HITS</span></a></li></ol></li><li><a href="#6-向量模型"><span>6.向量模型</span></a><ol><li><a href="#排序式检索"><span>排序式检索</span></a><ol><li><a href="#排序检索模型"><span>排序检索模型</span></a></li><li><a href="#过多、过少不再是问题"><span>过多、过少不再是问题</span></a></li><li><a href="#排序检索的基本—-评分"><span>排序检索的基本—-评分</span></a><ol><li><a href="#评分方案一—-Jaccard系数"><span>评分方案一—-Jaccard系数</span></a></li></ol></li></ol></li><li><a href="#词项频率"><span>词项频率</span></a><ol><li><a href="#词项–文档二值关联矩阵"><span>词项–文档二值关联矩阵</span></a></li><li><a href="#词项—文档词频关联矩阵"><span>词项—文档词频关联矩阵</span></a></li><li><a href="#词袋模型（Bag-of-words）"><span>词袋模型（Bag of words）</span></a><ol><li><a href="#词项频率tf（Term-frequency）"><span>词项频率tf（Term frequency）</span></a></li></ol></li></ol></li><li><a href="#tf-idf权重计算"><span>tf-idf权重计算</span></a><ol><li><a href="#罕见词所期望的权重"><span>罕见词所期望的权重</span></a></li><li><a href="#常见词项所期望的权重"><span>常见词项所期望的权重</span></a></li><li><a href="#文档频率（Document-frequency，df）"><span>文档频率（Document frequency，df）</span></a></li><li><a href="#idf（inverse-document-frequency）逆文档频率"><span>idf（inverse document frequency）逆文档频率</span></a></li><li><a href="#idf对排序的影响"><span>idf对排序的影响</span></a></li><li><a href="#文档集频率和文档频率"><span>文档集频率和文档频率</span></a></li><li><a href="#tf–idf文档-逆文档频率（单个词）"><span>tf–idf文档-逆文档频率（单个词）</span></a></li><li><a href="#Query-最终文档排序"><span>Query 最终文档排序</span></a></li></ol></li><li><a href="#向量空间模型"><span>向量空间模型</span></a><ol><li><a href="#文档表示成向量"><span>文档表示成向量</span></a></li><li><a href="#Queries表示成向量"><span>Queries表示成向量</span></a></li><li><a href="#利用夹角代替距离"><span>利用夹角代替距离</span></a></li><li><a href="#文档长度归一化"><span>文档长度归一化</span></a></li></ol></li></ol></li><li><a href="#6-检索系统"><span>6.检索系统</span></a><ol><li><a href="#排序的重要性"><span>排序的重要性</span></a><ol><li><a href="#摘要阅读"><span>摘要阅读</span></a></li><li><a href="#点击"><span>点击</span></a></li></ol></li><li><a href="#结果排序的实现"><span>结果排序的实现</span></a><ol><li><a href="#tf和idf的存储"><span>tf和idf的存储</span></a></li><li><a href="#精确top-K检索机器加速办法"><span>精确top K检索机器加速办法</span></a></li><li><a href="#快速计算余弦相似度"><span>快速计算余弦相似度</span></a></li><li><a href="#堆排序法N中选K"><span>堆排序法N中选K</span></a></li><li><a href="#提前终止计算"><span>提前终止计算</span></a></li><li><a href="#非精确top-K检索的可行性"><span>非精确top K检索的可行性</span></a></li></ol></li></ol></li><li><a href="#评价"><span>评价</span></a><ol><li><a href="#评价方式"><span>评价方式</span></a><ol><li><a href="#效率（Efficiency）"><span>效率（Efficiency）</span></a></li><li><a href="#效果（Effectiveness）"><span>效果（Effectiveness）</span></a></li><li><a href="#其他指标"><span>其他指标</span></a></li><li><a href="#评价效果"><span>评价效果</span></a></li></ol></li><li><a href="#无序检索结果的评价"><span>无序检索结果的评价</span></a><ol><li><a href="#对单个查询进行评估的指标"><span>对单个查询进行评估的指标</span></a><ol><li><a href="#对整个文档集合的划分"><span>对整个文档集合的划分</span></a></li><li><a href="#评价指标"><span>评价指标</span></a></li></ol></li><li><a href="#正确率和召回率的问题"><span>正确率和召回率的问题</span></a><ol><li><a href="#召回率的计算"><span>召回率的计算</span></a></li><li><a href="#使用查准率-查全率的问题"><span>使用查准率/查全率的问题</span></a></li></ol></li><li><a href="#综合评价准则-F-P和R融合"><span>综合评价准则 F=P和R融合</span></a></li><li><a href="#精确率不适合IR的原因"><span>精确率不适合IR的原因</span></a></li></ol></li><li><a href="#有序检索结果的评价"><span>有序检索结果的评价</span></a><ol><li><a href="#评价排序后的结果"><span>评价排序后的结果</span></a></li><li><a href="#P-R的优缺点"><span>P-R的优缺点</span></a></li><li><a href="#基于P-R曲线的单一指标"><span>基于P-R曲线的单一指标</span></a></li><li><a href="#更多的评价准则：AP"><span>更多的评价准则：AP</span></a></li><li><a href="#不考虑召回率"><span>不考虑召回率</span></a></li><li><a href="#宏平均vs微平均"><span>宏平均vs微平均</span></a></li><li><a href="#平均查准率均值-Mean-Average-Precision-MAP"><span>平均查准率均值 Mean Average Precision(MAP)</span></a></li><li><a href="#面向用户的评价指标"><span>面向用户的评价指标</span></a></li><li><a href="#GMAP"><span>GMAP</span></a></li><li><a href="#NDCG"><span>NDCG</span></a></li><li><a href="#摘要"><span>摘要</span></a></li><li><a href="#本讲小结"><span>本讲小结</span></a></li></ol></li></ol></li><li><a href="#相关反馈及查询扩展"><span>相关反馈及查询扩展</span></a><ol><li><a href="#动机"><span>动机</span></a><ol><li><a href="#搜索中提高召回率的方法"><span>搜索中提高召回率的方法</span></a></li><li><a href="#关于召回率Recall"><span>关于召回率Recall</span></a></li><li><a href="#提高召回率的方法"><span>提高召回率的方法</span></a></li></ol></li><li><a href="#相关反馈基础"><span>相关反馈基础</span></a><ol><li><a href="#相关反馈的基本思想"><span>相关反馈的基本思想</span></a></li><li><a href="#相关反馈分类"><span>相关反馈分类</span></a></li></ol></li><li><a href="#相关反馈详细介绍"><span>相关反馈详细介绍</span></a><ol><li><a href="#相关反馈中的核心概念：质心"><span>相关反馈中的核心概念：质心</span></a></li><li><a href="#相关反馈基本理论"><span>相关反馈基本理论</span></a></li><li><a href="#Rocchio算法"><span>Rocchio算法</span></a></li><li><a href="#相关反馈策略的评价"><span>相关反馈策略的评价</span></a></li><li><a href="#评价的误区"><span>评价的误区</span></a></li><li><a href="#查询扩展"><span>查询扩展</span></a></li></ol></li></ol></li><li><a href="#概率检索模型"><span>概率检索模型</span></a><ol><li><a href="#向量空间模型回顾"><span>向量空间模型回顾</span></a><ol><li><a href="#向量空间模型-1"><span>向量空间模型</span></a></li><li><a href="#向量空间模型优缺点"><span>向量空间模型优缺点</span></a><ol><li><a href="#优点-1"><span>优点</span></a></li><li><a href="#缺点-1"><span>缺点</span></a></li></ol></li></ol></li><li><a href="#基本概率统计知识"><span>基本概率统计知识</span></a><ol><li><a href="#随机试验和随机事件"><span>随机试验和随机事件</span></a></li><li><a href="#概率和条件概率"><span>概率和条件概率</span></a></li><li><a href="#乘法公式、全概率公式和贝叶斯公式"><span>乘法公式、全概率公式和贝叶斯公式</span></a></li><li><a href="#事件独立性"><span>事件独立性</span></a></li><li><a href="#概率检索模型-1"><span>概率检索模型</span></a></li><li><a href="#概率排序原理PRP"><span>概率排序原理PRP</span></a></li><li><a href="#基于检索代价的概率排序原理"><span>基于检索代价的概率排序原理</span></a></li><li><a href="#二值独立概率模型BIM"><span>二值独立概率模型BIM</span></a></li><li><a href="#平滑"><span>平滑</span></a></li><li><a href="#BIM模型的优缺点"><span>BIM模型的优缺点</span></a><ol><li><a href="#优点-2"><span>优点</span></a></li><li><a href="#缺点-2"><span>缺点</span></a></li></ol></li><li><a href="#理论上的概率估计方法"><span>理论上的概率估计方法</span></a></li></ol></li></ol></li><li><a href="#基于语言建模的检索模型"><span>基于语言建模的检索模型</span></a><ol><li><a href="#语言模型"><span>语言模型</span></a><ol><li><a href="#最简单的语言生成器模型"><span>最简单的语言生成器模型</span></a></li><li><a href="#有穷自动机-rightarrow-语言模型"><span>有穷自动机$\rightarrow$语言模型</span></a></li><li><a href="#语言模型的比较"><span>语言模型的比较</span></a></li></ol></li><li><a href="#语言模型的种类"><span>语言模型的种类</span></a><ol><li><a href="#对于词项序列如何求解其生成的概率值"><span>对于词项序列如何求解其生成的概率值</span></a></li><li><a href="#语言模型的种类n-gram"><span>语言模型的种类n-gram</span></a></li><li><a href="#词的多项式分布"><span>词的多项式分布</span></a></li></ol></li><li><a href="#语言模型应用到IR"><span>语言模型应用到IR</span></a><ol><li><a href="#总体分布-amp-抽样"><span>总体分布&抽样</span></a></li><li><a href="#查询似然模型"><span>查询似然模型</span></a></li><li><a href="#查询生成的概率估计"><span>查询生成的概率估计</span></a></li><li><a href="#线性插值LM示例"><span>线性插值LM示例</span></a></li><li><a href="#平滑的方法：线性插值LM"><span>平滑的方法：线性插值LM</span></a></li><li><a href="#扩展的LM方法"><span>扩展的LM方法</span></a></li></ol></li></ol></li><li><a href="#文本分类及朴素贝叶斯分类器"><span>文本分类及朴素贝叶斯分类器</span></a><ol><li><a href="#本讲要点"><span>本讲要点</span></a></li><li><a href="#文本分类"><span>文本分类</span></a><ol><li><a href="#分类方法1：-手工方法"><span>分类方法1： 手工方法</span></a></li><li><a href="#分类方法2：规则方法"><span>分类方法2：规则方法</span></a></li><li><a href="#分类方法3：机器学习方法"><span>分类方法3：机器学习方法</span></a></li><li><a href="#基于学习的文本分类"><span>基于学习的文本分类</span></a></li><li><a href="#无监督-有监督的学习"><span>无监督/有监督的学习</span></a></li><li><a href="#搜索引擎中的文本分类应用"><span>搜索引擎中的文本分类应用</span></a></li><li><a href="#朴素贝叶斯分类器"><span>朴素贝叶斯分类器</span></a></li></ol></li><li><a href="#朴素贝叶斯理论"><span>朴素贝叶斯理论</span></a><ol><li><a href="#两种模型文本生成过程"><span>两种模型文本生成过程</span></a></li><li><a href="#具有最大后验概率的类别"><span>具有最大后验概率的类别</span></a></li></ol></li><li><a href="#特征选择"><span>特征选择</span></a><ol><li><a href="#特征选择算法"><span>特征选择算法</span></a></li><li><a href="#不同的特征选择方法"><span>不同的特征选择方法</span></a></li></ol></li><li><a href="#分类评价"><span>分类评价</span></a><ol><li><a href="#宏平均"><span>宏平均</span></a></li><li><a href="#微平均"><span>微平均</span></a></li><li><a href="#宏平均和微平均的适用范围"><span>宏平均和微平均的适用范围</span></a></li></ol></li></ol></li><li><a href="#基于向量空间模型的文本分类"><span>基于向量空间模型的文本分类</span></a><ol><li><a href="#基于向量空间的分类方法"><span>基于向量空间的分类方法</span></a><ol><li><a href="#向量空间表示"><span>向量空间表示</span></a></li><li><a href="#向量空间模型-2"><span>向量空间模型</span></a></li></ol></li><li><a href="#Rocchio方法"><span>Rocchio方法</span></a><ol><li><a href="#Rocchio方法进行向量空间分类的思路"><span>Rocchio方法进行向量空间分类的思路</span></a></li><li><a href="#Rocchio算法-1"><span>Rocchio算法</span></a></li><li><a href="#Rocchio算法中的决策边界"><span>Rocchio算法中的决策边界</span></a></li><li><a href="#Rocchio分类方法的缺陷"><span>Rocchio分类方法的缺陷</span></a></li></ol></li><li><a href="#KNN邻近方法"><span>KNN邻近方法</span></a><ol><li><a href="#kNN（k邻近）方法"><span>kNN（k邻近）方法</span></a></li><li><a href="#1NN分类器"><span>1NN分类器</span></a></li><li><a href="#小结：KNN方法"><span>小结：KNN方法</span></a></li><li><a href="#线性分类器"><span>线性分类器</span></a></li></ol></li></ol></li><li><a href="#基于向量空间模型的文本分类-1"><span>基于向量空间模型的文本分类</span></a><ol><li><a href="#二元线性SVM"><span>二元线性SVM</span></a><ol><li><a href="#小结：SVM要点"><span>小结：SVM要点</span></a></li></ol></li></ol></li><li><a href="#文本聚类"><span>文本聚类</span></a><ol><li><a href="#聚类介绍"><span>聚类介绍</span></a><ol><li><a href="#聚类的定义"><span>聚类的定义</span></a></li><li><a href="#分类VS聚类"><span>分类VS聚类</span></a></li></ol></li><li><a href="#聚类在IR中的应用"><span>聚类在IR中的应用</span></a><ol><li><a href="#聚类假设"><span>聚类假设</span></a></li><li><a href="#聚类在IR中的应用-1"><span>聚类在IR中的应用</span></a></li><li><a href="#文档聚类用于提高召回率"><span>文档聚类用于提高召回率</span></a></li><li><a href="#聚类的要求"><span>聚类的要求</span></a></li><li><a href="#扁平聚类vs层次聚类"><span>扁平聚类vs层次聚类</span></a></li><li><a href="#硬聚类vs软聚类"><span>硬聚类vs软聚类</span></a></li><li><a href="#扁平算法"><span>扁平算法</span></a></li></ol></li><li><a href="#K-均值聚类算法"><span>K-均值聚类算法</span></a><ol><li><a href="#聚类中的文档表示"><span>聚类中的文档表示</span></a></li><li><a href="#K-均值聚类算法-1"><span>K-均值聚类算法</span></a></li><li><a href="#K-均值聚类算法一定会收敛"><span>K-均值聚类算法一定会收敛</span></a></li><li><a href="#K-均值聚类算法的最优性"><span>K-均值聚类算法的最优性</span></a></li><li><a href="#K-均值聚类算法的初始化"><span>K-均值聚类算法的初始化</span></a></li><li><a href="#K-均值聚类算法的时间复杂度"><span>K-均值聚类算法的时间复杂度</span></a></li></ol></li><li><a href="#聚类评价"><span>聚类评价</span></a><ol><li><a href="#内部准则"><span>内部准则</span></a></li><li><a href="#外部准则"><span>外部准则</span></a></li><li><a href="#纯度"><span>纯度</span></a></li></ol></li><li><a href="#簇个数确定"><span>簇个数确定</span></a><ol><li><a href="#本讲小结-1"><span>本讲小结</span></a></li></ol></li></ol></li></ol></li></ol>
-                </div>
-
-            </div>
+              
             
 
-        </div>
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#信息检索"><span class="nav-number">1.</span> <span class="nav-text">信息检索</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#IR新课题"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">IR新课题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-布尔检索"><span class="nav-number">1.1.</span> <span class="nav-text">2.布尔检索</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#信息检索模型概述"><span class="nav-number">1.1.1.</span> <span class="nav-text">信息检索模型概述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">定义</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#文档表示"><span class="nav-number">1.1.1.1.1.</span> <span class="nav-text">文档表示</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#查询表示"><span class="nav-number">1.1.1.1.2.</span> <span class="nav-text">查询表示</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#相关度计算"><span class="nav-number">1.1.1.1.3.</span> <span class="nav-text">相关度计算</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#非结构化数据"><span class="nav-number">1.1.1.1.4.</span> <span class="nav-text">非结构化数据</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#结构化数据"><span class="nav-number">1.1.1.1.5.</span> <span class="nav-text">结构化数据</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#聚类（clustering）"><span class="nav-number">1.1.1.1.6.</span> <span class="nav-text">聚类（clustering）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分类（classification）"><span class="nav-number">1.1.1.1.7.</span> <span class="nav-text">分类（classification）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#布尔模型：优缺点"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">布尔模型：优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#优点"><span class="nav-number">1.1.1.2.1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#缺点"><span class="nav-number">1.1.1.2.2.</span> <span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#信息检索的基本假设"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">信息检索的基本假设</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#典型的搜索模型"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">典型的搜索模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#返回文档的好坏"><span class="nav-number">1.1.1.5.</span> <span class="nav-text">返回文档的好坏</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#查准率"><span class="nav-number">1.1.1.5.1.</span> <span class="nav-text">查准率</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#召回率"><span class="nav-number">1.1.1.5.2.</span> <span class="nav-text">召回率</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#倒排索引"><span class="nav-number">1.1.2.</span> <span class="nav-text">倒排索引</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#倒排索引建立步骤"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">倒排索引建立步骤</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#布尔检索模型"><span class="nav-number">1.1.3.</span> <span class="nav-text">布尔检索模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文档表示-1"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">文档表示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询表示-1"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">查询表示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相关度计算-1"><span class="nav-number">1.1.3.3.</span> <span class="nav-text">相关度计算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#形式化表示"><span class="nav-number">1.1.3.4.</span> <span class="nav-text">形式化表示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#布尔检索模型：布尔代数"><span class="nav-number">1.1.3.5.</span> <span class="nav-text">布尔检索模型：布尔代数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#布尔变量"><span class="nav-number">1.1.3.5.1.</span> <span class="nav-text">布尔变量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#布尔操作（关系）"><span class="nav-number">1.1.3.5.2.</span> <span class="nav-text">布尔操作（关系）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#布尔表达式"><span class="nav-number">1.1.3.5.3.</span> <span class="nav-text">布尔表达式</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#精确匹配"><span class="nav-number">1.1.3.6.</span> <span class="nav-text">精确匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询优化"><span class="nav-number">1.1.3.7.</span> <span class="nav-text">查询优化</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-词项词典和倒排记录表"><span class="nav-number">1.2.</span> <span class="nav-text">3.词项词典和倒排记录表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#建立词项词典"><span class="nav-number">1.2.1.</span> <span class="nav-text">建立词项词典</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文档解析"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">文档解析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#词条化"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">词条化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#停用词"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">停用词</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#词项归一化"><span class="nav-number">1.2.1.4.</span> <span class="nav-text">词项归一化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#词干还原"><span class="nav-number">1.2.1.5.</span> <span class="nav-text">词干还原</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#词形归并"><span class="nav-number">1.2.1.6.</span> <span class="nav-text">词形归并</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#区别："><span class="nav-number">1.2.1.7.</span> <span class="nav-text">区别：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现倒排记录表"><span class="nav-number">1.2.2.</span> <span class="nav-text">实现倒排记录表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#合并算法"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">合并算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基于调表的倒排记录表快速合并算法"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">基于调表的倒排记录表快速合并算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#短语查询"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">短语查询</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#二元词索引"><span class="nav-number">1.2.2.3.1.</span> <span class="nav-text">二元词索引</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#扩展的二元词索引"><span class="nav-number">1.2.2.3.2.</span> <span class="nav-text">扩展的二元词索引</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#位置信息索引"><span class="nav-number">1.2.2.3.3.</span> <span class="nav-text">位置信息索引</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-索引构建"><span class="nav-number">1.3.</span> <span class="nav-text">4.索引构建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#硬件基础"><span class="nav-number">1.3.1.</span> <span class="nav-text">硬件基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语资料库"><span class="nav-number">1.3.2.</span> <span class="nav-text">语资料库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#索引构建算法"><span class="nav-number">1.3.3.</span> <span class="nav-text">索引构建算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基于块的排序索引算法（BSBI：Blocked-sort-based-Indexing）"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">基于块的排序索引算法（BSBI：Blocked sort-based Indexing）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#基于BSBI排序算法存在的问题"><span class="nav-number">1.3.3.1.1.</span> <span class="nav-text">基于BSBI排序算法存在的问题</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内存式单遍扫描索引算法（SPIMI-Single-pass-in-memory-indexing"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">内存式单遍扫描索引算法（SPIMI  Single-pass  in-memory indexing)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分布式索引构建（Distributed-indexing）"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">分布式索引构建（Distributed indexing）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动态索引"><span class="nav-number">1.3.4.</span> <span class="nav-text">动态索引</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#动态索引构建方法"><span class="nav-number">1.3.4.1.</span> <span class="nav-text">动态索引构建方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主索引与辅助索引存在的问题"><span class="nav-number">1.3.4.2.</span> <span class="nav-text">主索引与辅助索引存在的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对数合并"><span class="nav-number">1.3.4.3.</span> <span class="nav-text">对数合并</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-索引压缩"><span class="nav-number">1.4.</span> <span class="nav-text">4.索引压缩</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#压缩"><span class="nav-number">1.4.1.</span> <span class="nav-text">压缩</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#压缩倒排索引的原因"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">压缩倒排索引的原因</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#词项统计量"><span class="nav-number">1.4.2.</span> <span class="nav-text">词项统计量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#词典压缩"><span class="nav-number">1.4.3.</span> <span class="nav-text">词典压缩</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#有损压缩和无损压缩"><span class="nav-number">1.4.3.1.</span> <span class="nav-text">有损压缩和无损压缩</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Heaps定律：M-kT-b"><span class="nav-number">1.4.3.2.</span> <span class="nav-text">Heaps定律：M=kT^b^</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Zipf定律"><span class="nav-number">1.4.3.3.</span> <span class="nav-text">Zipf定律</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要压缩词典"><span class="nav-number">1.4.3.4.</span> <span class="nav-text">为什么要压缩词典</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#压缩词项列表：将词典看成单一字符串"><span class="nav-number">1.4.3.5.</span> <span class="nav-text">压缩词项列表：将词典看成单一字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#按块存储（Blocking）"><span class="nav-number">1.4.3.6.</span> <span class="nav-text">按块存储（Blocking）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#前端编码"><span class="nav-number">1.4.3.7.</span> <span class="nav-text">前端编码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#倒排记录表压缩"><span class="nav-number">1.4.4.</span> <span class="nav-text">倒排记录表压缩</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#倒排记录表：相反的两点"><span class="nav-number">1.4.4.1.</span> <span class="nav-text">倒排记录表：相反的两点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#倒排记录表项中文档ID的间距（GAP）"><span class="nav-number">1.4.4.2.</span> <span class="nav-text">倒排记录表项中文档ID的间距（GAP）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可变长度编码"><span class="nav-number">1.4.4.3.</span> <span class="nav-text">可变长度编码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Web搜索"><span class="nav-number">1.5.</span> <span class="nav-text">5.Web搜索</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Web搜索基础"><span class="nav-number">1.5.1.</span> <span class="nav-text">Web搜索基础</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#重复文档"><span class="nav-number">1.5.1.1.</span> <span class="nav-text">重复文档</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相似性计算"><span class="nav-number">1.5.1.2.</span> <span class="nav-text">相似性计算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小结：近似重复检测"><span class="nav-number">1.5.1.3.</span> <span class="nav-text">小结：近似重复检测</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Web采集"><span class="nav-number">1.5.2.</span> <span class="nav-text">Web采集</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#采集器"><span class="nav-number">1.5.2.1.</span> <span class="nav-text">采集器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#采集器必须具有的功能"><span class="nav-number">1.5.2.1.1.</span> <span class="nav-text">采集器必须具有的功能</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#采集器基本架构"><span class="nav-number">1.5.2.2.</span> <span class="nav-text">采集器基本架构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Web-图"><span class="nav-number">1.5.2.3.</span> <span class="nav-text">Web 图</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Web-→Web图"><span class="nav-number">1.5.2.3.1.</span> <span class="nav-text">Web →Web图</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#邻接表"><span class="nav-number">1.5.2.3.2.</span> <span class="nav-text">邻接表</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#链接分析"><span class="nav-number">1.5.2.4.</span> <span class="nav-text">链接分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Web是有向图"><span class="nav-number">1.5.2.4.1.</span> <span class="nav-text">Web是有向图</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#索引锚文本"><span class="nav-number">1.5.2.4.2.</span> <span class="nav-text">索引锚文本</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#小结：锚文本"><span class="nav-number">1.5.2.4.3.</span> <span class="nav-text">小结：锚文本</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#链接分析：PageRank"><span class="nav-number">1.5.2.5.</span> <span class="nav-text">链接分析：PageRank</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#PageRank"><span class="nav-number">1.5.2.5.1.</span> <span class="nav-text">PageRank</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#查询处理"><span class="nav-number">1.5.2.5.2.</span> <span class="nav-text">查询处理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#PageRank打分"><span class="nav-number">1.5.2.5.3.</span> <span class="nav-text">PageRank打分</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#随机跳转（Teleporting）"><span class="nav-number">1.5.2.5.4.</span> <span class="nav-text">随机跳转（Teleporting）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#马尔科夫链"><span class="nav-number">1.5.2.5.5.</span> <span class="nav-text">马尔科夫链</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#邻接矩阵A→概率转移矩阵P"><span class="nav-number">1.5.2.5.6.</span> <span class="nav-text">邻接矩阵A→概率转移矩阵P</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#概率向量的变化"><span class="nav-number">1.5.2.5.7.</span> <span class="nav-text">概率向量的变化</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链接分析：HITS"><span class="nav-number">1.5.3.</span> <span class="nav-text">链接分析：HITS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-向量模型"><span class="nav-number">1.6.</span> <span class="nav-text">6.向量模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#排序式检索"><span class="nav-number">1.6.1.</span> <span class="nav-text">排序式检索</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#排序检索模型"><span class="nav-number">1.6.1.1.</span> <span class="nav-text">排序检索模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#过多、过少不再是问题"><span class="nav-number">1.6.1.2.</span> <span class="nav-text">过多、过少不再是问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排序检索的基本—-评分"><span class="nav-number">1.6.1.3.</span> <span class="nav-text">排序检索的基本—-评分</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#评分方案一—-Jaccard系数"><span class="nav-number">1.6.1.3.1.</span> <span class="nav-text">评分方案一—-Jaccard系数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#词项频率"><span class="nav-number">1.6.2.</span> <span class="nav-text">词项频率</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#词项–文档二值关联矩阵"><span class="nav-number">1.6.2.1.</span> <span class="nav-text">词项–文档二值关联矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#词项—文档词频关联矩阵"><span class="nav-number">1.6.2.2.</span> <span class="nav-text">词项—文档词频关联矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#词袋模型（Bag-of-words）"><span class="nav-number">1.6.2.3.</span> <span class="nav-text">词袋模型（Bag of words）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#词项频率tf（Term-frequency）"><span class="nav-number">1.6.2.3.1.</span> <span class="nav-text">词项频率tf（Term frequency）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tf-idf权重计算"><span class="nav-number">1.6.3.</span> <span class="nav-text">tf-idf权重计算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#罕见词所期望的权重"><span class="nav-number">1.6.3.1.</span> <span class="nav-text">罕见词所期望的权重</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常见词项所期望的权重"><span class="nav-number">1.6.3.2.</span> <span class="nav-text">常见词项所期望的权重</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文档频率（Document-frequency，df）"><span class="nav-number">1.6.3.3.</span> <span class="nav-text">文档频率（Document frequency，df）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#idf（inverse-document-frequency）逆文档频率"><span class="nav-number">1.6.3.4.</span> <span class="nav-text">idf（inverse document frequency）逆文档频率</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#idf对排序的影响"><span class="nav-number">1.6.3.5.</span> <span class="nav-text">idf对排序的影响</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文档集频率和文档频率"><span class="nav-number">1.6.3.6.</span> <span class="nav-text">文档集频率和文档频率</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tf–idf文档-逆文档频率（单个词）"><span class="nav-number">1.6.3.7.</span> <span class="nav-text">tf–idf文档-逆文档频率（单个词）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Query-最终文档排序"><span class="nav-number">1.6.3.8.</span> <span class="nav-text">Query 最终文档排序</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#向量空间模型"><span class="nav-number">1.6.4.</span> <span class="nav-text">向量空间模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文档表示成向量"><span class="nav-number">1.6.4.1.</span> <span class="nav-text">文档表示成向量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Queries表示成向量"><span class="nav-number">1.6.4.2.</span> <span class="nav-text">Queries表示成向量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#利用夹角代替距离"><span class="nav-number">1.6.4.3.</span> <span class="nav-text">利用夹角代替距离</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文档长度归一化"><span class="nav-number">1.6.4.4.</span> <span class="nav-text">文档长度归一化</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-检索系统"><span class="nav-number">1.7.</span> <span class="nav-text">6.检索系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#排序的重要性"><span class="nav-number">1.7.1.</span> <span class="nav-text">排序的重要性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#摘要阅读"><span class="nav-number">1.7.1.1.</span> <span class="nav-text">摘要阅读</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#点击"><span class="nav-number">1.7.1.2.</span> <span class="nav-text">点击</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结果排序的实现"><span class="nav-number">1.7.2.</span> <span class="nav-text">结果排序的实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#tf和idf的存储"><span class="nav-number">1.7.2.1.</span> <span class="nav-text">tf和idf的存储</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#精确top-K检索机器加速办法"><span class="nav-number">1.7.2.2.</span> <span class="nav-text">精确top K检索机器加速办法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#快速计算余弦相似度"><span class="nav-number">1.7.2.3.</span> <span class="nav-text">快速计算余弦相似度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#堆排序法N中选K"><span class="nav-number">1.7.2.4.</span> <span class="nav-text">堆排序法N中选K</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#提前终止计算"><span class="nav-number">1.7.2.5.</span> <span class="nav-text">提前终止计算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#非精确top-K检索的可行性"><span class="nav-number">1.7.2.6.</span> <span class="nav-text">非精确top K检索的可行性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#评价"><span class="nav-number">1.8.</span> <span class="nav-text">评价</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#评价方式"><span class="nav-number">1.8.1.</span> <span class="nav-text">评价方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#效率（Efficiency）"><span class="nav-number">1.8.1.1.</span> <span class="nav-text">效率（Efficiency）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#效果（Effectiveness）"><span class="nav-number">1.8.1.2.</span> <span class="nav-text">效果（Effectiveness）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他指标"><span class="nav-number">1.8.1.3.</span> <span class="nav-text">其他指标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#评价效果"><span class="nav-number">1.8.1.4.</span> <span class="nav-text">评价效果</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无序检索结果的评价"><span class="nav-number">1.8.2.</span> <span class="nav-text">无序检索结果的评价</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#对单个查询进行评估的指标"><span class="nav-number">1.8.2.1.</span> <span class="nav-text">对单个查询进行评估的指标</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#对整个文档集合的划分"><span class="nav-number">1.8.2.1.1.</span> <span class="nav-text">对整个文档集合的划分</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#评价指标"><span class="nav-number">1.8.2.1.2.</span> <span class="nav-text">评价指标</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正确率和召回率的问题"><span class="nav-number">1.8.2.2.</span> <span class="nav-text">正确率和召回率的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#召回率的计算"><span class="nav-number">1.8.2.2.1.</span> <span class="nav-text">召回率的计算</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#使用查准率-查全率的问题"><span class="nav-number">1.8.2.2.2.</span> <span class="nav-text">使用查准率/查全率的问题</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#综合评价准则-F-P和R融合"><span class="nav-number">1.8.2.3.</span> <span class="nav-text">综合评价准则 F=P和R融合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#精确率不适合IR的原因"><span class="nav-number">1.8.2.4.</span> <span class="nav-text">精确率不适合IR的原因</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有序检索结果的评价"><span class="nav-number">1.8.3.</span> <span class="nav-text">有序检索结果的评价</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#评价排序后的结果"><span class="nav-number">1.8.3.1.</span> <span class="nav-text">评价排序后的结果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#P-R的优缺点"><span class="nav-number">1.8.3.2.</span> <span class="nav-text">P-R的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基于P-R曲线的单一指标"><span class="nav-number">1.8.3.3.</span> <span class="nav-text">基于P-R曲线的单一指标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更多的评价准则：AP"><span class="nav-number">1.8.3.4.</span> <span class="nav-text">更多的评价准则：AP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不考虑召回率"><span class="nav-number">1.8.3.5.</span> <span class="nav-text">不考虑召回率</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#宏平均vs微平均"><span class="nav-number">1.8.3.6.</span> <span class="nav-text">宏平均vs微平均</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#平均查准率均值-Mean-Average-Precision-MAP"><span class="nav-number">1.8.3.7.</span> <span class="nav-text">平均查准率均值 Mean Average Precision(MAP)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#面向用户的评价指标"><span class="nav-number">1.8.3.8.</span> <span class="nav-text">面向用户的评价指标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GMAP"><span class="nav-number">1.8.3.9.</span> <span class="nav-text">GMAP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NDCG"><span class="nav-number">1.8.3.10.</span> <span class="nav-text">NDCG</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#摘要"><span class="nav-number">1.8.3.11.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本讲小结"><span class="nav-number">1.8.3.12.</span> <span class="nav-text">本讲小结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关反馈及查询扩展"><span class="nav-number">1.9.</span> <span class="nav-text">相关反馈及查询扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#动机"><span class="nav-number">1.9.1.</span> <span class="nav-text">动机</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#搜索中提高召回率的方法"><span class="nav-number">1.9.1.1.</span> <span class="nav-text">搜索中提高召回率的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关于召回率Recall"><span class="nav-number">1.9.1.2.</span> <span class="nav-text">关于召回率Recall</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#提高召回率的方法"><span class="nav-number">1.9.1.3.</span> <span class="nav-text">提高召回率的方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相关反馈基础"><span class="nav-number">1.9.2.</span> <span class="nav-text">相关反馈基础</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#相关反馈的基本思想"><span class="nav-number">1.9.2.1.</span> <span class="nav-text">相关反馈的基本思想</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相关反馈分类"><span class="nav-number">1.9.2.2.</span> <span class="nav-text">相关反馈分类</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相关反馈详细介绍"><span class="nav-number">1.9.3.</span> <span class="nav-text">相关反馈详细介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#相关反馈中的核心概念：质心"><span class="nav-number">1.9.3.1.</span> <span class="nav-text">相关反馈中的核心概念：质心</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相关反馈基本理论"><span class="nav-number">1.9.3.2.</span> <span class="nav-text">相关反馈基本理论</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Rocchio算法"><span class="nav-number">1.9.3.3.</span> <span class="nav-text">Rocchio算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相关反馈策略的评价"><span class="nav-number">1.9.3.4.</span> <span class="nav-text">相关反馈策略的评价</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#评价的误区"><span class="nav-number">1.9.3.5.</span> <span class="nav-text">评价的误区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询扩展"><span class="nav-number">1.9.3.6.</span> <span class="nav-text">查询扩展</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#概率检索模型"><span class="nav-number">1.10.</span> <span class="nav-text">概率检索模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#向量空间模型回顾"><span class="nav-number">1.10.1.</span> <span class="nav-text">向量空间模型回顾</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#向量空间模型-1"><span class="nav-number">1.10.1.1.</span> <span class="nav-text">向量空间模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#向量空间模型优缺点"><span class="nav-number">1.10.1.2.</span> <span class="nav-text">向量空间模型优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#优点-1"><span class="nav-number">1.10.1.2.1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#缺点-1"><span class="nav-number">1.10.1.2.2.</span> <span class="nav-text">缺点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本概率统计知识"><span class="nav-number">1.10.2.</span> <span class="nav-text">基本概率统计知识</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#随机试验和随机事件"><span class="nav-number">1.10.2.1.</span> <span class="nav-text">随机试验和随机事件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#概率和条件概率"><span class="nav-number">1.10.2.2.</span> <span class="nav-text">概率和条件概率</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#乘法公式、全概率公式和贝叶斯公式"><span class="nav-number">1.10.2.3.</span> <span class="nav-text">乘法公式、全概率公式和贝叶斯公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#事件独立性"><span class="nav-number">1.10.2.4.</span> <span class="nav-text">事件独立性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#概率检索模型-1"><span class="nav-number">1.10.2.5.</span> <span class="nav-text">概率检索模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#概率排序原理PRP"><span class="nav-number">1.10.2.6.</span> <span class="nav-text">概率排序原理PRP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基于检索代价的概率排序原理"><span class="nav-number">1.10.2.7.</span> <span class="nav-text">基于检索代价的概率排序原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二值独立概率模型BIM"><span class="nav-number">1.10.2.8.</span> <span class="nav-text">二值独立概率模型BIM</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#平滑"><span class="nav-number">1.10.2.9.</span> <span class="nav-text">平滑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BIM模型的优缺点"><span class="nav-number">1.10.2.10.</span> <span class="nav-text">BIM模型的优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#优点-2"><span class="nav-number">1.10.2.10.1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#缺点-2"><span class="nav-number">1.10.2.10.2.</span> <span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#理论上的概率估计方法"><span class="nav-number">1.10.2.11.</span> <span class="nav-text">理论上的概率估计方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基于语言建模的检索模型"><span class="nav-number">1.11.</span> <span class="nav-text">基于语言建模的检索模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语言模型"><span class="nav-number">1.11.1.</span> <span class="nav-text">语言模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#最简单的语言生成器模型"><span class="nav-number">1.11.1.1.</span> <span class="nav-text">最简单的语言生成器模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#有穷自动机-rightarrow-语言模型"><span class="nav-number">1.11.1.2.</span> <span class="nav-text">有穷自动机$\rightarrow$语言模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#语言模型的比较"><span class="nav-number">1.11.1.3.</span> <span class="nav-text">语言模型的比较</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语言模型的种类"><span class="nav-number">1.11.2.</span> <span class="nav-text">语言模型的种类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#对于词项序列如何求解其生成的概率值"><span class="nav-number">1.11.2.1.</span> <span class="nav-text">对于词项序列如何求解其生成的概率值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#语言模型的种类n-gram"><span class="nav-number">1.11.2.2.</span> <span class="nav-text">语言模型的种类n-gram</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#词的多项式分布"><span class="nav-number">1.11.2.3.</span> <span class="nav-text">词的多项式分布</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语言模型应用到IR"><span class="nav-number">1.11.3.</span> <span class="nav-text">语言模型应用到IR</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#总体分布-amp-抽样"><span class="nav-number">1.11.3.1.</span> <span class="nav-text">总体分布&抽样</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询似然模型"><span class="nav-number">1.11.3.2.</span> <span class="nav-text">查询似然模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询生成的概率估计"><span class="nav-number">1.11.3.3.</span> <span class="nav-text">查询生成的概率估计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线性插值LM示例"><span class="nav-number">1.11.3.4.</span> <span class="nav-text">线性插值LM示例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#平滑的方法：线性插值LM"><span class="nav-number">1.11.3.5.</span> <span class="nav-text">平滑的方法：线性插值LM</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#扩展的LM方法"><span class="nav-number">1.11.3.6.</span> <span class="nav-text">扩展的LM方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文本分类及朴素贝叶斯分类器"><span class="nav-number">1.12.</span> <span class="nav-text">文本分类及朴素贝叶斯分类器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#本讲要点"><span class="nav-number">1.12.1.</span> <span class="nav-text">本讲要点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文本分类"><span class="nav-number">1.12.2.</span> <span class="nav-text">文本分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#分类方法1：-手工方法"><span class="nav-number">1.12.2.1.</span> <span class="nav-text">分类方法1： 手工方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分类方法2：规则方法"><span class="nav-number">1.12.2.2.</span> <span class="nav-text">分类方法2：规则方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分类方法3：机器学习方法"><span class="nav-number">1.12.2.3.</span> <span class="nav-text">分类方法3：机器学习方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基于学习的文本分类"><span class="nav-number">1.12.2.4.</span> <span class="nav-text">基于学习的文本分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#无监督-有监督的学习"><span class="nav-number">1.12.2.5.</span> <span class="nav-text">无监督/有监督的学习</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#搜索引擎中的文本分类应用"><span class="nav-number">1.12.2.6.</span> <span class="nav-text">搜索引擎中的文本分类应用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#朴素贝叶斯分类器"><span class="nav-number">1.12.2.7.</span> <span class="nav-text">朴素贝叶斯分类器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#朴素贝叶斯理论"><span class="nav-number">1.12.3.</span> <span class="nav-text">朴素贝叶斯理论</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#两种模型文本生成过程"><span class="nav-number">1.12.3.1.</span> <span class="nav-text">两种模型文本生成过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#具有最大后验概率的类别"><span class="nav-number">1.12.3.2.</span> <span class="nav-text">具有最大后验概率的类别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特征选择"><span class="nav-number">1.12.4.</span> <span class="nav-text">特征选择</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#特征选择算法"><span class="nav-number">1.12.4.1.</span> <span class="nav-text">特征选择算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不同的特征选择方法"><span class="nav-number">1.12.4.2.</span> <span class="nav-text">不同的特征选择方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分类评价"><span class="nav-number">1.12.5.</span> <span class="nav-text">分类评价</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#宏平均"><span class="nav-number">1.12.5.1.</span> <span class="nav-text">宏平均</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#微平均"><span class="nav-number">1.12.5.2.</span> <span class="nav-text">微平均</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#宏平均和微平均的适用范围"><span class="nav-number">1.12.5.3.</span> <span class="nav-text">宏平均和微平均的适用范围</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基于向量空间模型的文本分类"><span class="nav-number">1.13.</span> <span class="nav-text">基于向量空间模型的文本分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基于向量空间的分类方法"><span class="nav-number">1.13.1.</span> <span class="nav-text">基于向量空间的分类方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#向量空间表示"><span class="nav-number">1.13.1.1.</span> <span class="nav-text">向量空间表示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#向量空间模型-2"><span class="nav-number">1.13.1.2.</span> <span class="nav-text">向量空间模型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Rocchio方法"><span class="nav-number">1.13.2.</span> <span class="nav-text">Rocchio方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Rocchio方法进行向量空间分类的思路"><span class="nav-number">1.13.2.1.</span> <span class="nav-text">Rocchio方法进行向量空间分类的思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Rocchio算法-1"><span class="nav-number">1.13.2.2.</span> <span class="nav-text">Rocchio算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Rocchio算法中的决策边界"><span class="nav-number">1.13.2.3.</span> <span class="nav-text">Rocchio算法中的决策边界</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Rocchio分类方法的缺陷"><span class="nav-number">1.13.2.4.</span> <span class="nav-text">Rocchio分类方法的缺陷</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#KNN邻近方法"><span class="nav-number">1.13.3.</span> <span class="nav-text">KNN邻近方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#kNN（k邻近）方法"><span class="nav-number">1.13.3.1.</span> <span class="nav-text">kNN（k邻近）方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1NN分类器"><span class="nav-number">1.13.3.2.</span> <span class="nav-text">1NN分类器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小结：KNN方法"><span class="nav-number">1.13.3.3.</span> <span class="nav-text">小结：KNN方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线性分类器"><span class="nav-number">1.13.3.4.</span> <span class="nav-text">线性分类器</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基于向量空间模型的文本分类-1"><span class="nav-number">1.14.</span> <span class="nav-text">基于向量空间模型的文本分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#二元线性SVM"><span class="nav-number">1.14.1.</span> <span class="nav-text">二元线性SVM</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#小结：SVM要点"><span class="nav-number">1.14.1.1.</span> <span class="nav-text">小结：SVM要点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文本聚类"><span class="nav-number">1.15.</span> <span class="nav-text">文本聚类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#聚类介绍"><span class="nav-number">1.15.1.</span> <span class="nav-text">聚类介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#聚类的定义"><span class="nav-number">1.15.1.1.</span> <span class="nav-text">聚类的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分类VS聚类"><span class="nav-number">1.15.1.2.</span> <span class="nav-text">分类VS聚类</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#聚类在IR中的应用"><span class="nav-number">1.15.2.</span> <span class="nav-text">聚类在IR中的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#聚类假设"><span class="nav-number">1.15.2.1.</span> <span class="nav-text">聚类假设</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#聚类在IR中的应用-1"><span class="nav-number">1.15.2.2.</span> <span class="nav-text">聚类在IR中的应用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文档聚类用于提高召回率"><span class="nav-number">1.15.2.3.</span> <span class="nav-text">文档聚类用于提高召回率</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#聚类的要求"><span class="nav-number">1.15.2.4.</span> <span class="nav-text">聚类的要求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#扁平聚类vs层次聚类"><span class="nav-number">1.15.2.5.</span> <span class="nav-text">扁平聚类vs层次聚类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#硬聚类vs软聚类"><span class="nav-number">1.15.2.6.</span> <span class="nav-text">硬聚类vs软聚类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#扁平算法"><span class="nav-number">1.15.2.7.</span> <span class="nav-text">扁平算法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#K-均值聚类算法"><span class="nav-number">1.15.3.</span> <span class="nav-text">K-均值聚类算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#聚类中的文档表示"><span class="nav-number">1.15.3.1.</span> <span class="nav-text">聚类中的文档表示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#K-均值聚类算法-1"><span class="nav-number">1.15.3.2.</span> <span class="nav-text">K-均值聚类算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#K-均值聚类算法一定会收敛"><span class="nav-number">1.15.3.3.</span> <span class="nav-text">K-均值聚类算法一定会收敛</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#K-均值聚类算法的最优性"><span class="nav-number">1.15.3.4.</span> <span class="nav-text">K-均值聚类算法的最优性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#K-均值聚类算法的初始化"><span class="nav-number">1.15.3.5.</span> <span class="nav-text">K-均值聚类算法的初始化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#K-均值聚类算法的时间复杂度"><span class="nav-number">1.15.3.6.</span> <span class="nav-text">K-均值聚类算法的时间复杂度</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#聚类评价"><span class="nav-number">1.15.4.</span> <span class="nav-text">聚类评价</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#内部准则"><span class="nav-number">1.15.4.1.</span> <span class="nav-text">内部准则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#外部准则"><span class="nav-number">1.15.4.2.</span> <span class="nav-text">外部准则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#纯度"><span class="nav-number">1.15.4.3.</span> <span class="nav-text">纯度</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#簇个数确定"><span class="nav-number">1.15.5.</span> <span class="nav-text">簇个数确定</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#本讲小结-1"><span class="nav-number">1.15.5.1.</span> <span class="nav-text">本讲小结</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
     </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TianyLi</span>
 </div>
 
 
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        </div>
-        <div class="ui vertical footer segment">
-    <div class="ui center aligned container">
-        <div class="ui inverted section divider"></div>
-        &copy; 2018 <a href="/">TianyLi</a>,
-        Powered by <a href="https://github.com/henryhuang/hexo-theme-aloha" target="_blank">Aloha</a> and <a
-                href="http://hexo.io/" target="_blank">Hexo</a>.
-    </div>
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
-    </div>
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
 
 
 
 
-<!-- scripts list from theme config.yml -->
 
-<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
 
-<script src="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.js"></script>
 
-<script src="//cdn.bootcss.com/algoliasearch/3.18.1/algoliasearch.min.js"></script>
 
-<script src="//cdn.bootcss.com/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js"></script>
 
-<script src="/js/semantic-ui-algolia.js"></script>
+  
 
-<script src="/js/aloha-events.js"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("KzDP5NgGACc0bKLgfEtJ8Xrk-gzGzoHsz", "nGixqUVUQJjtTFuvDaoKrMo0");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
@@ -1923,6 +2507,14 @@
 <!-- hexo-inject:end -->
 
 
+
+  
+
+  
+
+  
+
+  
 
 </body>
 </html>
