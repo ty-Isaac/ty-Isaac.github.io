@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, Isaac" />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -103,8 +103,8 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
-    sidebar: {"position":"right","display":"hide","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -154,7 +154,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-right 
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
    page-home 
  ">
     <div class="headband"></div>
@@ -198,26 +198,6 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
           </a>
         </li>
       
@@ -270,12 +250,226 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/01/Create-reverse-table/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TianyLi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ty_Isaac">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/01/Create-reverse-table/" itemprop="url">
+                  Create reverse table
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-01T15:44:06+08:00">
+                2017-05-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programming/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p><a href="http://a280606790.iteye.com/blog/799347" target="_blank" rel="external">http://a280606790.iteye.com/blog/799347</a></p>
+<p><a href="http://www.cnblogs.com/sephy/p/3303711.html" target="_blank" rel="external">http://www.cnblogs.com/sephy/p/3303711.html</a></p>
+</blockquote>
+<h2 id="Lucene包结构功能表"><a href="#Lucene包结构功能表" class="headerlink" title="Lucene包结构功能表"></a>Lucene包结构功能表</h2><table>
+<thead>
+<tr>
+<th>包名</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>org.apache.lucene.analysis</td>
+<td>语言分析器，主要用于的切词，支持中文主要是扩展此类</td>
+</tr>
+<tr>
+<td>org.apache.lucene.document</td>
+<td>索引存储时的文档结构管理，类似于关系型数据库的表结构</td>
+</tr>
+<tr>
+<td>org.apache.lucene.index</td>
+<td>索引管理，建立、删除等</td>
+</tr>
+<tr>
+<td>org.apache.lucene.queryParser</td>
+<td>查询分析器，查询关键词间的运算，与、或、非等</td>
+</tr>
+<tr>
+<td>org.apache.lucene.search</td>
+<td>检索管理，根据查询条件，检索得到结果</td>
+</tr>
+<tr>
+<td>org.apache.lucene.util</td>
+<td>公用类</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Analyzer是分析器，将字符串划分成一个个词语，去除其中的无效词语。英文的of,the，中文’的’，’地’等。</p>
+</li>
+<li><p>document用户提供的源，可以是文本文件、字符串或者数据库表的一条记录。一条记录经过索引后，就是以一个Document形式存储在索引文件中。用户进行搜索以Document列表形式返回</p>
+</li>
+<li><p>Field: 一个document可以包含多个信息域，标题、正文、最后修改时间，这些信息域通过Field在Document中存储。Field有两个属性可选：存储和索引。通过存储属性可以控制是否对该Field进行存储。</p>
+</li>
+<li><p>Term:搜索的最小单位，表示文档的一个词语。term由词语和这个词语出现的Field组成。</p>
+</li>
+<li><p>Tocken: term中的一次出现，包含term文本和相应的起止偏移，以及一个类型字符串。一句话可以出现多次相同的词语，它们用同一个term表示，但是用不同的tocken，每个tocken标记该词语出现的地方。</p>
+</li>
+<li><p>Segment: 添加索引时并不是每个document都马上添加到同一个索引文件，首先被写入不同的小文件，然后再合并成一个大索引文件，每一个小文件都是一个segment。</p>
+<p>​</p>
+</li>
+</ul>
+<h2 id="Lucene查询逻辑"><a href="#Lucene查询逻辑" class="headerlink" title="Lucene查询逻辑"></a>Lucene查询逻辑</h2><h3 id="影响Lucene对文档评分权重的方式"><a href="#影响Lucene对文档评分权重的方式" class="headerlink" title="影响Lucene对文档评分权重的方式"></a>影响Lucene对文档评分权重的方式</h3><p>如果希望某些文档和某些域比其他的域更重要，如果此文档和此域包含所要查询的词则应该得分较高，则可以在索引阶段设定文档的boost和域的boost值。默认值1.0，增加权重需要比1大才可以</p>
+<p>Lucene文档的打分公式：<br>$$<br>score(q,d)=coord(q,d) \cdot queryNorm(q)\cdot \sum (tf(t\in d))\cdot idf(t)^3 \cdot t.getBoost()\cdot norm(t,d))<br>$$<br>通过修改对应域的boost的值来修改对应域的权重。</p>
+<p>lucene的搜索相当强大，提供了很多辅助查询类，每个类都继承自Query类，各自完成特定的一种查询，可以组合使用完成特定的复杂操作；Lucene还提供Sort类对结果进行排序，还有Filter类对查询条件进行限制。各种查询方式可以在官网API中查看。</p>
+<p>对于分词器，按照句子语义切分成一个个词语。对英文进行切词已经有完善的分词器StandardAnalyzer，很多情况下都可以使用。但是对中文分词并不友好，它会将中文词语单切，对每一个字符都分词。例如搜索”如果”，也会将”牛奶不如果汁好喝”搜索出来，并且因为对每一个字都分词，会造成词项很多，文件很大。所以选择使用Paoding分词，按词典词义进行分词。</p>
+<p>执行查询的逻辑为：在已创建的索引目录中，创建一个搜索器。使用分词器对查询语句分词，设置搜索的域，利用生成的query去搜素，以Hits的形式返回。</p>
+<p>查询例示：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">searchIndex</span><span class="params">(String text)</span></span>&#123;</div><div class="line">     TokenStream stream = analyzer.tokenStream(<span class="string">"content"</span>,<span class="keyword">new</span> StringReader(text));</div><div class="line">     Date date1=<span class="keyword">new</span> Date();</div><div class="line">     <span class="keyword">try</span> &#123;</div><div class="line">         <span class="keyword">if</span>(showParticiple)</div><div class="line">             printTokens(<span class="string">" "</span>,stream);</div><div class="line">         System.out.println(<span class="string">"搜索 '"</span>+text+<span class="string">"' 结果如下"</span>);</div><div class="line">         <span class="comment">//1.打开存储位置</span></div><div class="line">             <span class="comment">//庖丁分词</span></div><div class="line">         analyzer = <span class="keyword">new</span> PaodingAnalyzer();</div><div class="line">         IndexReader ireader = IndexReader.open(INDEX_DIR);</div><div class="line">         <span class="comment">//2.创建搜索器</span></div><div class="line">         IndexSearcher isearcher = <span class="keyword">new</span> IndexSearcher(ireader);</div><div class="line">         <span class="comment">//3.进行关键词查询</span></div><div class="line">         QueryParser parser = <span class="keyword">new</span> QueryParser(<span class="string">"content"</span>,analyzer);</div><div class="line">       	<span class="comment">//进行多域查询，支持查询内容，时间，日期</span></div><div class="line">         String fields[] = &#123;<span class="string">"content"</span>,<span class="string">"filename"</span>,<span class="string">"editor"</span>,<span class="string">"date"</span>&#125;;</div><div class="line">         String texts[] =&#123;text,text,text,text&#125;;</div><div class="line">         Query query = MultiFieldQueryParser.parse(texts,fields,analyzer);</div><div class="line">         ScoreDoc[] hits=isearcher.search(query,<span class="keyword">null</span>,<span class="number">300</span>).scoreDocs;</div><div class="line">         <span class="keyword">if</span>(hits.length==<span class="number">0</span>)</div><div class="line">             System.out.println(<span class="string">"没有相似文件"</span>);</div><div class="line">         <span class="keyword">else</span> &#123;</div><div class="line">             System.out.println(<span class="string">"找到"</span>+hits.length+<span class="string">"个文件"</span>);</div><div class="line">         &#125;</div><div class="line">         <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;hits.length;i++)&#123;</div><div class="line">             Document hitDoc = isearcher.doc(hits[i].doc);</div><div class="line">             System.out.println(<span class="string">"_______________________"</span>);</div><div class="line">             System.out.println(hitDoc.get(<span class="string">"filename"</span>));</div><div class="line">             System.out.println(<span class="string">"时间: "</span>+hitDoc.get(<span class="string">"date"</span>));</div><div class="line">             System.out.println(<span class="string">"URL: "</span>+hitDoc.get(<span class="string">"url"</span>));</div><div class="line">             System.out.println(<span class="string">"Content:"</span>+hitDoc.get(<span class="string">"content"</span>));</div><div class="line">             System.out.println(<span class="string">"编辑: "</span>+hitDoc.get(<span class="string">"editor"</span>));</div><div class="line">             System.out.println(<span class="string">"Path:"</span>+hitDoc.get(<span class="string">"path"</span>));</div><div class="line">             System.out.println(<span class="string">"_______________________"</span>);</div><div class="line">         &#125;</div><div class="line">         <span class="comment">//4.关闭查询器等</span></div><div class="line">         ireader.close();</div><div class="line">     &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">         e.printStackTrace();</div><div class="line">     &#125;</div><div class="line">     Date date2 = <span class="keyword">new</span> Date();</div><div class="line">     System.out.println(<span class="string">"查看索引-----耗时："</span>+(date2.getTime()-date1.getTime()+<span class="string">"ms\n"</span>));</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<h2 id="Lucene入库逻辑"><a href="#Lucene入库逻辑" class="headerlink" title="Lucene入库逻辑"></a>Lucene入库逻辑</h2><ol>
+<li><p>入库这定义到库中文档的结构，如需要把网站内容加载到全文检索库，让用户通过“站内检索“搜索到相关的网页的内容。入库文档结构和关系型数据库中的表结构类似，每个入库的文档由多个字段构成（文章标题、作者、发布时间、原文链接、正文内容）。</p>
+</li>
+<li><p>包含N个字段的文档（Dcument）在入库前需要经过切词索引，切词规则由语言分析器（analyzer）完成。</p>
+</li>
+<li><p>切分后的”单词“被注册到索引树上，供查询使用。另需要将其他不需要索引的内容入库，所有这些文件操作由storage完成。</p>
+</li>
+<li><p>代码示例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">createIndex</span><span class="params">(String path)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">boolean</span> first=<span class="keyword">true</span>;</div><div class="line">        <span class="comment">//记录开始创建索引的时间</span></div><div class="line">        Date date1=<span class="keyword">new</span> Date();</div><div class="line">        <span class="comment">//获取路径下的所有文件集合</span></div><div class="line">        List&lt;File&gt; fileList=getFileList(path);</div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            <span class="keyword">for</span>(File f:fileList)&#123;</div><div class="line">                <span class="comment">//从"."开始取子字符串 取文件后缀</span></div><div class="line">                String type =f.getName().substring(f.getName().lastIndexOf(<span class="string">"."</span>)+<span class="number">1</span>);</div><div class="line">                <span class="comment">//1.读取txt文件的内容</span></div><div class="line">                <span class="keyword">if</span>(<span class="string">"txt"</span>.equalsIgnoreCase(type)) &#123;</div><div class="line">                    <span class="comment">//取得文件所有内容</span></div><div class="line">                    con = txt2String(f);</div><div class="line">                &#125;</div><div class="line">     </div><div class="line">                <span class="comment">//2.向本地文件存储索引</span></div><div class="line">                File indexFile = <span class="keyword">new</span> File(INDEX_DIR);</div><div class="line">              	<span class="comment">//如果索引不存在则创建</span></div><div class="line">                <span class="keyword">if</span>(!indexFile.exists())&#123;</div><div class="line">                    indexFile.mkdirs();</div><div class="line">                &#125;</div><div class="line">                indexWriter = <span class="keyword">new</span> IndexWriter(INDEX_DIR,analyzer,first);</div><div class="line">                first=<span class="keyword">false</span>;</div><div class="line">        </div><div class="line">                <span class="comment">//3.提取内容，进行索引的存储</span></div><div class="line">                Document document=<span class="keyword">new</span> Document();</div><div class="line">                Field filename = <span class="keyword">new</span> Field(<span class="string">"filename"</span>,con.get(<span class="number">0</span>), Field.Store.YES,Field.Index.TOKENIZED);</div><div class="line">                filename.setBoost(<span class="number">100</span>);</div><div class="line">                Field editor = <span class="keyword">new</span> Field(<span class="string">"editor"</span>,con.get(<span class="number">2</span>), Field.Store.YES,Field.Index.TOKENIZED);</div><div class="line">              	<span class="comment">//设置内容权重</span></div><div class="line">                editor.setBoost(<span class="number">80</span>);</div><div class="line">                document.add(filename);</div><div class="line">                Field content = <span class="keyword">new</span> Field(<span class="string">"content"</span>,con.get(con.size()-<span class="number">1</span>), Field.Store.YES,Field.Index.TOKENIZED);</div><div class="line">                content.setBoost(<span class="number">50</span>);</div><div class="line">                document.add(<span class="keyword">new</span> Field(<span class="string">"date"</span>,con.get(<span class="number">3</span>), Field.Store.YES,Field.Index.UN_TOKENIZED));</div><div class="line">                document.add(editor);</div><div class="line">                document.add(<span class="keyword">new</span> Field(<span class="string">"url"</span>,con.get(<span class="number">1</span>),Field.Store.YES,Field.Index.NO));</div><div class="line">                document.add(content);</div><div class="line">                document.add(<span class="keyword">new</span> Field(<span class="string">"path"</span>,f.getPath(), Field.Store.YES,Field.Index.NO));</div><div class="line">                <span class="comment">//4.索引对象加入索引创建中</span></div><div class="line">                indexWriter.addDocument(document);</div><div class="line">                <span class="comment">//提交索引并关闭</span></div><div class="line">                closeWriter();</div><div class="line">            &#125;</div><div class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">        Date date2=<span class="keyword">new</span> Date();</div><div class="line">        System.out.println(<span class="string">"创建索引成功\t耗时： "</span>+(date2.getTime()-date1.getTime())+<span class="string">"ms\n"</span>);</div><div class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/23/Python爬虫/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TianyLi">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://oo9y7ylu4.bkt.clouddn.com/image/blog/headIcon/IMG_7483.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -349,17 +543,6 @@
 
           
           
-             <span id="/2017/04/23/Python爬虫/" class="leancloud_visitors" data-flag-title="Python爬虫--《山大主页》">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
 
           
 
@@ -380,18 +563,36 @@
       
         
           
-          Python爬虫URL管理器声明两个集合 new_urls,old_urls. 一个存储待爬取的URL，一个存储已经爬取过的URLS。其中有四个函数，分别是
+            <h1 id="Python爬虫"><a href="#Python爬虫" class="headerlink" title="Python爬虫"></a>Python爬虫</h1><h2 id="URL管理器"><a href="#URL管理器" class="headerlink" title="URL管理器"></a>URL管理器</h2><p>声明两个集合 new_urls,old_urls. 一个存储待爬取的URL，一个存储已经爬取过的URLS。其中有四个函数，分别是</p>
+<ul>
+<li>add_new_url: 如果传入的url不在带爬取页面和已爬取页面中，向new_urls中加入一个新的待爬取页面。</li>
+<li>add_new_urls:传入很多urls，将urls的每一个url调用add_new_url判断是否加入待爬取集合中</li>
+<li>has_new_url:判断是否有待爬取页面</li>
+<li>get_new_url:从待爬取集合中返回一个url并将其加入已爬取集合中</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># coding:utf8</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">UrlManager</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        self.new_urls = set()</div><div class="line">        self.old_urls = set()</div><div class="line">    <span class="comment"># 向管理器添加url</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add_new_url</span><span class="params">(self, url)</span>:</span></div><div class="line">        <span class="keyword">if</span> url <span class="keyword">is</span> <span class="keyword">None</span>:</div><div class="line">            <span class="keyword">return</span></div><div class="line">        <span class="comment"># 如果URL不在待爬取页面和已爬取页面中，将页面加入到待爬取页面</span></div><div class="line">        <span class="keyword">if</span> url <span class="keyword">not</span> <span class="keyword">in</span> self.new_urls <span class="keyword">and</span> url <span class="keyword">not</span> <span class="keyword">in</span> self.old_urls:</div><div class="line">            self.new_urls.add(url)</div><div class="line">            </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add_new_urls</span><span class="params">(self, urls)</span>:</span></div><div class="line">        <span class="comment"># 如果urls为空 或者 其长度为0 退出</span></div><div class="line">        <span class="keyword">if</span> urls <span class="keyword">is</span> <span class="keyword">None</span> <span class="keyword">or</span> len(urls) == <span class="number">0</span>:</div><div class="line">            <span class="keyword">return</span></div><div class="line">        <span class="comment"># 调用单个url加入到集合中</span></div><div class="line">        <span class="keyword">for</span> url <span class="keyword">in</span> urls:</div><div class="line">            self.add_new_url(url)</div><div class="line"></div><div class="line">    <span class="comment"># 是否有新的url</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">has_new_url</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="comment"># 长度不为0表明有待爬取的url</span></div><div class="line">        <span class="keyword">return</span> len(self.new_urls) != <span class="number">0</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_new_url</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="comment"># 从待获取url集合中获取一个url，并加入到已爬取集合</span></div><div class="line">        new_url = self.new_urls.pop()</div><div class="line">        self.old_urls.add(new_url)</div><div class="line">        <span class="keyword">return</span> new_url</div></pre></td></tr></table></figure>
+<h2 id="URL下载器"><a href="#URL下载器" class="headerlink" title="URL下载器"></a>URL下载器</h2><p>将传入的url，使用urllib2.urlopen下载，并返回结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># coding:utf8</span></div><div class="line"><span class="keyword">import</span> urllib2</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">HtmlDownloader</span><span class="params">(object)</span>:</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">download</span><span class="params">(self, url)</span>:</span></div><div class="line">        <span class="keyword">if</span> url <span class="keyword">is</span> <span class="keyword">None</span>:</div><div class="line">            <span class="keyword">return</span> <span class="keyword">None</span></div><div class="line">        response = urllib2.urlopen(url)</div><div class="line">        <span class="keyword">if</span> response.getcode() != <span class="number">200</span>:</div><div class="line">            <span class="keyword">return</span> <span class="keyword">None</span></div><div class="line">        <span class="keyword">return</span> response.read()</div></pre></td></tr></table></figure>
+<h2 id="URL解析器"><a href="#URL解析器" class="headerlink" title="URL解析器"></a>URL解析器</h2><ul>
+<li>_get_new_urls: 根据传入的BeautifulSoup对象查找符合要求的url，即需要爬取的url。找到所有a标签中符合url标准的 href值。并且根据格式生成对应的url加入到new_urls集合中。</li>
+<li>_get_new_data: 解析页面中的数据，声明一个字典res_data，保存url、title、date、content、author</li>
+<li>parse: 传入页面内容和url，分别爬取页面的url和data并返回</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># coding:utf8</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">import</span> re</div><div class="line"><span class="keyword">import</span> urlparse</div><div class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">HtmlParser</span><span class="params">(object)</span>:</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_get_new_urls</span><span class="params">(self, page_url, soup)</span>:</span></div><div class="line">        new_urls = set()</div><div class="line">        <span class="comment"># view.sdu.edu.cn/new/2017~~~~</span></div><div class="line">        <span class="comment">#^\d+/([^# ]*)| 导航栏： ^/new/\w+/$  上下一页^\w+/\d+.html ：sdnews/23.html  ^/new/\w+/$</span></div><div class="line">        links = soup.find_all(<span class="string">'a'</span>, href=re.compile(<span class="string">r"^\d+/([^# ]*)|^/new/\w+|^\w+/\d+.html"</span>))    <span class="comment"># 正则表达式  /view/123.htm</span></div><div class="line">        <span class="keyword">for</span> link <span class="keyword">in</span> links:</div><div class="line">            new_url = link[<span class="string">'href'</span>]</div><div class="line">            <span class="comment"># print (new_url)</span></div><div class="line">            <span class="keyword">if</span> new_url[<span class="number">0</span>:<span class="number">4</span>] == <span class="string">"/new"</span>:</div><div class="line">                new_full_url = urlparse.urljoin(page_url, new_url)</div><div class="line">            <span class="keyword">else</span>:</div><div class="line">                new_full_url = <span class="string">"http://www.view.sdu.edu.cn/new/"</span>+new_url</div><div class="line">            <span class="comment">#</span></div><div class="line">            <span class="comment"># print (new_full_url)</span></div><div class="line">            new_urls.add(new_full_url)</div><div class="line">        <span class="keyword">return</span> new_urls</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_get_new_data</span><span class="params">(self, page_url, soup)</span>:</span></div><div class="line">        <span class="comment"># 解析数据</span></div><div class="line">        res_data = &#123;&#125;</div><div class="line">        res_data[<span class="string">'url'</span>] = page_url</div><div class="line">        <span class="comment"># &lt;div class="text"&gt; &lt;h1&gt;山东大学召开创新转化学院课程与教材建设研讨会&lt;/h1&gt;</span></div><div class="line">        <span class="keyword">if</span> soup.find(<span class="string">'div'</span>, class_=<span class="string">"text"</span>) <span class="keyword">is</span> <span class="keyword">None</span>:</div><div class="line">            <span class="keyword">return</span></div><div class="line">        <span class="comment"># 标题</span></div><div class="line">        title_node = soup.find(<span class="string">'div'</span>, class_=<span class="string">"text"</span>).find(<span class="string">'h1'</span>)</div><div class="line">        res_data[<span class="string">'title'</span>] = title_node.get_text()</div><div class="line">        <span class="comment"># 时间</span></div><div class="line">        <span class="comment">#&lt;div class="text_a"&gt;</span></div><div class="line">        date_node = soup.find(<span class="string">'div'</span>, class_=<span class="string">"text_a"</span>)</div><div class="line">        res_data[<span class="string">'date'</span>] = date_node.get_text()</div><div class="line"></div><div class="line">        <span class="comment"># &lt;div class="text_s" id="content"&gt;</span></div><div class="line">        <span class="comment"># 内容</span></div><div class="line">        summary_node = soup.find(<span class="string">'div'</span>, class_=<span class="string">"text_s"</span>, id=<span class="string">"content"</span>)</div><div class="line">        res_data[<span class="string">'summary'</span>] = summary_node.get_text()</div><div class="line">        <span class="comment"># &lt;div class ="text_c" &gt; 【作者：邹晓东　来自：《文史】 &lt; / div &gt;</span></div><div class="line">        <span class="comment"># 作者</span></div><div class="line">        author_node = soup.find(<span class="string">'div'</span>,class_=<span class="string">"text_c"</span>)</div><div class="line">        res_data[<span class="string">'author'</span>] = author_node.get_text()</div><div class="line">        <span class="keyword">return</span> res_data</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(self, page_url, html_cont)</span>:</span></div><div class="line"></div><div class="line">        <span class="keyword">if</span> page_url <span class="keyword">is</span> <span class="keyword">None</span> <span class="keyword">or</span> html_cont <span class="keyword">is</span> <span class="keyword">None</span>:</div><div class="line">            <span class="keyword">return</span></div><div class="line">        soup = BeautifulSoup(html_cont, <span class="string">'html.parser'</span>, from_encoding=<span class="string">'utf-8'</span>)</div><div class="line">        <span class="comment"># soup = BeautifulSoup(html_cont)</span></div><div class="line">        new_urls = self._get_new_urls(page_url, soup)</div><div class="line">        new_data = self._get_new_data(page_url, soup)</div><div class="line">        <span class="keyword">return</span> new_urls, new_data</div></pre></td></tr></table></figure>
+<h2 id="DATA输出器"><a href="#DATA输出器" class="headerlink" title="DATA输出器"></a>DATA输出器</h2><p>集合datas保存所有内容</p>
+<ul>
+<li>collect_data: 保存所有爬取的新闻内容数据</li>
+<li>output_html: 将datas中所有保存的数据写入到文件中</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># coding:utf8</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> os</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">HtmlOutputer</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        self.datas = []</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">collect_data</span><span class="params">(self, data)</span>:</span></div><div class="line">        <span class="keyword">if</span> data <span class="keyword">is</span> <span class="keyword">None</span>:</div><div class="line">            <span class="keyword">return</span></div><div class="line">        self.datas.append(data)</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">output_html</span><span class="params">(self)</span>:</span></div><div class="line">        foutAll = open(<span class="string">'output.html'</span>, <span class="string">'w'</span>)</div><div class="line">        foutAll.write(<span class="string">"&lt;meta charset=\"UTF-8\"&gt;"</span>)</div><div class="line">        foutAll.write(<span class="string">"&lt;html&gt;"</span>)</div><div class="line">        foutAll.write(<span class="string">"&lt;body&gt;"</span>)</div><div class="line">        foutAll.write(<span class="string">"&lt;table&gt;"</span>)</div><div class="line">        count = <span class="number">0</span></div><div class="line">        <span class="keyword">for</span> data <span class="keyword">in</span> self.datas:</div><div class="line">            <span class="comment">#记录每一篇文章的html</span></div><div class="line">            foutAll.write(<span class="string">"&lt;tr&gt;"</span>)</div><div class="line">            foutAll.write(<span class="string">"&lt;td&gt;&lt;a href=%s&gt;%s&lt;/a&gt;&lt;/td&gt;"</span> % (data[<span class="string">'url'</span>], data[<span class="string">'url'</span>]))</div><div class="line">            foutAll.write(<span class="string">"&lt;td&gt;%d&lt;/td&gt;"</span> % count)</div><div class="line">            foutAll.write(<span class="string">"&lt;td&gt;%s&lt;/td&gt;"</span> % data[<span class="string">'title'</span>].encode(<span class="string">'utf-8'</span>))</div><div class="line"></div><div class="line">            fout=open(<span class="string">'test/%d'</span> % count, <span class="string">'w'</span>)</div><div class="line">            fout.write(data[<span class="string">'title'</span>].encode(<span class="string">'utf-8'</span>))</div><div class="line">            fout.write(data[<span class="string">'summary'</span>].encode(<span class="string">'utf-8'</span>))</div><div class="line">            fout.write(data[<span class="string">'url'</span>])</div><div class="line">            fout.close()</div><div class="line">            count += <span class="number">1</span></div></pre></td></tr></table></figure>
+<h2 id="爬虫启动器"><a href="#爬虫启动器" class="headerlink" title="爬虫启动器"></a>爬虫启动器</h2><ul>
+<li>初始化爬虫对象：URL管理器、URL下载器、URL解析器、URL输出器</li>
+<li>爬虫调度程序：将root_url加入到URL管理器的待爬集合中。如果待爬集合不为空循环执行：取一个url，将其内容下载；将url，cont传入到解析器；解析器返回页面中所有的url和data。将url加入待爬、将data加入输出器。循环结束，调用输出</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># coding:utf8</span></div><div class="line"><span class="keyword">from</span> Spider <span class="keyword">import</span> html_downloader</div><div class="line"><span class="keyword">from</span> Spider <span class="keyword">import</span> html_output</div><div class="line"><span class="keyword">from</span> Spider <span class="keyword">import</span> html_parser</div><div class="line"><span class="keyword">from</span> Spider <span class="keyword">import</span> url_manager</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">SpiderMain</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="comment"># 构造函数初始化对象</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        self.urls = url_manager.UrlManager()                    <span class="comment"># URL管理器</span></div><div class="line">        self.downloader = html_downloader.HtmlDownloader()      <span class="comment"># URL下载器</span></div><div class="line">        self.parser = html_parser.HtmlParser()                  <span class="comment"># URL解析器</span></div><div class="line">        self.output = html_output.HtmlOutputer()                <span class="comment"># 输出器</span></div><div class="line">    <span class="comment"># 爬虫调度程序</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">craw</span><span class="params">(self, root_url)</span>:</span></div><div class="line">        count = <span class="number">1</span></div><div class="line">        self.urls.add_new_url(root_url)</div><div class="line">        <span class="keyword">while</span> self.urls.has_new_url():</div><div class="line">            <span class="keyword">try</span>:</div><div class="line">                new_url = self.urls.get_new_url()</div><div class="line">                <span class="comment"># print 'craw %d : %s' % (count, new_url)</span></div><div class="line">                html_cont = self.downloader.download(new_url)</div><div class="line">                new_urls, new_data = self.parser.parse(new_url, html_cont)</div><div class="line">                self.urls.add_new_urls(new_urls)</div><div class="line">                self.output.collect_data(new_data)</div><div class="line">                count += <span class="number">1</span></div><div class="line">            <span class="keyword">except</span>:</div><div class="line">                <span class="keyword">print</span> <span class="string">'craw failed'</span></div><div class="line">                <span class="keyword">print</span> count</div><div class="line">        self.output.output_html()</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    <span class="comment"># root_url = "http://www.view.sdu.edu.cn/"             # 入口地址</span></div><div class="line">    <span class="comment"># root_url = "http://www.view.sdu.edu.cn/new/2015/1028/76105.html"             # 入口地址</span></div><div class="line">    root_url = <span class="string">"http://www.view.sdu.edu.cn/"</span></div><div class="line">    <span class="comment"># root_url = "http://www.view.sdu.edu.cn/new/sdnews/"</span></div><div class="line">    obj_spider = SpiderMain()</div><div class="line">    obj_spider.craw(root_url)</div></pre></td></tr></table></figure>
+<p><a href="http://download.csdn.net/detail/li201400130091/9859107" target="_blank" rel="external">源代码请参考</a></p>
 
-add_new_url: 如果传入的url不在带爬取页面和已爬取页面中，向new_urls中加入一个新的待爬取页面。
-add_new_url
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/23/Python爬虫/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
@@ -438,7 +639,7 @@ add_new_url
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TianyLi">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://oo9y7ylu4.bkt.clouddn.com/image/blog/headIcon/IMG_7483.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -512,17 +713,6 @@ add_new_url
 
           
           
-             <span id="/2017/04/20/vocabulary/" class="leancloud_visitors" data-flag-title="vocabulary">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
 
           
 
@@ -543,15 +733,249 @@ add_new_url
       
         
           
-          Mediacurrent affairs 实事    the press新闻界    the print media印刷媒体    the electronic media电子媒体news outlets新闻报道机构        无处不在的、普遍的、流行的 prevalent,ubiquitous
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/20/vocabulary/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <h2 id="Media"><a href="#Media" class="headerlink" title="Media"></a>Media</h2><p>current affairs 实事    the press新闻界    the print media印刷媒体    the electronic media电子媒体news outlets新闻报道机构        无处不在的、普遍的、流行的 prevalent,ubiquitous,pervasive            be awash with,be inundated with,be saturated with    </p>
+<p>lay the foundation for</p>
+<p>increasingly:  Cash in China is increasingly unnecessary.</p>
+<p>e-commerce</p>
+<p>roughly:  roughtly the population of all Europe</p>
+<p>reasonably: We may reasonably conclude that the meeting has been postponed.</p>
+<p>freshman 大学一年级学生；新手    sophomore大学二年级学生    junior大学三年级学生    senior大学四年级学生</p>
+<p>sampling rate    sampling frequency</p>
+<p>Firefighters tried to extinguish the flame.</p>
+<p>unfavorable : I got an unfavorable score. /  I am surprised you got an unfavorbale impression of him.</p>
+<p>cope with: For all his learning, he didn’t know how to cope with the situation.</p>
+<p>civil rights </p>
+<p>Sweet are the uses of adversity. 苦尽甘来u</p>
+<p>pessism    optimism</p>
+<p>harassed 疲倦的，厌烦的   </p>
+<p>a house among the trees</p>
+<p>cyber 电脑的，网络的    cyber attack </p>
+<p>glitch n.小故障  computer glitch</p>
+<p>anecdote n.轶事，奇闻</p>
+<p>tens of thousands of </p>
+<p>vengeance n.报仇，复仇  retaliate v.报复，回敬</p>
+<p>mortality n. 死亡数目 Infant mortality was 20 deaths per thousand live births in 1986.</p>
+<p>allergy n.敏感症，反感 I have an allergy to animal hair.</p>
+<p>lethal adj.致命的 a lethal weapon </p>
+<p>oral learing: The mechanism of oral learing is largely that of continuous repetition.</p>
+<p>phase out : 逐渐减少 The Palace Museum will decide whether to phase out the sale of paper tickects and sell all tickets via the internet.</p>
+<p>in a bid to : 以便， in a bid to avoid too many tourists at a time.</p>
+<p>set a daily visitor cap 设置每日游客访问量</p>
+<p>restriction: The swimming club is open to families in the neighborhood without restriction.</p>
+<p>meditated a visit to her daughter ,  He meditate on his past life.</p>
+<p>reception 接待，招待会  receipt n.收据</p>
+<p>The book contains many mathmatical theorems.</p>
+<p>conform: I can’t conform what you said</p>
+<p>entrancing music 令人陶醉的音乐</p>
+<p>composite, composition, comprise</p>
+<p>speculate: It’s useless to speculate why he did it.</p>
+<p>cheat: I would rather fail than cheat in the examination.</p>
+<p>suspicious: suspicious behavior, I was suspicious of his motives.</p>
+<p>fluctuate: My weight fluctuated widly depending on how muach I ate.</p>
+<p>resent-hate: I resent having to get his permission for everything I do.</p>
+<p>elevation: The house is at an elevation of 1000 meters.</p>
+<p>population: One third of the world’s population consume two thirds of the world’s resources.</p>
+<p>fitness: fitness equipment , fitness centers ; Her fitness for the job cannot be questioned.</p>
+<p>certainty: We have no certainty of success.</p>
+<p>substitute: a meat substitute</p>
+<p>tentative: We made a tentative arrangement to meet on Friday. tentative conclusions.</p>
+<p>infectious disease,  tourist attraction旅游胜地</p>
+<p>a definitive agreement/answer/statement  The definitive version of text is ready to be published.</p>
+<p>Don’t keep us in suspense. Tell us what happened!</p>
+<p>a muscle spasm 肌肉痉挛</p>
+<p>It takes a lot of stamina to run a marathon.</p>
+<p>maximum temperature 最高气温</p>
+<p>There are some indications that the prices will rise.</p>
+<p>eternal truth不朽的真理  She felt eternal gratitude to him for saving her life.</p>
+<p>index of corpulence.肥胖指数</p>
+<p>2017-05-08</p>
+<p>renowned adj.有名的，有声誉的 He is renowned as novelist.</p>
+<p>decisive: the decisive vote决定性的一票 .The government must take decisive action on gun control.  </p>
+<p>a divorce settlement</p>
+<p>He made many efforts to enhance his reputation.</p>
+<p>The book shows that he is an ingenious author.</p>
+<p>The knowledge is beyond my scope.知识超过了我的范围</p>
+<p>Malls in the town reach saturation point.</p>
+<p>He consoled her with flowers.  Nothing could console him when his pet dog died.</p>
+<p>I refuse to lie about it , it’s against my principles.</p>
+<p>He give me a duplicate key of his house.</p>
+<p><u>Stern as he is , he is full of sympathy.</u></p>
+<p>quench熄灭（镇压）  extinguish熄灭（根除） Firemen try to quench the flames raging through the building.</p>
+<p>The house has an ample parlor.</p>
+<p>He could no longer distinguish between illusion and reality</p>
+<p>Reading good books elevates your mind.</p>
+<p>The sun has bleached her yellow skirt.</p>
+<p>We’re having difficulty keeping up our mortgage payments.</p>
+<p>They pledged never to tell the secret.</p>
+<p>a crucial factor / issue / decision</p>
+<p>ambient temperature 室温  Ambient noise may come from any direction.</p>
+<p>Rice is our staple food.</p>
+<p>The external walls of the building.</p>
+<p>Our relationship is based on reciprocal respect. 我们的关系是以相互尊重为基础的。</p>
+<p>The stillness was broken by the sound of footsteps.</p>
+<p>There was a suddent stillness in the air.</p>
+<p>They asked him to be merciful to the prisoners.</p>
+<p>He is a man always speaking with restraint.</p>
+<p>She’s tired of the perpetual complaints.   </p>
+<p>In his job, patience is an invalueable asset.</p>
+<p>The meeting may be prolong into the evening.</p>
+<p>He sent the letter our of malice.</p>
+<p>Henceforth I expect you to be punctual for meeting.</p>
+<ul>
+<li>permanent指总是处于相同的情况和地位，可长期持续下去，永久不变</li>
+<li>eternal语体较庄重，侧重指永远存在，无始无终。 </li>
+<li>perpetual语气最强，指保持永久不变，没有中断的行为，永无止境地持续下去。有时用于贬义，指令人厌烦之事。</li>
+</ul>
+<p>You don’t have to be a dieter.</p>
+<p>It’s the job of the police to enforce the law.</p>
+<p>2017-05-10</p>
+<p>She made an emotional plea for help.</p>
+<p>Her denial of my advice hurts me.</p>
+<p>There is no further reference to him in her diary</p>
+<p>The dispute coule develop into open warfare.</p>
+<p>Be careful not to damage other people’s property.</p>
+<p>Thank you so much for your timely help.</p>
+<p>Some people are never contented.</p>
+<p>A new work programme for young people will be implemented.</p>
+<p>It is doubtless that Taiwan belongs to China.</p>
+<p>I affirm that waht he said is true.</p>
+<p>The missing girl is presumed dead.</p>
+<p>I am accustomed to sleeping late.</p>
+<p>an elaborately decorated room</p>
+<p>He was resolute in carrying out his plan.</p>
+<p>2017-05-11 </p>
+<p>national anthem国歌</p>
+<p>think twice再三考虑</p>
+<p>A smile often denotes pleasure and friendship</p>
+<p>2017-05-12</p>
+<p>astonishing惊人的</p>
+<p>without intervention</p>
+<p>epidemic： childhood obesity was neither an epidemic nor a public health problem.</p>
+<p>obesity is also a risk factor for a variety of chronic diseases.</p>
+<p>The company was granted a charted trade in the occupied.</p>
+<p>I wouldn’t have dared to defy my teachers.</p>
+<p>Adolescence is the period of transition between childhood and adulthood.</p>
+<p>Her perdominant characteristic is honesty.</p>
+<p>I fail to see the logic behind his argument.</p>
+<p>Technically the building is a masterpiece, but few people like it.</p>
+<p>To be specific, the argument in your graduation thesis is logical.</p>
+<p>She was pressurized into agreeing to a merger.</p>
+<p>She was expelled from his company.</p>
+<p>2017-05-13 </p>
+<p>Implicit in his speech was the a assumption that they guilty.</p>
+<p>2017-05-14 </p>
+<p>There’s only a minimal amount of risk involved.</p>
+<p>If you get up early, you should not disturb others.</p>
+<p>Why should I say sorry when it’s not my fault?</p>
+<p>I really hate your abandonment of study.</p>
+<p>2017-05-15</p>
+<p>struggling with 艰苦奋斗</p>
+<p>distinctly:  Though they talked in a low voice, they could be heard distinctly.</p>
+<p>reportedly:  The  star is reportedly very ill.</p>
+<p>engage in:  Let’s not engage in personalities.</p>
+<p>category: We are divided into several categories by grades.</p>
+<p>sequence: He had to attend a sequence of meetings.</p>
+<p>under way: He gave his content for the project to get under way.</p>
+<p>elapse:  Three years have elapsd since we met last time.</p>
+<p>situated: The village is situated in a valley.</p>
+<p>cleanliness: We require the cleanliness from our child.</p>
+<p>designate: She was designated sportswoman of the year.</p>
+<p>regulatory: There were privacy and regulatory worries.</p>
+<p>inviolable: inviolable territory, the inviolable right to life</p>
+<p>2017-05-16 </p>
+<p>No previous experience is necessary for this job.</p>
+<p>He refused the proffered assistance.</p>
+<p>Children swim at the pool, under the watchful eye of lifeguards.</p>
+<p>The problem is that it’s not profitable.</p>
+<p>violence   ultraviolet</p>
+<p>in a stew over the lost keys</p>
+<p>case history</p>
+<p>deviant</p>
+<p>introverted</p>
+<p>2017-05-18</p>
+<p>His action is out of greed</p>
+<p>instantaneous  He had an instantaneous response.</p>
+<p>He used to be a literary agent.</p>
+<p>civilized  : Such behavior is unacceptable in a civilized society.</p>
+<p>faltering: A pause of faltering in speech.</p>
+<p>2017-05-20</p>
+<p>The realization of his ambition makes hime very happy.</p>
+<p>The deficiency of this plan is very clear and it can’t possibly succeed.</p>
+<p>She couldn’t stand any more of their ridicule.</p>
+<p>instiution</p>
+<p>2017-05-21</p>
+<p>We’re not sure whether we still want to proceed the sale.</p>
+<p>He had practically finished his meal when I arrived.</p>
+<p>The big match tonight is England versus Spain.</p>
+<p>a massive dose of a drug.</p>
+<p>We restrict the number of students per class to 10</p>
+<p>2017-05-22</p>
+<p>institution 制度</p>
+<p>fundamental adj. 基本的，基础的</p>
+<p>2017-05-28</p>
+<p>sponsored</p>
+<p>ceaseless adj. 不断的，不停的</p>
+<p>awfully adv.可怕地，非常地</p>
+<h2 id="教育意义"><a href="#教育意义" class="headerlink" title="教育意义"></a>教育意义</h2><ol>
+<li>gain knowledge about…… 获取关于……的知识</li>
+<li>develop a wide range of skills  </li>
+<li>improve/sharpen their skills</li>
+<li>academic performance<ol>
+<li>get good grades / achieve good grades</li>
+<li>communication skills </li>
+<li>problem-solving skills</li>
+</ol>
+</li>
+<li>provide a well-rounded education<ol>
+<li>have a wide range of interests and skills</li>
+</ol>
+</li>
+<li>a broad and balance curriculum<ol>
+<li>place more importance on……</li>
+</ol>
+</li>
+<li>an optinal course</li>
+<li>academic subjects</li>
+<li>develop good learning habits</li>
+<li>give them a sense of achievement</li>
+<li>reduce distractions 减少干扰</li>
+</ol>
+<h2 id="Listening-List"><a href="#Listening-List" class="headerlink" title="Listening List"></a>Listening List</h2><h3 id="House-renting"><a href="#House-renting" class="headerlink" title="House renting"></a>House renting</h3><p>renting 出租、real-estate agency房屋中介、Landlord房东、Landlady女房东、deposit押金、lease租约、available可租的、unfurnished没有家具的、furnished有家具的、facilities设备、surrounding周边环境、fence篱笆、driveway车道、garage车库、corridor走廊、fountain喷泉、suburb\outskirts郊区、downtown市区、style风格、bungalow平房、flat、accommodation住宿、dormitory宿舍、motel汽车旅馆、shared social area共享休息区、Wing翼、Annex副楼、Lobby前厅、Foyer门厅、balcony阳台、a single/double bedroom 单人间/双人间、a twin room双床房、Laundry room洗衣间、Attic阁楼、Bunk bed上下铺、Wardrobe衣柜、Mirror镜子、cupboard橱柜、cabinet衣柜、drawer柜子、Mattress床垫、king/queen-size bed特大/大号床、electronics电器、Central heating中央供暖、radiator暖气片、air-conditioner空调、washing machine洗衣机、fridge冰箱、vacuum cleaner吸尘器、micro-wave oven微波炉、(Hair)dryer、cable TV有线电视、stereo system立体音响、kettle电水壶、decoration装饰、carpet地毯、pillow枕头、sheet床单、blanket毯子、curtain窗帘、shutter百叶窗、soap肥皂、shampoo香波、body wash沐浴液、body lotion润肤乳、towel浴巾、toothpaste牙膏、toothbrush牙刷、filter过滤器</p>
+<h3 id="Job-hopping"><a href="#Job-hopping" class="headerlink" title="Job hopping"></a>Job hopping</h3><p>vacant position空缺职位、job applicant工作申请者、candidate求职者、day shift 日班、shift work倒班、challenging job有挑战的工作、CV=resume简历、arm badge/name badge 胸章/臂章、job interview求职面试、starting salary起薪、wage工资、commission佣金、perks红包、bonus分红、pension养老金、public house fund住房公积金、health insurance健康保险、duration时长、career plan职业规划、work irregular hours不规则工作时间、achievement成就、random selection随机选择、occupational factor职业因素、satisfaction满足感、routine work日常工作、staff advantages员工福利、window dressing橱窗展示、cashier收银员、serve customers服务客户、performance at work工作表现、performance绩效、keep an eye on stock关注库存、stimulating刺激、human resources人力资源、financial officer财政人员、public servant公务员、airplane飞机、ferry轮渡、hovercraft气垫船、tube地铁、subway地铁、underground地铁、metro地铁、cab出租车、4-wheel-drive四驱车、hybrid混合动力车、airport shuttle bus机场穿梭巴士、minibus小巴、express train高铁</p>
+<h3 id="Shopping"><a href="#Shopping" class="headerlink" title="Shopping"></a>Shopping</h3><p>shop assistant售货员、counter柜台、corner shop街角小店、general store综合商店、Hypermarket大型超级市场、stall货摊、booth流动商店、kiosk报亭 公用电话亭、boutique时装精品小店、bazaar市场、arcade拱廊市场？、precinct购物区、shopping mall购物中心、department store百货商店、free parking lot免费停车场、mail-order store邮购商店、auction拍卖、second-hand store二手商店、bid喊价、discount折扣、change找零、cosmetic化妆品、stationery文具、fabrics纺织品、sports good体育用品、daily necessities日常必需品、cash现金、cheque支票、cheque book支票本、signature签名、visa、balance余额、overdraft透支、installment分期还款、duty-free shop免税店、credit card信用卡、quality质量、service服务、brand品牌、compact紧凑车型、sedan小轿车、</p>
+<h3 id="食物"><a href="#食物" class="headerlink" title="食物"></a>食物</h3><p>barley 大麦</p>
+<p>Section 3 Listen words</p>
+<p>Now this is rather disturbing</p>
+<p>life span 寿命   longevity寿命</p>
+<p>spouse法律意义上 的伴侣   partner </p>
+<p>nursing care </p>
+<p>To start with ,  Since , Furthermore </p>
+<p>It is the in playground that we meet each other. </p>
+<p>subsidy 津贴补助 allownce</p>
+<p>social security 社保 social ins</p>
+<p>informative消息灵通的，资料多的，信息量大的</p>
+<p>initiative主动权(计划，决定) profitable有利益的</p>
+<p>rare breeds animals 稀有物种 </p>
+<p>circular area </p>
+<p>rear</p>
+<p>address the problem解决问题</p>
+<p>erect a </p>
+<p>enable traffic to exit at all times.</p>
+<p>Top/bottom </p>
+<p>Above/ below</p>
+<h2 id="连接的词汇"><a href="#连接的词汇" class="headerlink" title="连接的词汇"></a>连接的词汇</h2><h3 id="由于，因为"><a href="#由于，因为" class="headerlink" title="由于，因为"></a>由于，因为</h3><ul>
+<li>on account of </li>
+<li>As a result of 由于，  As a result ，因此</li>
+</ul>
+<h4 id="改变"><a href="#改变" class="headerlink" title="改变"></a>改变</h4><p>wax and wane 起伏、改变   The stock waxs and wanes</p>
+<p>2017-07-09<br>primitive</p>
+<p>traverse</p>
+<p>throughout the course of history 贯穿历史过程</p>
+<p>religious conviction 宗教信仰</p>
+<p>economic gain 经济增长</p>
+<h2 id="学科"><a href="#学科" class="headerlink" title="学科"></a>学科</h2><p>mathematics 数学 , arts 文科 , science 理科 , history 历史 , geometry 几何 , geography 地理 , geology 地质学</p>
+
+          
         
       
     </div>
@@ -598,7 +1022,7 @@ add_new_url
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TianyLi">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://oo9y7ylu4.bkt.clouddn.com/image/blog/headIcon/IMG_7483.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -672,17 +1096,6 @@ add_new_url
 
           
           
-             <span id="/2017/04/19/小作文/" class="leancloud_visitors" data-flag-title="IELTS小作文">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
 
           
 
@@ -703,23 +1116,143 @@ add_new_url
       
         
           
-          曲线图内容
-曲线的变化趋势：上升、下降、保持平稳、波动
-特殊点：起点、终点、交点、极值点、转折点 
-特殊曲线 ： 最高、最低 (**！！)
+            <h2 id="曲线图"><a href="#曲线图" class="headerlink" title="曲线图"></a>曲线图</h2><h3 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h3><ol>
+<li>曲线的变化趋势：上升、下降、保持平稳、波动</li>
+<li>特殊点：起点、终点、交点、极值点、转折点 </li>
+<li>特殊曲线 ： 最高、最低 (**！！)</li>
+</ol>
+<h3 id="逻辑"><a href="#逻辑" class="headerlink" title="逻辑"></a>逻辑</h3><ol>
+<li>简单介绍逻辑 paraphrase    不能抄题</li>
+<li>所有曲线的起点  信息处理逻辑（从大到小），相近的点一句话处理（顺序）</li>
+<li>所有下降的曲线及除了交点之外的所有特点</li>
+<li>所有上升的曲线及包含交点的所有特点        （按幅度分组）</li>
+<li>图标的Overview  图的最大特点，第一眼看 (1)各个曲线的趋势（2）特殊曲线</li>
+</ol>
+<h2 id="柱状图"><a href="#柱状图" class="headerlink" title="柱状图"></a>柱状图</h2><p>按柱子的分类分段（主要方法）</p>
+<p>按横坐标的组数分段（补充方法）    原则4~6</p>
+<p>按时态分段（适用于)</p>
+<p>分段不参考 动静</p>
+<p>动态：参照 曲线图</p>
+<p>静态： 1st 2nd last  将不同的柱子分开</p>
+<p>与其他的关系</p>
+<p>两倍关系 ：第一 的从句 将一半的带出</p>
+<ol>
+<li>柱状图即可提现数据变化趋势</li>
+</ol>
+<h2 id="饼图-pie-chart"><a href="#饼图-pie-chart" class="headerlink" title="饼图(pie chart)"></a>饼图(pie chart)</h2><ol>
+<li><p>写几块？ 为什么？</p>
+<p>（x-1）块，x=总块数 ；</p>
+</li>
+<li><p>主要特点是</p>
+<p>1st 2nd last。找数字关系</p>
+</li>
+<li><p>写作顺序</p>
+<p>从大到小</p>
+</li>
+<li><p>余下的块看情况，找数字之间的关系</p>
+</li>
+</ol>
+<p>动态饼  抓主要趋势</p>
+<p><strong>多个饼图 动静结合</strong></p>
+<ol>
+<li><p>数据的变化趋势</p>
+<p>参考曲线图</p>
+</li>
+<li><p>具有代表性的数字</p>
+<p>1^st^  2^nd^  last</p>
+</li>
+<li><p>数字之间的倍数</p>
+<p>相等、倍数</p>
+</li>
+<li><p>Overview</p>
+<p>寻找每个饼的overview之间的联系</p>
+</li>
+</ol>
+<p>pie charts </p>
+<p>趋势（上升、下降）：  明显的一组 不明显的一组</p>
+<p>分段：</p>
+<p>总结：多幅图各个击破，找最大的overview；寻找共同点。</p>
+<h2 id="表格-table"><a href="#表格-table" class="headerlink" title="表格(table)"></a>表格(table)</h2><p>静态还是动态</p>
+<p>​    看情况、曲线图、</p>
+<p>表格的主要特点</p>
+<p>​    </p>
+<p>表格的overview</p>
+<p>​    最大的数</p>
+<p>横着看，竖着看都有结论</p>
+<p>时间按  最早、第二早、最晚。</p>
+<p>相关的数据关系。</p>
+<p>兼顾纵横</p>
+<h2 id="地图题"><a href="#地图题" class="headerlink" title="地图题"></a>地图题</h2><h4 id="历史变迁型-difference"><a href="#历史变迁型-difference" class="headerlink" title="历史变迁型(difference)"></a>历史变迁型(difference)</h4><p>Before - After: </p>
+<p>difference的角度  <u>数量的变化、面积的变化、位置的变化</u></p>
+<p><u>顺序  顺时针，第二幅图 按照第一幅图的顺序</u></p>
+<p>基本功：</p>
+<p>数量：</p>
+<p>0-1修建：build , construct</p>
+<p>1-0去除：remove , demolish</p>
+<p>1-2倍数：倍数的表达</p>
+<p>位置：</p>
+<p>move to, relocate at ,<u>to in</u></p>
+<p>面积：area , size </p>
+<p>后面这个比前面这个变了很多</p>
+<h4 id="规划类-layout"><a href="#规划类-layout" class="headerlink" title="规划类(layout)"></a>规划类(layout)</h4><p>注意比较二者的区别最后得出结论</p>
+<p>总而言之，我觉得 …… 更适合 </p>
+<h2 id="流程图-Flow-chart"><a href="#流程图-Flow-chart" class="headerlink" title="流程图 Flow chart"></a>流程图 Flow chart</h2><p>Life cycle生命周期</p>
+<p>Production物品生产</p>
+<p>基本功 ： 找谓语，词汇很关键</p>
+<p>产卵spawn  生长发育 thrive</p>
+<p>immigrate 人的移民</p>
+<p>emmigrate 动物的迁徙  dwell     inhabit栖息</p>
+<p>Washing powder</p>
+<p>grind / ground   laminate  磨碎</p>
+<p>process 处理(加工)</p>
+<p>undergo  high temerature</p>
+<p>spwan产卵 lay下蛋    thrive , grow   。  grow into 长成  live on 以……为生</p>
+<p>knit</p>
+<p>First , then , stage/phase , step</p>
+<p>intelligible 通俗易懂</p>
+<p>总结，产品 的 流程 比较清楚、清晰易懂</p>
+<p>step  \ stage</p>
+<h2 id="基本功"><a href="#基本功" class="headerlink" title="基本功"></a>基本功</h2><h3 id="单词"><a href="#单词" class="headerlink" title="单词"></a>单词</h3><ul>
+<li>上升： rise / climb / increase / soar / show an upward trend /</li>
+<li>下降：fall / decline / decrease / slash大幅度削减 /detract from /descend</li>
+<li>保持平稳：(keep/remain)  (stable/steady)</li>
+<li>波动： fluctuate</li>
+<li>显著地： obviously  / consideratly / significantly /dramaticly</li>
+<li>大约：about / around / almost /approximately / roughly / just over or below / nearly</li>
+<li>超过：overtake / exceed / surpass</li>
+<li>展现： show / illustrate / give information about</li>
+<li>很多：a great deal</li>
+<li>占据：account for</li>
+<li>交叠：overlap</li>
+</ul>
+<h3 id="静态图句型"><a href="#静态图句型" class="headerlink" title="静态图句型"></a>静态图句型</h3><p>百分之…的…被用来/被用在…了 </p>
+<p><u>40% of money was used/spent in food.</u></p>
+<p><u>There is 40% of money that is spent on food.</u></p>
+<p><u>Money spent on food occupies/takes up/consititute/  40%  of all/collectively</u>(不适用纯数字)</p>
+<p><u>The percentage/proportion of money spent on food is 40%.</u>    number(可数)/quantity/amount(不可数)</p>
+<h3 id="动态图句型"><a href="#动态图句型" class="headerlink" title="动态图句型"></a>动态图句型</h3><p> A increased to XXX(单位) in 2000</p>
+<p>There was an obvious decrease/increase in D(something).</p>
+<p>E rose and peaked at XXX(单位) in 1990 before fell significantly to XXX [单位] in 1996</p>
+<p>F soared to XXX[单位] in 1993 after a slow increase from 1990 to 1991.</p>
+<p>占据  consititue ,  account for , takes up ,  occupies  species 单复数通行</p>
+<p>collectively 总体、集体</p>
+<p>纯数字，带单位，百分数没有单位</p>
+<p>diploma  degree大学文凭        Bachelor degree学士学位</p>
+<p>predict  ———  estimate  ——— calculate</p>
+<p>相等</p>
+<p>be + almost / around  same with   equal to  ,  similar to  ,  close to</p>
+<p>There is no difference between the two in quantitative terms.</p>
+<p>倍数</p>
+<p>A is twice as big as B</p>
+<p>A is twice bigger than B </p>
+<p>The percentage of money spent on rent was 20%, which was about twice bigger than taht of clothes.</p>
+<p>There was 9% of money spent entertainment, which was similar/close to that of clothes.</p>
+<p>介词性：Thanks to, due to , because of </p>
+<p>连词性：because , since , as , for , thus ,so</p>
+<p>状语性：as a result, in this way</p>
+<p>动词性：cause, lead to ,result in ,contribute to ,are involved/related/linked</p>
 
-逻辑
-简单介绍逻辑 paraphrase    不能抄题
-所有曲线的起点  信息处理逻辑（从大到小），相近的点一句话处理（顺序）
-所有下降的曲线及除了交点之外
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/19/小作文/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
@@ -766,7 +1299,7 @@ add_new_url
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TianyLi">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://oo9y7ylu4.bkt.clouddn.com/image/blog/headIcon/IMG_7483.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -840,17 +1373,6 @@ add_new_url
 
           
           
-             <span id="/2017/04/19/迷宫问题A*搜索/" class="leancloud_visitors" data-flag-title="A*算法">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
 
           
 
@@ -871,18 +1393,80 @@ add_new_url
       
         
           
-          启发式搜索A*搜索算法
-http://www.cnblogs.com/mingjiatang/p/5967681.html
+            <h1 id="启发式搜索"><a href="#启发式搜索" class="headerlink" title="启发式搜索"></a>启发式搜索</h1><h1 id="A-搜索算法"><a href="#A-搜索算法" class="headerlink" title="A*搜索算法"></a>A*搜索算法</h1><blockquote>
+<p><a href="http://www.cnblogs.com/mingjiatang/p/5967681.html" target="_blank" rel="external">http://www.cnblogs.com/mingjiatang/p/5967681.html</a></p>
+</blockquote>
+<h2 id="A-搜索算法简介"><a href="#A-搜索算法简介" class="headerlink" title="A*搜索算法简介"></a>A*搜索算法简介</h2><p>A*搜索算法是一种启发式算法。即在盲目搜索的过程加入一个启发函数，对于当前结点搜索完毕后，使用启发函数对每一个子结点的状态计算代价，选择代价最小的节点作为下一步的搜索节点。通过不断求最优，就可以找到最优解。</p>
+<p>DFS，BFS都是属于盲目搜索，选择子结点是根据固定顺序选择，在某些情况下求解会产生大量的冗余步骤。而A*搜索算法会是根据一个启发函数值来判别从哪一个节点继续进行搜索。启发函数的表达形式为：</p>
+<p>​                            $f(n)=g(n)+h(n)$ </p>
+<p>其中$f(n)$是每个节点的估值或者代价值。$g(n)$表示从起点到搜索点的代价，$h(n)$代表搜索点到目标点的代价，$h(n)$会直接影响到A*算法的效率。</p>
+<p>一种具有$f(n)=g(n)+h(n)$的启发式算法能成为A*算法的充分条件是：</p>
+<ol>
+<li>搜索树上存在从起点到终点的最优路径</li>
+<li>问题域有限</li>
+<li>所有子结点的搜索代价值都大于0</li>
+<li>$h(n)\leq h*(n)$</li>
+</ol>
+<h2 id="A-搜索算法描述"><a href="#A-搜索算法描述" class="headerlink" title="A*搜索算法描述"></a>A*搜索算法描述</h2><p>A*算法的流程如下：</p>
+<p>A*算法需要两个额外的存储空间，OPEN表和CLOSE表。</p>
+<ol>
+<li>初始化OPEN表和CLOSE表，将开始节点（开始节点的Hvalue和Gvalue都视为0）放入OPEN表中</li>
+<li>重复下面步骤(循环)<ol>
+<li>在开始列表中查找具有最小Fvalue的节点作为当前节点</li>
+<li>把当前节点从OPEN表中删除，并加入到CLOSED表中</li>
+<li>对当前节点的每一个相邻节点依次执行以下步骤：<ol>
+<li>如果相邻节点不可通行或者该节点已经在CLOSE表中，则什么操作也不执行</li>
+<li>如果该相邻节点不在OPEN表中，则将该节点添加到OEPN表中，并<u>将该相邻节点的父节点设置为当前节点</u>，同时计算保存相邻节点的Fvalue</li>
+<li>如果该相邻节点在OPEN表中，则判断若经由当前节点到达该相邻节点的Fvalue是否小雨原来保存的Fvalue，若小于则将该相邻节点的父节点设置为当前节点，并重新计算该相邻节点的Fvalue</li>
+<li>若当终点节点被加入到OPEN表作为待检验节点时，表示路径已经找到，此时应终止循环；若当OPEN表为空，表示没有从开始节点到终点节点的路径，此时循环结束</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>循环终止后，从终点节点开始沿父节点往前遍历，从后到前输出搜索路径。</li>
+</ol>
+<p>其中，设置相邻节点的父节点为当前节点为了记录从起始节点到终止节点的路径，方便搜索路径后对路径进行输出。</p>
+<h2 id="A-算法对于八数码问题"><a href="#A-算法对于八数码问题" class="headerlink" title="A*算法对于八数码问题"></a>A*算法对于八数码问题</h2><h3 id="启发式A-算法"><a href="#启发式A-算法" class="headerlink" title="启发式A*算法"></a>启发式A*算法</h3><p>open表：存放所有待扩展的节点</p>
+<p>closed表：存放所有已扩展的节点</p>
+<p>spring表：存放所有待处理的节点状态</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">List&lt;State&gt; open = <span class="keyword">new</span> ArrayList&lt;&gt;();  <span class="comment">//open表</span></div><div class="line">List&lt;State&gt; closed = <span class="keyword">new</span> ArrayList&lt;&gt;();     <span class="comment">//close表</span></div><div class="line">List&lt;State&gt; spring = <span class="keyword">new</span> ArrayList&lt;&gt;();     <span class="comment">//spring表</span></div><div class="line"><span class="keyword">int</span> start[]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">0</span>&#125;;            <span class="comment">//初始状态数组</span></div><div class="line"><span class="keyword">int</span> goal[] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">8</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">6</span>,<span class="number">5</span>&#125;;           <span class="comment">//目标状态数组</span></div><div class="line">State startState = <span class="keyword">new</span> State();         <span class="comment">//初始状态</span></div><div class="line">State goalState = <span class="keyword">new</span> State();          <span class="comment">//目标状态</span></div></pre></td></tr></table></figure>
+<h3 id="算法步骤"><a href="#算法步骤" class="headerlink" title="算法步骤"></a>算法步骤</h3><ol>
+<li><p>检查是否有解（逆序数）</p>
+<p>将9宫格横向展开，左边的数大于右边的数的组数称为逆序数。横向平移逆序数增量为0、2或-2。纵向平移逆序数增长为0、4或-4。因此，初态和目标态的逆序数和应该是偶数。（即初态逆序奇数、末态逆序也为奇数和为偶数）若不是偶数代表此八数码无解。</p>
+</li>
+<li><p>初始化open表（存放待扩展的节点）、close表（存放已扩展的节点）、spring表（存放答案）、初始状态、目标状态。</p>
+</li>
+<li><p>计算初始状态的g、h、f值后，将初始状态加入到open表中</p>
+</li>
+<li><p>检查问题是否有解</p>
+</li>
+<li><p>循环()</p>
+<ol>
+<li><p>在open表中取出一个状态getOfOpen，判断是否是目标状态。是目标状态则结束</p>
+</li>
+<li><p>将状态getOfOpen加入closed表</p>
+</li>
+<li><p>将状态getOfOpen产生后继节点</p>
+<ol>
+<li>获取0的位置，将0进行四个方向移动的尝试，可以则移动。</li>
+<li>判断该移动方向得到的结果是否与其前驱节点相似。</li>
+<li>不相似创建新的状态点加入到spring中。</li>
+</ol>
+</li>
+<li><p>检查spring表中所有的节点(state)</p>
+<p>如果在open表中有相同节点(stateInOpen)。如果state的g值&lt;stateInOpen的g值，则改变open表中(stateInOpen)的参数，并将open表中的状态按gvalue重排。并从spring表删除该节点。</p>
+<p>如果在closed表中有相同节点(stateInClosed)，state的g值&lt;stateInClosed的g值，则改变closed表中(stateInClosed)的参数，将stateInClosed加入open表并排序。并从spring表删除该节点</p>
+<p>否则将state加入open表，并从spring表中删除该节点</p>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="算法空间表示"><a href="#算法空间表示" class="headerlink" title="算法空间表示"></a>算法空间表示</h3><p>状态用一维数组表示，每个节点状态存以一个State对象存储。包括存储Fvalue，Gvalue，Hvalue。对于九宫格按行展开存入数组，用0表示移动位置（空格）。</p>
+<h2 id="A-算法对于迷宫问题"><a href="#A-算法对于迷宫问题" class="headerlink" title="A*算法对于迷宫问题"></a>A*算法对于迷宫问题</h2><p>采用A*算法对迷宫路径求解中，$g(n)$和$h(n)$都采用==曼哈顿距离==，曼哈顿距离代表两个点在标准坐标上的绝对轴距总和。<br>$$<br>d(i,j)=|x_1-x_2|+|y_1-y_2|<br>$$<br>即每次获取的当前通道块，都会对其到入口通道块和出口通道开的曼哈顿距离进行计算。求算当前通道块的Fvalue进行保存。该函数满足启发式算法的充分条件1、2、3、4。</p>
+<p>对于迷宫问题需要将A*算法进行更改，其中2-3-1，如果相邻节点不可通行或者该节点已经在close表或open表中，则什么也不执行；2-3-2，如果该节点不在open表和close表中，则将该节点添加到open表中，并将该节点的父节点设置为当前节点，同时计算保存相邻节点的$Fvalue$。</p>
+<p>在迷宫求解中使用A*搜索算法不需要更新OPEN表中已存在节点的Fvalue，因为每个节点的位置都是确定的，所以曼哈顿九黎就是固定的。如果是带权值的网路求解最短路径，那么就需要去更新open表中节点的$Fvalue$，如$Dijkstra$算法。</p>
 
-A*搜索算法简介A*搜索算法是一种启发式算法。即在盲目搜索的过程加入一个启发函数，对于当前结点搜索完毕后，使用启发函数对每一个子结点的状态计算代价，选择代价最小的节点作为下一
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/19/迷宫问题A*搜索/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
@@ -929,7 +1513,7 @@ A*搜索算法简介A*搜索算法是一种启发式算法。即在盲目搜索�
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TianyLi">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://oo9y7ylu4.bkt.clouddn.com/image/blog/headIcon/IMG_7483.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1003,17 +1587,6 @@ A*搜索算法简介A*搜索算法是一种启发式算法。即在盲目搜索�
 
           
           
-             <span id="/2017/04/17/Section1/" class="leancloud_visitors" data-flag-title="Listenning notes">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
 
           
 
@@ -1034,29 +1607,135 @@ A*搜索算法简介A*搜索算法是一种启发式算法。即在盲目搜索�
       
         
           
-          ListenningSection 1
-租房
+            <h1 id="Listenning"><a href="#Listenning" class="headerlink" title="Listenning"></a>Listenning</h1><h3 id="Section-1"><a href="#Section-1" class="headerlink" title="Section 1"></a>Section 1</h3><ol>
+<li><p>租房</p>
+<ol>
+<li>房租价格（数字，水电气，定金）</li>
+<li>地理位置（市区、郊区）</li>
+<li>内部设施（厨房）</li>
+<li>外部设置（花园、车库和交通状况）</li>
+<li>专有名词（房东、租客、地址）</li>
+<li>生活习惯（双方的要求）</li>
+<li>实地看房（时间）</li>
+<li>入住后的问题（complaint）</li>
+</ol>
+<ul>
+<li><p>支付信息：</p>
+<p>currency 货币、charge 费用、cost成本、deposit押金</p>
+<p>pay by cheque/check, cash, credit card</p>
+<p>daliy, weekly, monthly, quarterly, annual basis</p>
+</li>
+<li><p>地址信息：</p>
+<p>road    street    avenue    lane</p>
+<p>Pallisades/West Lake Street</p>
+<p>city centre = central area    市中心，中心那部分</p>
+<p>downtown/urban area    市中心，闹市区</p>
+<p>suburb = outskirt            郊区，边缘</p>
+<p>country = rural area        农村，乡村</p>
+<ul>
+<li><p>常考地址</p>
+<p>South Street, Market Street, Mills Road, University Drive, Hill Road, Forest Road, Cross Street, Castle Road</p>
+</li>
+</ul>
+</li>
+<li><p>参与人物：</p>
+<p>房东：landlord/landlady    租户：tenant/occupant    中介：real estate agency   学校：accommodation office    出租：to let    租期：length of let</p>
+</li>
+<li><p>房屋类型：</p>
+<p>homestay寄宿家庭, flat/apartment, student hall, dormitory dorm, halls of residence, b&amp;b</p>
+</li>
+<li><p>房屋类型和家用设施：</p>
+<p>balcony阳台, double room双人间, bathroom, kitchen, garden花园, yard庭院, garage车库, laundry洗衣房, study书房, hall, lobby, porch走廊</p>
+<p>fridge电冰箱, microwave微波炉, hairdryer吹风机, toaster烤箱, washing machine洗衣机,air-conditioner空调, heater暖气</p>
+</li>
+<li><p>家具用品与费用：</p>
+<p>pillow, curtain, bed sheet床单, blanket毛毯, mattess床垫, towel毛巾, carpet地毯 rent, deposit押金, phone  bill, gas bill, water/electricity bill, <em><u>share petrol一起支付汽油</u></em>, utilities物业费</p>
+</li>
+<li><p>complaint</p>
+<ul>
+<li>not near the center, not near the railway station, far from the bus stop,</li>
+<li>near the airport, noisy.</li>
+<li>share kitchen</li>
+<li>insects</li>
+<li>a stranger in the next bed, have no privacy</li>
+<li>have to prepare some repellent, insects haunting</li>
+</ul>
+</li>
+<li><p>其他考点</p>
+<ul>
+<li>个人信息（年龄、性别、国籍、专业）</li>
+<li>职业</li>
+<li>饮食要求</li>
+</ul>
+</li>
+<li><p>国籍</p>
+<p>Australia/Australian</p>
+<p>Canada/Canadian</p>
+<p>India/Indian</p>
+<p>Mexico/Mexican</p>
+<p>Scotland/Scottish</p>
+<p>Germany/German</p>
+</li>
+<li><p>职业</p>
+<p>engineer, architect, secretary, cook/chef, programmer, technician, manager</p>
+</li>
+</ul>
+</li>
+<li><p>银行</p>
+<ol>
+<li><p>账户：</p>
+<p>open an account开户    bank/pass book存折    cheque account支票账户    savings account储蓄账户    current account活期账户    deposit account定期账户    monthly savings account按月计息账户    daily interest account按天计息账户    instant account速成户头  joint account联名账户    expense    account公款支付账户    signature card签名卡    credit card信用卡    cash card现金卡    debit card借记卡    cheque guarantee card支票担保卡</p>
+</li>
+<li><p>人员：</p>
+<p>cashier收银员   teller/clerk银行职员  accountant会计   service charge服务费    commercial/merchant bank商业银行   full refund全额偿还    extension延期   overdraw/overdraft透支   mortgage抵押    rebate回扣  payday发薪日     pay slip/envelop薪水单 a princely sum(an excessive amount)巨款  by installment 分期付款    apply for/grant  a loan 申请/批准贷款  collateral担保物    debt债务  loan贷款  statement对账单  money order汇票 unit货币单位      ounce盎司    penny便士  nickel (美/加)五分硬币  dime(美/加) 十分硬币</p>
+</li>
+<li><p>交易动作：</p>
+<p>deposit存款    draw/withdraw取款  earn interest赚取利息 annual insterest rate年利率    service charge服务费/手续费  cheque book支票簿  cash the check(A.) /cheque(B.)兑现支票 blank cheque空白支票      traveler’s cheque旅行支票  exchange rate汇率 denomination=face value面额  value/worth面值  bill钞票  cash现金  password/code 密码  change零钱  coin硬币 four in hundred四张一百元面额  give the money in fives换成五元面额  fill out/in填写  amount in figures小写金额  amount in words大写金额</p>
+</li>
+</ol>
+</li>
+<li><p>图书馆</p>
+<ol>
+<li><p>图书分类</p>
+<p>fiction小说   periodical期刊   journal杂志   current/back issue现刊/过刊brochure小册子,手册   prospectus说明书,章程,简介   leaflet传单   index索引 encyclopedia百科全书   front/back over封面,封底   catalog(ue)目录,目录册   bibliography文献目录,参考书目</p>
+</li>
+<li><p>借书规则</p>
+<p>call slip借单,借书证   library card借书证   loan period借书期   renew续借   due到期   overdue过期   annual fee年费   fine罚款</p>
+</li>
+<li><p>借阅服务</p>
+<p>librarian图书管理员   available可提供的,可借到的   in stock有库存   out an loan 已借出   Closed Reserved关闭预定   interlibrary service馆际互借服务   magnetically coded加过词条的   touch screen information service触摸屏查询台   limited number少数   book/order/reserve 预定   in advance提前   laptop笔记本(portable computer)</p>
+</li>
+<li><p>常考思路</p>
+<ol>
+<li><p>办理借书证</p>
+<p>五种所需证件：ID card ,  driving licence ,  driver’s license ,  passport photos , bank statement(银行结单，银行对账单), student card</p>
+</li>
+<li><p>具体内容</p>
+<p>A. 开关门时间： 注意周末、节假日等特殊时间</p>
+<p>B. 具体情况：借阅量borrowng loads</p>
+<p>C.特殊借阅物：CD（Compact Disk）/DVD(Digital Video Disk)/Video</p>
+</li>
+<li><p>复印</p>
+<p>设备：photocopying facilities；photocopier影印机；copy，copier，printer</p>
+<p>用纸：A3/A4(5 pence); black&amp;whiter ;  colour;  double sides photocopying</p>
+<p>付款方式：by a card/coin</p>
+</li>
+<li><p>计算机房 computer room</p>
+<p>24 hours online service；limited computers；book/reserve a place；24/48hours in advance; book a place for one hour / a timeslot 时间段</p>
+</li>
+<li><p>不同借阅条件</p>
+<p>本校生在本校借：</p>
+<p>本校生在外校借：</p>
+<p>外校生来本校借：</p>
+<p>非学生来本校借：</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
 
-房租价格（数字，水电气，定金）
-地理位置（市区、郊区）
-内部设施（厨房）
-外部设置（花园、车库和交通状况）
-专有名词（房东、租客、地址）
-生活习惯（双方的要求）
-实地看房（时间）
-入住后的问题（complaint）
-
-
-支付信息：
-currency 货
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/17/Section1/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
@@ -1103,7 +1782,7 @@ currency 货
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TianyLi">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://oo9y7ylu4.bkt.clouddn.com/image/blog/headIcon/IMG_7483.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1177,17 +1856,6 @@ currency 货
 
           
           
-             <span id="/2017/04/17/读书笔记《费尔巴》/" class="leancloud_visitors" data-flag-title="读书笔记《关于费尔巴的提纲》">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
 
           
 
@@ -1208,17 +1876,23 @@ currency 货
       
         
           
-          关于背景1845 年 2 月，马克思被法国政府驱逐，离开巴黎来到布鲁塞尔。在这里，他重读了费尔巴哈的著作，自觉意识到他的世界观与包括费尔巴哈在内的旧唯物主义有了重大的、本质的区别，在笔记本上写下了供进一步研究用的 《关于费尔巴哈的提纲》,共十一条。
-摘录
-旧唯物主义的立脚点是“市民”社会，新唯物主义
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/17/读书笔记《费尔巴》/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <h3 id="关于背景"><a href="#关于背景" class="headerlink" title="关于背景"></a>关于背景</h3><p>1845 年 2 月，马克思被法国政府驱逐，离开巴黎来到布鲁塞尔。在这里，他重读了费尔巴哈的著作，自觉意识到他的世界观与包括费尔巴哈在内的旧唯物主义有了重大的、本质的区别，在笔记本上写下了供进一步研究用的 《关于费尔巴哈的提纲》,共十一条。</p>
+<h3 id="摘录"><a href="#摘录" class="headerlink" title="摘录"></a>摘录</h3><ol>
+<li>旧唯物主义的立脚点是“市民”社会，新唯物主义的立脚点则是人类社会或社会化的人类。</li>
+<li>人的思维是否具有客观的真理性，这不是一个理论的问题，而是一个实践的问题。人应该在实践中证明自己思维的真理性，即自己思维的现实性和力量，自己思维的此岸性。</li>
+<li>从前的一切唯物主义（包括费尔巴哈的唯物主义）的主要缺点是：对对象、现实、感性，只是从客体的或者直观的形式去理解，而不是把它们当作感性的人的活动，当作实践去理解，不是从主体方面去理解。因此，和唯物主义相反，能动的方面却被唯心主义抽象地发展了，但只是抽象地发展了，因为唯心主义当然是不知道现实的、感性的活动本身的。</li>
+<li>全部社会生活在本质上是实践的。凡是把理论引向神秘主义的神秘东西，都能在人的实践中以及对这个实践的理解中得到合理的解决。</li>
+<li>直观的唯物主义，即不是把感性理解为实践活动的唯物主义至多也只能达到对单个人和市民社会的直观。</li>
+<li>环境的改变和人的活动或自我改变的一致，只能被看作是并合理地理解为革命的实践。</li>
+<li>费尔巴哈是从宗教上的自我异化，从世界被二重化为宗教的、想象的世界和现实的世界这一事实出发的。他做的工作是把宗教世界归结于它的世俗基础。他没有注意到，在做完这一工作之后，主要的事情还没有做。因为，世俗基础使自己从自身中分离出去，并在云霄中固定为一个独立王国，这一事实，只能用这个世俗基础的自我分裂和自我矛盾来说明。因此，对于这个世俗基础本身首先应当从它的矛盾中去理解，然后用消除矛盾的方法在实践中使之发生革命</li>
+</ol>
+<h3 id="讨论"><a href="#讨论" class="headerlink" title="讨论"></a>讨论</h3><p>摘录1：《提纲》中，马克思将自己的哲学称为新唯物主义。新唯物主义的落脚点是“人类社会或社会化的人类”，而旧唯物主义的落脚点是“市民”社会。市民社会应该指的是资本主义的社会与市场的关系，而社会化的人类或人类社会指社会主义社会和市场。</p>
+<p>摘录3：《提纲》通过对费尔巴哈的清算，将包括费尔巴哈等的以前的唯物主义作为批评对象。阐述了费尔巴哈旧唯物主义忽视人的主观能动性和唯心主义夸大主观能动性的错误。将马克思的思想从新的角度，阐明以实践为基础的新唯物主义哲学与旧唯物主义和唯心主义的区别。从而反映出实践是马克思主义哲学与旧哲学的根本观点。</p>
+<p>摘录2、4：实践是检验真理的标准。人的认识、人的思维是否正确，只有在实践中才能证明。检验真理的标准不是主观的理念或者客观的事物，应该从实践中出发去鉴别真理。真理是人们的主观认识对客观世界的评判，而实践对联系主观与客观举足轻重。离开实践去探讨人的思维是否正确毫无意义。</p>
+<p>摘录5、6:  新唯物主义的主要价值与思想在于通过实践改造实际。它认为全部的生活本质上是实践的。通过指导无产阶级通过革命去改造世界，改变不合理的制度。即通过实践认知并改变世界。</p>
+<p>摘录7：马克思认为费尔巴哈的宗教观有错误，并阐述了宗教产生的社会根源，由于“世俗基础的自我分裂和自我矛盾”，才产生了人对自然的恐惧和对神的依赖。消除的办法是，对世俗基础实践改造，消灭人与人之间的矛盾。</p>
+
+          
         
       
     </div>
@@ -1265,7 +1939,7 @@ currency 货
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TianyLi">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://oo9y7ylu4.bkt.clouddn.com/image/blog/headIcon/IMG_7483.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1339,17 +2013,6 @@ currency 货
 
           
           
-             <span id="/2017/04/13/DFS-Search/" class="leancloud_visitors" data-flag-title="DFS_Search">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
 
           
 
@@ -1370,16 +2033,11 @@ currency 货
       
         
           
-          深度优先搜索深度优先搜索所使用的策略是：只要可能尽可能在图中尽量“深入”。搜索从某个节点v开始探索，然后访问和这个节点邻接的一个未访问过的节点，直到该结点的所有出发边都被发现为止。 若结点v的所有出发边都被发现，搜索则回溯到v的前驱节点，来搜索该前驱节点的出发边。
-使用颜色来标记结点的状态。每个节点
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/13/DFS-Search/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <h2 id="深度优先搜索"><a href="#深度优先搜索" class="headerlink" title="深度优先搜索"></a>深度优先搜索</h2><p>深度优先搜索所使用的策略是：只要可能尽可能在图中尽量“深入”。搜索从某个节点v开始探索，然后访问和这个节点邻接的一个未访问过的节点，直到该结点的所有出发边都被发现为止。 若结点v的所有出发边都被发现，搜索则回溯到v的前驱节点，来搜索该前驱节点的出发边。</p>
+<p>使用颜色来标记结点的状态。每个节点的初始颜色都是白色，在节点被发现后变成灰色，在其邻接链表被扫描完成后，其颜色变为黑色。该方法保证每一个节点尽在一棵深度优先树中被访问，因此，所有的深度优先树是不相交的。</p>
+<p>除了创建一个深度优先搜索森林外，深度优先搜索算法还在每个节点盖上一个时间戳。每个节点v有两个时间记录。一个是v.d记录节点第一次被发现的时间（涂上灰色的时候），第二个时间v.f是对v节点的邻接链表搜索完成的时间（涂上黑色的时候）。这些时间记录提供了重要的图结构信息，能够帮助推断深度优先搜索算法的行为。</p>
+
+          
         
       
     </div>
@@ -1426,7 +2084,7 @@ currency 货
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TianyLi">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://oo9y7ylu4.bkt.clouddn.com/image/blog/headIcon/IMG_7483.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1478,17 +2136,6 @@ currency 货
 
           
           
-             <span id="/2017/04/11/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
 
           
 
@@ -1509,15 +2156,17 @@ currency 货
       
         
           
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/11/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+          
         
       
     </div>
@@ -1587,7 +2236,7 @@ currency 货
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="http://oo9y7ylu4.bkt.clouddn.com/image/blog/headIcon/IMG_7483.jpg"
+               src="/images/avatar.gif"
                alt="TianyLi" />
           <p class="site-author-name" itemprop="name">TianyLi</p>
            
@@ -1599,7 +2248,7 @@ currency 货
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-count">29</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1662,7 +2311,7 @@ currency 货
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy;  2016 - 
+  &copy; 
   <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -1678,7 +2327,7 @@ currency 货
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Muse
   </a>
 </div>
 
@@ -1759,7 +2408,24 @@ currency 货
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 
 
 
@@ -1803,130 +2469,6 @@ currency 货
 
 
   
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-  <script>AV.initialize("KzDP5NgGACc0bKLgfEtJ8Xrk-gzGzoHsz", "nGixqUVUQJjtTFuvDaoKrMo0");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
-
-
 
   
 
