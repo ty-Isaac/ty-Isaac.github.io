@@ -330,7 +330,10 @@
             <hr>
 <p>title:github项目构建方式</p>
 <hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">echo &quot;# Paper-Design&quot; &gt;&gt; README.md</div><div class="line">git init</div><div class="line">git add README.md</div><div class="line">git commit -m &quot;first commit&quot;</div><div class="line">git remote add origin git@github.com:ty-Isaac/Paper-Design.git</div><div class="line">git push -u origin master</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> <span class="string">"# Paper-Design"</span> &gt;&gt; README.md</div><div class="line">git init</div><div class="line">git add README.md</div><div class="line">git commit -m <span class="string">"first commit"</span></div><div class="line">git remote add origin git@github.com:ty-Isaac/Paper-Design.git</div><div class="line">git push -u origin master</div></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">docker-machine create --driver virtualbox manager01</div><div class="line">docker-machine ssh manager01</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">docker swarm init --advertise-addr 192.168.99.100</div><div class="line">docker swarm join --token SWMTKN-1-4yygequxrc063rdtecgjtaw6rya4939yd6bvrwrzhunoq2iwew-219peo7wurdwydz6ko33rbneu 192.168.99.100:2377</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">docker service create --replicas 1 --name hello busybox</div><div class="line">docker service ps 服务名</div><div class="line">docker service logs 服务名</div><div class="line">docker service rm 服务名</div><div class="line">docker service scale 服务名=3</div><div class="line">docker service ls</div><div class="line">docker service ps <span class="_">-f</span> <span class="string">'desired-state=runing'</span> hello</div><div class="line"><span class="comment"># 创建服务的同时暴露端口，宿主机的88端口和容器的80端口</span></div><div class="line">docker service creat --name my_web -p 88:80 --replicas 3 nginx</div><div class="line"></div><div class="line"><span class="comment"># 查看服务详细信息</span></div><div class="line">docker service inspect my_web</div><div class="line"></div><div class="line"><span class="comment"># </span></div><div class="line">docker network ls</div></pre></td></tr></table></figure>
 
           
         
@@ -453,6 +456,30 @@
           
             <h1 id="This-is-us"><a href="#This-is-us" class="headerlink" title="This is us."></a>This is us.</h1><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=546201384&auto=1&height=66"></iframe>
 
+<h2 id="2018年05月20日"><a href="#2018年05月20日" class="headerlink" title="2018年05月20日"></a>2018年05月20日</h2><p>在她凌晨的时候，北京时间的 5月20日 13:14的时候，在她凌晨6:14的时候强行起床给他发了个信息。为了爱情，她的细心暖暖暖！！！！</p>
+<h2 id="2018年05月18日"><a href="#2018年05月18日" class="headerlink" title="2018年05月18日"></a>2018年05月18日</h2><p>每天陪着她看书，学习。看着就很舒服 么么哒的甜蜜蜜。</p>
+<h2 id="2018年05月14日"><a href="#2018年05月14日" class="headerlink" title="2018年05月14日"></a>2018年05月14日</h2><p>你喜欢你们寝室哪个地方的人。。</p>
+<p>惊了，我不喜欢男生！！</p>
+<p>论男友的求生欲</p>
+<p>撩完我就跑！！！！</p>
+<p>有那么多猥琐大哥想加你游戏好友！！</p>
+<p>萌萌哒，小昀昀的萝莉音哈哈哈。</p>
+<h2 id="2018年05月13日"><a href="#2018年05月13日" class="headerlink" title="2018年05月13日"></a>2018年05月13日</h2><p>爱情之中不仅仅有甜甜蜜蜜，更多的是烦躁、紧张、努力时期的陪伴~</p>
+<p>我爱你，这三个字代表的是，态度、决心与关怀~</p>
+<h2 id="2018年05月9日"><a href="#2018年05月9日" class="headerlink" title="2018年05月9日"></a>2018年05月9日</h2><p>又是一个鸡屁股 惊了。</p>
+<h2 id="2018年05月08日"><a href="#2018年05月08日" class="headerlink" title="2018年05月08日"></a>2018年05月08日</h2><p>太浪了，太浪了，带她吃了一个鸡屁股，惊了</p>
+<h2 id="2018年05月07日"><a href="#2018年05月07日" class="headerlink" title="2018年05月07日"></a>2018年05月07日</h2><blockquote>
+<p>每天用追你的心思去爱你，因为你会珍惜，所以很值得</p>
+<p>他：咦，怎么能穿那个样子下去，不行不行，换换换。</p>
+<p>过了一会儿，</p>
+<p>她：这个呢？</p>
+<p>他：不行不行，只能我看</p>
+</blockquote>
+<p>哈哈哈，这么有占有欲的猪。</p>
+<p>带她吃鸡，培养网瘾少女。其实她愿意去喜欢你的爱好，还有什么说的呢。</p>
+<h2 id="2018年05月06日"><a href="#2018年05月06日" class="headerlink" title="2018年05月06日"></a>2018年05月06日</h2><p>昨天她去看电影，看着电源还回我消息。惊呆了。</p>
+<p>拍的美美的样子绝了。</p>
+<p>喜欢欺负儿媳妇的麻麻，哈哈哈哈，通情达理的霸霸。</p>
 <h2 id="2018年05月05日"><a href="#2018年05月05日" class="headerlink" title="2018年05月05日"></a>2018年05月05日</h2><p>看她和段苒在一起讨论，玩游戏的样子真滴真实，真实。这才是真正快乐的样子，以后躺在沙发上教你玩~</p>
 <p>大早上给我发了一个樱桃小丸子，惊了惊了惊了。</p>
 <h2 id="2018年05月04日"><a href="#2018年05月04日" class="headerlink" title="2018年05月04日"></a>2018年05月04日</h2><blockquote>
